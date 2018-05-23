@@ -1,0 +1,33 @@
+---
+title: Home
+layout: default
+description: This is the home page.
+sections:
+- [About, About the center]
+- [News, News and events]
+- [Community, Our community]
+---
+<header id="top-block" class="flex p4 flex-column justify-center">
+  <h1>Penn Center for Neuroaesthetics</h1>
+  <ul class="list-reset mt0 flex justify-center">
+    {% for item in page.sections %}
+      <li class="m1"><a class="text-decoration-none" href="#{{ item[0] | slugify }}">{{ item[0] }}</a></li>
+    {% endfor %}
+  </ul>
+</header>
+<section id="about" class="section-blocks p4 flex flex-column justify-center">
+  <h2 class="mb2">{{ page.sections[0][1] }}</h2>
+  <div class="mb2 flex flex-column items-center">
+    <p class="col-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
+    <p class="mt0 col-6">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+  </div>
+  <a class="text-decoration-none" href="/about">Learn more →</a>
+</section>
+<section id="news" class="section-blocks p4 flex flex-column justify-center">
+  <h2 class="mb2">{{ page.sections[1][1] }}</h2>
+  <a class="text-decoration-none" href="/about">What's on the horizon →</a>
+</section>
+<section id="follow" class="section-blocks p4 flex flex-column justify-center">
+  <h2 class="mb2">{{ page.sections[2][1] }}</h2>
+  <a class="text-decoration-none" href="/about">Connect with us →</a>
+</section>

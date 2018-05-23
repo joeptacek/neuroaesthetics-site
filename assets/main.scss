@@ -1,0 +1,43 @@
+---
+# front matter required for jekyll to compile sass
+---
+// variables
+
+$font-stack: "Raleway", sans-serif;
+
+// resets
+
+* {
+  box-sizing: border-box;
+}
+
+// utliities
+
+body {
+  font-family: $font-stack;
+  font-size: 20px;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#top-block {
+  height: 85vh;
+
+  background-color: whitesmoke;
+  color: grey;
+}
+
+.section-blocks {
+  height: 100vh;
+
+  &:nth-child(even) {
+    background-color: lighten(silver, 10%);
+    color: dimgrey;
+  }
+
+  &:nth-child(odd) {
+    background-color: whitesmoke;
+    color: grey;
+  }
+}
