@@ -21,14 +21,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-#top-block {
+body > header,
+body > footer {
   height: 85vh;
 
   background-color: whitesmoke;
   color: grey;
 }
 
-.section-blocks {
+body > section {
   height: 100vh;
 
   &:nth-child(even) {
