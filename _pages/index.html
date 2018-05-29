@@ -7,33 +7,40 @@ sections:
 - [News, News and events]
 - [Community, Our community]
 ---
-<header class="flex p4 flex-column justify-center">
-  <h1>Penn Center for Neuroaesthetics</h1>
-  <ul class="list-reset mt0 flex justify-center">
+<!-- HEADER -->
+<header class="vh-100 pa5 bg-near-white mid-gray flex flex-column justify-center items-center">
+  <h1 class="tc">Penn Center for Neuroaesthetics</h1>
+  <nav>
     {% for item in page.sections %}
-      <li class="m1"><a class="text-decoration-none" href="#{{ item[0] | slugify }}">{{ item[0] }}</a></li>
+      <a class="link blue underline-hover mh1" href="#{{ item[0] | slugify }}">{{ item[0] }}</a></li>
     {% endfor %}
-  </ul>
+  </nav>
 </header>
-<section class="p4 flex flex-column justify-center">
-  <h2 class="mb2">{{ page.sections[0][1] }}</h2>
-  <div class="mb2 flex flex-column items-center">
-    <p class="col-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
-    <p class="mt0 col-6">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+<!-- ABOUT -->
+<section id="{{ page.sections[0][0] | slugify }}" class="bg-light-gray mid-gray vh-100 pa5 flex flex-column justify-center items-center">
+  <h2 class="tc">{{ page.sections[0][1] }}</h2>
+  <p class="tc measure-narrow lh-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
+  <p class="tc measure-narrow lh-copy">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+  <p><a class="link blue underline-hover" href="#">Learn more →</a></p>
+</section>
+
+<!-- NEWS -->
+<section id="{{ page.sections[1][0] | slugify }}" class="bg-near-white mid-gray vh-100 pa5 flex flex-column justify-center items-center">
+  <h2 class="tc">{{ page.sections[1][1] }}</h2>
+  <p><a class="link blue underline-hover" href="#">What's on the horizon →</a></p>
+</section>
+
+<!-- COMMUNITY -->
+<section id="{{ page.sections[2][0] | slugify }}" class="bg-light-gray mid-gray vh-100 relative">
+  <div id="particles-js" class="absolute top-0 bottom-0 left-0 right-0"></div>
+  <div class="absolute top-0 bottom-0 left-0 right-0 pa4 flex flex-column justify-center items-center">
+    <h2 class="tc">{{ page.sections[2][1] }}</h2>
+    <p><a class="link blue underline-hover" href="#">Connect with us →</a></p>
   </div>
-  <a class="text-decoration-none" href="/about">Learn more →</a>
 </section>
-<section class="p4 flex flex-column justify-center">
-  <h2 class="mb2">{{ page.sections[1][1] }}</h2>
-  <a class="text-decoration-none" href="/about">What's on the horizon →</a>
-</section>
-<section class="p4 flex flex-column justify-center relative">
-  <div id="particles-js" class="mxn4 absolute top-0 bottom-0 left-0 right-0"></div>
-  <div class="relative">
-    <h2 class="mb2">{{ page.sections[2][1] }}</h2>
-    <a class="text-decoration-none" href="/about">Connect with us →</a>
-  </div>
-</section>
-<footer class="p4 flex flex-column justify-center">
-  <h2>Footer</h2>
+
+<!-- FOOTER -->
+<footer class="bg-near-white mid-gray vh-50 pa4 flex flex-column justify-center">
+  <p class="tc f6">Copyright 2018 Penn Center for Neuroaesthetics</p>
 </footer>

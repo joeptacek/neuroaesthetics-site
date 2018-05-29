@@ -20,7 +20,5 @@
     "browser-sync": "^2.24.4",
     "gulp": "^3.9.1"
   },
-  "dependencies": {
-    "particles.js": "^2.0.0"
-  }
+  "dependencies": {}
 }

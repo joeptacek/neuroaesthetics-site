@@ -15,30 +15,12 @@ $font-stack: "Raleway", sans-serif;
 
 body {
   font-family: $font-stack;
-  font-size: 20px;
+  font-size: 16px;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-body > header,
-body > footer {
-  height: 85vh;
-
-  background-color: whitesmoke;
-  color: grey;
-}
-
-body > section {
-  height: 100vh;
-
-  &:nth-child(even) {
-    background-color: lighten(silver, 10%);
-    color: dimgrey;
-  }
-
-  &:nth-child(odd) {
-    background-color: whitesmoke;
-    color: grey;
-  }
+#particles-js > canvas {
+  display: block; // squash inline gap
 }
