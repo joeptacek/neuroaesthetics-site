@@ -5,17 +5,18 @@
 
 $font-stack: "Raleway", sans-serif;
 
-// resets
+// tachyons overrides
 
-* {
-  box-sizing: border-box;
-}
+.link { transition: none; }
+.link:link, .link:visited { transition: none; }
+.link:hover { transition: none; }
+.link:active { transition: none; }
+.link:focus { transition: none; }
 
-// utliities
+// styles
 
 body {
   font-family: $font-stack;
-  font-size: 16px;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
