@@ -5,6 +5,19 @@
 
 $font-stack: "Raleway", sans-serif;
 
+// resets
+
+* {
+  margin-top: 0 !important;
+}
+
+* {
+  &:last-child {
+    margin-bottom: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
 // tachyons overrides
 
 .link { transition: none; }
@@ -20,6 +33,11 @@ body {
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body > header {
+  background-image: url(/assets/jpg/clouds.jpg);
+  background-size: cover;
 }
 
 #particles-js > canvas {

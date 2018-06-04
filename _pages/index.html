@@ -8,52 +8,60 @@ sections:
 - [News, News and events]
 ---
 <!-- HEADER -->
-<header class="vh-100 pa5 bg-near-white mid-gray flex flex-column justify-center items-center">
-  <h1 class="tc">Penn Center for Neuroaesthetics</h1>
-  <nav>
-    {% for item in page.sections %}
-      <a class="link blue underline-hover mh1" href="#{{ item[0] | slugify }}">{{ item[0] }}</a></li>
-    {% endfor %}
-  </nav>
+<header class="mid-gray">
+  <div class="min-vh-100 pa4 pa5-m pa6-l flex flex-column justify-center items-center">
+    <div class="pa4 pv6 pa5-m pa6-l">
+      <div class="flex flex-column justify-center items-center">
+        <h1 class="tc mb4">Penn Center for Neuroaesthetics</h1>
+        <nav>
+          {% for item in page.sections %}
+            <a class="link blue dim mh1" href="#{{ item[0] | slugify }}">{{ item[0] }}</a></li>
+          {% endfor %}
+        </nav>
+      </div>
+    </div>
+  </div>
 </header>
 
 <!-- ABOUT -->
-<section id="{{ page.sections[0][0] | slugify }}" class="bg-light-gray mid-gray min-vh-100 pa4 pa5-m pa6-l flex flex-column justify-center items-center">
-  <!-- <h2 class="mb5 tc">{{ page.sections[0][1] }}</h2> -->
-  <div class="bg-white-80 pa4 pa5-ns">
-    <div class="mb3 mb4-ns flex flex-column flex-row-l">
-      <div class="mb3 mb4-ns mb0-l mr5-l">
-        <h2 class="f4 tc">Lorem ipsum</h3>
-        <hr class="mw1 bb bw1 b--black-10"/>
-        <p class="measure-narrow lh-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
+<section id="{{ page.sections[0][0] | slugify }}" class="bg-light-gray mid-gray">
+  <div class="min-vh-100 pa4 pa5-m pa6-l flex flex-column justify-center items-center">
+    <div class="bg-white-50 br1 pa4 pv5 pa5-ns">
+      <!-- <h2 class="mb5 tc">{{ page.sections[0][1] }}</h2> -->
+      <div class="mb4 flex flex-column flex-row-l">
+        <div class="mb4 mb0-l mr5-l">
+          <h2 class="f4 tc mb3">Lorem ipsum</h3>
+          <hr class="mw1 mb3 bb bw1 b--black-10"/>
+          <p class="measure-narrow lh-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="mb4 mb0-l mr5-l">
+          <h2 class="f4 tc mb3">Ut enim ad</h3>
+          <hr class="mw1 mb3 bb bw1 b--black-10"/>
+          <p class="measure-narrow lh-copy">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+        <div class="mb4 mb0-l mr5-l">
+          <h2 class="f4 tc mb3">Donec ac viverra</h3>
+          <hr class="mw1 mb3 bb bw1 b--black-10"/>
+          <p class="measure-narrow lh-copy">Donec ac viverra velit, vel commodo massa. Integer at ante non risus tincidunt accumsan. Aliquam porta purus sed laoreet finibus.</p>
+        </div>
       </div>
-      <div class="mb3 mb4-ns mb0-l mr5-l">
-        <h2 class="f4 tc">Ut enim ad</h3>
-        <hr class="mw1 bb bw1 b--black-10"/>
-        <p class="measure-narrow lh-copy">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-      </div>
-      <div>
-        <h2 class="f4 tc">Donec ac viverra</h3>
-        <hr class="mw1 bb bw1 b--black-10"/>
-        <p class="measure-narrow lh-copy">Donec ac viverra velit, vel commodo massa. Integer at ante non risus tincidunt accumsan. Aliquam porta purus sed laoreet finibus.</p>
-      </div>
+      <p class="tc"><a class="b dib pv2 ph3 br2 link white bg-blue dim" href="#">Learn more →</a></p>
     </div>
-    <p class="tc"><a class="b dib pv2 ph3 br2 link white bg-blue" href="#">Learn more →</a></p>
   </div>
 </section>
 
 <!-- COMMUNITY -->
-<section id="{{ page.sections[1][0] | slugify }}" class="bg-near-white mid-gray min-vh-100 relative">
+<section id="{{ page.sections[1][0] | slugify }}" class="bg-near-white mid-gray relative min-vh-100">
   <div id="particles-js" class="absolute top-0 bottom-0 left-0 right-0"></div>
-  <div class="absolute top-0 bottom-0 left-0 right-0 pa4 pa5-m pa6-l flex flex-column justify-center items-center">
-    <div class="bg-white-80 br1 pa4 pa5-ns">
-      <div class="mb3 mb4-ns flex flex-column flex-row-l">
-        <div>
+  <div class="min-vh-100 pa4 pa5-m pa6-l flex flex-column justify-center items-center absolute top-0 bottom-0 left-0 right-0">
+    <div class="bg-white-80 br1 pa4 pv5 pa5-ns">
+      <div class="mb4 flex flex-column flex-row-l">
+        <div class="mb4 mb0-l mr5-l">
           <h2 class="tc mb4">{{ page.sections[1][1] }}</h2>
           <p class="measure-narrow lh-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
         </div>
       </div>
-      <p class="tc"><a class="b dib pv2 ph3 br2 link white bg-blue" href="#">Connect with us →</a></p>
+      <p class="tc"><a class="b dib pv2 ph3 br2 link white bg-blue dim" href="#">Connect with us →</a></p>
     </div>
   </div>
   <!-- <div class="absolute top-0 bottom-0 left-0 right-0 pa4 flex flex-column justify-center items-center"> -->
@@ -61,20 +69,21 @@ sections:
 </section>
 
 <!-- NEWS -->
-<section id="{{ page.sections[2][0] | slugify }}" class="bg-light-gray mid-gray min-vh-100 pa4 pa5-m pa6-l flex flex-column justify-center items-center">
-  <div class="bg-white-80 br1 pa4 pa5-ns">
-    <div class="mb3 mb4-ns flex flex-column flex-row-l">
-      <div>
-        <h2 class="tc">{{ page.sections[2][1] }}</h2>
-        <p class="measure-narrow lh-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
+<section id="{{ page.sections[2][0] | slugify }}" class="bg-light-gray mid-gray">
+  <div class="min-vh-100 pa4 pa5-m pa6-l flex flex-column justify-center items-center">
+    <div class="bg-white-80 br1 pa4 pv5 pa5-ns">
+      <div class="mb4 flex flex-column flex-row-l">
+        <div class="mb4 mb0-l mr5-l">
+          <h2 class="tc mb4">{{ page.sections[2][1] }}</h2>
+          <p class="measure-narrow lh-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
+        </div>
       </div>
+      <p class="tc"><a class="b dib pv2 ph3 br2 link white bg-blue dim" href="#">What's on the horizon →</a></p>
     </div>
-    <p class="tc"><a class="b dib pv2 ph3 br2 link white bg-blue" href="#">What's on the horizon →</a></p>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="bg-near-white mid-gray vh-50 pa4 flex flex-column justify-center">
   <p class="silver tc f6">Copyright 2018 Penn Center for Neuroaesthetics</p>
-  <p class="silver tc f6">Website built by Joe Ptacek</p>
 </footer>
