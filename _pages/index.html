@@ -8,14 +8,14 @@ sections:
 - [News, News and events]
 ---
 <!-- HEADER -->
-<header class="mid-gray">
+<header class="dark-gray">
   <div class="min-vh-100 pa4 pa5-m pa6-l flex flex-column justify-center items-center">
     <div class="pa4 pv6 pa5-m pa6-l">
       <div class="flex flex-column justify-center items-center">
-        <h1 class="tc mb4">Penn Center for Neuroaesthetics</h1>
+        <h1 class="f2 f1-ns lh-solid tc mb4">Penn Center for Neuroaesthetics</h1>
         <nav>
           {% for item in page.sections %}
-            <a class="link blue dim mh1" href="#{{ item[0] | slugify }}">{{ item[0] }}</a></li>
+            <a class="b link blue dim mh1" href="#{{ item[0] | slugify }}">{{ item[0] }}</a></li>
           {% endfor %}
         </nav>
       </div>
