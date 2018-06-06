@@ -12,11 +12,6 @@ sections:
     <div class="pa4 pv6 pa5-m pa6-l">
       <div class="flex flex-column justify-center items-center">
         <h1 class="f2 f1-ns lh-solid tc mb4">Penn Center for Neuroaesthetics</h1>
-        <nav>
-          {% for item in page.sections %}
-            <a class="b link blue dim mh1" href="#{{ item[0] | slugify }}">{{ item[0] }}</a></li>
-          {% endfor %}
-        </nav>
       </div>
     </div>
   </div>
@@ -72,11 +67,11 @@ sections:
             <p class="measure-narrow lh-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
           </div>
         </div>
-        <p class="tc"><a class="b dib pv2 ph3 br2 link white bg-blue dim" href="/calendar.html">What's on the horizon →</a></p>
+        <p class="tc"><a class="b dib pv2 ph3 br2 link white bg-blue dim" href="/events.html">What's on the horizon →</a></p>
       </div>
     </div>
   </section>
 </main>
-<footer class="bg-near-white mid-gray min-vh-50 pa4 flex flex-column justify-center">
+<footer class="bg-near-white mid-gray vh-50 pa4 flex flex-column justify-center">
   <p class="silver tc f6">Copyright 2018 Penn Center for Neuroaesthetics</p>
 </footer>

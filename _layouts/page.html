@@ -1,8 +1,24 @@
 ---
 layout: default
 ---
-<header class="mid-gray"></header>
+<header id="home-header" class="mid-gray">
+  <div class="flex flex-column justify-center items-center">
+    <div class="pa4 pa5-ns">
+      <div class="flex flex-column justify-center items-center">
+        <h1 class="f2 f1-ns lh-solid tc mb4">{{ page.title }}</h1>
+        <nav>
+          <a class="b link blue dim mh1" href="/index.html">Home</a></li>
+          <a class="b link blue dim mh1" href="/about.html">About</a></li>
+          <a class="b link blue dim mh1" href="/community.html">Community</a></li>
+          <a class="b link blue dim mh1" href="/events.html">Events</a></li>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
 <main>
   {{ content }}
 </main>
-<footer class="mid-gray"></footer>
+<footer class="bg-near-white mid-gray vh-50 pa4 flex flex-column justify-center">
+  <p class="silver tc f6">Copyright 2018 Penn Center for Neuroaesthetics</p>
+</footer>

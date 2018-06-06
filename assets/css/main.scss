@@ -36,8 +36,12 @@ body {
 }
 
 #home-header {
-  background-image: url(/assets/jpg/clouds.jpg);
+  background-image: url(/assets/jpg/anjan_photos/15.jpg);
+  // color: white;
+  // color: black;
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: 50% 50%;
 }
 
 #particles-js > canvas {
