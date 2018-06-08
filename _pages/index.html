@@ -1,13 +1,13 @@
 ---
 title: Home
-layout: home
+layout: default
 description: This is the home page.
 sections:
 - [About, About the center]
 - [Community, Our community]
 - [News, News and events]
 ---
-<section id="{{ page.sections[0][0] | slugify }}" class="bg-light-gray mid-gray">
+<section id="{{ page.sections[0][0] | slugify }}" class="bg-light-gray">
   <div class="min-vh-100 pa4 pa5-m pa6-l flex flex-column justify-center items-center">
     <div class="bg-white-50 br1 pa4 pv5 pa5-ns">
       <!-- <h2 class="mb5 tc">{{ page.sections[0][1] }}</h2> -->
@@ -32,9 +32,9 @@ sections:
     </div>
   </div>
 </section>
-<section id="{{ page.sections[1][0] | slugify }}" class="bg-near-white mid-gray relative min-vh-100">
-  <div id="particles-js" class="absolute top-0 bottom-0 left-0 right-0"></div>
-  <div class="min-vh-100 pa4 pa5-m pa6-l flex flex-column justify-center items-center absolute top-0 bottom-0 left-0 right-0">
+<section id="{{ page.sections[1][0] | slugify }}" class="bg-near-white relative min-vh-100">
+  <div id="particles-js" class="absolute absolute--fill"></div>
+  <div class="min-vh-100 pa4 pa5-m pa6-l flex flex-column justify-center items-center absolute absolute--fill">
     <div class="bg-white-80 br1 pa4 pv5 pa5-ns">
       <div class="mb4 flex flex-column flex-row-l">
         <div class="mb4 mb0-l mr5-l">
@@ -45,10 +45,8 @@ sections:
       <p class="tc"><a class="b dib pv2 ph3 br2 link white bg-blue dim" href="/community.html">Connect with us →</a></p>
     </div>
   </div>
-  <!-- <div class="absolute top-0 bottom-0 left-0 right-0 pa4 flex flex-column justify-center items-center"> -->
-  </div>
 </section>
-<section id="{{ page.sections[2][0] | slugify }}" class="bg-light-gray mid-gray">
+<section id="{{ page.sections[2][0] | slugify }}" class="bg-light-gray">
   <div class="min-vh-100 pa4 pa5-m pa6-l flex flex-column justify-center items-center">
     <div class="bg-white-80 br1 pa4 pv5 pa5-ns">
       <div class="mb4 flex flex-column flex-row-l">

@@ -3,9 +3,26 @@
   <head>
     {% include layout/head.html %}
   </head>
-  <body class="m0">
-    {{ content }}
-    <footer class="bg-near-white mid-gray vh-50 pa4 flex flex-column justify-center">
+  <body class="m0 mid-gray">
+    <header id="header">
+      <div class="{% if page.title == "Home" %}vh-100{% else %}vh-50{% endif %} pa4 flex flex-column">
+        <div class="flex flex-column justify-end">
+          <nav class="bg-black-10 tc pa4 f6 f5-ns">
+            <a class="b mh1 link near-white dim" href="/index.html">Home</a></li>
+            <a class="b mh1 link near-white dim" href="/about.html">About</a></li>
+            <a class="b mh1 link near-white dim" href="/community.html">Community</a></li>
+            <a class="b mh1 link near-white dim" href="/events.html">Events</a></li>
+          </nav>
+        </div>
+        <div class="flex justify-center items-center ph4 flex-auto">
+          <h1 class="f2 f1-ns lh-solid tc">{% if page.title == "Home" %}Penn Center for Neuroaesthetics{% else %}{{ page.title }}{% endif %}</h1>
+        </div>
+      </div>
+    </header>
+    <main>
+      {{ content }}
+    </main>
+    <footer class="bg-near-white vh-50 pa4 flex flex-column justify-center">
       <p class="silver tc f6">Copyright 2018 Penn Center for Neuroaesthetics</p>
     </footer>
     <script src="/assets/js/vendor/particles.js/particles.js"></script>
