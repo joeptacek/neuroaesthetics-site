@@ -35,6 +35,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+button {
+  font-family: $font-stack;
+}
+
 .bg-sky {
   background-image: url(/assets/img/anjan_photos/15.jpg);
 }
