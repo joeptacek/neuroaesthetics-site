@@ -3,27 +3,32 @@
   <head>
     {% include layout/head.html %}
   </head>
-  <body class="m0 mid-gray">
-    <header id="header">
-      <div class="{% if page.title == "Home" %}vh-100{% else %}vh-50{% endif %} pa4 flex flex-column">
-        <div class="flex flex-column justify-end">
-          <nav class="bg-black-10 tc pa4 f6 f5-ns">
-            <a class="b mh1 link near-white dim" href="/index.html">Home</a></li>
-            <a class="b mh1 link near-white dim" href="/about.html">About</a></li>
-            <a class="b mh1 link near-white dim" href="/community.html">Community</a></li>
-            <a class="b mh1 link near-white dim" href="/events.html">Events</a></li>
-          </nav>
+  <body class="m0 mid-gray bg-navy">
+    <header class="{{ page.header }} bg-cover bg-fixed vh-100 flex flex-column bt bw2 b--navy">
+      <nav class="bg-near-white f6 f5-ns flex items-center pv3 ph4 ph5-m ph6-l">
+        <a class="link dim mr4" href="/index.html">
+          <object height="75" width="auto" type="image/svg+xml" data="/assets/img/logo-pcfn-black.svg" style="pointer-events: none;">PCfN</object>
+        </a>
+        <div class="flex items-center">
+          <a class="b mr3 link black dim" href="/about.html">About</a>
+          <a class="b mr3 link black dim" href="/community.html">Community</a>
+          <a class="b mr3 link black dim" href="/events.html">Events</a>
         </div>
-        <div class="flex justify-center items-center ph4 flex-auto">
-          <h1 class="f2 f1-ns lh-solid tc">{% if page.title == "Home" %}Penn Center for Neuroaesthetics{% else %}{{ page.title }}{% endif %}</h1>
+        <div class="flex-auto tr">
+          <a class="link dim mr5 tr" href="http://www.med.upenn.edu/" target="_blank">
+            <img src="/assets/img/logo-psom.png" alt="Logo for the Perelman School of Medicine at the University of Pennsylvania" height="40" width="auto">
+          </a>
         </div>
+      </nav>
+      <div class="flex justify-center items-center ph4 ph5-m ph6-l flex-auto">
+        <h1 class="near-black bg-white-80 f2 f1-ns lh-solid tc pv3 ph4">{{ page.subtitle }}</h1>
       </div>
     </header>
     <main>
       {{ content }}
     </main>
-    <footer class="bg-near-white vh-50 pa4 flex flex-column justify-center">
-      <p class="silver tc f6">Copyright 2018 Penn Center for Neuroaesthetics</p>
+    <footer class="bg-near-white pv5 pv6-l ph4 ph5-m ph6-l flex flex-column items-center justify-center">
+      <p class="tc silver f6">Copyright 2018 Penn Center for Neuroaesthetics</p>
     </footer>
     <script src="/assets/js/vendor/particles.js/particles.js"></script>
     <script src="assets/js/main.js"></script>

@@ -35,13 +35,34 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-#header {
-  background-image: url(/assets/jpg/anjan_photos/15.jpg);
-  // color: white;
-  // color: black;
+.bg-sky {
+  background-image: url(/assets/img/anjan_photos/15.jpg);
+}
+
+.bg-leaves {
+  background-image: url(/assets/img/anjan_photos/6.jpg);
+}
+
+.bg-goddard {
+  background-image: url(/assets/img/anjan_photos/16.png);
+}
+
+.bg-salt {
+  background-image: url(/assets/img/anjan_photos/1.jpg);
+}
+
+.bg-sand {
+  background-image: url(/assets/img/anjan_photos/8.jpg);
+}
+
+.bg-cover {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
+}
+
+.bg-fixed {
+  background-attachment: fixed;
 }
 
 #particles-js > canvas {
