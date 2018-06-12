@@ -1,6 +1,12 @@
 <meta charset="utf-8">
-<title>{{ page.title }}</title>
-<meta name="description" content="{{ page.description }}">
+
+{% if page.collection == "people" %}
+  <title>PCfN → Community → {{ page.title }}</title>
+  <meta name="description" content="Meet {{ page.title }}">
+{% else %}
+  <title>PCfN → {{ page.title }}</title>
+  <meta name="description" content="{{ page.description }}">
+{% endif %}
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">

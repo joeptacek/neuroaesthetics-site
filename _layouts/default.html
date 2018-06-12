@@ -4,23 +4,20 @@
     {% include layout/head.html %}
   </head>
   <body class="m0 mid-gray bg-navy bb">
-    <header class="{{ page.header }} bg-cover bg-fixed vh-100 flex flex-column bt bw2 b--navy">
-      <nav class="bg-near-white f6 f5-ns flex flex-column flex-row-ns items-center pv3-ns ph5-m ph6-l">
+    <header class="{% if page.collection == "pages" %}{{ page.header }} bg-cover bg-fixed vh-100 {% endif %}flex flex-column bt bw2 b--navy">
+      <nav class="bg-near-white f6 f5-ns flex flex-column flex-row-ns items-center pv3-ns ph5-m ph6-l bb b--moon-gray">
         <div class="flex items-center pv3 pv0-ns mr4-ns">
-          <!-- <a class="link dim pr3 mr3 br bw1 b--silver dn-ns" href="http://www.upenn.edu/">
-            <img src="/assets/img/logo/logo-penn-shield-only.png" alt="Logo for the Perelman School of Medicine at the University of Pennsylvania" width="40" height="auto">
-          </a> -->
-          <a class="link dim mr4 dn-ns" href="http://www.med.upenn.edu/" target="_blank">
-            <img src="/assets/img/logo/logo-psom.png" alt="Logo for the Perelman School of Medicine at the University of Pennsylvania" width="142" height="auto">
-          </a>
-          <a class="link dim" href="/index.html">
+          <a class="link dim mr4 mr0-ns" href="/index.html">
             <object height="75" width="auto" type="image/svg+xml" data="/assets/img/logo/logo-pcfn-black.svg" style="pointer-events: none;">PCfN</object>
+          </a>
+          <a class="link dim dn-ns" href="http://www.med.upenn.edu/" target="_blank">
+            <img src="/assets/img/logo/logo-psom.png" alt="Logo for the Perelman School of Medicine at the University of Pennsylvania" width="110" height="auto">
           </a>
         </div>
         <div class="self-stretch flex items-center justify-center bt b--moon-gray bn-ns pv3 pv0-ns mr4-ns">
           <a class="b f6 f5-l mr4 mr3-ns link black dim" href="/about.html">About</a>
           <a class="b f6 f5-l mr4 mr3-ns link black dim" href="/community.html">Community</a>
-          <a class="b f6 f5-l mr4 mr3-ns link black dim" href="/events.html">Events</a>
+          <a class="b f6 f5-l link black dim" href="/events.html">Events</a>
         </div>
         <div class="flex-auto tr dn db-ns">
           <a class="link dim" href="http://www.med.upenn.edu/" target="_blank">
@@ -28,9 +25,11 @@
           </a>
         </div>
       </nav>
-      <div class="flex justify-center items-center ph4 ph5-m ph6-l flex-auto">
-        <h1 class="near-black bg-white-80 f3 f2-m f1-l lh-solid tc pv3 ph4">{{ page.subtitle }}</h1>
-      </div>
+      {% if page.collection == "pages" %}
+        <div class="flex justify-center items-center ph4 ph5-m ph6-l flex-auto">
+          <h1 class="near-black bg-white-80 f3 f2-m f1-l lh-solid tc pv3 ph4">{{ page.subtitle }}</h1>
+        </div>
+      {% endif %}
     </header>
     <main>
       {{ content }}

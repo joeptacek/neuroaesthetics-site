@@ -11,6 +11,9 @@ exclude:
   - node_modules
 
 collections:
+  people:
+    output: true
+    permalink: /people/:name
   pages:
     output: true
     permalink: /:name
