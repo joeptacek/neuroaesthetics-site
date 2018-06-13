@@ -2,27 +2,19 @@
 title: Community
 subtitle: Our community
 header: bg-leaves
-layout: default
 description: This is the community page.
 ---
 <section class="bg-light-gray">
   <div class="min-vh-100 pa4 pa5-m pa6-l flex flex-column justify-center items-center">
     <div class="bg-white-50 br1 pa4 pa5-ns">
-      <p class="f4 f3-l lh-copy measure">We bring people together whose expertise converge on neuroaesthetics scientific aims. This includes faculty from the Perelman School of Medicine, the School of Arts and Sciences, PennDesign, and the Wharton School.</p>
+      <p class="f4 f3-l lh-copy measure">We bring people together whose expertise converge on neuroaesthetics scientific aims. This includes faculty from the Perelman School of Medicine, the School of Arts and Sciences, the School of Design, and the Wharton School.</p>
     </div>
   </div>
 </section>
 <section class="bg-near-white bb b--moon-gray">
-  <div class="min-vh-100 pa4 pa5-m pa6-l flex flex-column justify-center items-center">
+  <div class="min-vh-100 pa5 pa5-m pa6-l flex flex-column flex-row-ns justify-center items-center-ns">
     {% for person in site.people %}
-      <div class="flex flex-column flex-row-ns items-center mb4 pb4">
-        <img class="br-100 pa1 ba b--moon-gray mb3 mb0-ns mr4-ns" src="/assets/img/people/175/{{ person.photo }}" alt="{{ person.title }}" height="auto" width="175">
-        <div class="">
-          <h2 class="f4 mb1 tc tl-ns">{{ person.title }}</h2>
-          <h3 class="f5 mb4 i normal tc tl-ns">{{ person.school }}</h3>
-          <p class="tc tl-ns"><a class="pv1 ph3 ba br-pill link blue dim f6" href="{{ person.url | append: ".html" }}">Meet Danielle →</a></p>
-        </div>
-      </div>
+      {% include person-mini.html data=person.data %}
     {% endfor %}
   </div>
 </section>

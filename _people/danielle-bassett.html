@@ -1,27 +1,11 @@
 ---
-title: Danielle Bassett
-layout: default
-photo: bassett-danielle.jpg
-school: Perelman School of Medicine
-bio: Danielle Bassett is currently a MacArthur Fellow, as well as the Eduardo D. Glandt Faculty Fellow, and Associate Professor of Bioengineering at the University of Pennsylvania. Dr. Bassett has 14 years of experience in developing and applying tools from network science to understand large-scale brain network organization estimated from structural and functional neuroimaging data from a wide range of modalities including MRI, fMRI, ECOG, DTI, DSI, and MEG in humans. Dr. Bassett has published extensively on topics related to network science, the work includes 181 accepted or published articles that have together garnered >12,900 citations (h-index = 48). Dr. Bassett received a B.S. in physics from the Pennsylvania State University and a Ph.D. in physics from the University of Cambridge, UK. Following a postdoctoral position at UC Santa Barbara, she was a Junior Research Fellow at the Sage Center for the Study of the Mind. In 2012, she was named American Psychological Association's `Rising Star' and given an Alumni Achievement Award from the Schreyer Honors College at Pennsylvania State University for extraordinary achievement under the age of 35. In 2014, she was named an Alfred P Sloan Research Fellow and was the youngest to receive the MacArthur Fellow Genius Grant. In 2015, she received the IEEE EMBS Early Academic Achievement Award, and was named an ONR Young Investigator. In 2016, she received an NSF CAREER award and was named one of Popular Science’s Brilliant 10. In 2017 she was awarded the Lagrange Prize in Complexity Science. She is the founding director of the Penn Network Visualization Program, a combined undergraduate art internship and K-12 outreach program bridging network science and the visual arts.  Her work has been supported by the National Science Foundation, the National Institutes of Health, the Army Research Office, the Army Research Laboratory, the Office of Naval Research, the Defense Advanced Research Projects Agency, the ISI Foundation, the Alfred P Sloan Foundation, and the John D and Catherine T MacArthur Foundation.
+data:
+  first_name: Danielle
+  middle_last_name: Bassett
+  photo: danielle-bassett.jpg
+  school: School of Engineering and Applied Science
+  department: Bioengineering
+  website: http://www.seas.upenn.edu/~dsb/
+  bio: "Danielle Bassett is currently a MacArthur Fellow, as well as the Eduardo D. Glandt Faculty Fellow, and Associate Professor of Bioengineering at the University of Pennsylvania. Dr. Bassett has 14 years of experience in developing and applying tools from network science to understand large-scale brain network organization estimated from structural and functional neuroimaging data from a wide range of modalities including MRI, fMRI, ECOG, DTI, DSI, and MEG in humans. Dr. Bassett has published extensively on topics related to network science, the work includes 181 accepted or published articles that have together garnered >12,900 citations (h-index = 48). Dr. Bassett received a B.S. in physics from the Pennsylvania State University and a Ph.D. in physics from the University of Cambridge, UK. Following a postdoctoral position at UC Santa Barbara, she was a Junior Research Fellow at the Sage Center for the Study of the Mind. In 2012, she was named American Psychological Association's 'Rising Star' and given an Alumni Achievement Award from the Schreyer Honors College at Pennsylvania State University for extraordinary achievement under the age of 35. In 2014, she was named an Alfred P Sloan Research Fellow and was the youngest to receive the MacArthur Fellow Genius Grant. In 2015, she received the IEEE EMBS Early Academic Achievement Award, and was named an ONR Young Investigator. In 2016, she received an NSF CAREER award and was named one of Popular Science’s Brilliant 10. In 2017 she was awarded the Lagrange Prize in Complexity Science. She is the founding director of the Penn Network Visualization Program, a combined undergraduate art internship and K-12 outreach program bridging network science and the visual arts.  Her work has been supported by the National Science Foundation, the National Institutes of Health, the Army Research Office, the Army Research Laboratory, the Office of Naval Research, the Defense Advanced Research Projects Agency, the ISI Foundation, the Alfred P Sloan Foundation, and the John D and Catherine T MacArthur Foundation."
 ---
-<section class="min-vh-100 flex justify-center bg-light-gray pa4 pa5-l bb b--moon-gray">
-  <div class="bg-near-white ba b--moon-gray">
-    <div class="bg-black-10 pv3 ph4 bb b--moon-gray mb4">
-      <p class="tl">
-        <a class="b f6 f5-l mr2 mr3-l link underline black dim" href="/community.html">Community</a>
-        <span class="b f6 f5-l mr2 mr3-l">→</span>
-        <span class="b f6 f5-l mr2 mr3-l">{{ page.title }}</span>
-      </p>
-    </div>
-    <div class="flex flex-column items-center pa4 pt3">
-      <img class="br-100 pa1 ba b--moon-gray mb4" src="/assets/img/people/225/{{ page.photo }}" alt="{{ page.title }}" height="auto" width="225">
-      <h2 class="f4 mb1 tc">{{ page.title }}</h2>
-      <h3 class="f5 mb4 i normal tc">{{ page.school }}</h3>
-      <p class="mb4 f6 f5-ns measure lh-copy">{{ page.bio }}</p>
-      <p class="tc tl-ns">
-        <a class="f6 f5-ns pv1 ph3 ba br-pill link blue dim" href="http://www.seas.upenn.edu/~dsb/" target="_blank">Website →</a>
-      </p>
-    </div>
-  </div>
-</section>
+{% include person-panel.html data=page.data %}

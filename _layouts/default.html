@@ -1,9 +1,26 @@
 <!doctype html>
 <html>
   <head>
-    {% include layout/head.html %}
+    <meta charset="utf-8">
+
+    {% if page.collection == "people" %}
+      <title>PCfN → Community → {{ page.title }}</title>
+      <meta name="description" content="Meet {{ page.title }}">
+    {% else %}
+      <title>PCfN → {{ page.title }}</title>
+      <meta name="description" content="{{ page.description }}">
+    {% endif %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="/assets/css/vendor/tachyons/tachyons.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
   </head>
+
+  <!-- BODY -->
   <body class="m0 mid-gray bg-navy bb">
+
+    <!-- HEADER -->
     <header class="{% if page.collection == "pages" %}{{ page.header }} bg-cover bg-fixed vh-100 {% endif %}flex flex-column bt bw2 b--navy">
       <nav class="bg-near-white f6 f5-ns flex flex-column flex-row-ns items-center pv3-ns ph5-m ph6-l bb b--moon-gray">
         <div class="flex items-center pv3 pv0-ns mr4-ns">
@@ -31,12 +48,18 @@
         </div>
       {% endif %}
     </header>
+
+    <!-- MAIN -->
     <main>
       {{ content }}
     </main>
+
+    <!-- FOOTER -->
     <footer class="bg-near-white pv5 pv6-l ph4 ph5-m ph6-l flex flex-column items-center justify-center">
       <p class="tc silver f6">Copyright 2018 Penn Center for Neuroaesthetics</p>
     </footer>
+
+    <!-- SCRIPTS -->
     <script src="/assets/js/vendor/particles.js/particles.js"></script>
     <script src="assets/js/main.js"></script>
   </body>

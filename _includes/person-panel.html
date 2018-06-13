@@ -1,0 +1,24 @@
+{% assign data = include.data %}
+<section class="min-vh-100 flex justify-center bg-light-gray pa4 pa5-l bb b--moon-gray">
+  <div class="bg-near-white ba b--moon-gray">
+    <div class="bg-black-10 pv3 ph4 bb b--moon-gray mb4">
+      <p class="tl">
+        <a class="b f6 f5-l mr2 mr3-l link underline black dim" href="/community.html">Community</a>
+        <span class="b f6 f5-l mr2 mr3-l">→</span>
+        <span class="b f6 f5-l mr2 mr3-l">{{ data.first_name }} {{ data.middle_last_name }}</span>
+      </p>
+    </div>
+    <div class="flex flex-column items-center pa4 pt3">
+      <img class="br-100 pa1 ba bw1 b--moon-gray mb4" src="/assets/img/people/225/{{ data.photo }}" alt="{{ data.title }}" height="auto" width="225">
+      <h2 class="f4 mb3 tc">{{ data.first_name }} {{ data.middle_last_name }}</h2>
+      <h3 class="f5 mb1 b normal tc">{{ data.school }}</h3>
+      <h3 class="f5 mb4 i normal tc">{{ data.department }}</h3>
+      <p class="mb4 f6 f5-ns measure lh-copy">{{ data.bio | smartify }}</p>
+      {% if data.website %}
+        <p class="tc tl-ns">
+          <a class="f6 f5-ns pv1 ph3 ba br-pill link blue dim" href="{{ data.website }}" target="_blank">Website →</a>
+        </p>
+      {% endif %}
+    </div>
+  </div>
+</section>
