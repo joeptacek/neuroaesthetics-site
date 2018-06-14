@@ -12,10 +12,23 @@ description: This is the community page.
   </div>
 </section>
 <section class="bg-near-white bb b--moon-gray">
-  <div class="min-vh-100 pv5 ph4 pa5-m pa6-l tc">
-    <div class="bg-white mw-50 ph4 pv5 ph5-ns flex inline-flex-ns flex-column flex-row-l justify-center">
+  <div class="min-vh-100 pv5 ph4 pa5-m pa6-l flex flex-column items-center justify-center">
+    <div>
       {% for person in site.people %}
-        {% include person-mini.html data=person.data %}
+        {% assign mod_three = forloop.index | modulo:4 %}
+        {% if forloop.first %}
+          <div class="bg-white mw-50 ph4 pv5 ph5-ns flex flex-column flex-row-l justify-center">
+          {% include person-mini.html data=person.data %}
+        {% elsif forloop.last %}
+          {% include person-mini.html data=person.data %}
+          </div>
+        {% elsif mod_three == 0 %}
+          {% include person-mini.html data=person.data %}
+          </div>
+          <div class="bg-white mw-50 ph4 pb5 ph5-ns flex flex-column flex-row-l justify-center">
+        {% else %}
+          {% include person-mini.html data=person.data %}
+        {% endif %}
       {% endfor %}
     </div>
   </div>
