@@ -12,9 +12,11 @@ description: This is the community page.
   </div>
 </section>
 <section class="bg-near-white bb b--moon-gray">
-  <div class="min-vh-100 pa5 pa5-m pa6-l flex flex-column flex-row-ns justify-center items-center-ns">
-    {% for person in site.people %}
-      {% include person-mini.html data=person.data %}
-    {% endfor %}
+  <div class="min-vh-100 pv5 ph4 pa5-m pa6-l tc">
+    <div class="bg-white mw-50 ph4 pv5 ph5-ns flex inline-flex-ns flex-column flex-row-l justify-center">
+      {% for person in site.people %}
+        {% include person-mini.html data=person.data %}
+      {% endfor %}
+    </div>
   </div>
 </section>
