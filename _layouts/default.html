@@ -18,14 +18,14 @@
   </head>
 
   <!-- BODY -->
-  <body class="m0 mid-gray bg-navy bb">
+  <body class="m0 mid-gray">
 
     <!-- HEADER -->
-    <header class="{% if page.collection == "pages" %}{{ page.header }} bg-cover bg-fixed vh-100 {% endif %}flex flex-column bt bw2 b--navy">
+    <header class="{% if page.collection == "pages" %}{{ page.header }} bg-cover bg-fixed vh-100 {% endif %}flex flex-column">
       <nav class="bg-near-white f6 f5-ns flex flex-column flex-row-ns items-center pv3-ns ph5-m ph6-l bb b--moon-gray">
         <div class="flex items-center pv3 pv0-ns mr4-ns">
           <a class="link dim mr4 mr0-ns" href="/index.html">
-            <object height="75" width="auto" type="image/svg+xml" data="/assets/img/logo/logo-pcfn-black.svg" style="pointer-events: none;">PCfN</object>
+            <object height="85" width="auto" type="image/svg+xml" data="/assets/img/logo/logo-pcfn-black.svg" style="pointer-events: none;">PCfN</object>
           </a>
           <a class="link dim dn-ns" href="http://www.med.upenn.edu/" target="_blank">
             <img src="/assets/img/logo/logo-psom.png" alt="Logo for the Perelman School of Medicine at the University of Pennsylvania" width="110" height="auto">
@@ -44,7 +44,7 @@
       </nav>
       {% if page.collection == "pages" %}
         <div class="flex flex-column justify-center items-center ph4 ph5-m ph6-l flex-auto">
-          <h1 class="ba bw1 br2 b--dark-gray bg-white-50 black-70 f3 f2-m f1-l lh-solid tc pa4">{{ page.subtitle }}</h1>
+          <h1 class="bg-white-50 black-70 f3 f2-m f1-l lh-solid tc pa4">{{ page.subtitle }}</h1>
         </div>
       {% endif %}
     </header>
