@@ -4,20 +4,22 @@ subtitle: Our community
 header: bg-leaves
 description: This is the community page.
 ---
-<section class="bg-light-gray">
-  <div class="min-vh-100 pa4 pa5-m pa6-l flex flex-column justify-center items-center">
-    <div class="bg-white-50 br1 pa4 pa5-ns">
-      <p class="f4 f3-l lh-copy measure">We bring people together whose expertise converge on neuroaesthetics scientific aims. This includes faculty from the Perelman School of Medicine, the School of Arts and Sciences, the School of Design, and the Wharton School.</p>
-    </div>
-  </div>
-</section>
-<section class="bg-near-white bb b--moon-gray">
-  <div class="min-vh-100 pv5 ph4 pa5-m pa6-l flex flex-column items-center justify-center">
-    <div>
+{% capture header_content %}
+  <h1 class="black-70 f3 f2-l lh-solid tc mb4 mb5-l">{{ page.subtitle }}</h1>
+  <p class="jp-indent f4 f3-l lh-copy measure">
+    We bring people together whose expertise converge on neuroaesthetics scientific aims. This includes faculty from the Perelman School of Medicine, the School of Arts and Sciences, the School of Design, and the Wharton School.
+  </p>
+{% endcapture %}
+
+{% include header.html %}
+
+<section class="bg-near-white bb b--black-10">
+  <div class="min-vh-100 pv5 ph4 pa5-m pa6-l flex flex-column items-center-ns justify-center">
+    <div class="bg-white ba b--moon-gray">
       {% for person in site.people %}
         {% assign mod_three = forloop.index | modulo:4 %}
         {% if forloop.first %}
-          <div class="bg-white mw-50 ph4 pv5 ph5-ns flex flex-column flex-row-l justify-center">
+          <div class="mw-50 ph4 pv5 ph5-ns flex flex-column flex-row-l justify-center">
           {% include person-mini.html data=person.data %}
         {% elsif forloop.last %}
           {% include person-mini.html data=person.data %}
@@ -25,7 +27,7 @@ description: This is the community page.
         {% elsif mod_three == 0 %}
           {% include person-mini.html data=person.data %}
           </div>
-          <div class="bg-white mw-50 ph4 pb5 ph5-ns flex flex-column flex-row-l justify-center">
+          <div class="mw-50 ph4 pb5 ph5-ns flex flex-column flex-row-l justify-center">
         {% else %}
           {% include person-mini.html data=person.data %}
         {% endif %}

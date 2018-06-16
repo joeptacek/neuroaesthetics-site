@@ -20,35 +20,6 @@
   <!-- BODY -->
   <body class="m0 mid-gray">
 
-    <!-- HEADER -->
-    <header class="{% if page.collection == "pages" %}{{ page.header }} bg-cover bg-fixed vh-100 {% endif %}flex flex-column">
-      <nav class="bg-near-white f6 f5-ns flex flex-column flex-row-ns items-center pv3-ns ph5-m ph6-l bb b--moon-gray">
-        <div class="flex items-center pv3 pv0-ns mr4-ns">
-          <a class="link dim mr4 mr0-ns" href="/index.html">
-            <object height="85" width="auto" type="image/svg+xml" data="/assets/img/logo/logo-pcfn-black.svg" style="pointer-events: none;">PCfN</object>
-          </a>
-          <a class="link dim dn-ns" href="http://www.med.upenn.edu/" target="_blank">
-            <img src="/assets/img/logo/logo-psom.png" alt="Logo for the Perelman School of Medicine at the University of Pennsylvania" width="110" height="auto">
-          </a>
-        </div>
-        <div class="self-stretch flex items-center justify-center bt b--moon-gray bn-ns pv3 pv0-ns mr4-ns">
-          <a class="b f5 mr4 mr3-ns link black dim" href="/about.html">About</a>
-          <a class="b f5 mr4 mr3-ns link black dim" href="/community.html">Community</a>
-          <a class="b f5 link black dim" href="/events.html">Events</a>
-        </div>
-        <div class="flex-auto tr dn db-ns">
-          <a class="link dim" href="http://www.med.upenn.edu/" target="_blank">
-            <img src="/assets/img/logo/logo-psom.png" alt="Logo for the Perelman School of Medicine at the University of Pennsylvania" width="142" height="auto">
-          </a>
-        </div>
-      </nav>
-      {% if page.collection == "pages" %}
-        <div class="flex flex-column justify-center items-center ph4 ph5-m ph6-l flex-auto">
-          <h1 class="bg-white-50 black-70 f3 f2-m f1-l lh-solid tc pa4">{{ page.subtitle }}</h1>
-        </div>
-      {% endif %}
-    </header>
-
     <!-- MAIN -->
     <main>
       {{ content }}
@@ -56,7 +27,8 @@
 
     <!-- FOOTER -->
     <footer class="bg-near-white pv5 pv6-l ph4 ph5-m ph6-l flex flex-column items-center justify-center">
-      <p class="tc silver f6">Copyright 2018 Penn Center for Neuroaesthetics</p>
+      <p class="tc silver f6 mb5">Copyright 2018 Penn Center for Neuroaesthetics</p>
+      <img class="o-80" src="/assets/img/logo/logo-psom.png" alt="Logo for the Perelman School of Medicine at the University of Pennsylvania" width="120" height="auto">
     </footer>
 
     <!-- SCRIPTS -->

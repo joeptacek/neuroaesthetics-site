@@ -39,6 +39,16 @@ button {
   font-family: $font-stack;
 }
 
+.jp-indent {
+  // tachyons .indent messes with margin-top and margin-bottom
+  text-indent: 1rem;
+}
+
+.hanging-indent {
+  padding-left: 1rem;
+  text-indent: -1rem;
+}
+
 .bg-sky {
   background-image: url(/assets/img/anjan_photos/15.jpg);
 }

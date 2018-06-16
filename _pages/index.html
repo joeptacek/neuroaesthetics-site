@@ -4,61 +4,67 @@ subtitle: Penn Center for Neuroaesthetics
 header: bg-sky
 description: This is the home page.
 ---
+{% capture header_content %}
+  <h1 class="black-70 f3 f2-l lh-solid tc mb4 mb5-l">{{ page.subtitle }}</h1>
+{% endcapture %}
+
+{% include header.html %}
+
 <section class="bg-light-gray">
-  <div class="min-vh-100 ph4 pv5 flex justify-center">
-    <div class="inline-flex flex-column justify-center">
-      <div class="pa5 bg-dark-green br3 br--top">
-        <h2 class="f2 tc near-white">Mission</h2>
+  <div class="min-vh-100 ph4 pv5 pv6-l flex justify-center">
+    <div class="">
+      <div class="pv4 bg-blue br2 br--top">
+        <h2 class="f3 tc near-white">Mission</h2>
       </div>
-      <div class="bg-white-80 flex flex-column items-center pt5 pb4 ph4 bl br bw1 b--dark-green">
+      <div class="bg-white-80 flex flex-column items-center pv4 ph4 bl br bb br2 br--bottom bw1 b--black-10">
         <div>
           <div class="mb4">
-            <p class="f4 flex flex-column flex-row-ns"><span class="flex items-center justify-center dark-green b ba bw1 br2 pv3 ph3 mb3 mb0-ns mr3-ns">Advance</span><span class="dib tc tl-ns black pv3 ph3">research in basic and applied neuroaesthetics</span></p>
+            <p class="f4 flex flex-column items-center db-ns"><span class="dib dark-green underline b mb2 mb0-ns mr2-ns">Advance</span><span class="tc tl-ns black">research in basic and applied neuroaesthetics</span></p>
           </div>
           <div class="mb4">
-            <p class="f4 flex flex-column flex-row-ns"><span class="flex items-center justify-center dark-green b ba bw1 br2 pv3 ph3 mb3 mb0-ns mr3-ns">Educate</span><span class="dib tc tl-ns black pv3 ph3">the next generation of scholars</span></p>
+            <p class="f4 flex flex-column items-center db-ns"><span class="dib dark-green underline b mb2 mb0-ns mr2-ns">Educate</span><span class="tc tl-ns black">the next generation of scholars</span></p>
           </div>
           <div class="mb4">
-            <p class="f4 flex flex-column flex-row-ns"><span class="flex items-center justify-center dark-green b ba bw1 br2 pv3 ph3 mb3 mb0-ns mr3-ns">Converge</span><span class="dib tc tl-ns black pv3 ph3">allied interdisciplinary interests</span></p>
+            <p class="f4 flex flex-column items-center db-ns"><span class="dib dark-green underline b mb2 mb0-ns mr2-ns">Converge</span><span class="tc tl-ns black">allied interdisciplinary interests</span></p>
           </div>
           <div class="mb4">
-            <p class="f4 flex flex-column flex-row-ns"><span class="flex items-center justify-center dark-green b ba bw1 br2 pv3 ph3 mb3 mb0-ns mr3-ns">Welcome</span><span class="dib tc tl-ns black pv3 ph3">investigators and creative experts</span></p>
+            <p class="f4 flex flex-column items-center db-ns"><span class="dib dark-green underline b mb2 mb0-ns mr2-ns">Welcome</span><span class="tc tl-ns black">investigators and creative experts</span></p>
           </div>
-          <div class="">
-            <p class="f4 flex flex-column flex-row-ns"><span class="flex items-center justify-center dark-green b ba bw1 br2 pv3 ph3 mb3 mb0-ns mr3-ns">Engage</span><span class="dib tc tl-ns black pv3 ph3">with the arts community</span></p>
+          <div class="mb4">
+            <p class="f4 flex flex-column items-center db-ns"><span class="dib dark-green underline b mb2 mb0-ns mr2-ns">Engage</span><span class="tc tl-ns black">with the arts community</span></p>
+          </div>
+          <div class="tc">
+            <a class="b dib pv3 ph4 br2 link white bg-blue dim" href="/about.html">Learn more →</a>
           </div>
         </div>
       </div>
-      <p class="pb5 bg-white-80 tc br3 bl br bb b--dark-green bw1 br--bottom">
-        <a class="b dib pv3 ph4 br2 link white bg-blue dim" href="/about.html">Learn more →</a>
-      </p>
     </div>
   </div>
 </section>
 <section class="bg-near-white relative min-vh-100">
   <div id="particles-js" class="absolute absolute--fill"></div>
   <div class="min-vh-100 pa4 pa5-m pa6-l flex flex-column justify-center items-center absolute absolute--fill">
-    <div class="bg-white-80 br1 pa4 pv5 pa5-ns">
+    <div class="bg-white-80 br1 ba b--black-10 pa4 pv5 pa5-ns">
       <div class="mb4 flex flex-column flex-row-l">
         <div class="mb4 mb0-l">
           <h2 class="tc mb4">Our community</h2>
           <p class="measure-narrow lh-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
         </div>
       </div>
-      <p class="tc"><a class="b dib pv2 ph3 br2 link white bg-blue dim" href="/community.html">Connect with us →</a></p>
+      <p class="tc"><a class="b dib pv3 ph4 br2 link white bg-blue dim" href="/community.html">Connect with us →</a></p>
     </div>
   </div>
 </section>
 <section class="bg-light-gray bb b--moon-gray">
   <div class="min-vh-100 pa4 pa5-m pa6-l flex flex-column justify-center items-center">
-    <div class="bg-white-80 br1 pa4 pv5 pa5-ns">
+    <div class="bg-white-80 br1 ba b--black-10 pa4 pv5 pa5-ns">
       <div class="mb4 flex flex-column flex-row-l">
         <div class="mb4 mb0-l">
           <h2 class="tc mb4">News and events</h2>
           <p class="measure-narrow lh-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
         </div>
       </div>
-      <p class="tc"><a class="b dib pv2 ph3 br2 link white bg-blue dim" href="/events.html">What's on the horizon →</a></p>
+      <p class="tc"><a class="b dib pv3 ph4 br2 link white bg-blue dim" href="/events.html">What's on the horizon →</a></p>
     </div>
   </div>
 </section>
