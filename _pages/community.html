@@ -13,11 +13,11 @@ description: This is the community page.
 
 {% include header.html %}
 
-<!-- SAS -->
-<section id="school-of-arts-and-sciences" class="bg-light-gray">
+<!-- PSOM -->
+<section id="perelman-school-of-medicine" class="bg-light-gray">
   <div class="min-vh-100 pv5 ph4 pa5-m pa6-l flex flex-column items-center-ns justify-center">
-    {% assign target_schools = "School of Arts and Sciences" %}
-    <h2 class="tc f2 mb5 mb6-l">School of Arts and Sciences</h2>
+    {% assign target_schools = "Perelman School of Medicine" %}
+    <h2 class="tc f2 mb5 mb6-l">Perelman School of Medicine</h2>
     <div class="bg-white ba b--moon-gray">
       {% assign nth_person = 1 %}
       {% assign people_sorted_by_name = site.people | sort: "data.last_name" %}
@@ -53,11 +53,11 @@ description: This is the community page.
   </div>
 </section>
 
-<!-- PSOM -->
-<section id="perelman-school-of-medicine" class="bg-near-white">
+<!-- SAS -->
+<section id="school-of-arts-and-sciences" class="bg-near-white">
   <div class="min-vh-100 pv5 ph4 pa5-m pa6-l flex flex-column items-center-ns justify-center">
-    {% assign target_schools = "Perelman School of Medicine" %}
-    <h2 class="tc f2 mb5 mb6-l">Perelman School of Medicine</h2>
+    {% assign target_schools = "School of Arts and Sciences" %}
+    <h2 class="tc f2 mb5 mb6-l">School of Arts and Sciences</h2>
     <div class="bg-white ba b--moon-gray">
       {% assign nth_person = 1 %}
       {% assign people_sorted_by_name = site.people | sort: "data.last_name" %}
@@ -134,7 +134,7 @@ description: This is the community page.
 </section>
 
 <!-- Other Schools at Penn -->
-<section id="other-schools-at-penn" class="bg-light-gray bb b--moon-gray">
+<section id="other-schools-at-penn" class="bg-near-white">
   <div class="min-vh-100 pv5 ph4 pa5-m pa6-l flex flex-column items-center-ns justify-center">
     {% assign target_schools = "School of Design,Perelman School of Medicine,School of Arts and Sciences" | split: "," %}
     <h2 class="tc f2 mb5 mb6-l">Other Schools at Penn</h2>
@@ -142,28 +142,69 @@ description: This is the community page.
       {% assign nth_person = 1 %}
       {% assign people_sorted_by_name = site.people | sort: "data.last_name" %}
       {% for person in people_sorted_by_name %}
+        {% if person.data.affiliation == "University of Pennsylvania" %}
+          {% assign mod_three = nth_person | modulo: 3 %}
+          {% if forloop.first %}
+            <div class="mw-50 ph4 pv5 ph5-ns flex flex-column flex-row-l justify-center">
+            {% unless target_schools contains person.data.school %}
+              {% include person-mini.html data=person.data %}
+              {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
+            {% endunless %}
+          {% elsif forloop.last %}
+            {% unless target_schools contains person.data.school %}
+              {% include person-mini.html data=person.data %}
+              {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
+            {% endunless %}
+            </div>
+          {% elsif mod_three == 0 %}
+            {% unless target_schools contains person.data.school %}
+              {% include person-mini.html data=person.data %}
+              {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
+              </div>
+              <div class="mw-50 ph4 pb5 ph5-ns flex flex-column flex-row-l justify-center">
+            {% endunless %}
+          {% else %}
+            {% unless target_schools contains person.data.school %}
+              {% include person-mini.html data=person.data %}
+              {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
+            {% endunless %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Outside Collaborators -->
+<section id="outside-collaborators" class="bg-light-gray bb b--moon-gray">
+  <div class="min-vh-100 pv5 ph4 pa5-m pa6-l flex flex-column items-center-ns justify-center">
+    <h2 class="tc f2 mb5 mb6-l">Outside Collaborators</h2>
+    <div class="bg-white ba b--moon-gray">
+      {% assign nth_person = 1 %}
+      {% assign people_sorted_by_name = site.people | sort: "data.last_name" %}
+      {% for person in people_sorted_by_name %}
         {% assign mod_three = nth_person | modulo: 3 %}
         {% if forloop.first %}
           <div class="mw-50 ph4 pv5 ph5-ns flex flex-column flex-row-l justify-center">
-          {% unless target_schools contains person.data.school %}
+          {% unless person.data.affiliation == "University of Pennsylvania" %}
             {% include person-mini.html data=person.data %}
             {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
           {% endunless %}
         {% elsif forloop.last %}
-          {% unless target_schools contains person.data.school %}
+          {% unless person.data.affiliation == "University of Pennsylvania" %}
             {% include person-mini.html data=person.data %}
             {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
           {% endunless %}
           </div>
         {% elsif mod_three == 0 %}
-          {% unless target_schools contains person.data.school %}
+          {% unless person.data.affiliation == "University of Pennsylvania" %}
             {% include person-mini.html data=person.data %}
             {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
             </div>
             <div class="mw-50 ph4 pb5 ph5-ns flex flex-column flex-row-l justify-center">
           {% endunless %}
         {% else %}
-          {% unless target_schools contains person.data.school %}
+          {% unless person.data.affiliation == "University of Pennsylvania" %}
             {% include person-mini.html data=person.data %}
             {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
           {% endunless %}
