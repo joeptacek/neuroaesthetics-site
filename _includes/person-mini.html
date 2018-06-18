@@ -3,8 +3,7 @@
   <div class="flex flex-column items-center flex-row-m">
     <img class="br-100 pa1 ba b--moon-gray mb3 mr4-m mb0-m" src="/assets/img/people/175/{{ data.photo }}" alt="{{ data.first_name }} {{ data.middle_last_name }}" height="auto" width="175">
     <div class="tc tl-m relative">
-      <h2 class="mb2 f5 tc tl-m">{{ data.first_name }} {{ data.middle_last_name }}</h2>
-      <h3 class="mb1 f6 b i normal tc tl-m">{{ data.school }}</h3>
+      <h2 class="mb1 f5 tc tl-m">{{ data.first_name }} {{ data.middle_last_name }}</h2>
       <h3 class="f6 i normal tc tl-m">{{ data.department }}</h3>
       {% if data.bio %}<a class="br2 dib bg-blue pv2 ph3 tc tl-m link white b dim f6" href="{{ person.url | append: ".html" }}">Meet {{ data.first_name }} →</a>{% endif %}
     </div>
