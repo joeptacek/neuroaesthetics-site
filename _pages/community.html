@@ -17,7 +17,7 @@ description: This is the community page.
   <div class="min-vh-100 pv5 ph4 pa5-m pa6-l flex flex-column items-center-ns justify-center">
     <div class="bg-white ba b--moon-gray">
       {% for person in site.people %}
-        {% assign mod_three = forloop.index | modulo:4 %}
+        {% assign mod_three = forloop.index | modulo:3 %}
         {% if forloop.first %}
           <div class="mw-50 ph4 pv5 ph5-ns flex flex-column flex-row-l justify-center">
           {% include person-mini.html data=person.data %}
