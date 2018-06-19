@@ -1,0 +1,13 @@
+{% assign data = include.data %}
+<div class="bg-white flex flex-column ba b--dark-pink br2 mb5">
+  <div class="pv3 ph4 bg-dark-pink tc b near-white">
+    <p>In the news</p>
+  </div>
+  <div class="pa4 measure">
+    <a class="flex flex-column items-center link dim mb3" href="{{ data.url }}" target="_blank">
+      <h2 class="dark-pink f4 tc mb3">{{ data.title }}</h2>
+      <p class="bg-dark-pink near-white f6 pv1 ph2 br2 tc b">{{ data.source }}</p>
+    </a>
+    <p class="i tc">{{ data.date | date: "%B %e, %Y" }}</p>
+  </div>
+</div>

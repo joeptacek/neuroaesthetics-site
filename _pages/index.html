@@ -11,12 +11,12 @@ description: This is the home page.
 {% include header.html %}
 
 <section class="bg-light-gray">
-  <div class="ph4 pv5 flex items-center justify-center">
+  <div class="ph4 pv5 pv6-l flex items-center justify-center">
     <div class="">
       <div class="pv4 bg-blue br2 br--top">
-        <h2 class="f3 tc near-white">Mission</h2>
+        <h2 class="f3 f2-l tc near-white">Mission</h2>
       </div>
-      <div class="bg-white-80 flex flex-column items-center pv4 ph4 bl br bb br2 br--bottom bw1 b--black-10">
+      <div class="bg-white-80 flex flex-column items-center pv4 ph4 bl br bb br2 br--bottom bw1 b--blue">
         <div>
           <div class="mb4">
             <p class="f4 flex flex-column items-center db-ns"><span class="dib dark-green b mb2 mb0-ns mr2-ns">Advance</span><span class="tc tl-ns black">research in basic and applied neuroaesthetics.</span></p>
@@ -41,7 +41,7 @@ description: This is the home page.
     </div>
   </div>
 </section>
-<section class="bg-near-white relative vh-50">
+<section class="bg-near-white relative vh-100">
   <div id="particles-js" class="absolute absolute--fill"></div>
   <div class="h-100 pa4 pv5 flex items-center justify-center absolute absolute--fill">
     <div class="bg-white-80 br1 ba b--black-10 pa4 pv5 pa5-ns">
@@ -52,17 +52,20 @@ description: This is the home page.
   </div>
 </section>
 <section class="bg-light-gray bb b--moon-gray">
-  <div class="pa4 pv5 flex flex-column items-center justify-center">
-    <div class="bg-white-80 br1 ba b--black-10 pa4 pv5 pa5-ns">
+  <div class="ph4 pv5 pv6-l flex flex-column items-center justify-center">
+    <div class="bg-white-80 br1 ba b--black-10 pa4 pv5 pa5-ns mb5">
       <h2 class="tc mb4">News and events</h2>
-      <p class="tc"><a class="b dib pv3 ph4 br2 link white bg-blue dim" href="/events.html">What's on the horizon →</a></p>
+      <p class="tc"><a class="b dib pv3 ph4 br2 link white bg-blue dim" href="/news.html">What's on the horizon →</a></p>
     </div>
-    <div class="h3 bl b--moon-gray">
+    <div class="mb5">
+      {% for announcement in site.announcements %}
+        {% include announcement-item.html data=announcement.data announcement_url=announcement.url %}
+      {% endfor %}
     </div>
-    <div class="bg-white-80 br1 ba b--black-10">
-      <h2 class="bg-light-blue near-white pa3 tc mb0">Follow us</h2>
-      <div class="pa4">
-        <a class="twitter-timeline" href="https://twitter.com/Penn_CfN" data-width="400" data-height="200" data-chrome="transparent noheader nofooter noborders" data-dnt="true">Tweets by Penn_CfN</a>
+    <div class="bg-white-80">
+      <h2 class="bg-blue near-white pa3 tc br2 br--top mb0">Follow us</h2>
+      <div class="pa4 bl br bb br2 br--bottom b--blue">
+        <a class="twitter-timeline" href="https://twitter.com/_PCfN_" data-width="400" data-height="200" data-chrome="transparent noheader nofooter noborders" data-dnt="true">Tweets by Penn_CfN</a>
       </div>
     </div>
   </div>

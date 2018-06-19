@@ -11,19 +11,17 @@ exclude:
   - node_modules
 
 collections:
+  pages:
+    output: true
+    permalink: /:name
   people:
     output: true
-    permalink: /people/:name
+  announcements:
+    output: true
   news:
     output: false
   events:
     output: false
-  announcements:
-    output: true
-    permalink: /announcements/:name
-  pages:
-    output: true
-    permalink: /:name
 
 defaults:
 - scope:
@@ -34,3 +32,7 @@ defaults:
     path: "_people"
   values:
     layout: "person"
+- scope:
+    path: "_announcements"
+  values:
+    layout: "announcement"

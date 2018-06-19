@@ -1,0 +1,29 @@
+---
+title: News
+subtitle: News and events
+header: bg-salt
+description: This is the events page.
+---
+{% capture header_content %}
+  <h1 class="black-70 f3 f2-l lh-solid tc mb4 mb5-l">{{ page.subtitle }}</h1>
+{% endcapture %}
+
+{% include header.html %}
+
+<section class="bg-light-gray">
+  <div class="ph4 pt6 flex flex-column items-center justify-center mb5">
+    {% for announcement in site.announcements %}
+      {% include announcement-item.html data=announcement.data announcement_url=announcement.url %}
+    {% endfor %}
+  </div>
+  <div class="ph4 flex flex-column items-center justify-center mb5">
+    {% for event in site.events %}
+      {% include event-item.html data=event.data %}
+    {% endfor %}
+  </div>
+  <div class="ph4 pb6 flex flex-coumn items-center justify-center">
+    {% for news in site.news %}
+      {% include news-item.html data=news.data %}
+    {% endfor %}
+  </div>
+</section>
