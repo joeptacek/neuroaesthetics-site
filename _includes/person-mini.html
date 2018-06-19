@@ -6,11 +6,15 @@
       <h2 class="f5 tc tl-m mb2">{{ data.first_name }} {{ data.middle_initials}} {{ data.last_name }}</h2>
       <div class="mb3">
         {% if data.affiliation == "University of Pennsylvania" %}
-          {% unless target_schools contains data.school %}
-            <p class="f6 underline tc tl-m mb1">{{ data.school }}</p>
-          {% endunless %}
-          {% if data.department %}
-            <p class="f6 i tc tl-m">{{ data.department }}</p>
+          {% if data.program == "Penn Center for Neuroaesthetics" %}
+            <p class="f6 i tc tl-m">{{ data.position_short }}</p>            
+          {% else %}
+            {% unless target_schools contains data.school %}
+              <p class="f6 underline tc tl-m mb1">{{ data.school }}</p>
+            {% endunless %}
+            {% if data.department %}
+              <p class="f6 i tc tl-m">{{ data.department }}</p>
+            {% endif %}
           {% endif %}
         {% else %}
           <p class="f6 underline tc tl-m">{{ data.affiliation }}</p>

@@ -3,17 +3,21 @@
   <div class="bg-near-white ba b--moon-gray">
     <div class="bg-black-10 pv3 ph4 bb b--moon-gray mb4">
       <p class="tl">
-        {% if data.affiliation == "Univeristy of Pennsylvania" %}
-          {% case data.school  %}
-            {% when "School of Arts and Sciences" %}
-              <a class="b f6 f5-l mr2 mr3-l link underline black dim" href="/community.html#school-of-arts-and-sciences">Community</a>
-            {% when "Perelman School of Medicine" %}
-              <a class="b f6 f5-l mr2 mr3-l link underline black dim" href="/community.html#perelman-school-of-medicine">Community</a>
-            {% when "School of Design" %}
-              <a class="b f6 f5-l mr2 mr3-l link underline black dim" href="/community.html#school-of-design">Community</a>
-            {% else %}
-              <a class="b f6 f5-l mr2 mr3-l link underline black dim" href="/community.html#other-schools-at-penn">Community</a>
-          {% endcase %}
+        {% if data.affiliation == "University of Pennsylvania" %}
+          {% if data.program == "Penn Center for Neuroaesthetics" %}
+            <a class="b f6 f5-l mr2 mr3-l link underline black dim" href="/community.html#penn-center-for-neuroaesthetics">Community</a>
+          {% else %}
+            {% case data.school  %}
+              {% when "School of Arts and Sciences" %}
+                <a class="b f6 f5-l mr2 mr3-l link underline black dim" href="/community.html#school-of-arts-and-sciences">Community</a>
+              {% when "Perelman School of Medicine" %}
+                <a class="b f6 f5-l mr2 mr3-l link underline black dim" href="/community.html#perelman-school-of-medicine">Community</a>
+              {% when "School of Design" %}
+                <a class="b f6 f5-l mr2 mr3-l link underline black dim" href="/community.html#school-of-design">Community</a>
+              {% else %}
+                <a class="b f6 f5-l mr2 mr3-l link underline black dim" href="/community.html#other-schools-at-penn">Community</a>
+            {% endcase %}
+          {% endif %}
         {% else %}
           <a class="b f6 f5-l mr2 mr3-l link underline black dim" href="/community.html#outside-collaborators">Community</a>
         {% endif %}
@@ -26,6 +30,9 @@
       <h2 class="f4 mb3 tc">{{ data.first_name }} {{ data.middle_initials}} {{ data.last_name }}</h2>
       <div class="mb4">
         {% if data.affiliation == "University of Pennsylvania" %}
+          {% if data.position %}
+            <p class="f5 b tc tl-m">{{ data.position }}</p>
+          {% endif %}
           {% if data.school %}
             <p class="f5 mb2 underline tc">{{ data.school }}</p>
           {% endif %}

@@ -5,7 +5,7 @@ header: bg-leaves
 description: This is the community page.
 ---
 {% capture header_content %}
-  <h1 class="black-70 underline f3 f2-l lh-solid tc mb4 mb5-l">{{ page.subtitle }}</h1>
+  <h1 class="black-70 f3 f2-l lh-solid tc mb4 mb5-l">{{ page.subtitle }}</h1>
   <p class="jp-indent f4 f3-l lh-copy measure">
     We bring people together whose expertise converge on neuroaesthetics scientific aims. This includes faculty from the Perelman School of Medicine, the School of Arts and Sciences, the School of Design, and the Wharton School.
   </p>
@@ -14,8 +14,48 @@ description: This is the community page.
 {% include header.html %}
 
 <!-- PSOM -->
+<section id="penn-center-for-neuroaesthetics" class="bg-near-white">
+  <div class="pv5 ph4 pa5-m pa6-l flex flex-column items-center-ns justify-center">
+    {% assign target_program = "Penn Center for Neuroaesthetics" %}
+    <h2 class="tc f2 mb5 mb6-l">Penn Center for Neuroaesthetics</h2>
+    <div class="bg-white ba b--moon-gray">
+      {% assign nth_person = 1 %}
+      {% assign people_sorted_by_name = site.people %}
+      {% for person in people_sorted_by_name %}
+        {% assign mod_three = nth_person | modulo: 3 %}
+        {% if forloop.first %}
+          <div class="mw-50 ph4 pv5 ph5-ns flex flex-column flex-row-l justify-center">
+          {% if target_program contains person.data.program %}
+            {% include person-mini.html data=person.data %}
+            {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
+          {% endif %}
+        {% elsif forloop.last %}
+          {% if target_program contains person.data.program %}
+            {% include person-mini.html data=person.data %}
+            {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
+          {% endif %}
+          </div>
+        {% elsif mod_three == 0 %}
+          {% if target_program contains person.data.program %}
+            {% include person-mini.html data=person.data %}
+            {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
+            </div>
+            <div class="mw-50 ph4 pb5 ph5-ns flex flex-column flex-row-l justify-center">
+          {% endif %}
+        {% else %}
+          {% if target_program contains person.data.program %}
+            {% include person-mini.html data=person.data %}
+            {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- PSOM -->
 <section id="perelman-school-of-medicine" class="bg-light-gray">
-  <div class="min-vh-100 pv5 ph4 pa5-m pa6-l flex flex-column items-center-ns justify-center">
+  <div class="pv5 ph4 pa5-m pa6-l flex flex-column items-center-ns justify-center">
     {% assign target_schools = "Perelman School of Medicine" %}
     <h2 class="tc f2 mb5 mb6-l">Perelman School of Medicine</h2>
     <div class="bg-white ba b--moon-gray">
@@ -26,26 +66,34 @@ description: This is the community page.
         {% if forloop.first %}
           <div class="mw-50 ph4 pv5 ph5-ns flex flex-column flex-row-l justify-center">
           {% if target_schools contains person.data.school %}
-            {% include person-mini.html data=person.data %}
-            {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
+            {% unless person.data.program == "Penn Center for Neuroaesthetics" %}
+              {% include person-mini.html data=person.data %}
+              {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
+            {% endunless %}
           {% endif %}
         {% elsif forloop.last %}
           {% if target_schools contains person.data.school %}
-            {% include person-mini.html data=person.data %}
-            {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
+            {% unless person.data.program == "Penn Center for Neuroaesthetics" %}
+              {% include person-mini.html data=person.data %}
+              {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
+            {% endunless %}
           {% endif %}
           </div>
         {% elsif mod_three == 0 %}
           {% if target_schools contains person.data.school %}
-            {% include person-mini.html data=person.data %}
-            {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
+            {% unless person.data.program == "Penn Center for Neuroaesthetics" %}
+              {% include person-mini.html data=person.data %}
+              {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
+            {% endunless %}
             </div>
             <div class="mw-50 ph4 pb5 ph5-ns flex flex-column flex-row-l justify-center">
           {% endif %}
         {% else %}
           {% if target_schools contains person.data.school %}
-            {% include person-mini.html data=person.data %}
-            {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
+            {% unless person.data.program == "Penn Center for Neuroaesthetics" %}
+              {% include person-mini.html data=person.data %}
+              {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
+            {% endunless %}
           {% endif %}
         {% endif %}
       {% endfor %}
@@ -55,7 +103,7 @@ description: This is the community page.
 
 <!-- SAS -->
 <section id="school-of-arts-and-sciences" class="bg-near-white">
-  <div class="min-vh-100 pv5 ph4 pa5-m pa6-l flex flex-column items-center-ns justify-center">
+  <div class="pv5 ph4 pa5-m pa6-l flex flex-column items-center-ns justify-center">
     {% assign target_schools = "School of Arts and Sciences" %}
     <h2 class="tc f2 mb5 mb6-l">School of Arts and Sciences</h2>
     <div class="bg-white ba b--moon-gray">
@@ -95,7 +143,7 @@ description: This is the community page.
 
 <!-- Design -->
 <section id="school-of-design" class="bg-light-gray">
-  <div class="min-vh-100 pv5 ph4 pa5-m pa6-l flex flex-column items-center-ns justify-center">
+  <div class="pv5 ph4 pa5-m pa6-l flex flex-column items-center-ns justify-center">
     {% assign target_schools = "School of Design" %}
     <h2 class="tc f2 mb5 mb6-l">School of Design</h2>
     <div class="bg-white ba b--moon-gray">
@@ -135,7 +183,7 @@ description: This is the community page.
 
 <!-- Other Schools at Penn -->
 <section id="other-schools-at-penn" class="bg-near-white">
-  <div class="min-vh-100 pv5 ph4 pa5-m pa6-l flex flex-column items-center-ns justify-center">
+  <div class="pv5 ph4 pa5-m pa6-l flex flex-column items-center-ns justify-center">
     {% assign target_schools = "School of Design,Perelman School of Medicine,School of Arts and Sciences" | split: "," %}
     <h2 class="tc f2 mb5 mb6-l">Other Schools at Penn</h2>
     <div class="bg-white ba b--moon-gray">
@@ -177,7 +225,7 @@ description: This is the community page.
 
 <!-- Outside Collaborators -->
 <section id="outside-collaborators" class="bg-light-gray bb b--moon-gray">
-  <div class="min-vh-100 pv5 ph4 pa5-m pa6-l flex flex-column items-center-ns justify-center">
+  <div class="pv5 ph4 pa5-m pa6-l flex flex-column items-center-ns justify-center">
     <h2 class="tc f2 mb5 mb6-l">Outside Collaborators</h2>
     <div class="bg-white ba b--moon-gray">
       {% assign nth_person = 1 %}
