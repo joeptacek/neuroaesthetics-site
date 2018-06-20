@@ -69,6 +69,16 @@ button {
   background-image: url(/assets/img/anjan_photos/8.jpg);
 }
 
+.bg-venetians {
+  background-image: linear-gradient( rgba(255,255,255,0.4), rgba(255,255,255,0.4)),
+                    url(/assets/img/anjan_photos/venetians.jpg);
+}
+
+.bg-goddard {
+  background-image: linear-gradient( rgba(255,255,255,0.4), rgba(255,255,255,0.4)),
+                    url(/assets/img/anjan_photos/goddard.png);
+}
+
 .bg-cover {
   background-repeat: no-repeat;
   background-size: cover;
@@ -77,6 +87,30 @@ button {
 
 .bg-fixed {
   background-attachment: scroll;
+}
+
+.bg-gradient-1a {
+  background-image: linear-gradient(to top, #CDECFF, white);
+}
+
+.bg-gradient-1b {
+  background-image: linear-gradient(to bottom, #CDECFF, white);
+}
+
+.bg-gradient-2a {
+  background-image: linear-gradient(to top, #E8FDF5, white);
+}
+
+.bg-gradient-2b {
+  background-image: linear-gradient(to bottom, #E8FDF5, white);
+}
+
+.bg-gradient-3 {
+  background-image: linear-gradient(to top, #CDECFF, #E8FDF5);
+}
+
+.bg-gradient-3a {
+  background-image: linear-gradient(to top, #CDECFF, #E8FDF5);
 }
 
 @media screen and (min-width: 30rem) {

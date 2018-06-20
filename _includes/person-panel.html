@@ -5,24 +5,15 @@
       <p class="tl">
         {% if data.affiliation == "University of Pennsylvania" %}
           {% if data.program == "Penn Center for Neuroaesthetics" %}
-            <a class="b f6 f5-l mr2 mr3-l link underline black dim" href="/community.html#penn-center-for-neuroaesthetics">Community</a>
+            <a class="b f6 f5-l mr2 link underline black dim" href="/community.html#pcfn-people">Community</a>
           {% else %}
-            {% case data.school  %}
-              {% when "School of Arts and Sciences" %}
-                <a class="b f6 f5-l mr2 mr3-l link underline black dim" href="/community.html#school-of-arts-and-sciences">Community</a>
-              {% when "Perelman School of Medicine" %}
-                <a class="b f6 f5-l mr2 mr3-l link underline black dim" href="/community.html#perelman-school-of-medicine">Community</a>
-              {% when "School of Design" %}
-                <a class="b f6 f5-l mr2 mr3-l link underline black dim" href="/community.html#school-of-design">Community</a>
-              {% else %}
-                <a class="b f6 f5-l mr2 mr3-l link underline black dim" href="/community.html#other-schools-at-penn">Community</a>
-            {% endcase %}
+            <a class="b f6 f5-l mr2 link underline black dim" href="/community.html#penn-affiliates">Community</a>
           {% endif %}
         {% else %}
-          <a class="b f6 f5-l mr2 mr3-l link underline black dim" href="/community.html#outside-collaborators">Community</a>
+          <a class="b f6 f5-l mr2 link underline black dim" href="/community.html#other-collaborators">Community</a>
         {% endif %}
-        <span class="b f6 f5-l mr2 mr3-l">→</span>
-        <span class="b f6 f5-l mr2 mr3-l">{{ data.first_name }} {{ data.middle_initials}} {{ data.last_name }}</span>
+        <span class="b f6 f5-l mr2">→</span>
+        <span class="b f6 f5-l mr2">{{ data.first_name }} {{ data.middle_initials}} {{ data.last_name }}</span>
       </p>
     </div>
     <div class="flex flex-column items-center pa4 pt3">

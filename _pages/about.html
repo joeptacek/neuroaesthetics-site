@@ -5,22 +5,24 @@ header: bg-sand
 description: This is the about page.
 ---
 {% capture header_content %}
-  <h1 class="black-70 f3 f2-l lh-solid tc mb4 mb5-l">{{ page.subtitle }}</h1>
-  <p class="jp-indent f4 f3-l lh-copy measure">
-    Neuroaesthetics is an emerging discipline within cognitive neuroscience that seeks to understand the biological basis of aesthetic experiences. We aim to conduct foundational research in neuroaesthetics and apply these insights to promote human well-being.
-  </p>
+  <div class="bg-white-80 br1 pa4 pa5-l ba b--black-20 shadow-6">
+    <h1 class="black-70 f3 f2-l lh-solid tc mb4 mb5-l">{{ page.subtitle }}</h1>
+    <p class="f4 f3-l lh-copy measure">
+      Neuroaesthetics is an emerging discipline within cognitive neuroscience that seeks to understand the biological basis of aesthetic experiences. We aim to conduct foundational research in neuroaesthetics and apply these insights to promote human well-being.
+    </p>
+  </div>
 {% endcapture %}
 
 {% include header.html %}
 
-<section class="bg-light-gray">
-  <div class="pa4 pa5-m pa6-l flex flex-column justify-center items-center">
+<section class="pa4 pa5-m pa6-l bg-gradient-3 bb b--moon-gray">
+  <div class="flex flex-column justify-center items-center mb4">
     <div class="bg-white-50 br1 pa4 pa5-ns shadow-6">
       <div class="measure-wide lh-copy">
         <h2 class="lh-title">
           Basic research
         </h2>
-        <p class="jp-indent f4 f3-l mb4">
+        <p class="f5 f4-m f3-l mb4">
           The aim of neuroaesthetics is to understand neural systems that underlie aesthetic experiences and choices. This includes investigating the nature and neural basis of beauty, art, design, and architecture.
         </p>
         <h3 class="i lh-title f5 f4-l b mb4">
@@ -39,15 +41,13 @@ description: This is the about page.
       </div>
     </div>
   </div>
-</section>
-<section class="bg-near-white bb b--moon-gray">
-  <div class="pa4 pa5-m pa6-l flex flex-column justify-center items-center">
+  <div class="flex flex-column justify-center items-center mb4">
     <div class="bg-white-50 br1 pa4 pa5-ns shadow-6">
       <div class="measure-wide lh-copy">
         <h2 class="lh-title">
           Translational research
         </h2>
-        <p class="jp-indent f4 f3-l mb4">
+        <p class="f5 f4-m f3-l mb4">
           Neuroaesthetics applications are relevant to medicine and beyond into domains of society and culture.
         </p>
         <h3 class="i lh-title f5 f4-l b mb4">
@@ -60,6 +60,28 @@ description: This is the about page.
           <li class="pl3 mb4">How does aesthetics influence design and marketing of everyday objects?</li>
           <li class="pl3">Can aesthetics facilitate learning?</li>
         </ul>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-column justify-center items-center">
+    <div class="bg-white-50 br1 pa4 pa5-ns shadow-6">
+      <div class="measure-wide lh-copy">
+        <h2 class="lh-title">
+          Education
+        </h2>
+        <p class="f5 f4-m f3-l mb4">
+          Grounded in basic science, the PCfN aims to promote dialogue across disciplines and to educate — and be informed by — the arts community and general public. Serving as a multidisciplenary hub for scholars in neuroscience, psychology, business, philosophy, the arts and humanities, we will offer new educational opportunities for those interested in the empirical study of aesthetics.
+        </p>
+        <h3 class="i lh-title f5 f4-l b mb4">
+          Future activities will include →
+        </h3>
+        <ul class="list f5 f4-l pl0">
+          <li class="pl3 mb4">Graduate seminars and undergraudate courses</li>
+          <li class="pl3 mb4">Publications and texts on neuroaesthetics</li>
+          <li class="pl3 mb4">Traditional academic gatherings (symposia, public lectures, workshops, national and international meetings)</li>
+          <li class="pl3 mb4">Collaborative events with arts venues and museums</li>
+        </ul>
+        <!-- news and events -->
       </div>
     </div>
   </div>
