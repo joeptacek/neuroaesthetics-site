@@ -2,7 +2,7 @@
 title: News
 subtitle: News and events
 header: bg-salt
-description: This is the events page.
+description: Center news and upcoming events.
 ---
 {% capture header_content %}
   <div class="bg-white-80 br1 pa4 pa5-l ba b--black-20 shadow-6">
@@ -11,11 +11,11 @@ description: This is the events page.
 {% endcapture %}
 
 {% include header.html %}
-<section class="ph4 pv5 pa5-m pa6-l bg-light-gray bb b--moon-gray">
+<section class="ph4 pv5 pa5-m pa6-l bg-gradient-4 bb b--moon-gray">
   <div class="flex justify-center mb5">
-    <div class="w-100 w-50-l flex flex-column items-center">
+    <div class="w-100 w-80-m w-50-l flex flex-column items-center">
       <div class="w-100 bg-white-50">
-        <h2 class="f3 bg-blue near-white pa4 tc br2 br--top mb0">Tweets</h2>
+        <h2 class="f3 bg-blue near-white pv3 ph4 pv4-ns tc br2 br--top mb0">Tweets</h2>
         <div class="pa4 bl br bb br2 br--bottom b--blue">
           <a class="twitter-timeline" href="https://twitter.com/_PCfN_" data-height="200" data-chrome="transparent noheader nofooter" data-dnt="true">Tweets by Penn_CfN</a>
         </div>
@@ -23,9 +23,9 @@ description: This is the events page.
     </div>
   </div>
   <div class="flex justify-center mb5">
-    <div class="w-100 w-50-l flex flex-column items-center">
+    <div class="w-100 w-80-m w-50-l flex flex-column items-center">
       <div class="w-100 bg-white-50 flex flex-column ba b--dark-green br2 mb5">
-        <div class="self-stretch pv4 ph4 bg-dark-green tc b near-white">
+        <div class="self-stretch pv3 ph4 pv4-ns bg-dark-green tc b near-white">
           <p class="f3">Coming up</p>
         </div>
         {% for event in site.events %}
@@ -35,9 +35,9 @@ description: This is the events page.
     </div>
   </div>
   <div class="flex justify-center">
-    <div class="w-100 w-50-l flex flex-column items-center">
+    <div class="w-100 w-80-m w-50-l flex flex-column items-center">
       <div class="w-100 bg-white-50 flex flex-column items-center ba b--purple br2 mb5">
-        <div class="self-stretch pv4 ph4 bg-purple tc b near-white">
+        <div class="self-stretch pv3 ph4 pv4-ns bg-purple tc b near-white">
           <p class="f3">In the news</p>
         </div>
         {% for news in site.news %}

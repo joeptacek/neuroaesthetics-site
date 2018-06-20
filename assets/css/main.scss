@@ -89,28 +89,20 @@ button {
   background-attachment: scroll;
 }
 
-.bg-gradient-1a {
+.bg-gradient-1 {
   background-image: linear-gradient(to top, #CDECFF, white);
 }
 
-.bg-gradient-1b {
-  background-image: linear-gradient(to bottom, #CDECFF, white);
-}
-
-.bg-gradient-2a {
-  background-image: linear-gradient(to top, #E8FDF5, white);
-}
-
-.bg-gradient-2b {
-  background-image: linear-gradient(to bottom, #E8FDF5, white);
+.bg-gradient-2 {
+  background-image: linear-gradient(to top, #ebf7ff, #E8FDF5);
 }
 
 .bg-gradient-3 {
-  background-image: linear-gradient(to top, #CDECFF, #E8FDF5);
+  background-image: linear-gradient(to bottom, #ebf7ff, #f4ecfd);
 }
 
-.bg-gradient-3a {
-  background-image: linear-gradient(to top, #CDECFF, #E8FDF5);
+.bg-gradient-4 {
+  background-image: linear-gradient(to bottom, #f4ecfd, #fffafa);
 }
 
 @media screen and (min-width: 30rem) {

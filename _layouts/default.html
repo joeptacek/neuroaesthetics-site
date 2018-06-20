@@ -15,6 +15,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="/assets/css/vendor/tachyons/tachyons.css">
     <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109208305-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-109208305-2');
+    </script>
   </head>
 
   <!-- BODY -->
@@ -37,7 +47,9 @@
 
     <!-- SCRIPTS -->
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    <script src="/assets/js/vendor/particles.js/particles.js"></script>
-    <script src="assets/js/main.js"></script>
+    {% if page.title == "Home" %}
+      <script src="/assets/js/vendor/particles.js/particles.js"></script>
+      <script src="/assets/js/main.js"></script>
+    {% endif %}
   </body>
 </html>
