@@ -89,6 +89,12 @@ button {
   background-attachment: scroll;
 }
 
+@media screen and (min-width: 60em) {
+  .bg-fixed {
+    background-attachment: fixed;
+  }
+}
+
 .bg-gradient-1 {
   background-image: linear-gradient(to top, #CDECFF, white);
 }
@@ -105,11 +111,6 @@ button {
   background-image: linear-gradient(to bottom, #f4ecfd, #fffafa);
 }
 
-@media screen and (min-width: 30rem) {
-  .bg-fixed {
-    background-attachment: fixed;
-  }
-}
 
 .shadow-6 { box-shadow: 0px 1px 3px 0 rgba( 0, 0, 0, .2 ); }
 
