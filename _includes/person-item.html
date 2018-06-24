@@ -1,5 +1,5 @@
 {% assign data = include.data %}
-<div class="mb5 mb0-l mr5-l w-third-l flex-auto-l">
+<div class="mb5 mb0-l w-third-l{% unless do_new_row == true or first_item == true %} ml4-l{% endunless %}">
   <div class="flex flex-column items-center flex-row-m">
     <img class="br-100 pa1 ba b--moon-gray mb3 mr4-m mb0-m" src="/assets/img/people/175/{{ data.photo }}" alt="{{ data.first_name }} {{ data.last_name }}" height="auto" width="175">
     <div class="tc tl-m relative">

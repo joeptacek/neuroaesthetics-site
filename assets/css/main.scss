@@ -14,7 +14,7 @@ $font-stack: "Raleway", sans-serif;
 * {
   &:last-child {
     margin-bottom: 0 !important;
-    margin-right: 0 !important; // breaks tachyons classes like .center
+    // margin-right: 0 !important; // breaks tachyons classes like .center
   }
 }
 
@@ -89,12 +89,6 @@ button {
   background-attachment: scroll;
 }
 
-@media screen and (min-width: 60em) {
-  .bg-fixed {
-    background-attachment: fixed;
-  }
-}
-
 .bg-gradient-1 {
   background-image: linear-gradient(to top, #CDECFF, white);
 }
@@ -109,6 +103,117 @@ button {
 
 .bg-gradient-4 {
   background-image: linear-gradient(to bottom, #f4ecfd, #fffafa);
+}
+
+.bg-gradient-6 {
+  background-image: linear-gradient(to bottom, white, #b3ccc4);
+}
+
+.bg-gradient-7 {
+  background-image: linear-gradient(to bottom, #e1e8e6, #e1e8e6);
+}
+
+.bg-gradient-8 {
+  background-image: linear-gradient(to bottom, #e1e8e6, #e1e8e6);
+}
+
+.bg-baby-blue {
+  background-color: #ebf7ff;
+}
+
+.bg-jp-sage {
+  background-color: #dae6e2;
+}
+
+.bg-jp-dark-sage {
+  background-color: #b3ccc4;
+}
+
+.bg-jp-darkest-sage {
+  background-color: #4a6d61;
+}
+
+.bg-jp-light-sage {
+  background-color: #e1e8e6;
+}
+
+.bg-jp-lightest-sage {
+  background-color: #edf2f0
+}
+
+.mw-30em {
+  max-width: 30em;
+}
+
+.mw-40em {
+  max-width: 40em;
+}
+
+.mw-60em {
+  max-width: 60em;
+}
+
+.mw-45em {
+  max-width: 45em;
+}
+
+
+@media screen and (min-width: 30em) {
+  .mw-30em-ns {
+    max-width: 30em;
+  }
+
+  .mw-40em-ns {
+    max-width: 40em;
+  }
+
+  .mw-45em-ns {
+    max-width: 45em;
+  }
+
+  .mw-60em-ns {
+    max-width: 60em;
+  }
+}
+
+@media screen and (min-width: 30em) and (max-width: 60em) {
+  .mw-30em-m {
+    max-width: 30em;
+  }
+
+  .mw-40em-m {
+    max-width: 40em;
+  }
+
+  .mw-45em-m {
+    max-width: 45em;
+  }
+
+  .mw-60em-m {
+    max-width: 60em;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .mw-30em-l {
+    max-width: 30em;
+  }
+
+  .mw-40em-l {
+    max-width: 40em;
+  }
+
+  .mw-45em-l {
+    max-width: 45em;
+  }
+
+  .mw-60em-l {
+    max-width: 60em;
+  }
+
+  .bg-fixed {
+    background-attachment: fixed;
+  }
 }
 
 

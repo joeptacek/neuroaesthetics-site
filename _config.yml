@@ -10,6 +10,8 @@ exclude:
   - Gemfile.lock
   - node_modules
 
+future: true # to publish announcement / event documents with filename date in future
+
 collections:
   pages:
     output: true

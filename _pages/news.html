@@ -11,36 +11,28 @@ description: Center news and upcoming events.
 {% endcapture %}
 
 {% include header.html %}
-<section class="ph4 pv5 pa5-m pa6-l bg-gradient-4 bb b--moon-gray">
-  <div class="flex justify-center mb5">
-    <div class="w-100 w-80-m w-50-l flex flex-column items-center">
-      <div class="w-100 bg-white-50">
-        <h2 class="f3 bg-blue near-white pv3 ph4 pv4-ns tc br2 br--top mb0">Tweets</h2>
-        <div class="pa4 bl br bb br2 br--bottom b--blue">
-          <a class="twitter-timeline" href="https://twitter.com/PCfN__" data-height="200" data-chrome="transparent noheader nofooter" data-dnt="true">Tweets by Penn_CfN</a>
-        </div>
+<section class="ph3 pv4 ph4-m pv5-ns ph6-l bg-jp-light-sage">
+  <div class="mw-40em center">
+    <div class="mb4 mb5-ns">
+      <h2 class="f3 bg-blue near-white pv3 ph4 tc br2 br--top mb0">Tweets</h2>
+      <div class="bg-white pa4 bl br bb br2 br--bottom b--moon-gray">
+        <a class="twitter-timeline" href="https://twitter.com/PCfN__" data-height="200" data-chrome="transparent noheader noborders nofooter" data-dnt="true">Tweets by PCfN__</a>
       </div>
     </div>
-  </div>
-  <div class="flex justify-center mb5">
-    <div class="w-100 w-80-m w-50-l flex flex-column items-center">
-      <div class="w-100 bg-white-50 flex flex-column ba b--dark-green br2 mb5">
-        <div class="self-stretch pv3 ph4 pv4-ns bg-dark-green tc b near-white">
-          <p class="f3">Coming up</p>
-        </div>
-        {% for event in site.events %}
+    <div class="mb4 mb5-ns">
+      <h2 class="f3 bg-dark-green near-white pv3 ph4 tc br2 br--top mb0">Coming up</h2>
+      <div class="bg-white bl br bb br2 br--bottom b--moon-gray">
+        {% assign events_sorted = site.events | sort: 'data.date_start' %}
+        {% for event in events_sorted %}
           {% include event-item.html data=event.data %}
         {% endfor %}
       </div>
     </div>
-  </div>
-  <div class="flex justify-center">
-    <div class="w-100 w-80-m w-50-l flex flex-column items-center">
-      <div class="w-100 bg-white-50 flex flex-column items-center ba b--purple br2 mb5">
-        <div class="self-stretch pv3 ph4 pv4-ns bg-purple tc b near-white">
-          <p class="f3">In the news</p>
-        </div>
-        {% for news in site.news %}
+    <div class="">
+      <h2 class="f3 bg-purple near-white pv3 ph4 tc br2 br--top mb0">In the news</h2>
+      <div class="bg-white bl br bb br2 br--bottom b--moon-gray">
+        {% assign news_sorted = site.news | sort: 'data.date' | reverse %}
+        {% for news in news_sorted %}
           {% include news-item.html data=news.data %}
         {% endfor %}
       </div>
