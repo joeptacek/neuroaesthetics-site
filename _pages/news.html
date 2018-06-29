@@ -5,37 +5,38 @@ header: bg-salt
 description: Center news and upcoming events.
 ---
 {% capture header_content %}
-  <div class="bg-white-80 br1 pa4 pa5-l ba b--black-20 shadow-6">
-    <h1 class="black-70 f3 f2-l lh-solid tc mb4 mb5-l">{{ page.subtitle }}</h1>
-  </div>
+  <h1 class="lh-solid tc mb3 mb4-ns">{{ page.subtitle }}</h1>
 {% endcapture %}
 
 {% include header.html %}
-<section class="ph3 pv4 ph4-m pv5-ns ph6-l bg-jp-light-sage">
-  <div class="mw-40em center">
-    <div class="mb4 mb5-ns">
-      <h2 class="f3 bg-blue near-white pv3 ph4 tc br2 br--top mb0">Tweets</h2>
-      <div class="bg-white pa4 bl br bb br2 br--bottom b--moon-gray">
-        <a class="twitter-timeline" href="https://twitter.com/PCfN__" data-height="200" data-chrome="transparent noheader noborders nofooter" data-dnt="true">Tweets by PCfN__</a>
+
+<main class="bt bw3 b--dark-green">
+  <section class="bg-jp-light-sage ph3 pv4 ph4-m pv5-ns ph6-l">
+    <div class="measure-wide f5 f4-m f3-l center">
+      <div class="f4 mb4 mb5-ns shadow-6">
+        <h2 class="bg-blue near-white pv3 ph4 tc br2 br--top mb0">Tweets</h2>
+        <div class="bg-white pa4 br2 br--bottom">
+          <a class="twitter-timeline" href="https://twitter.com/PCfN__" data-height="200" data-chrome="transparent noheader noborders nofooter" data-dnt="true">Tweets by PCfN__</a>
+        </div>
+      </div>
+      <div class="f4 mb4 mb5-ns shadow-6">
+        <h2 class="bg-dark-green near-white pv3 ph4 tc br2 br--top mb0">Upcoming events</h2>
+        <div class="bg-white br2 br--bottom">
+          {% assign events_sorted = site.events | sort: 'data.date_start' %}
+          {% for event in events_sorted %}
+            {% include event-item.html data=event.data %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="f4 shadow-6">
+        <h2 class="bg-purple near-white pv3 ph4 tc br2 br--top mb0">In the news</h2>
+        <div class="bg-white br2 br--bottom">
+          {% assign news_sorted = site.news | sort: 'data.date' | reverse %}
+          {% for news in news_sorted %}
+            {% include news-item.html data=news.data %}
+          {% endfor %}
+        </div>
       </div>
     </div>
-    <div class="mb4 mb5-ns">
-      <h2 class="f3 bg-dark-green near-white pv3 ph4 tc br2 br--top mb0">Coming up</h2>
-      <div class="bg-white bl br bb br2 br--bottom b--moon-gray">
-        {% assign events_sorted = site.events | sort: 'data.date_start' %}
-        {% for event in events_sorted %}
-          {% include event-item.html data=event.data %}
-        {% endfor %}
-      </div>
-    </div>
-    <div class="">
-      <h2 class="f3 bg-purple near-white pv3 ph4 tc br2 br--top mb0">In the news</h2>
-      <div class="bg-white bl br bb br2 br--bottom b--moon-gray">
-        {% assign news_sorted = site.news | sort: 'data.date' | reverse %}
-        {% for news in news_sorted %}
-          {% include news-item.html data=news.data %}
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
+</main>

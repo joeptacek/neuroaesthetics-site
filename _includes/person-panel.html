@@ -1,45 +1,51 @@
 {% assign data = include.data %}
-<section class="flex justify-center bg-jp-light-sage ph3 pv4 ph4-m pv5-ns ph6-l">
-  <div class="">
-    <div class="bg-near-white pv3 ph4 ba b--moon-gray br1 br--top">
-      <p class="tl">
-        {% if data.affiliation == "University of Pennsylvania" %}
-          {% if data.program == "Penn Center for Neuroaesthetics" %}
-            <a class="b f6 f5-l mr2 link underline black dim" href="/community.html#pcfn-people">Community</a>
+{% assign extra_content = include.extra_content %}
+<section class="bg-jp-light-sage ph3 pv4 ph4-m pv5-ns ph6-l">
+  <div class="f4 measure-wide lh-copy center">
+    <div class="f5">
+      <div class="bg-near-white pv3 ph4 ba b--moon-gray br1 br--top">
+        <p class="tl">
+          {% if data.affiliation == "University of Pennsylvania" %}
+            {% if data.program == "Penn Center for Neuroaesthetics" %}
+              <a class="b mr2 link underline black dim" href="/community.html#pcfn-people">Community</a>
+            {% else %}
+              <a class="b mr2 link underline black dim" href="/community.html#penn-affiliates">Community</a>
+            {% endif %}
           {% else %}
-            <a class="b f6 f5-l mr2 link underline black dim" href="/community.html#penn-affiliates">Community</a>
+            <a class="b mr2 link underline black dim" href="/community.html#other-collaborators">Community</a>
           {% endif %}
-        {% else %}
-          <a class="b f6 f5-l mr2 link underline black dim" href="/community.html#other-collaborators">Community</a>
-        {% endif %}
-        <span class="b f6 f5-l mr2">→</span>
-        <span class="b f6 f5-l mr2">{{ data.first_name }} {{ data.middle_initials}} {{ data.last_name }}</span>
-      </p>
-    </div>
-    <div class="bg-white flex flex-column items-center pa4 pt5-l bl br bb b--moon-gray br1 br--bottom">
-      <img class="br-100 pa1 ba bw1 b--moon-gray mb4" src="/assets/img/people/225/{{ data.photo }}" alt="{{ data.title }}" height="auto" width="225">
-      <h2 class="f4 mb3 tc">{{ data.first_name }} {{ data.middle_initials}} {{ data.last_name }}</h2>
-      <div class="mb4">
-        {% if data.affiliation == "University of Pennsylvania" %}
-          {% if data.position %}
-            <p class="f5 b tc tl-m">{{ data.position }}</p>
+          <span class="b mr2">→</span>
+          <span class="b mr2">{{ data.first_name }} {{ data.middle_initials}} {{ data.last_name }}</span>
+        </p>
+      </div>
+      <div class="bg-white pa4 pt5 bl br bb b--moon-gray br1 br--bottom">
+        <img class="db center br-100 pa1 ba bw1 b--moon-gray mb4" src="/assets/img/people/225/{{ data.photo }}" alt="{{ data.title }}" height="auto" width="225">
+        <h2 class="tc mb2">{{ data.first_name }} {{ data.middle_initials}} {{ data.last_name }}</h2>
+        <div class="mb4">
+          {% if data.affiliation == "University of Pennsylvania" %}
+            {% if data.position %}
+              <p class="b tc tl-m mb2">{{ data.position }}</p>
+            {% endif %}
+            {% if data.school %}
+              <p class="b tc silver mb2">{{ data.school }}</p>
+            {% endif %}
+            {% if data.department %}
+              <p class="i tc silver">{{ data.department }}</p>
+            {% endif %}
+          {% else %}
+            <p class="underline tc tl-m">{{ data.affiliation }}</p>
           {% endif %}
-          {% if data.school %}
-            <p class="f5 mb2 underline tc">{{ data.school }}</p>
-          {% endif %}
-          {% if data.department %}
-            <p class="f5 i tc">{{ data.department }}</p>
-          {% endif %}
-        {% else %}
-          <p class="f5 underline tc tl-m">{{ data.affiliation }}</p>
+        </div>
+        <p class="mb4">{{ data.bio | smartify }}</p>
+        {{ extra_content }}
+        {% if data.website %}
+        <p class="tc">
+          <a class="dib pv1 ph3 ba br-pill link blue dim" href="{{ data.website }}" target="_blank">
+            Website →
+          </a>
+        </p>
         {% endif %}
       </div>
-      <p class="mb4 f6 f5-ns measure lh-copy">{{ data.bio | smartify }}</p>
-      {% if data.website %}
-        <p class="tc tl-ns">
-          <a class="f6 f5-ns pv1 ph3 ba br-pill link blue dim" href="{{ data.website }}" target="_blank">Website →</a>
-        </p>
-      {% endif %}
     </div>
   </div>
 </section>

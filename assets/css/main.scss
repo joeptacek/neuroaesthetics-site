@@ -4,6 +4,15 @@
 // VARIABLES
 
 $font-stack: "Raleway", sans-serif;
+$font-stack: 'Questrial', sans-serif;
+// $font-stack: 'Quicksand', sans-serif;
+// $font-stack: 'Lato', sans-serif;
+// $font-stack: 'Varela Round', sans-serif;
+// $font-stack: 'PT Sans', sans-serif;
+// $font-stack: 'Cabin', sans-serif;
+// $font-stack: 'Barlow', sans-serif;
+// $font-stack: 'Karla', sans-serif;
+
 
 // RESETS
 
@@ -30,9 +39,6 @@ $font-stack: "Raleway", sans-serif;
 
 body {
   font-family: $font-stack;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 button {

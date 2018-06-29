@@ -13,46 +13,17 @@ data:
   website: null
   bio: "Anjan Chatterjee is the Frank A. and Gwladys H. Elliott Professor and Chair of Neurology at Pennsylvania Hospital. He is a member of the Center for Cognitive Neuroscience, and the Center for Neuroscience and Society at the University of Pennsylvania. He received his BA in Philosophy from Haverford College, MD from the University of Pennsylvania and completed his neurology residency at the University of Chicago. His clinical practice focuses on patients with cognitive disorders. His research addresses questions about spatial cognition and language, attention, neuroethics, and neuroaesthetics. He wrote The Aesthetic Brain: How we evolved to desire beauty and enjoy art and co-edited: Neuroethics in Practice: Mind, medicine, and society, and The Roots of Cognitive Neuroscience: behavioral neurology and neuropsychology. He is or has been on the editorial boards of: American Journal of Bioethics: Neuroscience, Behavioural Neurology, Cognitive and Behavioral Neurology, Neuropsychology, Journal of Cognitive Neuroscience, Journal of Alzheimer’s Disease, Journal of the International Neuropsychological Society, European Neurology, Empirical Studies of the Arts, The Open Ethics Journal and Policy Studies in Ethics, Law and Technology. He was awarded the Norman Geschwind Prize in Behavioral and Cognitive Neurology by the American Academy of Neurology and the Rudolph Arnheim Prize for contributions to Psychology and the Arts by the American Psychological Association. He is a founding member of the Board of Governors of the Neuroethics Society, the past President of the International Association of Empirical Aesthetics, and the past President of the Behavioral and Cognitive Neurology Society. He serves on the Boards of Haverford College, the Associated Services for the Blind and Visually Impaired, The College of Physicians of Philadelphia, and Universal Promise."
 ---
-{% assign data = include.data %}
-<section class="flex justify-center bg-jp-light-sage ph3 pv4 ph4-m pv5-ns ph6-l">
-  <div class="">
-    <div class="bg-near-white pv3 ph4 ba b--moon-gray br1 br--top">
-      <p class="tl">
-        <a class="b f6 f5-l mr2 link underline black dim" href="/community.html#pcfn-people">Community</a>
-        <span class="b f6 f5-l mr2">→</span>
-        <span class="b f6 f5-l mr2">{{ page.data.first_name }} {{ page.data.middle_initials}} {{ page.data.last_name }}</span>
-      </p>
-    </div>
-    <div class="bg-white flex flex-column items-center pa4 pt5-l bl br bb b--moon-gray br1 br--bottom">
-      <img class="br-100 pa1 ba bw1 b--moon-gray mb4" src="/assets/img/people/225/{{ page.data.photo }}" alt="{{ page.data.title }}" height="auto" width="225">
-      <h2 class="f4 mb3 tc">{{ page.data.first_name }} {{ page.data.middle_initials}} {{ page.data.last_name }}</h2>
-      <div class="mb4">
-        {% if page.data.affiliation == "University of Pennsylvania" %}
-          {% if page.data.position %}
-            <p class="f5 b tc tl-m">{{ page.data.position }}</p>
-          {% endif %}
-          {% if page.data.school %}
-            <p class="f5 mb2 underline tc">{{ page.data.school }}</p>
-          {% endif %}
-          {% if page.data.department %}
-            <p class="f5 i tc">{{ page.data.department }}</p>
-          {% endif %}
-        {% else %}
-          <p class="f5 underline tc tl-m">{{ page.data.affiliation }}</p>
-        {% endif %}
-      </div>
-      <p class="mb3 f6 f5-ns measure lh-copy">{{ page.data.bio | smartify }}</p>
-      <p class="self-start mb3 f6 f5-ns measure lh-copy">
-        Anjan Chatterjee is author of the book, The Aesthetic Brain.
-      </p>
-      <p class="mb3 f6 f5-ns measure lh-copy">
-        <a class="db link dim" href="https://global.oup.com/academic/product/the-aesthetic-brain-9780199811809">
-          <img class="db pa1 ba b--moon-gray" src="/assets/img/the-aesthetic-brain.jpg" alt="The Aesthetic Brain" height="286" width="200">
-        </a>
-      </p>
-      <p class="f6 f5-ns measure lh-copy">
-        For a list of his publications on the subject of Neuroaesthetics, please see the <a class="link blue underline dim" href="http://ccn.upenn.edu/chatterjee/research.html#neuroaesthetics" target="_blank">ChatLab website</a>.
-      </p>
-    </div>
-  </div>
-</section>
+{% capture anjan_extras %}
+  <p class="self-start mb4">
+    Anjan Chatterjee is author of the book, The Aesthetic Brain.
+  </p>
+  <p class="tc mb4">
+    <a class="dib link dim mb4" href="https://global.oup.com/academic/product/the-aesthetic-brain-9780199811809">
+      <img class="pa1 ba b--moon-gray" src="/assets/img/the-aesthetic-brain.jpg" alt="The Aesthetic Brain" height="286" width="200">
+    </a>
+  </p>
+  <p class="mb4">
+    For a list of his publications on the subject of Neuroaesthetics, please see the <a class="link blue underline dim" href="http://ccn.upenn.edu/chatterjee/research.html#neuroaesthetics" target="_blank">ChatLab website</a>.
+  </p>
+{% endcapture %}
+{% include person-panel.html data=page.data extra_content=anjan_extras %}

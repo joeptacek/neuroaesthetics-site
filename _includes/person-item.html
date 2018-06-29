@@ -1,24 +1,24 @@
 {% assign data = include.data %}
-<div class="mb5 mb0-l w-third-l{% unless do_new_row == true or first_item == true %} ml4-l{% endunless %}">
+<div class="f5 w-third-l mb5 mb0-l{% unless do_new_row == true or first_item == true %} ml4-l{% endunless %}">
   <div class="flex flex-column items-center flex-row-m">
     <img class="br-100 pa1 ba b--moon-gray mb3 mr4-m mb0-m" src="/assets/img/people/175/{{ data.photo }}" alt="{{ data.first_name }} {{ data.last_name }}" height="auto" width="175">
-    <div class="tc tl-m relative">
-      <h2 class="f4 tc tl-m mb2">{{ data.first_name }} {{ data.middle_initials}} {{ data.last_name }}</h2>
+    <div class="tc tl-m">
+      <h3 class="tc tl-m mb2">{{ data.first_name }} {{ data.middle_initials}} {{ data.last_name }}</h2>
       <div class="mb3">
         {% if data.affiliation == "University of Pennsylvania" %}
           {% if data.program == "Penn Center for Neuroaesthetics" %}
-            <p class="f6 i tc tl-m">{{ data.position_short }}</p>
+            <p class="i tc tl-m">{{ data.position_short }}</p>
           {% else %}
-            <p class="f6 b tc tl-m mb1">{{ data.school }}</p>
+            <p class="b tc tl-m mb1 silver">{{ data.school }}</p>
             {% if data.department %}
-              <p class="f6 i tc tl-m">{{ data.department }}</p>
+              <p class="i tc tl-m silver">{{ data.department }}</p>
             {% endif %}
           {% endif %}
         {% else %}
-          <p class="f6 tc tl-m">{{ data.affiliation }}</p>
+          <p class="tc tl-m">{{ data.affiliation }}</p>
         {% endif %}
       </div>
-      {% if data.bio %}<a class="br2 dib bg-blue pv2 ph4 tc tl-m link white b dim f6" href="{{ person.url }}">Bio →</a>{% endif %}
+      {% if data.bio %}<a class="br2 dib bg-blue pv2 ph4 tc tl-m link white b dim" href="{{ person.url }}">Bio →</a>{% endif %}
     </div>
   </div>
 </div>
