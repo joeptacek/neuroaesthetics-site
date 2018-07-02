@@ -2,7 +2,7 @@
 title: News
 subtitle: News and events
 header: bg-salt
-description: Center news and upcoming events.
+description: News and upcoming events at PCfN.
 ---
 {% capture header_content %}
   <h1 class="lh-solid tc mb3 mb4-ns">{{ page.subtitle }}</h1>
@@ -15,25 +15,34 @@ description: Center news and upcoming events.
     <div class="measure-wide f5 f4-m f3-l center">
       <div class="f4 mb4 mb5-ns shadow-6">
         <h2 class="bg-blue near-white pv3 ph4 tc br2 br--top mb0">Tweets</h2>
-        <div class="bg-white pa4 br2 br--bottom relative">
-          <div class="bg-gradient-10 absolute absolute--fill">
-          </div>
+        <div class="bg-white pa4 br2 br--bottom">
           <a class="twitter-timeline" href="https://twitter.com/PCfN__" data-height="250" data-chrome="transparent noheader noborders nofooter" data-dnt="true">Tweets by PCfN__</a>
         </div>
       </div>
       <div class="f4 mb4 mb5-ns shadow-6">
         <h2 class="bg-dark-green near-white pv3 ph4 tc br2 br--top mb0">Upcoming events</h2>
         <div class="bg-white br2 br--bottom">
-          {% assign events_sorted = site.events | sort: 'data.date_start' %}
+          {% assign todays_date = site.time | date: "%Y-%m-%d" %}
+          {% assign events_sorted = site.events | sort: "data.date_start" %}
           {% for event in events_sorted %}
-            {% include event-item.html data=event.data %}
+            {% if event.data.date_end %}
+              {% assign de = event.data.date_end | date: "%Y-%m-%d" %}
+              {% unless todays_date > de %}
+                {% include event-item.html data=event.data %}
+              {% endunless %}
+            {% else %}
+              {% assign ds = event.data.date_start | date: "%Y-%m-%d" %}
+              {% unless todays_date > ds %}
+                {% include event-item.html data=event.data %}
+              {% endunless %}
+            {% endif %}
           {% endfor %}
         </div>
       </div>
       <div class="f4 shadow-6">
         <h2 class="bg-purple near-white pv3 ph4 tc br2 br--top mb0">In the news</h2>
         <div class="bg-white br2 br--bottom">
-          {% assign news_sorted = site.news | sort: 'data.date' | reverse %}
+          {% assign news_sorted = site.news | sort: "data.date" | reverse %}
           {% for news in news_sorted %}
             {% include news-item.html data=news.data %}
           {% endfor %}

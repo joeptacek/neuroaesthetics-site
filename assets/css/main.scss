@@ -3,7 +3,7 @@
 ---
 // VARIABLES
 
-$font-stack: "Raleway", sans-serif;
+// $font-stack: "Raleway", sans-serif;
 $font-stack: 'Questrial', sans-serif;
 // $font-stack: 'Quicksand', sans-serif;
 // $font-stack: 'Lato', sans-serif;
@@ -23,7 +23,7 @@ $font-stack: 'Questrial', sans-serif;
 * {
   &:last-child {
     margin-bottom: 0 !important;
-    // margin-right: 0 !important; // breaks tachyons classes like .center
+    // margin-right: 0 !important; // breaks tachyons .center class i.e., can't do `margin: 0 auto`
   }
 }
 
@@ -56,37 +56,27 @@ button {
 }
 
 .bg-sky {
-  background-image: url(/assets/img/anjan_photos/15.jpg);
+  background-image: url(/assets/img/backgrounds/sky.jpg);
 }
 
 .bg-leaves {
-  background-image: url(/assets/img/anjan_photos/6.jpg);
+  background-image: url(/assets/img/backgrounds/leaves.jpg);
 }
 
 .bg-goddard {
-  background-image: url(/assets/img/anjan_photos/goddard.png);
+  background-image: url(/assets/img/backgrounds/goddard.png);
 }
 
 .bg-salt {
-  background-image: url(/assets/img/anjan_photos/1.jpg);
+  background-image: url(/assets/img/backgrounds/salt.jpg);
 }
 
 .bg-sand {
-  background-image: url(/assets/img/anjan_photos/8.jpg);
-}
-
-.bg-venetians {
-  background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)),
-                    url(/assets/img/anjan_photos/venetians.jpg);
+  background-image: url(/assets/img/backgrounds/sand.jpg);
 }
 
 .bg-goddard {
-  background-image: url(/assets/img/anjan_photos/goddard.png);
-  // background-image: url(/assets/img/anjan_photos/goddard-bw.jpg);
-  // background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)),
-  //                   url(/assets/img/anjan_photos/goddard.png);
-  // background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)),
-  //                   url(/assets/img/anjan_photos/goddard-bw.jpg);
+  background-image: url(/assets/img/backgrounds/goddard.png);
 }
 
 .bg-cover {
@@ -97,42 +87,6 @@ button {
 
 .bg-fixed {
   background-attachment: scroll;
-}
-
-.bg-gradient-1 {
-  background-image: linear-gradient(to top, #CDECFF, white);
-}
-
-.bg-gradient-2 {
-  background-image: linear-gradient(to top, #ebf7ff, #E8FDF5);
-}
-
-.bg-gradient-3 {
-  background-image: linear-gradient(to bottom, #ebf7ff, #f4ecfd);
-}
-
-.bg-gradient-4 {
-  background-image: linear-gradient(to bottom, #f4ecfd, #fffafa);
-}
-
-.bg-gradient-6 {
-  background-image: linear-gradient(to bottom, white, #b3ccc4);
-}
-
-.bg-gradient-7 {
-  background-image: linear-gradient(to bottom, #e1e8e6, #e1e8e6);
-}
-
-.bg-gradient-8 {
-  background-image: linear-gradient(to bottom, #e1e8e6, #e1e8e6);
-}
-
-.bg-gradient-10 {
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
-}
-
-.bg-baby-blue {
-  background-color: #ebf7ff;
 }
 
 .bg-jp-sage {
@@ -148,6 +102,7 @@ button {
 }
 
 .bg-jp-light-sage {
+  // main bg color
   background-color: #e1e8e6;
 }
 

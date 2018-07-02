@@ -4,5 +4,9 @@
     <h3 class="dark-green tc mb3">{{ data.title }}</h2>
     {% if data.subtitle %}<p class="bg-dark-green near-white pv1 ph2 br2 tc b">{{ data.subtitle }}</p>{% endif %}
   </a>
-  <p class="i tc">{{ data.date_start | date: "%B %e, %Y" }} - {{ data.date_end | date: "%B %e, %Y" }}</p>
+  {% if data.date_end %}
+    <p class="i tc">{{ data.date_start | date: "%B %e, %Y" }} - {{ data.date_end | date: "%B %e, %Y" }}</p>
+  {% else %}
+    <p class="i tc">{{ data.date_start | date: "%B %e, %Y" }}</p>
+  {% endif %}
 </div>
