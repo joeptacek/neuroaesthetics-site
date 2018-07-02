@@ -64,7 +64,7 @@ button {
 }
 
 .bg-goddard {
-  background-image: url(/assets/img/anjan_photos/16.png);
+  background-image: url(/assets/img/anjan_photos/goddard.png);
 }
 
 .bg-salt {
@@ -76,13 +76,17 @@ button {
 }
 
 .bg-venetians {
-  background-image: linear-gradient( rgba(255,255,255,0.4), rgba(255,255,255,0.4)),
+  background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)),
                     url(/assets/img/anjan_photos/venetians.jpg);
 }
 
 .bg-goddard {
-  background-image: linear-gradient( rgba(255,255,255,0.4), rgba(255,255,255,0.4)),
-                    url(/assets/img/anjan_photos/goddard.png);
+  background-image: url(/assets/img/anjan_photos/goddard.png);
+  // background-image: url(/assets/img/anjan_photos/goddard-bw.jpg);
+  // background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)),
+  //                   url(/assets/img/anjan_photos/goddard.png);
+  // background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)),
+  //                   url(/assets/img/anjan_photos/goddard-bw.jpg);
 }
 
 .bg-cover {
@@ -121,6 +125,10 @@ button {
 
 .bg-gradient-8 {
   background-image: linear-gradient(to bottom, #e1e8e6, #e1e8e6);
+}
+
+.bg-gradient-10 {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
 }
 
 .bg-baby-blue {
