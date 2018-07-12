@@ -3,16 +3,8 @@
 ---
 // VARIABLES
 
-// $font-stack: "Raleway", sans-serif;
 $font-stack: 'Questrial', sans-serif;
-// $font-stack: 'Quicksand', sans-serif;
-// $font-stack: 'Lato', sans-serif;
-// $font-stack: 'Varela Round', sans-serif;
-// $font-stack: 'PT Sans', sans-serif;
-// $font-stack: 'Cabin', sans-serif;
-// $font-stack: 'Barlow', sans-serif;
-// $font-stack: 'Karla', sans-serif;
-
+// $font-stack-headers: 'Arvo', serif;
 
 // RESETS
 
@@ -43,6 +35,10 @@ body {
 
 button {
   font-family: $font-stack;
+}
+
+h1, h2, h3, h4, h5 {
+  // font-family: $font-stack-headers;
 }
 
 .jp-indent {

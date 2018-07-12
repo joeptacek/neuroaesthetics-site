@@ -24,26 +24,35 @@
         <div class="mb4">
           {% if data.affiliation == "University of Pennsylvania" %}
             {% if data.position %}
-              <p class="b tc tl-m mb2">{{ data.position }}</p>
+              <p class="b tc mb2">{{ data.position }}</p>
             {% endif %}
             {% if data.school %}
-              <p class="b tc silver mb2">{{ data.school }}</p>
+              <p class="b tc silver mb0">{{ data.school }}</p>
             {% endif %}
             {% if data.department %}
               <p class="i tc silver">{{ data.department }}</p>
             {% endif %}
           {% else %}
-            <p class="underline tc tl-m">{{ data.affiliation }}</p>
+            <p class="b tc silver">{{ data.affiliation }}</p>
           {% endif %}
         </div>
+        <hr class="w-100 ba b--light-gray mb3 mb4-ns"/>
         <p class="mb4">{{ data.bio | smartify }}</p>
         {{ extra_content }}
-        {% if data.website %}
-        <p class="tc">
-          <a class="dib pv1 ph3 ba br-pill link blue dim" href="{{ data.website }}" target="_blank">
-            Website →
-          </a>
-        </p>
+        {% if data.links %}
+          <hr class="w-100 ba b--light-gray mb3 mb4-ns"/>
+          <div class="tc tl-ns pl2-ns">
+            <h3 class="mb2 mb3-ns">Links</h3>
+            <ul class="list pl0">
+              {% for link_item in data.links %}
+                <li class="mb2 lh-title">
+                  <a class="link blue underline dim" href="{{ link_item.link_url }}" target="_blank">
+                    {{ link_item.link_name }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
         {% endif %}
       </div>
     </div>
