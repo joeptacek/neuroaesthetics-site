@@ -4,7 +4,7 @@
 // VARIABLES
 
 $font-stack: 'Questrial', sans-serif;
-// $font-stack-headers: 'Arvo', serif;
+$font-stack-headers: 'Arvo', serif;
 
 // RESETS
 
@@ -38,7 +38,8 @@ button {
 }
 
 h1, h2, h3, h4, h5 {
-  // font-family: $font-stack-headers;
+  font-family: $font-stack-headers;
+  font-weight: normal;
 }
 
 .jp-indent {
@@ -106,74 +107,81 @@ h1, h2, h3, h4, h5 {
   background-color: #edf2f0
 }
 
-.mw-30em {
-  max-width: 30em;
+.mw-30rem {
+  max-width: 30rem;
 }
 
-.mw-40em {
-  max-width: 40em;
+.mw-40rem {
+  max-width: 40rem;
 }
 
-.mw-60em {
-  max-width: 60em;
+.mw-45rem {
+  max-width: 45rem;
 }
 
-.mw-45em {
-  max-width: 45em;
+.mw-50rem {
+  max-width: 50rem;
 }
 
+.mw-55rem {
+  max-width: 55rem;
+}
+
+.mw-60rem {
+  max-width: 60rem;
+}
 
 @media screen and (min-width: 30em) {
-  .mw-30em-ns {
-    max-width: 30em;
+  .mw-30rem-ns {
+    max-width: 30rem;
   }
 
-  .mw-40em-ns {
-    max-width: 40em;
+  .mw-40rem-ns {
+    max-width: 40rem;
   }
 
-  .mw-45em-ns {
-    max-width: 45em;
+  .mw-45rem-ns {
+    max-width: 45rem;
   }
 
-  .mw-60em-ns {
-    max-width: 60em;
+  .mw-60rem-ns {
+    max-width: 60rem;
   }
 }
 
 @media screen and (min-width: 30em) and (max-width: 60em) {
-  .mw-30em-m {
-    max-width: 30em;
+  .mw-30rem-m {
+    max-width: 30rem;
   }
 
-  .mw-40em-m {
-    max-width: 40em;
+  .mw-40rem-m {
+    max-width: 40rem;
   }
 
-  .mw-45em-m {
-    max-width: 45em;
+  .mw-45rem-m {
+    max-width: 45rem;
   }
 
-  .mw-60em-m {
-    max-width: 60em;
+  .mw-60rem-m {
+    max-width: 60rem;
   }
 }
 
 @media screen and (min-width: 60em) {
-  .mw-30em-l {
-    max-width: 30em;
+  .mw-30rem-l {
+    max-width: 30rem;
   }
 
-  .mw-40em-l {
-    max-width: 40em;
+  .mw-40rem-l {
+    max-width: 40rem;
   }
 
-  .mw-45em-l {
-    max-width: 45em;
+  .mw-45rem-l {
+    max-width: 45rem;
   }
 
-  .mw-60em-l {
-    max-width: 60em;
+  .mw-60rem-l {
+    max-width: 60rem;
   }
 
   .bg-fixed {
