@@ -131,6 +131,11 @@ h1, h2, h3, h4, h5 {
   max-width: 60rem;
 }
 
+.mw-90rem {
+  max-width: 90rem;
+}
+
+
 @media screen and (min-width: 30em) {
   .mw-30rem-ns {
     max-width: 30rem;
