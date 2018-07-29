@@ -25,7 +25,7 @@
           <p class="f4 tc mb2">{{ data.position }}</p>
         {% endif %}
         {% if data.school %}
-          <p class="tc silver mb0">{{ data.school }}</p>
+          <p class="tc silver mb1">{{ data.school }}</p>
         {% endif %}
         {% if data.department %}
           <p class="i tc silver">{{ data.department }}</p>
@@ -35,22 +35,26 @@
       {% endif %}
     </div>
     <hr class="w-100 ba b--light-gray mb3 mb4-ns"/>
-    <p class="mb4">{{ data.bio | smartify }}</p>
-    {{ extra_content }}
-    {% if data.links %}
-      <hr class="w-100 ba b--light-gray mb3 mb4-ns"/>
-      <div class="pl2-ns">
-        <h3 class="tracked-tight mb2 mb3-ns">Links</h3>
-        <ul class="list pl0">
-          {% for link_item in data.links %}
-            <li class="mb2 lh-title">
-              <a class="link blue underline dim" href="{{ link_item.link_url }}" target="_blank">
-                {{ link_item.link_name }}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
+    <div class="lh-copy">
+      <div class="{% if data.links %}mb4{% endif %}">
+        <p class="{% if extra_content %}mb4{% endif %}">{{ data.bio | smartify }}</p>
+        {{ extra_content }}
       </div>
-    {% endif %}
+      {% if data.links %}
+        <hr class="w-100 ba b--light-gray mb4"/>
+        <div class="pl2-ns">
+          <h3 class="tracked-tight mb2 mb3-ns">Links</h3>
+          <ul class="list pl0">
+            {% for link_item in data.links %}
+              <li class="mb2 lh-title">
+                <a class="link blue underline dim" href="{{ link_item.link_url }}" target="_blank">
+                  {{ link_item.link_name }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    </div>
   </div>
 </div>
