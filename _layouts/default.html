@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 
     {% if page.collection == "people" %}
-      <title>PCfN → Community → {{ page.title }}</title>
+      <title>PCfN → Community → {{ page.data.first_name }} {{ page.data.middle_initials}} {{ page.data.last_name }}</title>
       <meta name="description" content="Meet {{ page.title }}">
     {% else %}
       <title>PCfN → {{ page.title }}</title>
