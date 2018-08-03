@@ -1,12 +1,18 @@
 ---
 layout: default
+# default layout generates title and description using person's name, from collection item front matter
 ---
 {% include header.html %}
 
 <main class="f5 f4-ns">
   <section class="min-vh-100 bg-jp-light-sage ph3 pv4 ph4-m pv5-ns ph6-l">
-    <div class="mw-45rem center">
+    <div class="mw-40rem center">
       {{ content }}
+      <div class="">
+        <p class="tc">
+          <a class="dib w-100 link bg-jp-dark-sage white dim ph4 pv3 br2" href="/community.html">← Back to Community</a>
+        </p>
+      </div>
     </div>
   </section>
 </main>

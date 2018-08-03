@@ -2,23 +2,26 @@
 title: Community
 subtitle: Our community
 header: bg-goddard
-description: Meet the multidisciplenary community of individuals and groups affiliated with PCfN, here at Penn and around the world.
+description: Meet the multidisciplinary community of individuals and groups affiliated with PCfN, here at Penn and around the world.
+sections:
+- At PCfN
+- Affiliated faculty at Penn
+- Other collaborators
+- Affiliated groups
 ---
 {% capture header_content %}
-  <div class="flex-auto f5 f4-ns bg-white-90 shadow-6 mw-45rem lh-copy br1 ba bw1 b--black-60 pa4 pa5-ns">
-    <h1 class="lh-solid tracked-tight tc mb3 mb4-ns">{{ page.subtitle }}</h1>
-    <p>
-      We bring people together whose expertise converge on neuroaesthetics scientific aims. This includes University of Pennsylvania faculty from the <a class="link dim blue underline" href="https://www.med.upenn.edu/" target="_blank">Perelman School of Medicine</a>, <a class="link dim blue underline" href="https://www.sas.upenn.edu/" target="_blank">School of Arts and Sciences</a>, the <a class="link dim blue underline" href="https://www.design.upenn.edu/" target="_blank">School of Design</a>, the <a class="link dim blue underline" href="https://www.wharton.upenn.edu/" target="_blank">Wharton School</a>, and collaborators from around the world.
-    </p>
-  </div>
+  <p>
+    We bring people together whose expertise converge on neuroaesthetics scientific aims. This includes University of Pennsylvania faculty from the <a class="link dim blue underline" href="https://www.med.upenn.edu/" target="_blank">Perelman School of Medicine</a>, <a class="link dim blue underline" href="https://www.sas.upenn.edu/" target="_blank">School of Arts and Sciences</a>, the <a class="link dim blue underline" href="https://www.design.upenn.edu/" target="_blank">School of Design</a>, the <a class="link dim blue underline" href="https://www.wharton.upenn.edu/" target="_blank">Wharton School</a>, and collaborators from around the world.
+  </p>
 {% endcapture %}
 
 {% include header.html %}
+{% include page-nav.html %}
 
-<main class="f4 f3-ns bt bw3 b--dark-green">
+<main class="f4 f3-ns">
   <section class="min-vh-100 bg-jp-light-sage ph3 pv4 ph4-m pv5-m pa6-l">
     <div class="mw-55rem center">
-      <div id="pcfn-people" class="bg-white pv5 ba b--moon-gray br1 mb4 mb5-ns">
+      <div id="{{ page.sections[0] | slugify }}" class="bg-white pv5 ba b--moon-gray br1 mb4 mb5-ns">
         <div class="ph4 ph5-ns mb5">
           <h2 class="tc lh-solid tracked-tight mb4 mb0-ns">Penn Center for Neuroaesthetics</h2>
           <hr class="ba b--light-gray dn-ns">
@@ -69,7 +72,7 @@ description: Meet the multidisciplenary community of individuals and groups affi
           {% endif %}
         {% endfor %}
       </div>
-      <div id="penn-affiliates" class="bg-white pv5 ba b--moon-gray br1 mb4 mb5-ns">
+      <div id="{{ page.sections[1] | slugify }}" class="bg-white pv5 ba b--moon-gray br1 mb4 mb5-ns">
         <div class="ph4 ph5-ns mb5">
           <h2 class="tc lh-solid tracked-tight mb4 mb0-ns">Affiliated Faculty at Penn</h2>
           <hr class="ba b--light-gray dn-ns">
@@ -128,7 +131,7 @@ description: Meet the multidisciplenary community of individuals and groups affi
           {% endif %}
         {% endfor %}
       </div>
-      <div id="other-collaborators" class="bg-white pv5 ba b--moon-gray br1 mb4 mb5-ns">
+      <div id="{{ page.sections[2] | slugify }}" class="bg-white pv5 ba b--moon-gray br1 mb4 mb5-ns">
         <div class="ph4 ph5-ns mb5">
           <h2 class="tc lh-solid tracked-tight mb4 mb0-ns">Other Collaborators</h2>
           <hr class="ba b--light-gray dn-ns">
@@ -179,7 +182,7 @@ description: Meet the multidisciplenary community of individuals and groups affi
           {% endif %}
         {% endfor %}
       </div>
-      <div id="affiliated-groups" class="bg-white pa1 ba b--moon-gray br1 mb4 mb5-ns">
+      <div id="{{ page.sections[3] | slugify }}" class="bg-white pa1 ba b--moon-gray br1 mb4 mb5-ns">
         <div class="pv5 ph4 ph5-ns ba br1 b--light-gray">
           <h2 class="tc lh-solid tracked-tight ph4 ph5 mb4 mb5-ns">Affiliated Groups</h2>
           <hr class="ba b--light-gray mb5 dn-ns">

@@ -90,13 +90,19 @@ h1, h2, h3, h4, h5 {
   background-color: #dae6e2;
 }
 
-.bg-jp-dark-sage {
-  background-color: #b3ccc4;
-}
+.jp-dark-sage { color: #6da291; }
 
-.bg-jp-darkest-sage {
-  background-color: #4a6d61;
-}
+.bg-jp-dark-sage { background-color: #6da291; }
+
+.b--jp-darkest-sage { border-color: #6da291; }
+
+
+.bg-jp-darkest-sage { background-color: #4a6d61; }
+
+.jp-darkest-sage { color: #4a6d61; }
+
+.b--jp-darkest-sage { border-color: #4a6d61; }
+
 
 .bg-jp-light-sage {
   // main bg color
@@ -104,7 +110,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .bg-jp-lightest-sage {
-  background-color: #edf2f0
+  background-color: #f4f6f5
 }
 
 .mw-30rem {

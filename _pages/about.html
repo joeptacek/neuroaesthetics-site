@@ -3,22 +3,24 @@ title: About
 subtitle: About the center
 header: bg-sand
 description: Learn more about neuroaesthetics and PCfN's objectives in research and education.
+sections:
+- Basic research
+- Translational research
+- Education
 ---
 {% capture header_content %}
-  <div class="flex-auto f5 f4-ns bg-white-80 shadow-6 mw-45rem lh-copy br1 ba bw1 b--black-60 pa4 pa5-ns">
-    <h1 class="lh-solid tracked-tight tc mb3 mb4-ns">{{ page.subtitle }}</h1>
-    <p>
-      Neuroaesthetics is an emerging discipline within cognitive neuroscience that seeks to understand the biological basis of aesthetic experiences. We aim to conduct foundational research in neuroaesthetics and apply these insights to promote human well-being.
-    </p>
-  </div>
+  <p>
+    Neuroaesthetics is an emerging discipline within cognitive neuroscience that seeks to understand the biological basis of aesthetic experiences. We aim to conduct foundational research in neuroaesthetics and apply these insights to promote human well-being.
+  </p>
 {% endcapture %}
 
 {% include header.html %}
+{% include page-nav.html %}
 
-<main class="f5 f4-ns bt bw3 b--dark-green">
+<main class="f5 f4-ns">
   <section class="min-vh-100 bg-jp-light-sage ph3 pv4 ph4-m pv5-m pa6-l">
-    <div class="mw-45rem center lh-copy">
-      <div class="bg-white shadow-6 br1 pa4 pa5-ns mb4 mb5-ns">
+    <div class="mw-55rem center lh-copy">
+      <div id="{{ page.sections[0] | slugify }}" class="bg-white shadow-6 br1 pa4 pa5-ns mb4 mb5-ns">
         <h2 class="lh-title tracked-tight mb2">
           Basic research
         </h2>
@@ -41,7 +43,7 @@ description: Learn more about neuroaesthetics and PCfN's objectives in research 
           <li class="">How does context and education affect aesthetic experiences?</li>
         </ul>
       </div>
-      <div class="bg-white shadow-6 br1 pa4 pa5-ns mb4 mb5-ns">
+      <div id="{{ page.sections[1] | slugify }}" class="bg-white shadow-6 br1 pa4 pa5-ns mb4 mb5-ns">
         <h2 class="lh-title tracked-tight mb2">
           Translational research
         </h2>
@@ -61,7 +63,15 @@ description: Learn more about neuroaesthetics and PCfN's objectives in research 
           <li class="">Can aesthetics facilitate learning?</li>
         </ul>
       </div>
-      <div class="bg-white shadow-6 br1 pa4 pa5-ns mb4 mb5-ns">
+      <!-- <div id="{{ page.sections[1] | slugify }}" class="bg-jp-lightest-sage mw-40rem center shadow-6 tc pa4 pa5-ns br1 mb4 mb5-ns">
+        <p class="mb3 mb4-ns dark-gray">
+          Visit the ChatLab website for our latest publications in neuroaesthetics!
+        </p>
+        <p>
+          <a class="dib bg-blue white b pv3 ph5 br2 link dim" href="http://ccn.upenn.edu/chatterjee" target="_blank">ChatLab →</a>
+        </p>
+      </div> -->
+      <div id="{{ page.sections[2] | slugify }}" class="bg-white shadow-6 br1 pa4 pa5-ns mb4 mb5-ns">
         <h2 class="lh-title tracked-tight mb2">
           Education
         </h2>

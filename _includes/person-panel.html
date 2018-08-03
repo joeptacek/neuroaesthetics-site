@@ -1,7 +1,7 @@
 {% assign data = include.data %}
 {% assign extra_content = include.extra_content %}
-<div>
-  <div class="bg-near-white pv3 ph4 ba b--moon-gray br1 br--top">
+<div class="mb4 mb5-ns">
+  <div class="bg-jp-lightest-sage pv3 ph4 ba b--moon-gray br1 br--top">
     <p class="tl">
       {% if data.affiliation == "University of Pennsylvania" %}
         {% if data.program == "Penn Center for Neuroaesthetics" %}
@@ -34,10 +34,10 @@
         <p class="tc silver">{{ data.affiliation }}</p>
       {% endif %}
     </div>
-    <hr class="w-100 ba b--light-gray mb3 mb4-ns"/>
+    <hr class="w-100 ba b--light-gray mb4"/>
     <div class="lh-copy">
       <div class="{% if data.links %}mb4{% endif %}">
-        <p class="{% if extra_content %}mb4{% endif %}">{{ data.bio | smartify }}</p>
+        <p class="{% if extra_content %}mb3{% endif %}">{{ data.bio | smartify }}</p>
         {{ extra_content }}
       </div>
       {% if data.links %}

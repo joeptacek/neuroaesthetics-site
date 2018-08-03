@@ -3,19 +3,18 @@ title: News
 subtitle: News and events
 header: bg-salt
 description: Stay up to date with PCfN news and upcoming events.
+sections:
+- Twitter
+- Upcoming events
+- PCfN news
 ---
-{% capture header_content %}
-  <div class="flex-auto f5 f4-ns bg-white-80 shadow-6 mw-45rem lh-copy br1 ba bw1 b--black-60 pa4 pa5-ns">
-    <h1 class="lh-solid tracked-tight tc mb3 mb4-ns">{{ page.subtitle }}</h1>
-  </div>
-{% endcapture %}
-
 {% include header.html %}
+{% include page-nav.html %}
 
-<main class="f5 f4-ns bt bw3 b--dark-green">
+<main class="f5 f4-ns">
   <section class="min-vh-100 bg-jp-light-sage ph3 pv4 ph4-m pv5-m pa6-l">
-    <div class="mw-45rem center">
-      <div class="br2 mb4 mb5-ns shadow-6">
+    <div class="mw-55rem center">
+      <div id="{{ page.sections[0] | slugify }}" class="br2 mb4 mb5-ns shadow-6">
         <h2 class="tracked-tight bg-blue near-white pv3 ph4 tc br2 br--top mb0">Tweets</h2>
         <div class="bg-white pa4 br2 br--bottom">
           <div class="">
@@ -24,27 +23,28 @@ description: Stay up to date with PCfN news and upcoming events.
         </div>
       </div>
 
-      {% assign upcoming_events = false %}
-      {% assign todays_date = site.time | date: "%Y-%m-%d" %}
-      {% assign events_sorted = site.events | sort: "data.date_start" %}
-      {% for event in events_sorted %}
-        {% if event.data.date_end %}
-          {% assign de = event.data.date_end | date: "%Y-%m-%d" %}
-          {% if todays_date <= de %}
-            {% assign upcoming_events = true %}
-            {% break %}
+      <div id="{{ page.sections[1] | slugify }}" class="br2 mb4 mb5-ns shadow-6">
+        <h2 class="tracked-tight bg-dark-green near-white pv3 ph4 tc br2 br--top mb0">Upcoming events</h2>
+
+        {% assign upcoming_events = false %}
+        {% assign todays_date = site.time | date: "%Y-%m-%d" %}
+        {% assign events_sorted = site.events | sort: "data.date_start" %}
+        {% for event in events_sorted %}
+          {% if event.data.date_end %}
+            {% assign de = event.data.date_end | date: "%Y-%m-%d" %}
+            {% if todays_date <= de %}
+              {% assign upcoming_events = true %}
+              {% break %}
+            {% endif %}
+          {% else %}
+            {% assign ds = event.data.date_start | date: "%Y-%m-%d" %}
+            {% if todays_date <= ds %}
+              {% assign upcoming_events = true %}
+              {% break %}
+            {% endif %}
           {% endif %}
-        {% else %}
-          {% assign ds = event.data.date_start | date: "%Y-%m-%d" %}
-          {% if todays_date <= ds %}
-            {% assign upcoming_events = true %}
-            {% break %}
-          {% endif %}
-        {% endif %}
-      {% endfor %}
-      {% if upcoming_events %}
-        <div class="br2 mb4 mb5-ns shadow-6">
-          <h2 class="tracked-tight bg-dark-green near-white pv3 ph4 tc br2 br--top mb0">Upcoming events</h2>
+        {% endfor %}
+        {% if upcoming_events %}
           <div class="bg-white br2 br--bottom">
             {% assign first_event = true %}
             {% for event in events_sorted %}
@@ -63,10 +63,14 @@ description: Stay up to date with PCfN news and upcoming events.
               {% endif %}
             {% endfor %}
           </div>
-        </div>
-      {% endif %}
+        {% else %}
+          <div class="bg-white pa4 ph5-ns br2 br--bottom">
+            <p class="tc">Check back soon!</p>
+          </div>
+        {% endif %}
+      </div>
 
-      <div class="br2 shadow-6">
+      <div id="{{ page.sections[2] | slugify }}" class="br2 shadow-6">
         <h2 class="tracked-tight bg-purple near-white pv3 ph4 tc br2 br--top mb0">In the news</h2>
         <div class="bg-white br2 br--bottom">
           {% assign news_sorted = site.news | sort: "data.date" | reverse %}
