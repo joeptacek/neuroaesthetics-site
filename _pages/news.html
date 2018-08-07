@@ -73,9 +73,9 @@ sections:
       <div id="{{ page.sections[2] | slugify }}" class="br2 shadow-6">
         <h2 class="tracked-tight bg-purple near-white pv3 ph4 tc br2 br--top mb0">In the news</h2>
         <div class="bg-white br2 br--bottom">
-          {% assign news_sorted = site.news | sort: "data.date" | reverse %}
-          {% for news in news_sorted %}
-            {% include news-item.html data=news.data %}
+          {% assign news_sorted = site.data.news | sort: "date" | reverse %}
+          {% for news_item in news_sorted %}
+            {% include news-item.html data=news_item %}
           {% endfor %}
         </div>
       </div>

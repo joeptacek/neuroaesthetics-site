@@ -19,8 +19,6 @@ collections:
   people:
     output: true
   announcements:
-    output: true
-  news:
     output: false
   events:
     output: false
@@ -34,7 +32,3 @@ defaults:
     path: "_people"
   values:
     layout: "person"
-- scope:
-    path: "_announcements"
-  values:
-    layout: "announcement"
