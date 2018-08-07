@@ -1,27 +1,31 @@
-<header class="{% if page.collection == "pages" %}{{ page.header }} bg-cover bg-fixed min-vh-100{% endif %} flex flex-column">
-  <nav class="bg-near-white pv3-ns ph4-m ph6-l bb b--moon-gray">
-    <div class="mw-55rem center flex flex-column flex-row-ns items-center justify-between-ns">
-      <div class="flex items-center pv3 pv0-ns mr4-ns">
-        <a class="link dim" href="/">
-          <img src="/assets/img/logo/penn-center-for-neuroaesthetics-logo.png" alt="Logo for the Penn Center for Neuroaesthetics" width="130" height="auto">
-        </a>
+<header class="{% if page.collection == "pages" %}{{ page.header }} bg-cover bg-fixed{% endif %}">
+  <div class="{% if page.collection == "pages" %}min-vh-100{% endif %} flex flex-column">
+    <nav class="bg-near-white pv3-ns ph4-m ph6-l bb b--moon-gray">
+      <div class="mw-55rem center flex flex-column flex-row-ns items-center justify-between-ns">
+        <div class="flex items-center pv3 pv0-ns mr4-ns">
+          <a class="link dim" href="/">
+            <img src="/assets/img/logo/penn-center-for-neuroaesthetics-logo.png" alt="Logo for the Penn Center for Neuroaesthetics" width="130" height="auto">
+          </a>
+        </div>
+        <div class="f5 f4-ns self-stretch flex items-center justify-center bt bn-ns b--moon-gray pv3 pv0-ns">
+          <a class="link black-70 dim mr4" href="/about.html">About</a>
+          <a class="link black-70 dim mr4" href="/community.html">Community</a>
+          <a class="link black-70 dim" href="/news.html">News</a>
+        </div>
       </div>
-      <div class="f5 f4-ns self-stretch flex items-center justify-center bt bn-ns b--moon-gray pv3 pv0-ns">
-        <a class="link black-70 dim mr4" href="/about.html">About</a>
-        <a class="link black-70 dim mr4" href="/community.html">Community</a>
-        <a class="link black-70 dim" href="/news.html">News</a>
-      </div>
+    </nav>
+    <div class="bg-green pv2 near-white o-90">
+      <p class="tc b mw-55rem center">Announcement: <a class="link underline near-white" href="https://www.pennmedicine.org/news/news-releases/2018/june/penn-medicine-launches-nations-first-neuroaesthetics-research-center" target="_blank">Introducing, Penn Center for Neuroaesthetics!</a></p>
     </div>
-  </nav>
-  <div class="bg-green pv2 near-white o-90">
-    <p class="tc b mw-55rem center">Announcement: <a class="link underline near-white" href="https://www.pennmedicine.org/news/news-releases/2018/june/penn-medicine-launches-nations-first-neuroaesthetics-research-center" target="_blank">Introducing, Penn Center for Neuroaesthetics!</a></p>
+    {% if page.collection == "pages" %}
+      <div class="flex justify-center items-center ph3 pv5 ph4-m ph6-l flex-auto">
+        <div class="flex-auto f5 f4-ns bg-white-80 shadow-6 mw-55rem lh-copy br1 ba bw1 b--black-60 pa4 pa5-ns">
+          <h1 class="lh-solid tracked-tight tc {% if header_content %}mb3 mb4-ns{% endif %}">{{ page.subtitle }}</h1>
+          {% if header_content %}{{ header_content }}{% endif %}
+        </div>
+      </div>
+    {% endif %}
   </div>
-  {% if page.collection == "pages" %}
-    <div class="flex justify-center items-center ph3 pv6 ph4-m ph6-l bb bw3 b--dark-green flex-auto">
-      <div class="flex-auto f5 f4-ns bg-white-70 shadow-6 mw-55rem lh-copy br1 ba bw1 b--black-60 pa4 pa5-ns">
-        <h1 class="lh-solid tracked-tight tc {% if header_content %}mb3 mb4-ns{% endif %}">{{ page.subtitle }}</h1>
-        {% if header_content %}{{ header_content }}{% endif %}
-      </div>
-    </div>
-  {% endif %}
+  <div class="h3 bb bw3 b--dark-green">
+  </div>
 </header>
