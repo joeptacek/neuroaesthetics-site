@@ -14,13 +14,21 @@
         </div>
       </div>
     </nav>
-    <div class="bg-green pv2 near-white o-90">
-      <div class="ph3 ph4-m ph5-l">
-        <p class="tc b mw-55rem center">Announcement: <a class="link underline near-white" href="https://www.pennmedicine.org/news/news-releases/2018/june/penn-medicine-launches-nations-first-neuroaesthetics-research-center" target="_blank">Introducing, Penn Center for Neuroaesthetics!</a></p>
-      </div>
-    </div>
+    {% assign todays_date = site.time | date: "%Y-%m-%d" %}
+    {% for announcement in site.announcements %}
+      {% assign ds = announcement.date_start | date: "%Y-%m-%d" %}
+      {% assign de = announcement.date_end | date: "%Y-%m-%d" %}
+      {% if todays_date >= ds and todays_date <= de %}
+        <div class="bg-green pv2 near-white o-90">
+          <div class="ph3 ph4-m ph5-l">
+            <p class="tc b mw-55rem center">Announcement: <a class="link underline near-white" href="{% if announcement.ext_announcement %}{{ announcement.ext_announcement.link_url }}{% else %}{{ announcement.url }}{% endif %}" {% if announcement.ext_announcement %}target="_blank"{% endif %}>{{ announcement.title }}</a></p>
+          </div>
+        </div>
+        {% break %}
+      {% endif %}
+    {% endfor %}
     {% if page.collection == "pages" %}
-      <div class="flex justify-center items-center ph3 pv5 ph4-m ph6-l flex-auto">
+      <div class="flex justify-center items-center ph3 pv5 ph4-m pa6-l flex-auto">
         <div class="flex-auto f5 f4-ns bg-white-80 shadow-6 mw-55rem lh-copy br1 ba bw1 b--black-60 pa4 pa5-ns">
           <h1 class="lh-solid tracked-tight tc {% if header_content %}mb3 mb4-ns{% endif %}">{{ page.subtitle }}</h1>
           {% if header_content %}{{ header_content }}{% endif %}
@@ -29,7 +37,6 @@
     {% endif %}
   </div>
 {% if page.collection == "pages" %}
-  <div class="h3 bb bw3 b--dark-green">
-  </div>
+  <div class="h3 bb bw3 b--dark-green"></div>
 {% endif %}
 </header>

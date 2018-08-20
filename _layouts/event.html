@@ -1,0 +1,72 @@
+---
+layout: default
+---
+{% include header.html %}
+
+<main class="f5 f4-ns">
+  <section class="min-vh-100 bg-jp-light-sage ph3 pv4 ph4-m pv5-ns ph6-l">
+    <div class="mw-40rem center">
+      <div class="mb4 mb5-ns">
+        <div class="bg-jp-lightest-sage pv3 ph4 ba b--moon-gray br1 br--top">
+          <p class="tl">
+            <a class="b mr2 link underline black dim" href="/news.html#upcoming-events">News</a>
+            <span class="b mr2">→</span>
+            <span class="b mr2">Events</span>
+          </p>
+        </div>
+        <div class="f5 bg-white pa4 bl br bb b--moon-gray br1 br--bottom">
+          <h2 class="tracked-tight mb3">{{ page.title }}</h2>
+          <div class="mb4">
+            {% if page.subtitle %}
+              <p class="mb3">
+                {{ page.subtitle }}
+              </p>
+            {% endif %}
+            {% if page.date_start == page.date_end %}
+              <p class="silver mb3">
+                {{ page.date_start | date: "%B %e, %Y" }}
+              </p>
+            {% else %}
+              <p class="silver mb3">
+                {{ page.date_start | date: "%B %e" }} - {{ page.date_end | date: "%B %e, %Y" }}
+              </p>
+            {% endif %}
+          </div>
+          {% unless page.content == "" %}
+            <hr class="w-100 ba b--light-gray mb4"/>
+            <div class="lh-copy {% if page.links or page.ext_event %}mb4{% endif %}">
+              {{ content }}
+            </div>
+          {% endunless %}
+          {% if page.links or page.ext_event %}
+            <hr class="w-100 ba b--light-gray mb4"/>
+            <div class="lh-copy pl2-ns">
+              <h3 class="tracked-tight mb2 mb3-ns">Links</h3>
+              <ul class="list pl0">
+                {% if page.ext_event %}
+                  <li class="mb2 lh-title">
+                    <a class="link blue underline dim" href="{{ page.ext_event.link_url }}" target="_blank">
+                      {{ page.ext_event.link_name }}
+                    </a>
+                  </li>
+                {% endif %}
+                {% for link_item in page.links %}
+                  <li class="mb2 lh-title">
+                    <a class="link blue underline dim" href="{{ link_item.link_url }}" target="_blank">
+                      {{ link_item.link_name }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="">
+        <p class="tc">
+          <a class="dib w-100 link bg-jp-dark-sage white dim ph4 pv3 br2" href="/news.html#upcoming-events">← Back to News</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</main>

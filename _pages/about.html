@@ -1,11 +1,11 @@
 ---
 title: About
-subtitle: About the center
+subtitle: About the Center
 header: bg-sand
 description: Learn more about neuroaesthetics and PCfN's objectives in research and education.
 sections:
-- Basic research
-- Translational research
+- Basic Research
+- Translational Research
 - Education
 ---
 {% capture header_content %}
@@ -22,7 +22,7 @@ sections:
     <div class="mw-55rem center lh-copy">
       <div id="{{ page.sections[0] | slugify }}" class="bg-white shadow-6 br1 pa4 pa5-ns mb4 mb5-ns">
         <h2 class="lh-title tracked-tight mb2">
-          Basic research
+          {{ page.sections[0] }}
         </h2>
         <hr class="w-100 ba b--moon-gray mb4">
         <p class="mb4">
@@ -45,7 +45,7 @@ sections:
       </div>
       <div id="{{ page.sections[1] | slugify }}" class="bg-white shadow-6 br1 pa4 pa5-ns mb4 mb5-ns">
         <h2 class="lh-title tracked-tight mb2">
-          Translational research
+          {{ page.sections[1] }}
         </h2>
         <hr class="w-100 ba b--moon-gray mb4">
         <p class="mb4">
@@ -65,7 +65,7 @@ sections:
       </div>
       <div id="{{ page.sections[2] | slugify }}" class="bg-white shadow-6 br1 pa4 pa5-ns mb4 mb5-ns">
         <h2 class="lh-title tracked-tight mb2">
-          Education
+          {{ page.sections[2] }}
         </h2>
         <hr class="w-100 ba b--moon-gray mb4">
         <p class="mb4">

@@ -4,16 +4,21 @@
     <meta charset="utf-8">
 
     {% if page.collection == "people" %}
-      <title>PCfN → Community → {{ page.data.first_name }} {{ page.data.middle_initials}} {{ page.data.last_name }}</title>
-      <meta name="description" content="Meet {{ page.title }}">
+      <title>PCfN → Community → {{ page.first_name }} {{ page.middle_initials}} {{ page.last_name }}</title>
+      <meta name="description" content="Meet {{ page.first_name }} {{ page.middle_initials}} {{ page.last_name }}">
+    {% elsif page.collection == "events" %}
+      <title>PCfN → News → {{ page.title }}</title>
+      <meta name="description" content="Event page for {{ page.title }}">
+    {% elsif page.collection == "announcements" %}
+      <title>PCfN → News → {{ page.title }}</title>
+      <meta name="description" content="Announcment page for {{ page.title }}">
     {% else %}
       <title>PCfN → {{ page.title }}</title>
       <meta name="description" content="{{ page.description }}">
     {% endif %}
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Questrial">
-    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arvo|Questrial">
     <link rel="stylesheet" href="/assets/css/vendor/tachyons/tachyons.css">
     <link rel="stylesheet" href="/assets/css/main.css">
 
