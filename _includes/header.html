@@ -29,11 +29,10 @@
     {% endfor %}
     {% if page.collection == "pages" %}
       <div class="flex-ns justify-center-ns items-center-ns min-vh-100-ns ph3 pv6 ph4-m ph6-l">
-        <div class="flex-auto flex flex-column justify-center f5 f4-ns bg-near-white shadow-6 min-h5 mw-55rem lh-copy br2 ba b--light-silver pa4 pa5-ns">
+        <div class="flex-auto flex flex-column justify-center f5 f4-ns bg-near-white shadow-6 min-h5 mw-55rem lh-copy br2 ba b--light-silver pa4 pa5-ns o-95">
           <h1 class="lh-solid tracked-tight tc{% if header_content %} mb3 mb4-ns{% endif %}">{{ page.subtitle }}</h1>
           {% if header_content %}
             <div class="mb4">
-              <hr class="w-100 black-10 ba mb3 mb4-ns">
               {{ header_content }}
             </div>
           {% endif %}
