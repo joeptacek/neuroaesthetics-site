@@ -1,6 +1,6 @@
-<header class="{% if page.collection == "pages" %}{{ page.header }} bg-cover bg-fixed{% endif %}">
+<header class="{% if page.collection == "pages" %}{{ page.header-css }} bg-cover bg-fixed bb bw2 b--dark-green{% endif %}">
   <div class="{% if page.collection == "pages" %}min-vh-100{% endif %} flex flex-column">
-    <nav class="bg-near-white pv3-ns ph4-m ph6-l bb b--moon-gray">
+    <nav class="bg-near-white pv3-ns ph4-m ph6-l bb b--light-silver">
       <div class="mw-55rem center flex flex-column flex-row-ns items-center justify-between-ns">
         <div class="flex items-center pv3 pv0-ns mr4-ns">
           <a class="link dim" href="/">
@@ -28,15 +28,18 @@
       {% endif %}
     {% endfor %}
     {% if page.collection == "pages" %}
-      <div class="flex-auto flex justify-center items-center ph3 pv5 ph4-m pa6-l">
-        <div class="flex-auto f5 f4-ns bg-white-80 shadow-6 mw-55rem lh-copy br1 ba bw1 b--black-60 pa4 pa5-ns">
-          <h1 class="lh-solid tracked-tight tc {% if header_content %}mb3 mb4-ns{% endif %}">{{ page.subtitle }}</h1>
-          {% if header_content %}{{ header_content }}{% endif %}
+      <div class="flex-ns justify-center-ns items-center-ns min-vh-100-ns ph3 pv6 ph4-m ph6-l">
+        <div class="flex-auto flex flex-column justify-center f5 f4-ns bg-near-white shadow-6 min-h5 mw-55rem lh-copy br2 ba b--light-silver pa4 pa5-ns">
+          <h1 class="lh-solid tracked-tight tc{% if header_content %} mb3 mb4-ns{% endif %}">{{ page.subtitle }}</h1>
+          {% if header_content %}
+            <div class="mb4">
+              <hr class="w-100 black-10 ba mb3 mb4-ns">
+              {{ header_content }}
+            </div>
+          {% endif %}
+          <!-- {% include page-nav.html %} -->
         </div>
       </div>
     {% endif %}
   </div>
-{% if page.collection == "pages" %}
-  <div class="h3 bb bw3 b--dark-green"></div>
-{% endif %}
 </header>

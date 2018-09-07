@@ -1,9 +1,9 @@
 <div class="bg-jp-lightest-sage ph3 pv4 ph4-m ph6-l bb b--moon-gray">
   <div class="mw-55rem center flex flex-column items-center">
     <h2 class="f4 f3-l lh-solid tracked-tight tc tl-ns mb4">Jump to<span class="dn di-ns"> →</span></h2>
-    <nav class="flex flex-column flex-row-ns items-center items-end-ns flex-wrap tc tl-ns">
+    <nav class="flex flex-column items-center flex-row-ns flex-wrap-ns justify-center-ns tc tl-ns">
       {% for section in page.sections %}
-        <a class="link blue f5 f4-l dim {% unless forloop.last %}mb3 mb0-ns mr4-ns{% endunless %}" href="{{ section | slugify | prepend: '#' }}">{{ section }}</a>
+        <a class="lh-copy link blue f5 f4-l dim {% unless forloop.last %}mb3 mb0-ns mr4-ns{% endunless %}" href="{{ section | slugify | prepend: '#' }}">{{ section }}</a>
       {% endfor %}
     </nav>
   </div>

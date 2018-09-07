@@ -1,7 +1,7 @@
 ---
 title: Community
 subtitle: Our Community
-header: bg-goddard
+header-css: bg-goddard
 description: Meet the multidisciplinary community of individuals and groups affiliated with PCfN, here at Penn and around the world.
 sections:
 - At PCfN
@@ -19,82 +19,143 @@ sections:
 {% include page-nav.html %}
 
 <main class="f4 f3-ns">
-  <section class="min-vh-100 bg-jp-light-sage ph3 pv4 ph4-m pv5-m pa6-l">
+  <div class="min-vh-100 bg-jp-light-sage pa3 pa4-ns ph6-l">
     <div class="mw-55rem center">
-      <div id="{{ page.sections[0] | slugify }}" class="bg-white pv5 ba b--moon-gray br1 mb4 mb5-ns">
-        <div class="ph4 ph5-ns mb5">
-          <h2 class="tc lh-solid tracked-tight mb4">Penn Center for Neuroaesthetics</h2>
-          <hr class="ba b--light-gray">
-        </div>
-        {% assign first_item = true %}
-        {% assign do_new_row = false %}
-        {% assign nth_person = 1 %}
-        {% assign people_sorted_by_name = site.people %}
-        {% for person in people_sorted_by_name %}
-          {% assign mod_three = nth_person | modulo: 3 %}
-          {% if forloop.first %}
-            <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
-            {% if person.program == "Penn Center for Neuroaesthetics" %}
-              {% include person-item.html %}
-              {% assign first_item = false %}
-              {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
-            {% endif %}
-          {% elsif forloop.last %}
-            {% if person.program == "Penn Center for Neuroaesthetics" %}
-              {% if do_new_row == true %}
-                </div>
-                <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
+      <section id="{{ page.sections[0] | slugify }}" class="pv3 pv4-ns">
+        <div class="bg-white pv5 ba b--moon-gray br2">
+          <div class="ph4 ph5-ns mb5">
+            <h2 class="tc lh-solid tracked-tight mb4">Penn Center for Neuroaesthetics</h2>
+            <hr class="ba b--light-gray">
+          </div>
+          {% assign first_item = true %}
+          {% assign do_new_row = false %}
+          {% assign nth_person = 1 %}
+          {% assign people_sorted_by_name = site.people %}
+          {% for person in people_sorted_by_name %}
+            {% assign mod_three = nth_person | modulo: 3 %}
+            {% if forloop.first %}
+              <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
+              {% if person.program == "Penn Center for Neuroaesthetics" %}
+                {% include person-item.html %}
+                {% assign first_item = false %}
+                {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
               {% endif %}
-              {% include person-item.html %}
-              {% assign first_item = false %}
-              {% assign do_new_row = false %}
-              {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
-            {% endif %}
-            </div>
-          {% elsif mod_three == 0 %}
-            {% if person.program == "Penn Center for Neuroaesthetics" %}
-              {% include person-item.html %}
-              {% assign first_item = false %}
-              {% assign do_new_row = true %}
-              {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
-            {% endif %}
-          {% else %}
-            {% if person.program == "Penn Center for Neuroaesthetics" %}
-              {% if do_new_row == true %}
-                </div>
-                <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
+            {% elsif forloop.last %}
+              {% if person.program == "Penn Center for Neuroaesthetics" %}
+                {% if do_new_row == true %}
+                  </div>
+                  <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
+                {% endif %}
+                {% include person-item.html %}
+                {% assign first_item = false %}
+                {% assign do_new_row = false %}
+                {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
               {% endif %}
-              {% include person-item.html %}
-              {% assign first_item = false %}
-              {% assign do_new_row = false %}
-              {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
+              </div>
+            {% elsif mod_three == 0 %}
+              {% if person.program == "Penn Center for Neuroaesthetics" %}
+                {% include person-item.html %}
+                {% assign first_item = false %}
+                {% assign do_new_row = true %}
+                {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
+              {% endif %}
+            {% else %}
+              {% if person.program == "Penn Center for Neuroaesthetics" %}
+                {% if do_new_row == true %}
+                  </div>
+                  <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
+                {% endif %}
+                {% include person-item.html %}
+                {% assign first_item = false %}
+                {% assign do_new_row = false %}
+                {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
+              {% endif %}
             {% endif %}
-          {% endif %}
-        {% endfor %}
-      </div>
-      <div id="{{ page.sections[1] | slugify }}" class="bg-white pv5 ba b--moon-gray br1 mb4 mb5-ns">
-        <div class="ph4 ph5-ns mb5">
-          <h2 class="tc lh-solid tracked-tight mb4">{{ page.sections[1] }}</h2>
-          <hr class="ba b--light-gray">
+          {% endfor %}
         </div>
-        {% assign first_item = true %}
-        {% assign do_new_row = false %}
-        {% assign nth_person = 1 %}
-        {% assign people_sorted_by_name = site.people | sort: "last_name" %}
-        {% for person in people_sorted_by_name %}
-          {% assign mod_three = nth_person | modulo: 3 %}
-          {% if forloop.first %}
-            <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
-            {% if person.affiliation == "University of Pennsylvania" %}
-              {% unless person.program == "Penn Center for Neuroaesthetics" %}
+      </section>
+      <section id="{{ page.sections[1] | slugify }}" class="pv3 pv4-ns">
+        <div class="bg-white pv5 ba b--moon-gray br2">
+          <div class="ph4 ph5-ns mb5">
+            <h2 class="tc lh-solid tracked-tight mb4">{{ page.sections[1] }}</h2>
+            <hr class="ba b--light-gray">
+          </div>
+          {% assign first_item = true %}
+          {% assign do_new_row = false %}
+          {% assign nth_person = 1 %}
+          {% assign people_sorted_by_name = site.people | sort: "last_name" %}
+          {% for person in people_sorted_by_name %}
+            {% assign mod_three = nth_person | modulo: 3 %}
+            {% if forloop.first %}
+              <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
+              {% if person.affiliation == "University of Pennsylvania" %}
+                {% unless person.program == "Penn Center for Neuroaesthetics" %}
+                  {% include person-item.html %}
+                  {% assign first_item = false %}
+                  {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
+                {% endunless %}
+              {% endif %}
+            {% elsif forloop.last %}
+              {% if person.affiliation == "University of Pennsylvania" %}
+                {% unless person.program == "Penn Center for Neuroaesthetics" %}
+                  {% if do_new_row == true %}
+                    </div>
+                    <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
+                  {% endif %}
+                  {% include person-item.html %}
+                  {% assign first_item = false %}
+                  {% assign do_new_row = false %}
+                  {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
+                {% endunless %}
+              {% endif %}
+              </div>
+            {% elsif mod_three == 0 %}
+              {% if person.affiliation == "University of Pennsylvania" %}
+                {% unless person.program == "Penn Center for Neuroaesthetics" %}
+                  {% include person-item.html %}
+                  {% assign first_item = false %}
+                  {% assign do_new_row = true %}
+                  {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
+                {% endunless %}
+              {% endif %}
+            {% else %}
+              {% if person.affiliation == "University of Pennsylvania" %}
+                {% unless person.program == "Penn Center for Neuroaesthetics" %}
+                  {% if do_new_row == true %}
+                    </div>
+                    <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
+                  {% endif %}
+                  {% include person-item.html %}
+                  {% assign first_item = false %}
+                  {% assign do_new_row = false %}
+                  {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
+                {% endunless %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </section>
+      <section id="{{ page.sections[2] | slugify }}" class="pv3 pv4-ns">
+        <div class="bg-white pv5 ba b--moon-gray br2">
+          <div class="ph4 ph5-ns mb5">
+            <h2 class="tc lh-solid tracked-tight mb4">{{ page.sections[2] }}</h2>
+            <hr class="ba b--light-gray">
+          </div>
+          {% assign first_item = true %}
+          {% assign do_new_row = false %}
+          {% assign nth_person = 1 %}
+          {% assign people_sorted_by_name = site.people | sort: "last_name" %}
+          {% for person in people_sorted_by_name %}
+            {% assign mod_three = nth_person | modulo: 3 %}
+            {% if forloop.first %}
+              <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
+              {% unless person.affiliation == "University of Pennsylvania" %}
                 {% include person-item.html %}
                 {% assign first_item = false %}
                 {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
               {% endunless %}
-            {% endif %}
-          {% elsif forloop.last %}
-            {% if person.affiliation == "University of Pennsylvania" %}
-              {% unless person.program == "Penn Center for Neuroaesthetics" %}
+            {% elsif forloop.last %}
+              {% unless person.affiliation == "University of Pennsylvania" %}
                 {% if do_new_row == true %}
                   </div>
                   <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
@@ -104,20 +165,16 @@ sections:
                 {% assign do_new_row = false %}
                 {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
               {% endunless %}
-            {% endif %}
-            </div>
-          {% elsif mod_three == 0 %}
-            {% if person.affiliation == "University of Pennsylvania" %}
-              {% unless person.program == "Penn Center for Neuroaesthetics" %}
+              </div>
+            {% elsif mod_three == 0 %}
+              {% unless person.affiliation == "University of Pennsylvania" %}
                 {% include person-item.html %}
                 {% assign first_item = false %}
                 {% assign do_new_row = true %}
                 {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
               {% endunless %}
-            {% endif %}
-          {% else %}
-            {% if person.affiliation == "University of Pennsylvania" %}
-              {% unless person.program == "Penn Center for Neuroaesthetics" %}
+            {% else %}
+              {% unless person.affiliation == "University of Pennsylvania" %}
                 {% if do_new_row == true %}
                   </div>
                   <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
@@ -128,95 +185,46 @@ sections:
                 {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
               {% endunless %}
             {% endif %}
-          {% endif %}
-        {% endfor %}
-      </div>
-      <div id="{{ page.sections[2] | slugify }}" class="bg-white pv5 ba b--moon-gray br1 mb4 mb5-ns">
-        <div class="ph4 ph5-ns mb5">
-          <h2 class="tc lh-solid tracked-tight mb4">{{ page.sections[2] }}</h2>
-          <hr class="ba b--light-gray">
+          {% endfor %}
         </div>
-        {% assign first_item = true %}
-        {% assign do_new_row = false %}
-        {% assign nth_person = 1 %}
-        {% assign people_sorted_by_name = site.people | sort: "last_name" %}
-        {% for person in people_sorted_by_name %}
-          {% assign mod_three = nth_person | modulo: 3 %}
-          {% if forloop.first %}
-            <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
-            {% unless person.affiliation == "University of Pennsylvania" %}
-              {% include person-item.html %}
-              {% assign first_item = false %}
-              {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
-            {% endunless %}
-          {% elsif forloop.last %}
-            {% unless person.affiliation == "University of Pennsylvania" %}
-              {% if do_new_row == true %}
-                </div>
-                <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
-              {% endif %}
-              {% include person-item.html %}
-              {% assign first_item = false %}
-              {% assign do_new_row = false %}
-              {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
-            {% endunless %}
+      </section>
+      <section id="{{ page.sections[3] | slugify }}" class="pv3 pv4-ns">
+        <div class="bg-white pa1 ba b--moon-gray br2">
+          <div class="pv5 ph4 ph5-ns ba br2 b--light-gray">
+            <h2 class="tc lh-solid tracked-tight ph4 ph5 mb4">{{ page.sections[3] }}</h2>
+            <hr class="ba b--light-gray mb5">
+            <div class="flex flex-column flex-row-ns items-center justify-center mb5">
+              <a class="mb5 mb0-ns link dim mr5-ns" href="http://ccn.upenn.edu/" target="_blank">
+                <img class="" src="/assets/img/logo/center-for-cognitive-neuroscience-logo.png" alt="Logo of the Center for Cognitive Neuroscience" width="350" height="auto">
+              </a>
+              <a class="link dim" href="https://web.sas.upenn.edu/mindcore/" target="_blank">
+                <img class="" src="/assets/img/logo/mindcore-logo.png" alt="Logo of mindCORE" width="350" height="auto">
+              </a>
             </div>
-          {% elsif mod_three == 0 %}
-            {% unless person.affiliation == "University of Pennsylvania" %}
-              {% include person-item.html %}
-              {% assign first_item = false %}
-              {% assign do_new_row = true %}
-              {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
-            {% endunless %}
-          {% else %}
-            {% unless person.affiliation == "University of Pennsylvania" %}
-              {% if do_new_row == true %}
-                </div>
-                <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
-              {% endif %}
-              {% include person-item.html %}
-              {% assign first_item = false %}
-              {% assign do_new_row = false %}
-              {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
-            {% endunless %}
-          {% endif %}
-        {% endfor %}
-      </div>
-      <div id="{{ page.sections[3] | slugify }}" class="bg-white pa1 ba b--moon-gray br1 mb4 mb5-ns">
-        <div class="pv5 ph4 ph5-ns ba br1 b--light-gray">
-          <h2 class="tc lh-solid tracked-tight ph4 ph5 mb4">{{ page.sections[3] }}</h2>
-          <hr class="ba b--light-gray mb5">
-          <div class="flex flex-column flex-row-ns items-center justify-center mb5">
-            <a class="mb5 mb0-ns link dim mr5-ns" href="http://ccn.upenn.edu/" target="_blank">
-              <img class="" src="/assets/img/logo/center-for-cognitive-neuroscience-logo.png" alt="Logo of the Center for Cognitive Neuroscience" width="350" height="auto">
-            </a>
-            <a class="link dim" href="https://web.sas.upenn.edu/mindcore/" target="_blank">
-              <img class="" src="/assets/img/logo/mindcore-logo.png" alt="Logo of mindCORE" width="350" height="auto">
-            </a>
-          </div>
-          <div class="flex flex-column flex-row-ns items-center justify-center mb5">
-            <a class="mb5 mb0-ns link dim mr5-ns" href="https://neuroethics.upenn.edu/" target="_blank">
-              <img class="" src="/assets/img/logo/center-for-neuroscience-and-society-logo.png" alt="Logo of the Center for Neuroscience and Society" width="350" height="auto">
-            </a>
-            <a class="link dim" href="https://neuro.wharton.upenn.edu/" target="_blank">
-              <img class="" src="/assets/img/logo/wharton-neuroscience-initiative-logo.png" alt="Logo of the Edwin & Fanny Gray Hall Center for Human Appearance" width="350" height="auto">
-            </a>
-          </div>
-          <div class="flex flex-column flex-row-ns items-center justify-center mb5">
-            <a class="mb5 mb0-ns link dim mr5-ns" href="http://www.med.upenn.edu/center-for-human-appearance/" target="_blank">
-              <img class="" src="/assets/img/logo/center-for-human-appearance-logo.jpg" alt="Logo of the Edwin & Fanny Gray Hall Center for Human Appearance" width="225" height="auto">
-            </a>
-            <a class="link dim" href="https://www.barnesfoundation.org/" target="_blank">
-              <img class="" src="/assets/img/logo/barnes-foundation-logo.jpg" alt="Logo of Barnes Foundation" width="350" height="auto">
-            </a>
-          </div>
-          <div class="flex flex-column flex-row-ns items-center justify-center mb5">
-            <a class="link dim" href="https://globalwellnessinstitute.org/" target="_blank">
-              <img class="" src="/assets/img/logo/global-wellness-institute-logo.png" alt="Logo of the Global Wellness Institute" width="350" height="auto">
-            </a>
+            <div class="flex flex-column flex-row-ns items-center justify-center mb5">
+              <a class="mb5 mb0-ns link dim mr5-ns" href="https://neuroethics.upenn.edu/" target="_blank">
+                <img class="" src="/assets/img/logo/center-for-neuroscience-and-society-logo.png" alt="Logo of the Center for Neuroscience and Society" width="350" height="auto">
+              </a>
+              <a class="link dim" href="https://neuro.wharton.upenn.edu/" target="_blank">
+                <img class="" src="/assets/img/logo/wharton-neuroscience-initiative-logo.png" alt="Logo of the Edwin & Fanny Gray Hall Center for Human Appearance" width="350" height="auto">
+              </a>
+            </div>
+            <div class="flex flex-column flex-row-ns items-center justify-center mb5">
+              <a class="mb5 mb0-ns link dim mr5-ns" href="http://www.med.upenn.edu/center-for-human-appearance/" target="_blank">
+                <img class="" src="/assets/img/logo/center-for-human-appearance-logo.jpg" alt="Logo of the Edwin & Fanny Gray Hall Center for Human Appearance" width="225" height="auto">
+              </a>
+              <a class="link dim" href="https://www.barnesfoundation.org/" target="_blank">
+                <img class="" src="/assets/img/logo/barnes-foundation-logo.jpg" alt="Logo of Barnes Foundation" width="350" height="auto">
+              </a>
+            </div>
+            <div class="flex flex-column flex-row-ns items-center justify-center mb5">
+              <a class="link dim" href="https://globalwellnessinstitute.org/" target="_blank">
+                <img class="" src="/assets/img/logo/global-wellness-institute-logo.png" alt="Logo of the Global Wellness Institute" width="350" height="auto">
+              </a>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
-  </section>
+  </div>
 </main>

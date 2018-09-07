@@ -26,6 +26,7 @@ gulp.task('watch', function () {
 
 gulp.task('serve', ['watch'], function () {
   bs.init({
+    host: '0.0.0.0',
     files: '_site/**',
     server: '_site',
     notify: false

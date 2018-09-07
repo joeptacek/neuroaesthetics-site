@@ -42,6 +42,10 @@ h1, h2, h3, h4, h5 {
   font-weight: normal;
 }
 
+.min-h5 {
+  min-height: 16rem; // from tachyons h5
+}
+
 .jp-indent {
   // tachyons .indent messes with margin-top and margin-bottom
   text-indent: 1rem;
@@ -95,7 +99,6 @@ h1, h2, h3, h4, h5 {
 .bg-jp-dark-sage { background-color: #6da291; }
 
 .b--jp-darkest-sage { border-color: #6da291; }
-
 
 .bg-jp-darkest-sage { background-color: #4a6d61; }
 
