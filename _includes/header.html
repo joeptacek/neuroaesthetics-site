@@ -1,0 +1,44 @@
+<header class="{% if page.collection == "pages" %}{{ page.header-css }} bg-cover bg-fixed bb bw2 b--dark-green{% endif %}">
+  <div class="{% if page.collection == "pages" %}min-vh-100{% endif %} flex flex-column">
+    <nav class="bg-near-white pv3-ns ph4-m ph6-l bb b--light-silver">
+      <div class="mw-55rem center flex flex-column flex-row-ns items-center justify-between-ns">
+        <div class="flex items-center pv3 pv0-ns mr4-ns">
+          <a class="link dim" href="/">
+            <img src="/assets/img/logo/penn-center-for-neuroaesthetics-logo.png" alt="Logo for the Penn Center for Neuroaesthetics" width="130" height="auto">
+          </a>
+        </div>
+        <div class="f5 f4-ns self-stretch flex items-center justify-center bt bn-ns b--moon-gray pv3 pv0-ns">
+          <a class="link black-70 dim mr4" href="/about.html">About</a>
+          <a class="link black-70 dim mr4" href="/community.html">Community</a>
+          <a class="link black-70 dim" href="/news.html">News</a>
+        </div>
+      </div>
+    </nav>
+    {% assign todays_date = site.time | date: "%Y-%m-%d" %}
+    {% for announcement in site.announcements %}
+      {% assign ds = announcement.date_start | date: "%Y-%m-%d" %}
+      {% assign de = announcement.date_end | date: "%Y-%m-%d" %}
+      {% if todays_date >= ds and todays_date <= de %}
+        <div class="bg-green pv2 near-white o-90">
+          <div class="ph3 ph4-m ph5-l">
+            <p class="tc b mw-55rem center">Announcement: <a class="link underline near-white" href="{% if announcement.ext_announcement %}{{ announcement.ext_announcement.link_url }}{% else %}{{ announcement.url }}{% endif %}" {% if announcement.ext_announcement %}target="_blank"{% endif %}>{{ announcement.title }}</a></p>
+          </div>
+        </div>
+        {% break %}
+      {% endif %}
+    {% endfor %}
+    {% if page.collection == "pages" %}
+      <div class="flex-ns justify-center-ns items-center-ns min-vh-100-ns ph3 pv6 ph4-m ph6-l">
+        <div class="flex-auto flex flex-column justify-center f5 f4-ns bg-near-white shadow-6 min-h5 mw-55rem lh-copy br2 ba b--light-silver pa4 pa5-ns o-95">
+          <h1 class="lh-solid tracked-tight tc{% if header_content %} mb3 mb4-ns{% endif %}">{{ page.subtitle }}</h1>
+          {% if header_content %}
+            <div class="mb4">
+              {{ header_content }}
+            </div>
+          {% endif %}
+          <!-- {% include page-nav.html %} -->
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</header>

@@ -1,0 +1,56 @@
+---
+layout: default
+---
+{% include header.html %}
+
+<main class="f5 f4-ns">
+  <section class="min-vh-100 bg-jp-light-sage ph3 pv4 ph4-m pv5-ns ph6-l">
+    <div class="mw-40rem center">
+      <div class="mb4 mb5-ns">
+        <div class="bg-jp-lightest-sage pv3 ph4 ba b--moon-gray br1 br--top">
+          <p class="tl">
+            <a class="b mr2 link underline black dim" href="/news.html">News</a>
+            <span class="b mr2">→</span>
+            <span class="b mr2">Announcements</span>
+          </p>
+        </div>
+        <div class="f5 bg-white pa4 bl br bb b--moon-gray br1 br--bottom">
+          <h2 class="tracked-tight mb3">{{ page.title }}</h2>
+          {% unless page.content == "" %}
+            <hr class="w-100 ba b--light-gray mb4"/>
+            <div class="lh-copy {% if page.links or page.ext_announcement %}mb4{% endif %}">
+              {{ content }}
+            </div>
+          {% endunless %}
+          {% if page.links or page.ext_announcement %}
+            <hr class="w-100 ba b--light-gray mb4"/>
+            <div class="lh-copy pl2-ns">
+              <h3 class="tracked-tight mb2 mb3-ns">Links</h3>
+              <ul class="list pl0">
+                {% if page.ext_announcement %}
+                  <li class="mb2 lh-title">
+                    <a class="link blue underline dim" href="{{ page.ext_announcement.link_url }}" target="_blank">
+                      {{ page.ext_announcement.link_name }}
+                    </a>
+                  </li>
+                {% endif %}
+                {% for link_item in page.links %}
+                  <li class="mb2 lh-title">
+                    <a class="link blue underline dim" href="{{ link_item.link_url }}" target="_blank">
+                      {{ link_item.link_name }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="">
+        <p class="tc">
+          <a class="dib w-100 link bg-jp-dark-sage white dim ph4 pv3 br2" href="/news.html">← Back to News</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</main>

@@ -1,0 +1,85 @@
+---
+layout: default
+---
+{% include header.html %}
+
+<main class="f5 f4-ns">
+  <section class="min-vh-100 bg-jp-light-sage ph3 pv4 ph4-m pv5-ns ph6-l">
+    <div class="mw-40rem center">
+      <div class="mb4 mb5-ns">
+        <div class="bg-jp-lightest-sage pv3 ph4 ba b--moon-gray br1 br--top">
+          <p class="tl">
+            {% if page.affiliation == "University of Pennsylvania" %}
+              {% if page.program == "Penn Center for Neuroaesthetics" %}
+                <a class="b mr2 link underline black dim" href="/community.html#at-pcfn">Community</a>
+                <span class="b mr2">→</span>
+                <span class="b mr2">At PCfN</span>
+              {% else %}
+                <a class="b mr2 link underline black dim" href="/community.html#affiliated-faculty-at-penn">Community</a>
+                <span class="b mr2">→</span>
+                <span class="b mr2">Penn Faculty</span>
+              {% endif %}
+            {% else %}
+              <a class="b mr2 link underline black dim" href="/community.html#other-collaborators">Community</a>
+              <span class="b mr2">→</span>
+              <span class="b mr2">Other Collaborators</span>
+            {% endif %}
+          </p>
+        </div>
+        <div class="f5 bg-white pa4 {% if page.content != "" or page.links %}pt5{% else %}pa5{% endif %} bl br bb b--moon-gray br1 br--bottom">
+          <img class="db center br-100 pa1 ba bw1 b--moon-gray mb4" src="/assets/img/people/225/{{ page.photo }}" alt="{{ page.first_name }} {{ page.middle_initials}} {{ page.last_name }}" height="auto" width="225">
+          <h2 class="tracked-tight tc mb2">{{ page.first_name }} {{ page.middle_initials}} {{ page.last_name }}</h2>
+          <div class="mb4">
+            {% if page.affiliation == "University of Pennsylvania" %}
+              {% if page.position %}
+                <p class="f4 tc mb2">{{ page.position }}</p>
+              {% endif %}
+              {% if page.school %}
+                <p class="tc silver mb1">{{ page.school }}</p>
+              {% endif %}
+              {% if page.department %}
+                <p class="i tc silver">{{ page.department }}</p>
+              {% endif %}
+            {% else %}
+              <p class="tc silver">{{ page.affiliation }}</p>
+            {% endif %}
+          </div>
+          {% unless page.content == "" %}
+            <hr class="w-100 ba b--light-gray mb4"/>
+            <div class="lh-copy {% if page.links %}mb4{% endif %}">
+              {{ content }}
+            </div>
+          {% endunless %}
+          {% if page.links %}
+            <hr class="w-100 ba b--light-gray mb4"/>
+            <div class="lh-copy pl2-ns">
+              <h3 class="tracked-tight mb2 mb3-ns">Links</h3>
+              <ul class="list pl0">
+                {% for link_item in page.links %}
+                  <li class="mb2 lh-title">
+                    <a class="link blue underline dim" href="{{ link_item.link_url }}" target="_blank">
+                      {{ link_item.link_name }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="">
+        <p class="tc">
+          {% if page.affiliation == "University of Pennsylvania" %}
+            {% if page.program == "Penn Center for Neuroaesthetics" %}
+              <a class="dib w-100 link bg-jp-dark-sage white dim ph4 pv3 br2" href="/community.html#at-pcfn">← Back to Community</a>
+            {% else %}
+              <a class="dib w-100 link bg-jp-dark-sage white dim ph4 pv3 br2" href="/community.html#affiliated-faculty-at-penn">← Back to Community</a>
+            {% endif %}
+          {% else %}
+            <a class="dib w-100 link bg-jp-dark-sage white dim ph4 pv3 br2" href="/community.html#other-collaborators">← Back to Community</a>
+          {% endif %}
+        </p>
+      </div>
+    </div>
+  </section>
+</main>

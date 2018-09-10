@@ -1,0 +1,20 @@
+<div class="f5 w-third-l mb5 mb0-l{% unless do_new_row == true or first_item == true %} ml5-l{% endunless %}">
+  <div class="flex flex-column items-center flex-row-m">
+    <img class="br-100 pa1 ba b--moon-gray mb3 mr4-m mb0-m" src="/assets/img/people/225/{{ person.photo }}" alt="{{ person.first_name }} {{ person.middle_initials}} {{ person.last_name }}" height="auto" width="225">
+    <div class="tc tl-m">
+      <h3 class="tc tracked-tight tl-m mb2">{{ person.first_name }} {{ person.middle_initials}} {{ person.last_name }}</h2>
+      <div class="mb3">
+        {% if person.affiliation == "University of Pennsylvania" %}
+          {% if person.program == "Penn Center for Neuroaesthetics" %}
+            <p class="silver tc tl-m">{{ person.position_short }}</p>
+          {% else %}
+            <p class="tc tl-m mb1 silver">{{ person.school }}</p>
+          {% endif %}
+        {% else %}
+          <p class="tc tl-m silver">{{ person.affiliation }}</p>
+        {% endif %}
+      </div>
+      {% unless person.content == "" %}<a class="dib link dim bg-blue white tc tl-m b pv2 ph4 br2" href="{{ person.url }}">Bio →</a>{% endunless %}
+    </div>
+  </div>
+</div>

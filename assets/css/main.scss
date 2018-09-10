@@ -1,0 +1,215 @@
+---
+# front matter required for jekyll to compile sass
+---
+// VARIABLES
+
+$font-stack: 'Questrial', sans-serif;
+$font-stack-headers: 'Arvo', serif;
+
+// RESETS
+
+* {
+  margin-top: 0 !important; // breaks tachyons classes targeting margin-top
+}
+
+* {
+  &:last-child {
+    margin-bottom: 0 !important;
+    // margin-right: 0 !important; // breaks tachyons .center class i.e., can't do `margin: 0 auto`
+  }
+}
+
+// OVERRIDE TACHYONS
+
+.link { transition: none; }
+.link:link, .link:visited { transition: none; }
+.link:hover { transition: none; }
+.link:active { transition: none; }
+.link:focus { transition: none; }
+
+// STYLES
+
+body {
+  font-family: $font-stack;
+}
+
+button {
+  font-family: $font-stack;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: $font-stack-headers;
+  font-weight: normal;
+}
+
+.min-h5 {
+  min-height: 16rem; // from tachyons h5
+}
+
+.jp-indent {
+  // tachyons .indent messes with margin-top and margin-bottom
+  text-indent: 1rem;
+}
+
+.hanging-indent {
+  padding-left: 1rem;
+  text-indent: -1rem;
+}
+
+.bg-sky {
+  background-image: url(/assets/img/backgrounds/sky.jpg);
+}
+
+.bg-leaves {
+  background-image: url(/assets/img/backgrounds/leaves.jpg);
+}
+
+.bg-goddard {
+  background-image: url(/assets/img/backgrounds/goddard.png);
+}
+
+.bg-salt {
+  background-image: url(/assets/img/backgrounds/salt.jpg);
+}
+
+.bg-sand {
+  background-image: url(/assets/img/backgrounds/sand.jpg);
+}
+
+.bg-goddard {
+  background-image: url(/assets/img/backgrounds/goddard.png);
+}
+
+.bg-cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.bg-fixed {
+  background-attachment: scroll;
+}
+
+.bg-jp-sage {
+  background-color: #dae6e2;
+}
+
+.jp-dark-sage { color: #6da291; }
+
+.bg-jp-dark-sage { background-color: #6da291; }
+
+.b--jp-darkest-sage { border-color: #6da291; }
+
+.bg-jp-darkest-sage { background-color: #4a6d61; }
+
+.jp-darkest-sage { color: #4a6d61; }
+
+.b--jp-darkest-sage { border-color: #4a6d61; }
+
+
+.bg-jp-light-sage {
+  // main bg color
+  background-color: #e1e8e6;
+}
+
+.bg-jp-lightest-sage {
+  background-color: #f4f6f5
+}
+
+.mw-30rem {
+  max-width: 30rem;
+}
+
+.mw-40rem {
+  max-width: 40rem;
+}
+
+.mw-45rem {
+  max-width: 45rem;
+}
+
+.mw-50rem {
+  max-width: 50rem;
+}
+
+.mw-55rem {
+  max-width: 55rem;
+}
+
+.mw-60rem {
+  max-width: 60rem;
+}
+
+.mw-90rem {
+  max-width: 90rem;
+}
+
+.o-95 {
+  opacity: 0.95;
+}
+
+
+@media screen and (min-width: 30em) {
+  .mw-30rem-ns {
+    max-width: 30rem;
+  }
+
+  .mw-40rem-ns {
+    max-width: 40rem;
+  }
+
+  .mw-45rem-ns {
+    max-width: 45rem;
+  }
+
+  .mw-60rem-ns {
+    max-width: 60rem;
+  }
+}
+
+@media screen and (min-width: 30em) and (max-width: 60em) {
+  .mw-30rem-m {
+    max-width: 30rem;
+  }
+
+  .mw-40rem-m {
+    max-width: 40rem;
+  }
+
+  .mw-45rem-m {
+    max-width: 45rem;
+  }
+
+  .mw-60rem-m {
+    max-width: 60rem;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .mw-30rem-l {
+    max-width: 30rem;
+  }
+
+  .mw-40rem-l {
+    max-width: 40rem;
+  }
+
+  .mw-45rem-l {
+    max-width: 45rem;
+  }
+
+  .mw-60rem-l {
+    max-width: 60rem;
+  }
+
+  .bg-fixed {
+    background-attachment: fixed;
+  }
+}
+
+
+.shadow-6 { box-shadow: 0px 1px 3px 0 rgba( 0, 0, 0, .2 ); }
+
+#particles-js > canvas {
+  display: block; // squash inline gap
+}
