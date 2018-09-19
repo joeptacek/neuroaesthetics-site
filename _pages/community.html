@@ -28,7 +28,7 @@ sections:
             <hr class="ba b--light-gray">
           </div>
           {% assign first_item = true %}
-          {% assign do_new_row = false %}
+          {% assign do_another_row = false %}
           {% assign nth_person = 1 %}
           {% assign people_sorted_by_name = site.people %}
           {% for person in people_sorted_by_name %}
@@ -42,13 +42,13 @@ sections:
               {% endif %}
             {% elsif forloop.last %}
               {% if person.program == "Penn Center for Neuroaesthetics" %}
-                {% if do_new_row == true %}
+                {% if do_another_row == true %}
                   </div>
                   <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
                 {% endif %}
                 {% include person-item.html %}
                 {% assign first_item = false %}
-                {% assign do_new_row = false %}
+                {% assign do_another_row = false %}
                 {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
               {% endif %}
               </div>
@@ -56,18 +56,18 @@ sections:
               {% if person.program == "Penn Center for Neuroaesthetics" %}
                 {% include person-item.html %}
                 {% assign first_item = false %}
-                {% assign do_new_row = true %}
+                {% assign do_another_row = true %}
                 {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
               {% endif %}
             {% else %}
               {% if person.program == "Penn Center for Neuroaesthetics" %}
-                {% if do_new_row == true %}
+                {% if do_another_row == true %}
                   </div>
                   <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
                 {% endif %}
                 {% include person-item.html %}
                 {% assign first_item = false %}
-                {% assign do_new_row = false %}
+                {% assign do_another_row = false %}
                 {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
               {% endif %}
             {% endif %}
@@ -81,7 +81,7 @@ sections:
             <hr class="ba b--light-gray">
           </div>
           {% assign first_item = true %}
-          {% assign do_new_row = false %}
+          {% assign do_another_row = false %}
           {% assign nth_person = 1 %}
           {% assign people_sorted_by_name = site.people | sort: "last_name" %}
           {% for person in people_sorted_by_name %}
@@ -98,13 +98,13 @@ sections:
             {% elsif forloop.last %}
               {% if person.affiliation == "University of Pennsylvania" %}
                 {% unless person.program == "Penn Center for Neuroaesthetics" %}
-                  {% if do_new_row == true %}
+                  {% if do_another_row == true %}
                     </div>
                     <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
                   {% endif %}
                   {% include person-item.html %}
                   {% assign first_item = false %}
-                  {% assign do_new_row = false %}
+                  {% assign do_another_row = false %}
                   {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
                 {% endunless %}
               {% endif %}
@@ -114,20 +114,20 @@ sections:
                 {% unless person.program == "Penn Center for Neuroaesthetics" %}
                   {% include person-item.html %}
                   {% assign first_item = false %}
-                  {% assign do_new_row = true %}
+                  {% assign do_another_row = true %}
                   {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
                 {% endunless %}
               {% endif %}
             {% else %}
               {% if person.affiliation == "University of Pennsylvania" %}
                 {% unless person.program == "Penn Center for Neuroaesthetics" %}
-                  {% if do_new_row == true %}
+                  {% if do_another_row == true %}
                     </div>
                     <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
                   {% endif %}
                   {% include person-item.html %}
                   {% assign first_item = false %}
-                  {% assign do_new_row = false %}
+                  {% assign do_another_row = false %}
                   {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
                 {% endunless %}
               {% endif %}
@@ -142,7 +142,7 @@ sections:
             <hr class="ba b--light-gray">
           </div>
           {% assign first_item = true %}
-          {% assign do_new_row = false %}
+          {% assign do_another_row = false %}
           {% assign nth_person = 1 %}
           {% assign people_sorted_by_name = site.people | sort: "last_name" %}
           {% for person in people_sorted_by_name %}
@@ -156,13 +156,13 @@ sections:
               {% endunless %}
             {% elsif forloop.last %}
               {% unless person.affiliation == "University of Pennsylvania" %}
-                {% if do_new_row == true %}
+                {% if do_another_row == true %}
                   </div>
                   <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
                 {% endif %}
                 {% include person-item.html %}
                 {% assign first_item = false %}
-                {% assign do_new_row = false %}
+                {% assign do_another_row = false %}
                 {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
               {% endunless %}
               </div>
@@ -170,18 +170,18 @@ sections:
               {% unless person.affiliation == "University of Pennsylvania" %}
                 {% include person-item.html %}
                 {% assign first_item = false %}
-                {% assign do_new_row = true %}
+                {% assign do_another_row = true %}
                 {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
               {% endunless %}
             {% else %}
               {% unless person.affiliation == "University of Pennsylvania" %}
-                {% if do_new_row == true %}
+                {% if do_another_row == true %}
                   </div>
                   <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
                 {% endif %}
                 {% include person-item.html %}
                 {% assign first_item = false %}
-                {% assign do_new_row = false %}
+                {% assign do_another_row = false %}
                 {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
               {% endunless %}
             {% endif %}
