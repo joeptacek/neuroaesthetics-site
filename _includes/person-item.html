@@ -1,11 +1,11 @@
 <div class="f5 w-third-l mb5 mb0-l{% unless do_another_row == true or first_item == true %} ml5-l{% endunless %}">
-  <div class="flex flex-column items-center-m flex-row-m">
-    <div class="tc mb3 mr4-m mb0-m">
-      <img class="br-100 pa1 ba b--moon-gray" src="/assets/img/people/225/{{ person.photo }}" alt="{{ person.first_name }} {{ person.middle_initials}} {{ person.last_name }}" height="auto" width="225">
+  <div class="flex flex-column items-center flex-row-m">
+    <div class="tc mb3 mr4-m mb0-m pa1 ba b--moon-gray br-100">
+      <img class="db br-100" src="/assets/img/people/225/{{ person.photo }}" alt="{{ person.first_name }} {{ person.middle_initials}} {{ person.last_name }}" height="auto" width="225">
     </div>
-    <div class="h4 tc tl-m">
-      <h3 class="tc tracked-tight tl-m mb2">{{ person.first_name }} {{ person.middle_initials}} {{ person.last_name }}</h2>
+    <div class="tc tl-m">
       <div class="mb3">
+        <h3 class="tc tracked-tight tl-m mb2">{{ person.first_name }} {{ person.middle_initials}} {{ person.last_name }}</h2>
         {% if person.affiliation == "University of Pennsylvania" %}
           {% if person.program == "Penn Center for Neuroaesthetics" %}
             <p class="silver">{{ person.position_short }}</p>
@@ -16,7 +16,7 @@
           <p class="silver">{{ person.affiliation }}</p>
         {% endif %}
       </div>
-      {% unless person.content == "" %}<a class="db dib-m w4-m link dim bg-blue white tc b pv2 br2" href="{{ person.url }}">Bio →</a>{% endunless %}
+      {% unless person.content == "" %}<a class="dib w4 link dim bg-blue white tc b pv2 br2" href="{{ person.url }}">Bio →</a>{% endunless %}
     </div>
   </div>
 </div>
