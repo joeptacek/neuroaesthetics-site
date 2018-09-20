@@ -29,12 +29,24 @@ $font-stack-headers: 'Arvo', serif;
 
 // STYLES
 
-body {
+body, button, input, textarea {
   font-family: $font-stack;
 }
 
-button {
-  font-family: $font-stack;
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ccc;
+    font-weight: normal;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #ccc;
+    font-weight: normal;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #ccc;
+    font-weight: normal;
 }
 
 h1, h2, h3, h4, h5 {

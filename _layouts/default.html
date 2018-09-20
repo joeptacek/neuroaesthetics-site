@@ -13,6 +13,7 @@
       <title>PCfN → News → {{ page.title }}</title>
       <meta name="description" content="Announcment page for {{ page.title }}">
     {% else %}
+      {% comment %}e.g., for _pages and _miscellaneous{% endcomment %}
       <title>PCfN → {{ page.title }}</title>
       <meta name="description" content="{{ page.description }}">
     {% endif %}
@@ -50,7 +51,7 @@
             Copyright 2018 Penn Center for Neuroaesthetics
           </p>
           <p class="">
-            <a class="silver link underline dim" href="mailto:eica@pennmedicine.upenn.edu,jptacek@pennmedicine.upenn.edu?subject=PCfN">
+            <a class="silver link underline dim" href="/contact.html">
               Contact
             </a>
           </p>

@@ -16,6 +16,9 @@ collections:
   pages:
     output: true
     permalink: /:name
+  miscellaneous:
+    output: true
+    permalink: /:name
   people:
     output: true
   announcements:
