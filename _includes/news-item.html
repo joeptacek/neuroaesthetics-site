@@ -1,8 +1,7 @@
-{% assign data = include.data %}
 <div class="f5 f4-ns pa4 ph5-ns{% unless forloop.index == 1 %} bt b--light-gray{% endunless %}">
   <a class="flex flex-column items-center link dim" href="{{ data.url }}" target="_blank">
-    <h3 class="tracked-tight purple tc mb3">{{ data.title }}</h2>
-    <p class="bg-purple near-white pv1 ph2 br2 tc b mb3">{{ data.source }}</p>
-    <p class="silver tc">{{ data.date | date: "%B %e, %Y" }}</p>
+    <h3 class="tracked-tight purple tc mb3">{{ news_item.title }}</h2>
+    <p class="bg-purple near-white pv1 ph2 br2 tc b mb3">{{ news_item.source }}</p>
+    <p class="silver tc">{{ news_item.date | date: "%B %e, %Y" }}</p>
   </a>
 </div>

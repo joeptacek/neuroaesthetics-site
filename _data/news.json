@@ -1,44 +1,1028 @@
-[
-  {
-    "title": "Summary of Twenty-first Century Great Conversations in Art, Neuroscience and Related Therapeutics",
-    "source": "Frontiers in Psychology",
-    "date": "2018-08-08",
-    "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2018.01428/full"
+{
+  "published": {
+    "items": [
+      {
+        "title": "Why We Binge",
+        "source": "Penn Medicine News",
+        "date": "2018-09-25",
+        "url": "https://www.pennmedicine.org/news/news-blog/2018/september/binge-watching",
+        "category": "print",
+        "sites": {
+          "pcfn": true,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Summary of Twenty-first Century Great Conversations in Art, Neuroscience and Related Therapeutics",
+        "source": "Frontiers in Psychology",
+        "date": "2018-08-08",
+        "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2018.01428/full",
+        "category": "print",
+        "sites": {
+          "pcfn": true,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Beauty and the Beast",
+        "source": "Telgraph India",
+        "date": "2018-08-06",
+        "url": "https://www.telegraphindia.com/science/beauty-and-the-beast-250168",
+        "category": "print",
+        "sites": {
+          "pcfn": true,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Interview with Anjan Chatterjee",
+        "source": "Christopher Maute Interviews",
+        "date": "2018-04-29",
+        "url": "https://www.youtube.com/watch?v=uXKQt-2mAWs",
+        "category": "video",
+        "sites": {
+          "pcfn": true,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "How Do You View a Person With a Facial Deformity?",
+        "source": "Philly Voice",
+        "date": "2018-06-22",
+        "url": "http://www.phillyvoice.com/penn-research-center-neuroaesthetics-facial-deformities/",
+        "category": "print",
+        "sites": {
+          "pcfn": true,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Penn Medicine Launches First Neuroaesthetics Research Center in United States",
+        "source": "Philly Voice",
+        "date": "2018-06-20",
+        "url": "http://www.phillyvoice.com/penn-medicine-neuroaesthetics-research-center-philadelphia/",
+        "category": "print",
+        "sites": {
+          "pcfn": true,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "New Penn Research Hub Sits at the Intersection of Brains and Beauty",
+        "source": "Technical.ly Philly",
+        "date": "2018-06-20",
+        "url": "https://technical.ly/philly/2018/06/22/penn-medicine-research-center-neuroaesthetics/",
+        "category": "print",
+        "sites": {
+          "pcfn": true,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Why Scientists Are Battling Over Pleasure",
+        "source": "The New York Times",
+        "date": "2018-04-10",
+        "url": "https://www.nytimes.com/2018/04/10/science/pleasure-art-sex-food-drugs.html",
+        "category": "print",
+        "sites": {
+          "pcfn": true,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Navigating the Ethics of Agents for Pharmacological Cognitive Enhancement",
+        "source": "Neurology Advisor",
+        "date": "2018-04-03",
+        "url": "https://www.neurologyadvisor.com/general-neurology/cognitive-enhancement-drugs-ethical-issues/article/755626/",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "\"It's a Snapshot of America in This Moment\" – Behind the Netflix Film on Adderall Abuse",
+        "source": "Decider",
+        "date": "2018-03-20",
+        "url": "https://decider.com/2018/03/20/take-your-pills-netflix-review/",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "\"Take Your Pills\" Is an Unexpected Look Into Adderall Abuse",
+        "source": "The Guardian",
+        "date": "2018-03-14",
+        "url": "https://www.theguardian.com/film/2018/mar/14/take-your-pills-netflix-adderall-america",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Global Wellness Institute Releases Study on Removing Barriers Between Beauty and Wellness",
+        "source": "Benzinga",
+        "date": "2018-02-01",
+        "url": "https://www.benzinga.com/pressreleases/18/02/p11116385/global-wellness-institute-releases-study-on-removing-barriers-between-",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "\"The Aesthetic Brain\" by Anjan Chatterjee: Beauty, Pleasure and Art Through the Lens of Neuroscience and Evolution",
+        "source": "On Art and Aesthetics",
+        "date": "2017-11-01",
+        "url": "https://onartandaesthetics.com/2017/11/01/the-aesthetic-brain-by-anjan-chatterjee-beauty-pleasure-and-art-through-the-lens-of-neuroscience-and-evolution/",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Trip to the Beach Sparks Memories in Dementia Patients",
+        "source": "Bucks County Courier Times",
+        "date": "2017-10-08",
+        "url": "http://www.buckscountycouriertimes.com/news/local/trip-to-the-beach-sparks-memories-in-dementia-patients/article_b6876bcc-aab9-11e7-b465-cf4a9fd3bbcf.html",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "The Best Books on the Neuroscience of Aesthetics Recommended by Anjan Chatterjee",
+        "source": "Five Books",
+        "date": "2017-10-05",
+        "url": "https://fivebooks.com/interview/neuroscience-aesthetics/",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Chess Study Revives Debate Over Cognition-enhancing Drugs",
+        "source": "The Journal of the American Medical Association",
+        "date": "2017-09-05",
+        "url": "https://jamanetwork.com/journals/jama/fullarticle/2649239",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Grounding Ethics From Below: CRISPR-cas9 and Genetic Modification",
+        "source": "The Neuroethics Blog",
+        "date": "2017-07-25",
+        "url": "http://www.theneuroethicsblog.com/2017/07/grounding-ethics-from-below-crispr-cas9.html",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Buildings, Beauty, and the Brain: Q & A with Anjan Chatterjee",
+        "source": "CNS Blog",
+        "date": "2017-06-15",
+        "url": "https://www.cogneurosociety.org/buildings-beauty-and-the-brain-qa-with-anjan-chatterjee",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Five Things You (Probably) Don't Know About How Our Brains Process Beauty and Art",
+        "source": "Forbes",
+        "date": "2017-02-21",
+        "url": "https://www.forbes.com/sites/sethporges/2017/02/21/5-things-you-probably-dont-know-about-how-our-brains-process-beauty-and-art",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Karen Pence Picks a Cause, and Art Therapists Feel Angst",
+        "source": "The New York Times",
+        "date": "2017-02-10",
+        "url": "https://www.nytimes.com/2017/02/10/well/mind/karen-pence-picks-a-cause-and-art-therapists-feel-angst.html",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Is Beauty in the Eye of the Beholder?",
+        "source": "WNPR (The Colin McEnroe Show)",
+        "date": "2017-02-07",
+        "url": "http://wnpr.org/post/beauty-eye-beholder",
+        "category": "audio",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Beauty and Anti-aging Is by Far the Largest Sector in the $3.7 Trillion Wellness Economy",
+        "source": "Cosmetics Design USA",
+        "date": "2017-02-02",
+        "url": "http://www.cosmeticsdesign.com/Business-Financial/Beauty-and-anti-aging-is-by-far-the-largest-sector-in-the-3.7-trillion-wellness-economy",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Straight Talk With Dr. Anjan Chatterjee",
+        "source": "SciArt Magazine",
+        "date": "2017-02-01",
+        "url": "http://www.sciartmagazine.com/straight-talk-with-neuroaesthetics-researcher-dr-anjan-chatterjee.html",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Study Examines Art Therapy For Alzheimer's, Dementia",
+        "source": "KJZZ (The Show)",
+        "date": "2017-01-06",
+        "url": "http://kjzz.org/content/417763/study-examines-art-therapy-alzheimers-dementia",
+        "category": "audio",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "TEDMED 2015: How Your Brain Decides What Is Beautiful",
+        "source": "TEDMED",
+        "date": "2016-12-02",
+        "url": "https://www.ted.com/talks/anjan_chatterjee_how_your_brain_decides_what_is_beautiful",
+        "category": "video",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Neurologists Study Beauty and Aesthetics",
+        "source": "The Hofstra Chronicle",
+        "date": "2016-11-16",
+        "url": "http://thehofstrachronicle.com/neurologists-study-beauty-aesthetics",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Why Do We Create Art?",
+        "source": "Format Magazine",
+        "date": "2016-09-29",
+        "url": "https://www.format.com/magazine/features/photography/why-do-we-create-art",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "The Aesthetic Brain (Book Review)",
+        "source": "BioLogos",
+        "date": "2016-09-27",
+        "url": "http://biologos.org/blogs/jim-stump-faith-and-science-seeking-understanding/the-aesthetic-brain-book-review",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "What Is Microdosing? Buying and Taking LSD to Boost Performance",
+        "source": "Wired UK",
+        "date": "2016-08-24",
+        "url": "http://www.wired.co.uk/article/lsd-microdosing-drugs-silicon-valley",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "The \"Limitless Pill\" Could Soon Turn Us All Into Superhuman Workers",
+        "source": "Vice",
+        "date": "2016-05-06",
+        "url": "http://www.vice.com/en_ca/read/could-we-all-soon-be-taking-the-limitless-pill-modafinil-study-drug-britain-universities-working-culture",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Car Driving Distractions Could Be Mitigated Better Voice Technology",
+        "source": "The New York Times",
+        "date": "2016-05-02",
+        "url": "http://www.nytimes.com/roomfordebate/2016/05/02/how-to-stop-people-from-texting-while-driving/car-driving-distractions-could-be-mitigated-better-voice-technology",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "This Is Your Brain On Mural — Interview With Dr. Anjan Chatterjee",
+        "source": "Mural Blog",
+        "date": "2016-04-22",
+        "url": "https://blog.mural.ly/2016/04/22/this-is-your-brain-on-mural-interview-with-dr-anjan-chatterjee",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Smart Drugs",
+        "source": "WHYY (Radio Times)",
+        "date": "2015-11-16",
+        "url": "https://whyy.org/cms/radiotimes/2015/11/16/smart-drugs/",
+        "category": "audio",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "\"Smart Drugs\" Are Here – Should College Students Be Allowed to Use Them?",
+        "source": "The Washington Post",
+        "date": "2015-11-03",
+        "url": "https://www.washingtonpost.com/news/speaking-of-science/wp/2015/11/03/smart-drugs-are-here-should-college-students-be-allowed-to-use-them",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "College Students Should Be Allowed to Take Smart Drugs",
+        "source": "Intelligence Squared Debates",
+        "date": "2015-11-02",
+        "url": "http://www.intelligencesquaredus.org/debates/college-students-should-be-allowed-take-smart-drugs",
+        "category": "video",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Interact 2015: The Neuroscience of Aesthetics",
+        "source": "Interact",
+        "date": "2015-10-21",
+        "url": "https://2015.interactconf.com/speakers/anjan-chatterjee/index.html",
+        "category": "video",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Anjan Chatterjee Interview at #interactLDN 2015",
+        "source": "UX Podcast",
+        "date": "2015-10-21",
+        "url": "http://uxpodcast.com/anjan-chatterjee-interactldn-2015/",
+        "category": "audio",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "The Aesthetic Brain (Book Review)",
+        "source": "The Journal of Clinical Psychiatry",
+        "date": "2015-10-01",
+        "url": "http://www.psychiatrist.com/JCP/article/Pages/2015/v76n10/v76n1013.aspx",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Why the Brain Likes Beauty",
+        "source": "KERA (Think)",
+        "date": "2015-09-23",
+        "url": "http://think.kera.org/2015/09/23/why-the-brain-likes-beauty/",
+        "category": "audio",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Science Book a Day Interviews Anjan Chatterjee",
+        "source": "Science Book a Day",
+        "date": "2015-09-21",
+        "url": "http://sciencebookaday.com/2015/09/21/science-book-a-day-interviews-anjan-chatterjee",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "5 Lessons From the Neuroscience of Art and Aesthetics",
+        "source": "CNS Blog",
+        "date": "2015-04-28",
+        "url": "http://www.cogneurosociety.org/5-lessons-from-the-neuroscience-of-art-and-a",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "The Use of Workplace Productivity Drugs Is the Probable Future",
+        "source": "The New York Times",
+        "date": "2015-04-21",
+        "url": "http://www.nytimes.com/roomfordebate/2015/04/21/using-adderall-to-get-ahead-not-to-fight-adhd/the-use-of-workplace-productivity-drugs-is-the-probable-future",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "The Brain, Smart Drugs, and Sports",
+        "source": "SCI TV",
+        "date": "2015-04-15",
+        "url": "https://youtu.be/jKt7ZBpaZo8",
+        "category": "video",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "CNS 2015: The Neuroaesthetics of Aesthetics and Art",
+        "source": "CNS Blog",
+        "date": "2015-04-13",
+        "url": "https://www.cogneurosociety.org/cns2015_videos/",
+        "category": "video",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "My Q and A With Cognitive Neuroscientist Anjan Chatterjee",
+        "source": "Huffington Post",
+        "date": "2015-04-06",
+        "url": "http://www.huffingtonpost.com/arianna-huffington/my-q-and-a-with-anjan-chatterjee_b_7012082.html",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Beauty: Is It Really Only Skin Deep?",
+        "source": "Deutsche Welle",
+        "date": "2015-02-27",
+        "url": "http://www.dw.de/what-is-beautiful/a-18283192",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Can Science Tell Us What Beauty Is?",
+        "source": "Nautilus",
+        "date": "2015-01-29",
+        "url": "http://nautil.us/issue/20/creativity/can-science-tell-us-what-beauty-is",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Beauty Is in the Brain of the Beholder",
+        "source": "CNS Blog",
+        "date": "2015-01-21",
+        "url": "http://www.cogneurosociety.org/art_chatterjee",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "The Most Dangerous Muse",
+        "source": "Nautilus",
+        "date": "2015-01-15",
+        "url": "http://nautil.us/issue/20/creativity/the-most-dangerous-muse",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Cynthia Pannucci: Probing the Common Ground of Art and Science",
+        "source": "Psychology Today",
+        "date": "2014-11-04",
+        "url": "http://www.psychologytoday.com/blog/sensoria/201411/cynthia-pannucci",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Art Science Inspires: The BRAIN Exhibition",
+        "source": "Art & Science Collaborations, Inc.",
+        "date": "2014-10-11",
+        "url": "http://web.archive.org/web/20160401121818/http://www.asci.org/artikel1361.html",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "America's Brain Gain, Immigrants at the Frontier of Neuroscience",
+        "source": "Vilcek Foundation Newsletter",
+        "date": "2014-09-01",
+        "url": "http://www.vilcek.org/news/newsletter/archive/fall-2014.html",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Living With Alzheimer's With the Help of Art",
+        "source": "Philly.com",
+        "date": "2014-08-05",
+        "url": "http://articles.philly.com/2014-08-05/news/52433604_1_art-therapy-penn-memory-center-alzheimer",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Parkinson's Could Enhance Creativity",
+        "source": "Trinidad and Tobago Guardian",
+        "date": "2014-07-29",
+        "url": "http://www.guardian.co.tt/lifestyle/2014-07-29/study-parkinson%E2%80%99s-could-enhance-creativity",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "In the Brain of the Beholder",
+        "source": "The Economist",
+        "date": "2013-12-25",
+        "url": "https://www.economist.com/blogs/prospero/2013/12/why-we-find-things-beautiful",
+        "category": "audio",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Can Adderall Save the Boomers?",
+        "source": "Philadelphia",
+        "date": "2013-06-28",
+        "url": "http://www.phillymag.com/articles/adderall-adhd-boomers-millennials",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Sinister Bias in Calling Soccer Fouls",
+        "source": "Real Clear Science",
+        "date": "2013-03-23",
+        "url": "http://www.realclearscience.com/journal_club/2013/03/23/insidious_bias_in_calling_soccer_fouls_106490.html",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Adderall: The \"Get Ahead\" Drug",
+        "source": "Self",
+        "date": "2013-03-11",
+        "url": "http://www.self.com/health/2013/03/adderall-the-get-ahead-drug",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "The Art of Connection",
+        "source": "TPT (Arts & the Mind)",
+        "date": "2012-09-10",
+        "url": "http://www.pbs.org/video/tpt-documentaries-arts-mind-art-connection",
+        "category": "video",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "After Brain Damage, the Creative Juices Flow for Some",
+        "source": "Los Angeles Times",
+        "date": "2011-05-20",
+        "url": "http://www.latimes.com/health/la-he-diseases-art-20110516-story.html",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Adults Who Claim to Have ADHD? 1 in 4 May Be Faking It",
+        "source": "MSNBC",
+        "date": "2011-04-25",
+        "url": "http://www.nbcnews.com/id/42710178/ns/health-addictions",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "The Psychology of Cheating",
+        "source": "The New York Times",
+        "date": "2011-04-16",
+        "url": "http://www.nytimes.com/2011/04/17/weekinreview/17chump.html",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Can You Measure Beauty?",
+        "source": "Pittsburgh Post-Gazette",
+        "date": "2010-12-05",
+        "url": "http://old.post-gazette.com/pg/10339/1108079-115.stm",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Is It Just Us, Or Are Kids Getting Really Stupid?",
+        "source": "Philadelphia",
+        "date": "2010-11-26",
+        "url": "http://www.phillymag.com/articles/feature_is_it_just_us_or_are_kids_getting_really_stupid",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "What's She Taking: Generation RX",
+        "source": "Glamour",
+        "date": "2009-09-30",
+        "url": "https://www.glamour.com/story/whats-she-taking-generation-rx",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Brain-age Scans Seen As Potential Gauge of Child Development",
+        "source": "The Washington Post",
+        "date": "2010-09-10",
+        "url": "http://www.washingtonpost.com/wp-dyn/content/article/2010/09/09/AR2010090906177.html",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "A Clue to Referee Bias?",
+        "source": "Freakonomics Blog",
+        "date": "2010-07-29",
+        "url": "http://www.freakonomics.com/2010/07/29/a-clue-to-referee-bias",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Football Fouls More Likely to Be Given When Play Heads Left",
+        "source": "BPS Research Digest",
+        "date": "2010-07-28",
+        "url": "http://bps-research-digest.blogspot.com/2010/07/football-fouls-more-likely-to-be-given.html",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Referees' Calls May Get Lost in Their Translation",
+        "source": "The New York Times",
+        "date": "2010-07-12",
+        "url": "http://www.nytimes.com/2010/07/13/science/13obrefs.html",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "World Cup Science: Referee More Likely to Call Right-to-left Fouls",
+        "source": "Time",
+        "date": "2010-07-12",
+        "url": "http://newsfeed.time.com/2010/07/09/world-cup-science-referee-more-likely-to-call-right-to-left-fouls",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "When Soccer Goes Left, Fouls May Be Right Behind",
+        "source": "Wired",
+        "date": "2010-07-08",
+        "url": "http://www.wired.com/playbook/2010/07/when-soccer-goes-left-fouls-may-be-right-behind",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Fouls Go Left: Soccer Referees May Be Biased Based on Play's Direction of Motion",
+        "source": "Science Daily",
+        "date": "2010-07-08",
+        "url": "http://www.sciencedaily.com/releases/2010/07/100707180928.htm",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Referees' Calls Biased by Direction of Play",
+        "source": "The Daily Telegraph",
+        "date": "2010-07-08",
+        "url": "http://www.telegraph.co.uk/news/newstopics/howaboutthat/7878175/Referees-calls-biased-by-direction-of-play.html",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "The Neuropsychology of Art",
+        "source": "The Beautiful Brain Podcast",
+        "date": "2010-01-17",
+        "url": "http://thebeautifulbrain.com/2010/01/podcast-the-neuropsychology-of-art/",
+        "category": "audio",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "The Ethics of Enhancement (Part 1)",
+        "source": "Penn Center for Neuroscience & Society",
+        "date": "2010-01-05",
+        "url": "https://youtu.be/8nrdAFU3xpw",
+        "category": "video",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "The Ethics of Enhancement (Part 2)",
+        "source": "Penn Center for Neuroscience & Society",
+        "date": "2010-01-05",
+        "url": "https://youtu.be/Mb6mhm9w6qA",
+        "category": "video",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Ritalin Backed As Brain-booster",
+        "source": "BBC",
+        "date": "2009-06-19",
+        "url": "http://news.bbc.co.uk/2/hi/health/8106957.stm",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Brain Gain",
+        "source": "The New Yorker",
+        "date": "2009-04-27",
+        "url": "http://www.newyorker.com/magazine/2009/04/27/brain-gain",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Neuroethics: Are Better Brains Better?",
+        "source": "Penn Center for Neuroscience & Society",
+        "date": "2009-04-13",
+        "url": "https://youtu.be/Zh2VTVWI1P8",
+        "category": "video",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Can a Pill Make You Smarter?",
+        "source": "Marie Claire",
+        "date": "2008-12-15",
+        "url": "http://www.marieclaire.com/career-money/jobs/pill-for-productivity-focus",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "The Science of Sarcasm (Not That You Care)",
+        "source": "The New York Times",
+        "date": "2008-06-03",
+        "url": "http://www.nytimes.com/2008/06/03/health/research/03sarc.html",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Professionals Use Drugs to Sharpen Their Minds, Survey Finds",
+        "source": "The Washington Post",
+        "date": "2008-04-09",
+        "url": "http://www.washingtonpost.com/wp-dyn/content/article/2008/04/09/AR2008040902503.html",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Brain Enhancement Is Wrong, Right?",
+        "source": "The New York Times",
+        "date": "2008-03-09",
+        "url": "http://www.nytimes.com/2008/03/09/weekinreview/09carey.html",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Drug May Be a Help to the Sleep Deprived",
+        "source": "NPR (Morning Edition)",
+        "date": "2005-08-23",
+        "url": "http://www.npr.org/templates/story/story.php?storyId=4811303",
+        "category": "audio",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "The Possibility of Cosmetic Surgery for the Soul",
+        "source": "The New York Times",
+        "date": "2004-10-05",
+        "url": "http://www.nytimes.com/2004/10/05/health/05side.html",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      }
+    ]
   },
-  {
-    "title": "Beauty and the Beast",
-    "source": "Telgraph India",
-    "date": "2018-08-06",
-    "url": "https://www.telegraphindia.com/science/beauty-and-the-beast-250168"
-  },
-  {
-    "title": "Interview with Anjan Chatterjee (Video)",
-    "source": "Christopher Maute Interviews",
-    "date": "2018-04-29",
-    "url": "https://www.youtube.com/watch?v=uXKQt-2mAWs"
-  },
-  {
-    "title": "How Do You View a Person With a Facial Deformity?",
-    "source": "Philly Voice",
-    "date": "2018-06-22",
-    "url": "http://www.phillyvoice.com/penn-research-center-neuroaesthetics-facial-deformities/"
-  },
-  {
-    "title": "Penn Medicine Launches First Neuroaesthetics Research Center in United States",
-    "source": "Philly Voice",
-    "date": "2018-06-20",
-    "url": "http://www.phillyvoice.com/penn-medicine-neuroaesthetics-research-center-philadelphia/"
-  },
-  {
-    "title": "New Penn Research Hub Sits at the Intersection of Brains and Beauty",
-    "source": "Technical.ly Philly",
-    "date": "2018-06-20",
-    "url": "https://technical.ly/philly/2018/06/22/penn-medicine-research-center-neuroaesthetics/"
-  },
-  {
-    "title": "Why Scientists Are Battling Over Pleasure",
-    "source": "The New York Times",
-    "date": "2018-04-10",
-    "url": "https://www.nytimes.com/2018/04/10/science/pleasure-art-sex-food-drugs.html"
+  "archive": {
+    "items": [
+      {
+        "title": "Anjan Chatterjee on Neuroethics, Cosmetic Neurology, and Neuromarketing",
+        "source": "Neurons Inc",
+        "sub_source": "BrainEthics Podcast",
+        "date": "2011-05-19",
+        "url": "http://neuronsinc.com/cosmetic-neurology/brainethics-podcast-anjan-chatterjee-on-neuroethics-cosmetic-neurology-and-neuromarketing/",
+        "category": "audio",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Soccer Refs Subconsciously Call More Fouls on Plays to the Left",
+        "source": "Wired",
+        "date": "2010-07-08",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "\"Sinister Motion\" May Bias Soccer Referees",
+        "source": "Science",
+        "date": "2010-07-08",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Direction Matters!",
+        "source": "ABC News",
+        "date": "2010-07-08",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Are Better Brains Better? Cosmetic Neurology and the Ethics of Enhancement",
+        "source": "Haverford College",
+        "date": "2010-04-18",
+        "url": "https://www.haverford.edu/philosophy/news/dr-anjan-chatterjee-80-%C3%A2%E2%82%AC%C5%93are-better-brains-better-cosmetic-neurology-and-ethics",
+        "type": "video",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Smart Drugs for Straight As",
+        "source": "The Times",
+        "date": "2007-05-14",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Brain-boosting \"Cosmetic Neurology\" On the Horizon",
+        "source": "The Seattle Times",
+        "date": "2004-11-06",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      },
+      {
+        "title": "Hey, Ref! How Do You Read it? Scoring World Cup Bias",
+        "source": "The Philadelphia Inquirer",
+        "date": "2010-07-12",
+        "category": "print",
+        "sites": {
+          "pcfn": false,
+          "chatlab": true
+        }
+      }
+    ]
   }
-]
+}

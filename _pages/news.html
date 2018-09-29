@@ -60,9 +60,11 @@ sections:
         <div class="br2 shadow-6">
           <h2 class="tracked-tight bg-purple near-white pv3 ph4 tc br2 br--top mb0">{{ page.sections[2] }}</h2>
           <div class="bg-white br2 br--bottom">
-            {% assign news_sorted = site.data.news | sort: "date" | reverse %}
+            {% assign news_sorted = site.data.news.published.items | sort: "date" | reverse %}
             {% for news_item in news_sorted %}
-              {% include news-item.html data=news_item %}
+              {% if news_item.sites.pcfn %}
+                {% include news-item.html %}
+              {% endif %}
             {% endfor %}
           </div>
         </div>
