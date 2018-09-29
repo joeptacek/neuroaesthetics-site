@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/joeptacek/neuroaesthetics-site#readme",
   "devDependencies": {
-    "browser-sync": "^2.24.4",
+    "browser-sync": "^2.24.7",
     "gulp": "^3.9.1"
   },
   "dependencies": {}
