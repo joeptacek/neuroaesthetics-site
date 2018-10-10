@@ -1,7 +1,15 @@
-node_modules/
+# Node
+/node_modules/
+
+# Ruby
 /vendor/
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
+
+# Jekyll
+/_data/external/
+/_site/
+/.sass-cache/
+/.jekyll-cache/
+/.jekyll-metadata
+
+# macOS
 .DS_Store

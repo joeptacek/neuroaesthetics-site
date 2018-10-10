@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-bundle exec jekyll build && rsync -ahzP --delete ./_site/ jptacek@hosting.med.upenn.edu:/home/neuroaesthetics/web_docs
