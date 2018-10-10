@@ -115,13 +115,14 @@ gulp.task('deploy', ['build'], function (cb) {
   log(`Deploy: Attempting rsync -ahzP --delete ${rsyncSource} ${rsyncDest}`);
   exec(`rsync -ahzP --delete ${rsyncSource} ${rsyncDest}`, (error, stdout, stderr) => {
     if (error) {
+      // currently syncs successfully but throws error related to ownership of web_docs
       return cb(error);
     } else if (stdout) {
       log('Deploy: Standard output (rsync):\n' + `${stdout}`);
     } else if (stderr) {
       log.error(`Deploy: Standard error (rsync): ${stderr}`);
     }
-    log('Deploy: Command successful');
+    log('Deploy: Command successful (rsync)');
     cb();
   });
 })
