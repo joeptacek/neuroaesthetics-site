@@ -1,0 +1,33 @@
+---
+title: Research
+subtitle: Research and publications
+header-css: bg-sand
+description: Check out our latest publications or peruse the PCfN research archives.
+sections:
+- All publications
+---
+{% include header.html %}
+{% include page-nav.html %}
+
+<main class="f5 f4-ns">
+  <div class="min-vh-100 bg-jp-light-sage pa3 pa4-ns ph6-l">
+    <div class="mw-55rem center lh-copy">
+      <section id="{{ page.sections[0] | slugify }}" class="pv3 pv4-ns">
+        <div class="bg-white shadow-6 br1 pa4 pa5-ns">
+          <h2 class="lh-title tracked-tight mb2">
+            {{ page.sections[0] }}
+          </h2>
+          <hr class="w-100 ba b--moon-gray mb4">
+          <p class="mb4">
+            The aim of neuroaesthetics is to understand neural systems that underlie aesthetic experiences and choices. This includes investigating the nature and neural basis of beauty, art, design, and architecture.
+          </p>
+          {% for publication in site.data.external.publications %}
+            {% unless publication.category == "laskfjlkj" %}
+              <p><a href="{{ publication.pdf | prepend: "http://ccn.upenn.edu/chatterjee" }}" target="_blank">{{ publication.work_title }}</a></p>
+            {% endunless %}
+          {% endfor %}
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
