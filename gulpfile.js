@@ -14,7 +14,7 @@ const devLocalData = args.includes('--local');
 const production = args.includes('--production') || args.includes('deploy');
 if (production) {
   if (devLocalData) {
-    throw new Error("Cannot combine options: --local --production");
+    throw new Error("Cannot use `--local` with `--production` or `deploy`");
   } else {
     process.env['JEKYLL_ENV'] = "production";
   }
@@ -113,6 +113,10 @@ gulp.task('data', function (cb) {
     });
 
     function writeFromLocal(dataFilename, resolve, reject) {
+      try {
+
+      }
+      // TODO: catch errors with createReadStream e.g., if localDataSource doesn't exist
       writePipe = fs.createReadStream(path.join(localDataSource, dataFilename)).pipe(fs.createWriteStream(path.join(outputDir, dataFilename)))
       writePipe.on('finish', resolve);
       writePipe.on('error', e => { reject(e) });
