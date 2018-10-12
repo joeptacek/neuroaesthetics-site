@@ -7,78 +7,116 @@ const path = require('path');
 const del = require('del');
 const mkdirp = require('mkdirp');
 const log = require('fancy-log');
+const url = require('url');
+
+const args = process.argv;
+const devLocalData = args.includes('--local');
+const production = args.includes('--production') || args.includes('deploy');
+if (production) {
+  if (devLocalData) {
+    throw new Error("Cannot combine options: --local --production");
+  } else {
+    process.env['JEKYLL_ENV'] = "production";
+  }
+} else {
+  process.env['JEKYLL_ENV'] = "development";
+}
 
 gulp.task('data', function (cb) {
-  const dataURLs = [
-    'https://raw.githubusercontent.com/joeptacek/chatlab-site/master/_data/news.json',
-    'https://raw.githubusercontent.com/joeptacek/chatlab-site/master/_data/publications.json'
-  ]
+  const outputDir = '_data/external'
+  const dataFilenames = ['news.json', 'publications.json']
+  const localDataSource = '../chatlab-site/_data/';
+  const remoteDataSource = 'https://raw.githubusercontent.com/joeptacek/chatlab-site/master/_data/'
+  let httpError = false;
+
 
   // rm -rf _data/ && mkdir _data
   // fs.rmdir will error if non-empty, best to use del (or rimraf) module for rm -rf
   // add trailing slash to remove matching dirs while ignoring files
-  const outputDir = '_data/external'
   del([outputDir + '/']).then(delPaths => {
     mkdirp(outputDir, error => {
       if (error) {
-        return cb(error);
+        return cb(error); // mkdirp error
+      } else {
+        if (delPaths.length > 0) {
+          log(`Data: Cleaned ${outputDir}`);
+        }
+        if (!devLocalData) {
+          writeAllFromRemote();
+        } else {
+          writeAllFromLocal();
+        }
       }
-
-      if (delPaths.length > 0) {
-        log(`Data: Cleaned ${outputDir}`);
-      }
-
-      const proms = dataURLs.map(dataURL => {
-        return new Promise((resolve, reject) => {
-          writeGet(dataURL, resolve, reject);
-        });
-      })
-
-      Promise.all(proms).then(() => cb()).catch(reason => {
-        processResponse = false;
-        return cb(reason);
-      });
     });
   }).catch(delError => {
-    cb(delError)
+    cb(delError) // del error
   });
 
-  let processResponse = true;
-  function writeGet(dataURL, resolve, reject) {
-    const urlBasename = dataURL.substring(dataURL.lastIndexOf("/") + 1);
-    log(`Data: Requesting ${dataURL}`);
-    https.get(dataURL, res => {
-      if (processResponse) {
-        log(`Data: Received response from ...${urlBasename}`);
-        const { statusCode } = res;
-        const contentLength = res.headers['content-length'];
-        const maxContentLength = 5000000;
+  function writeAllFromRemote() {
+    const proms = dataFilenames.map(dataFilename => {
+      return new Promise((resolve, reject) => {
+        writeFromRemote(dataFilename, resolve, reject);
+      });
+    })
 
-        let resError;
-        if (statusCode !== 200) {
-          resError = new Error(`Data: Response issue for ...${urlBasename}. Wrong status, ${statusCode}`);
-        } else if ( contentLength > maxContentLength ) {
-          resError = new Error(`Data: Response issue for ...${urlBasename}. Too large, ${contentLength} B`);
-        }
-
-        if (resError) {
-          // consume response data to free up memory (necessary? included in node docs for http)
-          res.resume();
-          return reject(resError);
-        }
-
-        const outputPath = path.join(outputDir, urlBasename);
-        const outputFile = fs.createWriteStream(outputPath);
-
-        log(`Data: Writing ${contentLength} B to ${outputDir}/${urlBasename}`);
-        res.pipe(outputFile).on('finish', resolve);
-      } else {
-        log(`Data: Received response for ...${urlBasename}, but aborting due to error`)
-      }
-    }).on('error', e => {
-      reqError =  new Error(`Data: Request issue for ${urlBasename}, got \`${e.message})\``);
-      return reject(reqError);
+    Promise.all(proms).then(() => cb()).catch(reason => {
+      httpError = true;
+      return cb(reason);
     });
+
+    function writeFromRemote(dataFilename, resolve, reject) {
+      const dataSourceURL = url.resolve(remoteDataSource, dataFilename);
+      log(`Data: Requesting ${dataFilename}`);
+      https.get(dataSourceURL, res => {
+        if (!httpError) {
+          log(`Data: Received response from ...${dataFilename}`);
+          const { statusCode } = res;
+          const contentLength = res.headers['content-length'];
+          const maxContentLength = 5000000;
+
+          let resError;
+          if (statusCode !== 200) {
+            resError = new Error(`Data: Response issue for ...${dataFilname}. Wrong status, ${statusCode}`);
+          } else if ( contentLength > maxContentLength ) {
+            resError = new Error(`Data: Response issue for ...${dataFilename}. Too large, ${contentLength} B`);
+          }
+
+          if (resError) {
+            // consume response data to free up memory (necessary? included in node docs for http)
+            res.resume();
+            return reject(resError); // error related to response from https.get
+          }
+
+          log(`Data: Writing ${contentLength} B to ${outputDir}/${dataFilename}`);
+          writePipe = res.pipe(fs.createWriteStream(path.join(outputDir, dataFilename)));
+          writePipe.on('finish', resolve);
+          writePipe.on('error', e => { reject(e) });
+        } else {
+          log(`Data: Received response for ...${dataFilename}, but aborting due to error`)
+        }
+      }).on('error', e => {
+        reqError =  new Error(`Data: Request issue for ${dataFilename}, got \`${e.message})\``);
+        return reject(reqError); // http.get error
+      });
+    }
+  }
+
+  function writeAllFromLocal() {
+    const proms = dataFilenames.map(dataFilename => {
+      return new Promise((resolve, reject) => {
+        writeFromLocal(dataFilename, resolve, reject);
+      });
+    })
+
+    Promise.all(proms).then(() => cb()).catch(reason => {
+      return cb(reason);
+    });
+
+    function writeFromLocal(dataFilename, resolve, reject) {
+      writePipe = fs.createReadStream(path.join(localDataSource, dataFilename)).pipe(fs.createWriteStream(path.join(outputDir, dataFilename)))
+      writePipe.on('finish', resolve);
+      writePipe.on('error', e => { reject(e) });
+    }
   }
 });
 
