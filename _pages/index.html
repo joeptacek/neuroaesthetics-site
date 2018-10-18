@@ -3,36 +3,121 @@ title: Home
 subtitle: Penn Center for Neuroaesthetics
 header-css: bg-sky
 description: Penn Center for Neuroaesthetics (PCfN), directed by Anjan Chatterjee, MD, FAAN. Converging an international community of investigators and creative experts to promote research and education in neuroaesthetics.
+sections:
+- Our mission
+- Basic research
+- Translational research
+- Education
 ---
 {% include header.html %}
+{% include page-nav.html %}
 
 <main class="f5 f4-m f3-l">
-  <section class="flex items-center min-vh-100-l bg-jp-light-sage relative">
-    <div id="particles-js" class="absolute absolute--fill"></div>
-    <div class="flex-auto ph3 pv4 ph4-m pv5-m pa6-l relative">
-      <div class="mw-55rem center">
+  <div class="min-vh-100 bg-jp-light-sage pa3 pa4-ns ph6-l">
+    <div class="mw-55rem center lh-copy">
+      <section id="{{ page.sections[0] | slugify }}" class="pv3 pv4-ns">
         <div class="bg-white-90 shadow-6 br2">
-          <h2 class="bg-blue near-white pv4 ph3 ph4-ns tc br2 br--top mb0">Mission</h2>
-          <div class="pv3 pv4-ns ph3 ph4-ns bb b--light-gray">
-            <p class="flex flex-column items-center db-ns"><span class="dib dark-green b mb2 mb0-ns mr2-ns">Advance</span><span class="tc tl-ns black">research in basic and applied neuroaesthetics</span></p>
-          </div>
-          <div class="pv3 pv4-ns ph3 ph4-ns bb b--light-gray">
-            <p class="flex flex-column items-center db-ns"><span class="dib dark-green b mb2 mb0-ns mr2-ns">Educate</span><span class="tc tl-ns black">the next generation of scholars</span></p>
-          </div>
-          <div class="pv3 pv4-ns ph3 ph4-ns bb b--light-gray">
-            <p class="flex flex-column items-center db-ns"><span class="dib dark-green b mb2 mb0-ns mr2-ns">Converge</span><span class="tc tl-ns black">allied interdisciplinary interests</span></p>
-          </div>
-          <div class="pv3 pv4-ns ph3 ph4-ns bb b--light-gray">
-            <p class="flex flex-column items-center db-ns"><span class="dib dark-green b mb2 mb0-ns mr2-ns">Welcome</span><span class="tc tl-ns black">investigators and creative experts</span></p>
-          </div>
-          <div class="pv3 pv4-ns ph3 ph4-ns">
-            <p class="flex flex-column items-center db-ns"><span class="dib dark-green b mb2 mb0-ns mr2-ns">Engage</span><span class="tc tl-ns black">with the arts community</span></p>
-          </div>
-          <div class="pt2 pb3 pt3-ns pb4-ns ph3 ph4-ns">
-            <a class="db bg-blue white tc b pv3 ph3 br2 link dim" href="/about.html">Learn more <span class="dn di-ns">about PCfN</span> →</a>
+          <h2 class="bg-blue near-white pv4 ph3 ph4-ns tc br2 br--top mb0">{{ page.sections[0] }}</h2>
+          <div class="pa4 pa5-ns">
+            <div class="mb3">
+              <p class="flex flex-column items-center db-ns">
+                <span class="dib dark-green b mb1 mb0-ns mr2-ns">Advance</span><span class="tc tl-ns">research in basic and applied neuroaesthetics</span>
+              </p>
+            </div>
+            <div class="mb3">
+              <p class="flex flex-column items-center db-ns">
+                <span class="dib dark-green b mb1 mb0-ns mr2-ns">Educate</span><span class="tc tl-ns">the next generation of scholars</span>
+              </p>
+            </div>
+            <div class="mb3">
+              <p class="flex flex-column items-center db-ns">
+                <span class="dib dark-green b mb1 mb0-ns mr2-ns">Converge</span><span class="tc tl-ns">allied interdisciplinary interests</span>
+              </p>
+            </div>
+            <div class="mb3">
+              <p class="flex flex-column items-center db-ns">
+                <span class="dib dark-green b mb1 mb0-ns mr2-ns">Welcome</span><span class="tc tl-ns">investigators and creative experts</span>
+              </p>
+            </div>
+            <div class="mb3">
+              <p class="flex flex-column items-center db-ns">
+                <span class="dib dark-green b mb1 mb0-ns mr2-ns">Engage</span><span class="tc tl-ns">with the arts community</span>
+              </p>
+            </div>
+            <!-- <div class="pt2 pb3 pt3-ns pb4-ns ph3 ph4-ns">
+              <a class="db bg-blue white tc b pv3 ph3 br2 link dim" href="/about.html">Learn more <span class="dn di-ns">about PCfN</span> →</a>
+            </div> -->
+            <!-- <div class="bg-blue h2 br2 br--bottom"></div> -->
           </div>
         </div>
-      </div>
+      </section>
+      <section id="{{ page.sections[1] | slugify }}" class="pv3 pv4-ns">
+        <div class="bg-white shadow-6 br1 pa4 pa5-ns">
+          <h2 class="lh-title tracked-tight mb2">
+            {{ page.sections[1] }}
+          </h2>
+          <hr class="w-100 ba b--moon-gray mb4">
+          <p class="mb4">
+            The aim of neuroaesthetics is to understand neural systems that underlie aesthetic experiences and choices. This includes investigating the nature and neural basis of beauty, art, design, and architecture.
+          </p>
+          <h3 class="lh-title tracked-tight mb3">Some topical questions</h3>
+          <ul class="list pl0">
+            <li class="mb3">Is there a common neural currency to beauty across different domains — e.g., bodies, nature, man-made objects, spaces?</li>
+            <li class="mb3">How is the pleasure derived from art different from primary pleasures, such as pleasure in food or sex?</li>
+            <li class="mb3">What distinguishes utilitarian from non-utilitarian choices?</li>
+            <li class="mb3">What are aesthetic emotions?</li>
+            <li class="mb3">How do negative emotions give rise to pleasure in aesthetic contexts?</li>
+            <li class="mb3">Does beauty influence other values such as morality?</li>
+            <li class="mb3">What are the temporal dimensions of aesthetic experiences?</li>
+            <li class="">How does context and education affect aesthetic experiences?</li>
+          </ul>
+        </div>
+      </section>
+      <section id="{{ page.sections[2] | slugify }}" class="pv3 pv4-ns">
+        <div class="bg-white shadow-6 br1 pa4 pa5-ns">
+          <h2 class="lh-title tracked-tight mb2">
+            {{ page.sections[2] }}
+          </h2>
+          <hr class="w-100 ba b--moon-gray mb4">
+          <p class="mb4">
+            Neuroaesthetics applications are relevant to medicine and beyond into domains of society and culture.
+          </p>
+          <h3 class="lh-title tracked-tight mb3">Questions that motivate us</h3>
+          <ul class="list pl0">
+            <li class="mb3">How might aesthetic experiences be used therapeutically?</li>
+            <li class="mb3">How might an understanding of psychological and neural responses to constructed spaces contribute to architectural design?</li>
+            <li class="mb3">Does engagement with aesthetics and the arts contribute to well-being?</li>
+            <li class="mb3">How does aesthetics influence design and marketing of everyday objects?</li>
+            <li class="">Can aesthetics facilitate learning?</li>
+          </ul>
+        </div>
+      </section>
+      <section class="mw-40rem center pv3 pv4-ns">
+        <div class="bg-near-white shadow-6 br1 pa4 pa5-ns">
+          <p class="mb4 tc">
+            Want to learn more about our research? Check out some of our latest publications!
+          </p>
+          <a class="db bg-blue white tc b pv3 ph3 br2 link dim" href="/research.html">PCfN research →</a>
+        </div>
+      </section>
+      <section id="{{ page.sections[3] | slugify }}" class="pv3 pv4-ns">
+        <div class="bg-white shadow-6 br1 pa4 pa5-ns">
+          <h2 class="lh-title tracked-tight mb2">
+            {{ page.sections[3] }}
+          </h2>
+          <hr class="w-100 ba b--moon-gray mb4">
+          <p class="mb4">
+            Grounded in basic science, PCfN aims to promote dialogue across disciplines and to educate — and be informed by — the arts community and general public. Serving as a multidisciplenary hub for scholars in neuroscience, psychology, business, philosophy, the arts and humanities, we will offer new educational opportunities for those interested in the empirical study of aesthetics.
+          </p>
+          <h3 class="lh-title tracked-tight mb3">Future activities</h3>
+          <ul class="list pl0">
+            <li class="mb3">Graduate seminars and undergraudate courses</li>
+            <li class="mb3">Publications and texts on neuroaesthetics</li>
+            <li class="mb3">Traditional academic gatherings (symposia, public lectures, workshops, national and international meetings)</li>
+            <li class="">Collaborative events with arts venues and museums</li>
+          </ul>
+        </div>
+      </section>
     </div>
-  </section>
+  </div>
 </main>

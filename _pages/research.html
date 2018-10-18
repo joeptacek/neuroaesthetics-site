@@ -1,15 +1,21 @@
 ---
 title: Research
 subtitle: Research and publications
-header-css: bg-sand
+header-css: bg-leaves
 description: Check out our latest publications or peruse the PCfN research archives.
 sections:
-- All publications
+- Publications
 ---
+{% capture header_content %}
+  <p>
+    The aim of neuroaesthetics research is to understand neural systems that underlie aesthetic experiences and choices. This includes investigating the nature and neural basis of beauty, art, design, and architecture.
+  </p>
+{% endcapture %}
+
 {% include header.html %}
 {% include page-nav.html %}
 
-<main class="f5 f4-ns">
+<main class="f5 f4-m f3-l">
   <div class="min-vh-100 bg-jp-light-sage pa3 pa4-ns ph6-l">
     <div class="mw-55rem center lh-copy">
       <section id="{{ page.sections[0] | slugify }}" class="pv3 pv4-ns">
@@ -18,13 +24,11 @@ sections:
             {{ page.sections[0] }}
           </h2>
           <hr class="w-100 ba b--moon-gray mb4">
-          <p class="mb4">
-            The aim of neuroaesthetics is to understand neural systems that underlie aesthetic experiences and choices. This includes investigating the nature and neural basis of beauty, art, design, and architecture.
-          </p>
-          {% for publication in site.data.external.publications %}
-            {% unless publication.category == "laskfjlkj" %}
-              <p><a href="{{ publication.pdf | prepend: "http://ccn.upenn.edu/chatterjee" }}" target="_blank">{{ publication.work_title }}</a></p>
-            {% endunless %}
+          {% assign pubs_sorted = site.data.external.publications | sort: "work_post_date_fake" | reverse %}
+          {% for publication in pubs_sorted %}
+            {% if publication.category == "neuroaesthetics" %}
+              {% include publication-item.html %}
+            {% endif %}
           {% endfor %}
         </div>
       </section>

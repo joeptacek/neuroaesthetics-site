@@ -1,45 +1,42 @@
-<header class="{% if page.collection == "pages" %}{{ page.header-css }} bg-cover bg-fixed bb bw2 b--dark-green{% endif %}">
-  <div class="{% if page.collection == "pages" %}min-vh-100{% endif %} flex flex-column">
-    <nav class="bg-near-white pv3-l ph6-l bb b--light-silver">
-      <div class="mw-55rem-l center-l flex flex-column flex-row-l justify-between-l">
-        <div class="flex justify-center pv3 pv0-l mr4-l">
-          <a class="link dim" href="/">
-            <img src="/assets/img/logo/penn-center-for-neuroaesthetics-logo.png" alt="Logo for the Penn Center for Neuroaesthetics" width="130" height="auto">
-          </a>
-        </div>
-        <div class="f5 f4-ns b flex items-center justify-center bt bn-l b--moon-gray pv3 pv0-l ph3 ph4-m ph0-l">
-          <a class="link dim black-60 mr3 mr4-ns" href="/about.html">About</a>
-          <a class="link dim black-60 mr3 mr4-ns" href="/community.html">Community</a>
-          <a class="link dim black-60 mr3 mr4-ns" href="/news.html">News</a>
-          <a class="link dim bg-light-purple white pv1 pv2-ns ph3 br-pill" href="https://giving.apps.upenn.edu/fund?program=MED&fund=604330" target="_blank">Giving</a>
+<header class="flex flex-column{% if page.collection == "pages" %} {{ page.header-css }} bg-cover bg-fixed min-vh-100 bb bw2 b--dark-green{% endif %}">
+  <nav class="bg-near-white pv3-l ph6-l bb b--light-silver">
+    <div class="mw-55rem-l center-l flex flex-column flex-row-l justify-between-l">
+      <div class="flex justify-center pv3 pv0-l mr4-l">
+        <a class="link dim" href="/">
+          <img src="/assets/img/logo/penn-center-for-neuroaesthetics-logo.png" alt="Logo for the Penn Center for Neuroaesthetics" width="130" height="auto">
+        </a>
+      </div>
+      <div class="f5 f4-ns b flex items-center justify-center bt bn-l b--moon-gray pv3 pv0-l ph3 ph4-m ph0-l">
+        <a class="link dim black-60 mr3 mr4-ns" href="/research.html">Research</a>
+        <a class="link dim black-60 mr3 mr4-ns" href="/community.html">Community</a>
+        <a class="link dim black-60 mr3 mr4-ns" href="/news.html">News</a>
+        <a class="link dim bg-light-purple white pv1 pv2-ns ph3 br-pill" href="https://giving.apps.upenn.edu/fund?program=MED&fund=604330" target="_blank">Giving</a>
+      </div>
+    </div>
+  </nav>
+  {% assign todays_date = site.time | date: "%Y-%m-%d" %}
+  {% for announcement in site.announcements %}
+    {% assign ds = announcement.date_start | date: "%Y-%m-%d" %}
+    {% assign de = announcement.date_end | date: "%Y-%m-%d" %}
+    {% if todays_date >= ds and todays_date <= de %}
+      <div class="bg-green pv2 near-white o-90">
+        <div class="ph3 ph4-m ph6-l">
+          <p class="tc mw-55rem center">Announcement: <a class="link underline near-white" href="{% if announcement.ext_announcement %}{{ announcement.ext_announcement.link_url }}{% else %}{{ announcement.url }}{% endif %}" {% if announcement.ext_announcement %}target="_blank"{% endif %}>{{ announcement.title }}</a></p>
         </div>
       </div>
-    </nav>
-    {% assign todays_date = site.time | date: "%Y-%m-%d" %}
-    {% for announcement in site.announcements %}
-      {% assign ds = announcement.date_start | date: "%Y-%m-%d" %}
-      {% assign de = announcement.date_end | date: "%Y-%m-%d" %}
-      {% if todays_date >= ds and todays_date <= de %}
-        <div class="bg-green pv2 near-white o-90">
-          <div class="ph3 ph4-m ph6-l">
-            <p class="tc mw-55rem center">Announcement: <a class="link underline near-white" href="{% if announcement.ext_announcement %}{{ announcement.ext_announcement.link_url }}{% else %}{{ announcement.url }}{% endif %}" {% if announcement.ext_announcement %}target="_blank"{% endif %}>{{ announcement.title }}</a></p>
-          </div>
-        </div>
-        {% break %}
-      {% endif %}
-    {% endfor %}
-    {% if page.collection == "pages" %}
-      <div class="flex-ns justify-center-ns items-center-ns min-vh-100-ns ph3 pv6 ph4-m ph6-l">
-        <div class="flex-auto flex flex-column justify-center f5 f4-ns bg-near-white shadow-6 min-h5 mw-55rem lh-copy br2 ba b--light-silver pa4 pa5-ns o-95">
-          <h1 class="lh-solid tracked-tight tc{% if header_content %} mb3 mb4-ns{% endif %}">{{ page.subtitle }}</h1>
-          {% if header_content %}
-            <div class="mb4">
-              {{ header_content }}
-            </div>
-          {% endif %}
-          <!-- {% include page-nav.html %} -->
-        </div>
-      </div>
+      {% break %}
     {% endif %}
-  </div>
+  {% endfor %}
+  {% if page.collection == "pages" %}
+    <div class="flex-ns justify-center-ns items-center-ns min-vh-100-ns ph3 pv6 ph4-m ph6-l">
+      <div class="flex-auto flex flex-column justify-center f5 f4-ns bg-near-white shadow-6 min-h5 mw-55rem lh-copy br2 ba b--light-silver pa4 pa5-ns o-95">
+        <h1 class="lh-solid tracked-tight tc{% if header_content %} mb3 mb4-ns{% endif %}">{{ page.subtitle }}</h1>
+        {% if header_content %}
+          <div class="mb4">
+            {{ header_content }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
 </header>

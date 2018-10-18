@@ -29,7 +29,6 @@ gulp.task('data', function (cb) {
   const remoteDataSource = 'https://raw.githubusercontent.com/joeptacek/chatlab-site/master/_data/'
   let httpError = false;
 
-
   // rm -rf _data/ && mkdir _data
   // fs.rmdir will error if non-empty, best to use del (or rimraf) module for rm -rf
   // add trailing slash to remove matching dirs while ignoring files
@@ -113,9 +112,6 @@ gulp.task('data', function (cb) {
     });
 
     function writeFromLocal(dataFilename, resolve, reject) {
-      try {
-
-      }
       // TODO: catch errors with createReadStream e.g., if localDataSource doesn't exist
       writePipe = fs.createReadStream(path.join(localDataSource, dataFilename)).pipe(fs.createWriteStream(path.join(outputDir, dataFilename)))
       writePipe.on('finish', resolve);
@@ -160,9 +156,9 @@ gulp.task('deploy', ['build'], function (cb) {
       // currently syncs successfully but throws error related to ownership of web_docs
       return cb(error);
     } else if (stdout) {
-      log('Deploy: Standard output (rsync):\n' + `${stdout}`);
+      log('Deploy: Standard output (rsync):\n' + stdout);
     } else if (stderr) {
-      log.error(`Deploy: Standard error (rsync): ${stderr}`);
+      log.error('Deploy: Standard error (rsync):\n' + stderr);
     }
     log('Deploy: Command successful (rsync)');
     cb();
