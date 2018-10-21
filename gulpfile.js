@@ -149,9 +149,10 @@ gulp.task('serve', ['watch'], function () {
 gulp.task('deploy', ['build'], function (cb) {
   const siteDir = '_site';
   const rsyncSource = siteDir + '/';
-  const rsyncDest = 'jptacek@hosting.med.upenn.edu:/home/neuroaesthetics/web_docs'
+  // do ssh-keygen and copy public key to server to do rsync w/o password
+  const rsyncDest = 'neuroaesthetics@hosting.med.upenn.edu:/home/neuroaesthetics/web_docs'
   log(`Deploy: Attempting rsync -ahzP --delete ${rsyncSource} ${rsyncDest}`);
-  exec(`rsync -ahzP --delete ${rsyncSource} ${rsyncDest}`, (error, stdout, stderr) => {
+  exec(`rsync -ahzP --delete -e ssh ${rsyncSource} ${rsyncDest}`, (error, stdout, stderr) => {
     if (error) {
       // currently syncs successfully but throws error related to ownership of web_docs
       return cb(error);
