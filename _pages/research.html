@@ -23,7 +23,7 @@ sections:
           <h2 class="lh-title tracked-tight mb2">
             {{ page.sections[0] }}
           </h2>
-          <hr class="w-100 ba b--moon-gray mb4">
+          <hr class="w-100 ba b--moon-gray mb3 mb4-ns">
           {% assign pubs_sorted = site.data.external.publications | sort: "work_post_date_fake" | reverse %}
           {% for publication in pubs_sorted %}
             {% if publication.category == "neuroaesthetics" %}
