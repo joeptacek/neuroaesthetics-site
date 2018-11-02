@@ -135,6 +135,7 @@ gulp.task('build', ['data'], function (cb) {
 
 gulp.task('watch', ['data'], function () {
   spawn('bundle', ['exec', 'jekyll', 'build', '--watch'], { stdio: 'inherit' });
+  // build out cb() to make dependent tasks (e.g., serve) wait until jekyll watch is finished
 });
 
 gulp.task('serve', ['watch'], function () {
