@@ -1,6 +1,8 @@
-<div class="f5 w-third-l mb5 mb0-l{% unless do_another_row == true or first_item == true %} ml5-l{% endunless %}">
+<div class="f5">
   <div class="flex flex-column items-center flex-row-m">
-    <div class="tc mb3 mr4-m mb0-m pa1 ba b--moon-gray br-100">
+    {% comment %} flex: none to avoid shrinking img should not participate in flex resizing {% endcomment %}
+    <div class="flex-none mb3 mr4-m mb0-m pa1 ba b--moon-gray br-100">
+      {% comment %} display: block to avoid space under img, otherwise parent container and its border are stretched {% endcomment %}
       <img class="db br-100" src="/assets/img/people/225/{{ person.photo }}" alt="{{ person.first_name }} {{ person.middle_initials}} {{ person.last_name }}" height="auto" width="225">
     </div>
     <div class="tc tl-m">

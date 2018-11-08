@@ -35,42 +35,26 @@ body, button, input, textarea {
   font-family: $font-stack;
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #ccc;
-    font-weight: normal;
-    opacity: 1; /* Firefox */
-}
-
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #ccc;
-    font-weight: normal;
-}
-
-::-ms-input-placeholder { /* Microsoft Edge */
-    color: #ccc;
-    font-weight: normal;
-}
-
 h1, h2, h3, h4, h5 {
   font-family: $font-stack-headers;
   font-weight: normal;
+}
+
+.mw-40rem {
+  max-width: 40rem;
+}
+
+.mw-55rem {
+  max-width: 55rem;
 }
 
 .min-h5 {
   min-height: 16rem; // from tachyons h5
 }
 
-.shadow-6 {
-  box-shadow: 0px 1px 3px 0 rgba( 0, 0, 0, .2 );
-}
-
 .hanging-indent {
   padding-left: 0.5rem;
   text-indent: -0.5rem;
-}
-
-.o-95 {
-  opacity: 0.95;
 }
 
 .bg-cover {
@@ -122,12 +106,42 @@ h1, h2, h3, h4, h5 {
   background-color: #6da291;
 }
 
-.mw-40rem {
-  max-width: 40rem;
+.shadow-6 {
+  box-shadow: 0px 1px 3px 0 rgba( 0, 0, 0, .2 );
 }
 
-.mw-55rem {
-  max-width: 55rem;
+.o-95 {
+  opacity: 0.95;
+}
+
+table.tablegen {
+  display: block; // squash inline space
+
+  tbody {
+    display: block; // squash inline space
+  }
+
+  // liquid tablerow generates <tr class="row[1, 2, etc.]">
+  tr[class^="row"] {
+    display: flex;
+    flex-flow: column;
+  }
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ccc;
+    font-weight: normal;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #ccc;
+    font-weight: normal;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #ccc;
+    font-weight: normal;
 }
 
 @media screen and (min-width: 30em) {
@@ -161,5 +175,17 @@ h1, h2, h3, h4, h5 {
 
   .bg-fixed {
     background-attachment: fixed;
+  }
+
+  table.tablegen {
+    tr[class^="row"] {
+      flex-flow: row;
+    }
+
+    // liquid tablerow generates <td class="col[1, 2, etc.]">
+    td[class^="col"] {
+      // or else this flex item will resize according to content length
+      width: calc(100% / 3);
+    }
   }
 }

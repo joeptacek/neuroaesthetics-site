@@ -22,176 +22,57 @@ sections:
   <div class="min-vh-100 bg-jp-light-sage pa3 pa4-ns ph6-l">
     <div class="mw-55rem center">
       <section id="{{ page.sections[0] | slugify }}" class="pv3 pv4-ns">
-        <div class="bg-white pv5 ba b--moon-gray br2">
-          <div class="ph4 ph5-ns mb5">
+        <div class="bg-white ph4 pt5 ph5-ns ba b--moon-gray br2">
+          <div class="mb4 mb5-ns">
             <h2 class="tc lh-solid tracked-tight mb4">Penn Center for Neuroaesthetics</h2>
             <hr class="ba b--light-gray">
           </div>
-          {% assign first_item = true %}
-          {% assign do_another_row = false %}
-          {% assign nth_person = 1 %}
-          {% assign people_sorted_by_name = site.people %}
-          {% for person in people_sorted_by_name %}
-            {% assign mod_three = nth_person | modulo: 3 %}
-            {% if forloop.first %}
-              <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
-              {% if person.program == "Penn Center for Neuroaesthetics" %}
+          {% assign people_sorted_by_name = site.people | where: "program", "Penn Center for Neuroaesthetics" %}
+          <table class="tablegen w-100">
+            {% tablerow person in people_sorted_by_name cols:3 %}
+              <div class="pb5 ph3-l">
                 {% include person-item.html %}
-                {% assign first_item = false %}
-                {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
-              {% endif %}
-            {% elsif forloop.last %}
-              {% if person.program == "Penn Center for Neuroaesthetics" %}
-                {% if do_another_row == true %}
-                  </div>
-                  <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
-                {% endif %}
-                {% include person-item.html %}
-                {% assign first_item = false %}
-                {% assign do_another_row = false %}
-                {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
-              {% endif %}
               </div>
-            {% elsif mod_three == 0 %}
-              {% if person.program == "Penn Center for Neuroaesthetics" %}
-                {% include person-item.html %}
-                {% assign first_item = false %}
-                {% assign do_another_row = true %}
-                {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
-              {% endif %}
-            {% else %}
-              {% if person.program == "Penn Center for Neuroaesthetics" %}
-                {% if do_another_row == true %}
-                  </div>
-                  <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
-                {% endif %}
-                {% include person-item.html %}
-                {% assign first_item = false %}
-                {% assign do_another_row = false %}
-                {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
-              {% endif %}
-            {% endif %}
-          {% endfor %}
+            {% endtablerow %}
+          </table>
         </div>
       </section>
       <section id="{{ page.sections[1] | slugify }}" class="pv3 pv4-ns">
-        <div class="bg-white pv5 ba b--moon-gray br2">
-          <div class="ph4 ph5-ns mb5">
+        <div class="bg-white ph4 pt5 ph5-ns ba b--moon-gray br2">
+          <div class="mb4 mb5-ns">
             <h2 class="tc lh-solid tracked-tight mb4">{{ page.sections[1] }}</h2>
             <hr class="ba b--light-gray">
           </div>
-          {% assign first_item = true %}
-          {% assign do_another_row = false %}
-          {% assign nth_person = 1 %}
-          {% assign people_sorted_by_name = site.people | sort: "last_name" %}
-          {% for person in people_sorted_by_name %}
-            {% assign mod_three = nth_person | modulo: 3 %}
-            {% if forloop.first %}
-              <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
-              {% if person.affiliation == "University of Pennsylvania" %}
-                {% unless person.program == "Penn Center for Neuroaesthetics" %}
-                  {% include person-item.html %}
-                  {% assign first_item = false %}
-                  {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
-                {% endunless %}
-              {% endif %}
-            {% elsif forloop.last %}
-              {% if person.affiliation == "University of Pennsylvania" %}
-                {% unless person.program == "Penn Center for Neuroaesthetics" %}
-                  {% if do_another_row == true %}
-                    </div>
-                    <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
-                  {% endif %}
-                  {% include person-item.html %}
-                  {% assign first_item = false %}
-                  {% assign do_another_row = false %}
-                  {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
-                {% endunless %}
-              {% endif %}
+          {% assign people_sorted_by_name = site.people | where: "affiliation", "University of Pennsylvania" | where_exp: "item", "item.program != 'Penn Center for Neuroaesthetics'" | sort: "last_name" %}
+          <table class="tablegen w-100">
+            {% tablerow person in people_sorted_by_name cols:3 %}
+              <div class="pb5 ph3-l">
+                {% include person-item.html %}
               </div>
-            {% elsif mod_three == 0 %}
-              {% if person.affiliation == "University of Pennsylvania" %}
-                {% unless person.program == "Penn Center for Neuroaesthetics" %}
-                  {% include person-item.html %}
-                  {% assign first_item = false %}
-                  {% assign do_another_row = true %}
-                  {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
-                {% endunless %}
-              {% endif %}
-            {% else %}
-              {% if person.affiliation == "University of Pennsylvania" %}
-                {% unless person.program == "Penn Center for Neuroaesthetics" %}
-                  {% if do_another_row == true %}
-                    </div>
-                    <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
-                  {% endif %}
-                  {% include person-item.html %}
-                  {% assign first_item = false %}
-                  {% assign do_another_row = false %}
-                  {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
-                {% endunless %}
-              {% endif %}
-            {% endif %}
-          {% endfor %}
+            {% endtablerow %}
+          </table>
         </div>
       </section>
       <section id="{{ page.sections[2] | slugify }}" class="pv3 pv4-ns">
-        <div class="bg-white pv5 ba b--moon-gray br2">
-          <div class="ph4 ph5-ns mb5">
+        <div class="bg-white ph4 pt5 ph5-ns ba b--moon-gray br2">
+          <div class="mb4 mb5-ns">
             <h2 class="tc lh-solid tracked-tight mb4">{{ page.sections[2] }}</h2>
             <hr class="ba b--light-gray">
           </div>
-          {% assign first_item = true %}
-          {% assign do_another_row = false %}
-          {% assign nth_person = 1 %}
-          {% assign people_sorted_by_name = site.people | sort: "last_name" %}
-          {% for person in people_sorted_by_name %}
-            {% assign mod_three = nth_person | modulo: 3 %}
-            {% if forloop.first %}
-              <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
-              {% unless person.affiliation == "University of Pennsylvania" %}
+          {% assign people_sorted_by_name = site.people | where_exp: "item", "item.affiliation != 'University of Pennsylvania'" | sort: "last_name" %}
+          <table class="tablegen w-100">
+            {% tablerow person in people_sorted_by_name cols:3 %}
+              <div class="pb5 ph3-l">
                 {% include person-item.html %}
-                {% assign first_item = false %}
-                {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
-              {% endunless %}
-            {% elsif forloop.last %}
-              {% unless person.affiliation == "University of Pennsylvania" %}
-                {% if do_another_row == true %}
-                  </div>
-                  <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
-                {% endif %}
-                {% include person-item.html %}
-                {% assign first_item = false %}
-                {% assign do_another_row = false %}
-                {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
-              {% endunless %}
               </div>
-            {% elsif mod_three == 0 %}
-              {% unless person.affiliation == "University of Pennsylvania" %}
-                {% include person-item.html %}
-                {% assign first_item = false %}
-                {% assign do_another_row = true %}
-                {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
-              {% endunless %}
-            {% else %}
-              {% unless person.affiliation == "University of Pennsylvania" %}
-                {% if do_another_row == true %}
-                  </div>
-                  <div class="flex flex-column flex-row-l justify-center ph4 ph5-ns mb5">
-                {% endif %}
-                {% include person-item.html %}
-                {% assign first_item = false %}
-                {% assign do_another_row = false %}
-                {% capture nth_person %}{{ nth_person | plus: 1 }}{% endcapture %}
-              {% endunless %}
-            {% endif %}
-          {% endfor %}
+            {% endtablerow %}
+          </table>
         </div>
       </section>
       <section id="{{ page.sections[3] | slugify }}" class="pv3 pv4-ns">
         <div class="bg-white pa1 ba b--moon-gray br2">
           <div class="pv5 ph4 ph5-ns ba br2 b--light-gray">
-            <h2 class="tc lh-solid tracked-tight ph4 ph5 mb4">{{ page.sections[3] }}</h2>
+            <h2 class="tc lh-solid tracked-tight mb4">{{ page.sections[3] }}</h2>
             <hr class="ba b--light-gray mb5">
             <div class="flex flex-column flex-row-ns items-center justify-center mb5">
               <a class="mb5 mb0-ns link dim mr5-ns" href="http://ccn.upenn.edu/" target="_blank">
