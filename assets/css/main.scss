@@ -23,11 +23,9 @@ $font-stack-headers: 'Arvo', serif;
 
 // OVERRIDE TACHYONS
 
-.link { transition: none; }
-.link:link, .link:visited { transition: none; }
-.link:hover { transition: none; }
-.link:active { transition: none; }
-.link:focus { transition: none; }
+.dim { opacity: 1; transition: none; }
+.dim:hover, .dim:focus { opacity: .5; transition: none; }
+.dim:active { opacity: .8; transition: none; }
 
 // STYLES
 
@@ -91,6 +89,16 @@ h1, h2, h3, h4, h5 {
   background-image: url(/assets/img/backgrounds/goddard.png);
 }
 
+.bg-jp-dark-sage {
+  // collection item buttons
+  background-color: #6da291;
+}
+
+.bg-jp-sage {
+  // show more buttons
+  background-color: #92b9ad;
+}
+
 .bg-jp-light-sage {
   // main bg color
   background-color: #e1e8e6;
@@ -101,9 +109,13 @@ h1, h2, h3, h4, h5 {
   background-color: #f4f6f5
 }
 
-.bg-jp-dark-sage {
-  // collection item buttons
-  background-color: #6da291;
+.fill-white {
+  fill: #fff;
+}
+
+.fill-dark-green {
+  // tachyons dark-green
+  fill: #137752
 }
 
 .shadow-6 {
@@ -114,7 +126,15 @@ h1, h2, h3, h4, h5 {
   opacity: 0.95;
 }
 
-table.tablegen {
+.dni {
+  display: none !important;
+}
+
+.dbi {
+  display: block !important;
+}
+
+.tablegen {
   display: block; // squash inline space
 
   tbody {
@@ -145,6 +165,10 @@ table.tablegen {
 }
 
 @media screen and (min-width: 30em) {
+  .dim-ns { opacity: 1; transition: none; }
+  .dim-ns:hover, .dim-ns:focus { opacity: .5; transition: none; }
+  .dim-ns:active { opacity: .8; transition: none; }
+
   .mw-40rem-ns {
     max-width: 40rem;
   }
@@ -152,9 +176,21 @@ table.tablegen {
   .mw-55rem-ns {
     max-width: 55rem;
   }
+
+  .dni-ns {
+    display: none !important;
+  }
+
+  .dbi-ns {
+    display: block !important;
+  }
 }
 
 @media screen and (min-width: 30em) and (max-width: 60em) {
+  .dim-m { opacity: 1; transition: none; }
+  .dim-m:hover, .dim-m:focus { opacity: .5; transition: none; }
+  .dim-m:active { opacity: .8; transition: none; }
+
   .mw-40rem-m {
     max-width: 40rem;
   }
@@ -162,9 +198,21 @@ table.tablegen {
   .mw-55rem-m {
     max-width: 55rem;
   }
+
+  .dni-m {
+    display: none !important;
+  }
+
+  .dbi-m {
+    display: block !important;
+  }
 }
 
 @media screen and (min-width: 60em) {
+  .dim-l { opacity: 1; transition: none; }
+  .dim-l:hover, .dim-l:focus { opacity: .5; transition: none; }
+  .dim-l:active { opacity: .8; transition: none; }
+
   .mw-40rem-l {
     max-width: 40rem;
   }
@@ -177,7 +225,15 @@ table.tablegen {
     background-attachment: fixed;
   }
 
-  table.tablegen {
+  .dni-l {
+    display: none !important;
+  }
+
+  .dbi-l {
+    display: block !important;
+  }
+
+  .tablegen {
     tr[class^="row"] {
       flex-flow: row;
     }

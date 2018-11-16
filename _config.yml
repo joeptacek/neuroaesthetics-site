@@ -1,3 +1,6 @@
+plugins:
+  - jekyll-octicons
+
 exclude:
   - vendor
   - package.json

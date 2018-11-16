@@ -38,35 +38,55 @@ sections:
         </div>
       </section>
       <section id="{{ page.sections[1] | slugify }}" class="pv3 pv4-ns">
-        <div class="bg-white ph4 pt5 ph5-ns ba b--moon-gray br2">
+        <div class="js-vt-container bg-white ph4 pt5 ph5-ns ba b--moon-gray br2">
           <div class="mb4 mb5-ns">
             <h2 class="tc lh-solid tracked-tight mb4">{{ page.sections[1] }}</h2>
             <hr class="ba b--light-gray">
           </div>
           {% assign people_sorted_by_name = site.people | where: "affiliation", "University of Pennsylvania" | where_exp: "item", "item.program != 'Penn Center for Neuroaesthetics'" | sort: "last_name" %}
           <table class="tablegen w-100">
-            {% tablerow person in people_sorted_by_name cols:3 %}
-              <div class="pb5 ph3-l">
-                {% include person-item.html %}
-              </div>
-            {% endtablerow %}
+            <tbody class="js-vt-viewer" data-vt-viewer-type="show-more" data-vt-show-more-init-visible="2" data-vt-show-more-max="2" data-vt-show-more-responsive="false">
+              {% tablerow person in people_sorted_by_name cols:3 %}
+                <div class="pb5 ph3-l">
+                  {% include person-item.html %}
+                </div>
+              {% endtablerow %}
+            </tbody>
           </table>
+          <div class="js-vt-button pb4 pb5-ns">
+            <button class="w-100 f4 bg-jp-sage white b pa3 bn br2 dim-ns pointer">
+              <span class="mr2">
+                Show more
+              </span>
+              {% octicon chevron-down height:16 class:"v-top fill-white" %}
+            </button>
+          </div>
         </div>
       </section>
       <section id="{{ page.sections[2] | slugify }}" class="pv3 pv4-ns">
-        <div class="bg-white ph4 pt5 ph5-ns ba b--moon-gray br2">
+        <div class="js-vt-container bg-white ph4 pt5 ph5-ns ba b--moon-gray br2">
           <div class="mb4 mb5-ns">
             <h2 class="tc lh-solid tracked-tight mb4">{{ page.sections[2] }}</h2>
             <hr class="ba b--light-gray">
           </div>
           {% assign people_sorted_by_name = site.people | where_exp: "item", "item.affiliation != 'University of Pennsylvania'" | sort: "last_name" %}
           <table class="tablegen w-100">
-            {% tablerow person in people_sorted_by_name cols:3 %}
-              <div class="pb5 ph3-l">
-                {% include person-item.html %}
-              </div>
-            {% endtablerow %}
+            <tbody class="js-vt-viewer" data-vt-viewer-type="show-more" data-vt-show-more-init-visible="2" data-vt-show-more-max="2" data-vt-show-more-responsive="false">
+              {% tablerow person in people_sorted_by_name cols:3 %}
+                <div class="pb5 ph3-l">
+                  {% include person-item.html %}
+                </div>
+              {% endtablerow %}
+            </tbody>
           </table>
+          <div class="js-vt-button pb4 pb5-ns">
+            <button class="w-100 f4 bg-jp-sage white b pa3 bn br2 dim-ns pointer">
+              <span class="mr2">
+                Show more
+              </span>
+              {% octicon chevron-down height:16 class:"v-top fill-white" %}
+            </button>
+          </div>
         </div>
       </section>
       <section id="{{ page.sections[3] | slugify }}" class="pv3 pv4-ns">

@@ -1,10 +1,18 @@
 <nav class="bg-jp-lightest-sage ph3 pv4 ph4-m ph6-l bb b--moon-gray">
-  <div class="mw-55rem center flex flex-column items-center">
-    <h2 class="f4 f3-l lh-solid tracked-tight tc tl-ns mb4">Jump to<span class="dn di-ns"> →</span></h2>
-    <nav class="flex flex-column items-center flex-row-ns flex-wrap-ns justify-center-ns tc tl-ns">
+  <div class="js-vt-container mw-55rem center flex flex-column items-center">
+    <h2 class="f4 f3-l lh-solid tracked-tight tc tl-ns mb4">On this page</h2>
+    <nav class="js-vt-viewer flex flex-column items-center flex-row-ns flex-wrap-ns justify-center-ns tc tl-ns" data-vt-viewer-type="show-more" data-vt-show-more-init-visible="0" data-vt-show-more-max="99" data-vt-show-more-responsive="true">
       {% for section in page.sections %}
         <a class="lh-copy link blue f5 f4-l dim mh3 mb3 mb0-ns{% unless forloop.last %}{% endunless %}" href="{{ section | slugify | prepend: '#' }}">{{ section }}</a>
       {% endfor %}
     </nav>
+    <div class="js-vt-button">
+      <button class="bg-inherit dark-green tc dim pointer bn dn-ns">
+        <span class="mr2">
+          Show sections
+        </span>
+        {% octicon chevron-down height:12 class:"v-top fill-dark-green" %}
+      </button>
+    </div>
   </div>
 </nav>

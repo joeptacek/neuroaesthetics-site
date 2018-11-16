@@ -1,24 +1,25 @@
 <div class="f5">
-  <div class="flex flex-column items-center flex-row-m">
-    {% comment %} flex: none to avoid shrinking img should not participate in flex resizing {% endcomment %}
-    <div class="flex-none mb3 mr4-m mb0-m pa1 ba b--moon-gray br-100">
-      {% comment %} display: block to avoid space under img, otherwise parent container and its border are stretched {% endcomment %}
-      <img class="db br-100" src="/assets/img/people/225/{{ person.photo }}" alt="{{ person.first_name }} {{ person.middle_initials}} {{ person.last_name }}" height="auto" width="225">
-    </div>
-    <div class="tc tl-m">
-      <div class="mb3">
-        <h3 class="tc tracked-tight tl-m mb2">{{ person.first_name }} {{ person.middle_initials}} {{ person.last_name }}</h2>
-        {% if person.affiliation == "University of Pennsylvania" %}
-          {% if person.program == "Penn Center for Neuroaesthetics" %}
-            <p class="silver">{{ person.position_short }}</p>
-          {% else %}
-            <p class="mb1 silver">{{ person.school }}</p>
-          {% endif %}
-        {% else %}
-          <p class="silver">{{ person.affiliation }}</p>
-        {% endif %}
+  {% unless person.content == "" %}<a class="db link dim" href="{{ person.url }}">{% endunless %}
+    <div class="flex flex-column items-center flex-row-m">
+      {% comment %} flex: none to avoid shrinking; i.e., img should not participate in flex resizing {% endcomment %}
+      <div class="flex-none mb3 mr4-m mb0-m pa1 ba b--moon-gray br-100">
+        {% comment %} display: block to avoid space under img, otherwise parent container and its border are stretched {% endcomment %}
+        <img class="db br-100" src="/assets/img/people/225/{{ person.photo }}" alt="{{ person.first_name }} {{ person.middle_initials}} {{ person.last_name }}" height="auto" width="225">
       </div>
-      {% unless person.content == "" %}<a class="dib w4 link dim bg-blue white tc b pv2 br2" href="{{ person.url }}">Bio →</a>{% endunless %}
+      <div class="tc tl-m">
+        <div class="mb3">
+          <h3 class="tc mid-gray tracked-tight tl-m mb2">{{ person.first_name }} {{ person.middle_initials}} {{ person.last_name }}</h2>
+          {% if person.affiliation == "University of Pennsylvania" %}
+            {% if person.program == "Penn Center for Neuroaesthetics" %}
+              <p class="silver">{{ person.position_short }}</p>
+            {% else %}
+              <p class="mb1 silver">{{ person.school }}</p>
+            {% endif %}
+          {% else %}
+            <p class="silver">{{ person.affiliation }}</p>
+          {% endif %}
+        </div>
+      </div>
     </div>
-  </div>
+  {% unless person.content == "" %}</a>{% endunless %}
 </div>
