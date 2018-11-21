@@ -1,4 +1,4 @@
-<div class="f5 f4-ns">
+<div class="f5 f4-ns lh-title">
   <a class="flex flex-column items-center link dim" href="{% if event.ext_event %}{{ event.ext_event.link_url }}{% else %}{{ event.url }}{% endif %}" {% if event.ext_event %}target="_blank"{% endif %}>
     <h3 class="measure tracked-tight dark-green tc mb3">{{ event.title }}</h2>
     {% if event.subtitle %}

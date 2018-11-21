@@ -103,12 +103,13 @@ if (carouselContainers) {
     for (var i = 0; i < carouselContainers.length; i++) {
       var el = carouselContainers[i];
       var elChildren = el.children;
+      var nextIndex;
       for (var j = 0; j < elChildren.length; j++) {
         if (!elChildren[j].classList.contains('o-0')) {
           if (j < elChildren.length - 1) {
-            var nextIndex = j + 1;
+            nextIndex = j + 1;
           } else {
-            var nextIndex = 0;
+            nextIndex = 0;
           }
           elChildren[j].classList.add('o-0');
           elChildren[nextIndex].classList.remove('o-0');
@@ -119,8 +120,7 @@ if (carouselContainers) {
   }
 
   for (var i = 0; i < carouselContainers.length; i++) {
-    var thisCarouselContainer = carouselContainers[i];
-    carouselContainerInit(thisCarouselContainer);
+    carouselContainerInit(carouselContainers[i]);
   }
 
   function intervalGo() {
