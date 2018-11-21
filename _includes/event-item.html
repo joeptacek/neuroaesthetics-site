@@ -1,8 +1,8 @@
-<div class="f5 f4-ns pa4 ph5-ns{% unless first_event %} bt b--light-gray{% endunless %}">
+<div class="f5 f4-ns">
   <a class="flex flex-column items-center link dim" href="{% if event.ext_event %}{{ event.ext_event.link_url }}{% else %}{{ event.url }}{% endif %}" {% if event.ext_event %}target="_blank"{% endif %}>
-    <h3 class="tracked-tight dark-green tc mb3">{{ event.title }}</h2>
+    <h3 class="measure tracked-tight dark-green tc mb3">{{ event.title }}</h2>
     {% if event.subtitle %}
-      <p class="bg-dark-green near-white pv1 ph2 br2 tc b mb3">{{ event.subtitle }}</p>
+      <p class="measure bg-dark-green near-white pv1 ph2 br2 tc b mb3">{{ event.subtitle }}</p>
     {% endif %}
     {% if event.date_start == event.date_end %}
       <p class="silver tc">{{ event.date_start | date: "%B %e, %Y" }}</p>

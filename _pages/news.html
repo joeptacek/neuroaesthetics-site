@@ -4,8 +4,8 @@ subtitle: News and events
 header-css: bg-salt
 description: Stay up to date with PCfN news and upcoming events.
 sections:
-- Upcoming events
 - Tweets
+- Upcoming events
 - In the news
 ---
 {% include header.html %}
@@ -15,40 +15,9 @@ sections:
   <div class="min-vh-100 bg-jp-light-sage pa3 pa4-ns ph6-l">
     <div class="mw-55rem center">
       <section id="{{ page.sections[0] | slugify }}" class="pv3 pv4-ns">
-        <div class="br2 mb4 mb5-ns shadow-6">
-          <h2 class="tracked-tight bg-dark-green near-white pv4 ph3 ph4-ns tc br2 br--top mb0">{{ page.sections[0] }}</h2>
-          {% assign upcoming_events = false %}
-          {% assign todays_date = site.time | date: "%Y-%m-%d" %}
-          {% assign events_sorted = site.events | sort: "date_start" %}
-          {% for event in events_sorted %}
-            {% assign de = event.date_end | date: "%Y-%m-%d" %}
-            {% if de >= todays_date %}
-              {% assign upcoming_events = true %}
-              {% break %}
-            {% endif %}
-          {% endfor %}
-          {% if upcoming_events %}
-            <div class="bg-white br2 br--bottom">
-              {% assign first_event = true %}
-              {% for event in events_sorted %}
-                {% assign de = event.date_end | date: "%Y-%m-%d" %}
-                {% unless de < todays_date %}
-                  {% include event-item.html  %}
-                  {% assign first_event = false %}
-                {% endunless %}
-              {% endfor %}
-            </div>
-          {% else %}
-            <div class="bg-white pa4 ph5-ns br2 br--bottom">
-              <p class="tc silver">Check back soon!</p>
-            </div>
-          {% endif %}
-        </div>
-      </section>
-      <section id="{{ page.sections[1] | slugify }}" class="pv3 pv4-ns">
-        <div class="br2 mb4 mb5-ns shadow-6">
-          <h2 class="tracked-tight bg-blue near-white pv4 ph3 ph4-ns tc br2 br--top mb0">{{ page.sections[1] }}</h2>
-          <div class="bg-white pa3 br2 br--bottom">
+        <div class="bg-white shadow-6 br2 mb4 mb5-ns">
+          <h2 class="bg-blue near-white tc pv4 lh-title font-default b ph3 ph4-ns br2 br--top mb0">{{ page.sections[0] }}</h2>
+          <div class="pa3">
             <div class="mb3">
               <a class="twitter-timeline" href="https://twitter.com/PCfN__" data-height="500" data-chrome="transparent noheader noborders nofooter" data-dnt="true">Tweets by PCfN__</a>
             </div>
@@ -61,15 +30,46 @@ sections:
           </div>
         </div>
       </section>
+      <section id="{{ page.sections[1] | slugify }}" class="pv3 pv4-ns">
+        <div class="bg-white shadow-6 br2 mb4 mb5-ns">
+          <h2 class="bg-dark-green near-white lh-title font-default b tc pv4 ph3 ph4-ns br2 br--top mb0">{{ page.sections[1] }}</h2>
+          {% assign upcoming_events = false %}
+          {% assign todays_date = site.time | date: "%Y-%m-%d" %}
+          {% assign events_sorted = site.events | sort: "date_start" %}
+          {% for event in events_sorted %}
+            {% assign de = event.date_end | date: "%Y-%m-%d" %}
+            {% if de >= todays_date %}
+              {% assign upcoming_events = true %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+          {% if upcoming_events %}
+            {% assign first_event = true %}
+            {% for event in events_sorted %}
+              {% assign de = event.date_end | date: "%Y-%m-%d" %}
+              {% unless de < todays_date %}
+                <div class="pv4 ph3 ph4-ns{% unless first_event %} bt b--light-gray{% endunless %}">
+                  {% include event-item.html %}
+                </div>
+                {% assign first_event = false %}
+              {% endunless %}
+            {% endfor %}
+          {% else %}
+            <div class="pv4 ph3 ph4-ns">
+              <p class="tc silver">Check back soon!</p>
+            </div>
+          {% endif %}
+        </div>
+      </section>
       <section id="{{ page.sections[2] | slugify }}" class="pv3 pv4-ns">
-        <div class="br2 shadow-6">
-          <h2 class="tracked-tight bg-purple near-white pv4 ph3 ph4-ns tc br2 br--top mb0">{{ page.sections[2] }}</h2>
-          <div class="js-vt-container bg-white br2 br--bottom">
+        <div class="bg-white shadow-6 br2">
+          <h2 class="bg-purple near-white tc pv4 lh-title font-default b ph3 ph4-ns br2 br--top mb0">{{ page.sections[2] }}</h2>
+          <div class="js-vt-container">
             <div class="js-vt-viewer" data-vt-viewer-type="show-more" data-vt-show-more-init-visible="3" data-vt-show-more-max="5" data-vt-show-more-responsive="false">
               {% assign news_sorted = site.data.external.news | sort: "date" | reverse %}
               {% for news_item in news_sorted %}
                 {% if news_item.site_pcfn and news_item.archived == false %}
-                  <div class="pa4 ph5-ns{% unless forloop.index == 1 %} bt b--light-gray{% endunless %}">
+                  <div class="pv4 ph3 ph4-ns{% unless forloop.index == 1 %} bt b--light-gray{% endunless %}">
                     {% include news-item.html %}
                   </div>
                 {% endif %}

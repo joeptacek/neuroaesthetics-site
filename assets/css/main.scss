@@ -29,11 +29,11 @@ $font-stack-headers: 'Arvo', serif;
 
 // STYLES
 
-body, button, input, textarea {
+body, button, input, textarea, .font-default {
   font-family: $font-stack;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, .font-headers {
   font-family: $font-stack-headers;
   font-weight: normal;
 }
@@ -132,6 +132,38 @@ h1, h2, h3, h4, h5 {
 
 .dbi {
   display: block !important;
+}
+
+.hw-a {
+  // image stats
+  height: 350px;
+  width: 288px;
+}
+
+.hw-b {
+  // bodies
+  height: 350px;
+  width: 377px;
+}
+
+.hw-c {
+  // networks
+  height: 350px;
+  width: 350px;
+}
+
+.transition-opacity {
+  transition: opacity 2s linear;
+}
+
+.js-carousel-container {
+  position: relative;
+
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
 .tablegen {

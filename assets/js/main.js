@@ -1,3 +1,5 @@
+// View Toggle
+
 var VTContainers = document.getElementsByClassName('js-vt-container');
 if (VTContainers) {
   function showHideInit(el) {
@@ -81,5 +83,55 @@ if (VTContainers) {
         break;
     }
     thisVTButtonEl.addEventListener('click', VTHandler);
+  }
+}
+
+// Carousel
+
+var carouselContainers = document.getElementsByClassName('js-carousel-container');
+if (carouselContainers) {
+  function carouselContainerInit(el) {
+    var elChildren = el.children;
+    for (var i = 0; i < elChildren.length; i++) {
+      if (i < elChildren.length - 1) {
+        elChildren[i].classList.add('o-0');
+      }
+    }
+  }
+
+  function carouselContainerAdvanceAll() {
+    for (var i = 0; i < carouselContainers.length; i++) {
+      var el = carouselContainers[i];
+      var elChildren = el.children;
+      for (var j = 0; j < elChildren.length; j++) {
+        if (!elChildren[j].classList.contains('o-0')) {
+          if (j < elChildren.length - 1) {
+            var nextIndex = j + 1;
+          } else {
+            var nextIndex = 0;
+          }
+          elChildren[j].classList.add('o-0');
+          elChildren[nextIndex].classList.remove('o-0');
+          break;
+        }
+      }
+    }
+  }
+
+  for (var i = 0; i < carouselContainers.length; i++) {
+    var thisCarouselContainer = carouselContainers[i];
+    carouselContainerInit(thisCarouselContainer);
+  }
+
+  function intervalGo() {
+    window.setInterval(carouselContainerAdvanceAll, 2500);
+  }
+
+  switch (document.readyState) {
+    case 'loading':
+      window.addEventListener('load', intervalGo);
+      break;
+    default:
+      intervalGo();
   }
 }

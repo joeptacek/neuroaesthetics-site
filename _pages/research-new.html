@@ -1,0 +1,97 @@
+---
+title: Research
+subtitle: Research and publications
+header-css: bg-leaves
+description: Check out our latest publications or peruse the PCfN research archives.
+sections:
+- Current projects
+- Publications
+---
+{% capture header_content %}
+  <p>
+    The aim of neuroaesthetics research is to understand neural systems that underlie aesthetic experiences and choices. This includes investigating the nature and neural basis of beauty, art, design, and architecture.
+  </p>
+{% endcapture %}
+
+{% include header.html %}
+{% include page-nav.html %}
+
+<main class="f5 f4-m f3-l">
+  <div class="min-vh-100 bg-jp-light-sage pa3 pa4-ns ph6-l">
+    <div class="mw-55rem center lh-copy">
+      <section id="{{ page.sections[0] | slugify }}" class="pv3 pv4-ns">
+        <div class="bg-white shadow-6 br1 pa4 pa5-ns mb5">
+          <h2 class="lh-title tracked-tight mb2">
+            {{ page.sections[0] }}
+          </h2>
+          <hr class="w-100 ba b--moon-gray mb3 mb4-ns">
+          <p class="f4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat.</p>
+        </div>
+        <div class="flex flex-row-ns items-start-ns mb5">
+          <div class="bg-white shadow-6 br1 pa4 mr4 mt4">
+            <h3>Image Statistics</h3>
+            <p class="f5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat.</p>
+          </div>
+          <div class="flex-none bg-white shadow-6 br1 pa3">
+            <div class="js-carousel-container hw-a">
+              <img class="transition-opacity" src="/assets/img/projects/gregor/Strength_of_Gradients.png" alt="" height="350" width="auto">
+              <img class="transition-opacity" src="/assets/img/projects/gregor/Orientation_of_Gradients.png" alt="" height="350" width="auto">
+              <img class="transition-opacity" src="/assets/img/projects/gregor/Original.png" alt="" height="350" width="auto">
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-row-ns items-start-ns mb5">
+          <div class="flex-none bg-white shadow-6 br1 pa3 mr4">
+            <div class="js-carousel-container hw-b">
+              <img class="transition-opacity" src="/assets/img/projects/emily/paintcombined2.png" alt="" height="350" width="auto">
+              <img class="transition-opacity" src="/assets/img/projects/emily/combined2.png" alt="" height="350" width="auto">
+            </div>
+          </div>
+          <div class="bg-white shadow-6 br1 pa4 mt4">
+            <h3>Bodies</h3>
+            <p class="f5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat.</p>
+          </div>
+        </div>
+        <div class="flex flex-row-ns items-start-ns mb5">
+          <div class="bg-white shadow-6 br1 pa4 mr4 mt4">
+            <h3>Networks</h3>
+            <p class="f5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat.</p>
+          </div>
+          <div class="flex-none bg-white shadow-6 br1 pa3">
+            <div class="js-carousel-container hw-c">
+              <img class="transition-opacity" src="/assets/img/projects/gregor/sips1.png" alt="" height="350" width="auto">
+              <img class="transition-opacity" src="/assets/img/projects/gregor/sips2.png" alt="" height="350" width="auto">
+              <img class="transition-opacity" src="/assets/img/projects/gregor/sips3.png" alt="" height="350" width="auto">
+              <img class="transition-opacity" src="/assets/img/projects/gregor/sips4.png" alt="" height="350" width="auto">
+              <img class="transition-opacity" src="/assets/img/projects/gregor/sips5.png" alt="" height="350" width="auto">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="{{ page.sections[1] | slugify }}" class="pv3 pv4-ns">
+        <div class="js-vt-container bg-white shadow-6 br1 pa4 pa5-ns">
+          <h2 class="lh-title tracked-tight mb2">
+            {{ page.sections[1] }}
+          </h2>
+          <hr class="w-100 ba b--moon-gray mb3 mb4-ns">
+          <div class="js-vt-viewer" data-vt-viewer-type="show-more" data-vt-show-more-init-visible="5" data-vt-show-more-max="10" data-vt-show-more-responsive="false">
+            {% assign pubs_sorted = site.data.external.publications | sort: "work_post_date_fake" | reverse %}
+            {% for publication in pubs_sorted %}
+              {% if publication.category == "neuroaesthetics" %}
+                {% include publication-item.html %}
+              {% endif %}
+            {% endfor %}
+          </div>
+          <div class="js-vt-button pt3 pt4-ns">
+            <button class="w-100 f4 bg-jp-sage white tc b pa3 bn br2 dim-ns pointer">
+              <span class="mr2">
+                Show more
+              </span>
+              {% octicon chevron-down height:16 class:"v-top fill-white" %}
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
