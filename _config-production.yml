@@ -1,0 +1,53 @@
+plugins:
+  - jekyll-octicons
+
+exclude:
+  - vendor
+  - package.json
+  - package-lock.json
+  - gulpfile.js
+  - README.md
+  - assets/img/originals
+
+  # WIP
+  - _pages/research-new.html
+  - assets/img/projects
+
+  # excluded by default (need to re-exclude because user _config.yml overwrites the default sequence, doesn't append to it)
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+
+future: true # to publish announcement / event documents with filename date in future
+
+collections:
+  pages:
+    output: true
+    permalink: /:name
+  miscellaneous:
+    output: true
+    permalink: /:name
+  people:
+    output: true
+  announcements:
+    output: true
+  events:
+    output: true
+
+defaults:
+- scope:
+    path: ""
+  values:
+    layout: "default"
+- scope:
+    path: "_people"
+  values:
+    layout: "person"
+- scope:
+    path: "_events"
+  values:
+    layout: "event"
+- scope:
+    path: "_announcements"
+  values:
+    layout: "announcement"

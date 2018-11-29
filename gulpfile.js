@@ -12,14 +12,19 @@ const url = require('url');
 const args = process.argv;
 const devLocalData = args.includes('--local');
 const production = args.includes('--production') || args.includes('deploy');
+let jekyllBuild, jekyllWatch;
 if (production) {
   if (devLocalData) {
     throw new Error("Cannot use `--local` with `--production` or `deploy`");
   } else {
     process.env['JEKYLL_ENV'] = "production";
+    jekyllBuild = 'bundle exec jekyll build --config _config-production.yml';
+    jekyllWatch = ['exec', 'jekyll', 'build', '--watch', '--config', '_config-production.yml'];
   }
 } else {
   process.env['JEKYLL_ENV'] = "development";
+  jekyllBuild = 'bundle exec jekyll build';
+  jekyllWatch = ['exec', 'jekyll', 'build', '--watch'];
 }
 
 gulp.task('data', function (cb) {
@@ -121,7 +126,7 @@ gulp.task('data', function (cb) {
 });
 
 gulp.task('build', ['data'], function (cb) {
-  exec('bundle exec jekyll build', (error, stdout, stderr) => {
+  exec(jekyllBuild, (error, stdout, stderr) => {
     if (error) {
       return cb(error);
     } else if (stdout) {
@@ -134,7 +139,7 @@ gulp.task('build', ['data'], function (cb) {
 });
 
 gulp.task('watch', ['data'], function () {
-  spawn('bundle', ['exec', 'jekyll', 'build', '--watch'], { stdio: 'inherit' });
+  spawn('bundle', jekyllWatch, { stdio: 'inherit' });
   // build out cb() to make dependent tasks (e.g., serve) wait until jekyll watch is finished
 });
 

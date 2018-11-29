@@ -16,54 +16,94 @@ sections:
 {% include header.html %}
 {% include page-nav.html %}
 
-<main class="f5 f4-m f3-l lh-copy">
+<main class="f5 f4-ns lh-copy">
   <div class="min-vh-100 bg-jp-light-sage pa3 pa4-ns ph6-l">
     <div class="mw-55rem center">
       <section id="{{ page.sections[0] | slugify }}" class="pv3 pv4-ns">
-        <div class="bg-white shadow-6 br1 pa4 pa5-ns mb5">
+        <div class="bg-white shadow-6 br1 pa4 pa5-ns mb4 mb5-ns">
           <h2 class="lh-title tracked-tight mb2">
             {{ page.sections[0] }}
           </h2>
           <hr class="w-100 ba b--moon-gray mb3 mb4-ns">
-          <p class="f4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat.</p>
+          <p class="">Nullam mattis fermentum libero, non volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#lorem-ipsum">Lorem ipsum</a>, <a href="#dolor-sit-amet">dolor sit amet</a>, <a href="#consectetur-adipiscing">consectetur adipiscing</a> elit. <a href="#pellentesque-interdum">Pellentesque interdum</a> rutrum sodales.</p>
         </div>
-        <div class="flex flex-row-ns items-start-ns mb5">
-          <div class="bg-white shadow-6 br1 pa4 mr4 mt4">
-            <h3>Image Statistics</h3>
-            <p class="f5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat.</p>
-          </div>
-          <div class="flex-none bg-white shadow-6 br1 pa3">
+      </section>
+      <!-- Image statistics -->
+      <section id="lorem-ipsum" class="pv3 pv4-ns">
+        <div class="flex flex-column items-center flex-row-l items-start-l mb4 mb5-ns">
+          <div class="flex-none bg-near-white shadow-6 br1 pa3 mb3 mb0-l mr4-l">
             <div class="js-carousel-container hw-a">
-              <img class="transition-opacity" src="/assets/img/projects/gregor/Strength_of_Gradients.png" alt="" height="350" width="auto">
-              <img class="transition-opacity" src="/assets/img/projects/gregor/Orientation_of_Gradients.png" alt="" height="350" width="auto">
-              <img class="transition-opacity" src="/assets/img/projects/gregor/Original.png" alt="" height="350" width="auto">
+              <img class="transition-opacity br1" src="/assets/img/projects/gregor/Strength_of_Gradients.png" alt="" height="400" width="auto">
+              <img class="transition-opacity br1" src="/assets/img/projects/gregor/Orientation_of_Gradients.png" alt="" height="400" width="auto">
+              <img class="transition-opacity br1" src="/assets/img/projects/gregor/Original.png" alt="" height="400" width="auto">
+            </div>
+          </div>
+          <div class="flex flex-column items-center items-start-l">
+            <div class="measure bg-green white shadow-6 br1 pv2 ph3 mb3 mb4-l">
+              <h3>Lorem ipsum</h3>
+            </div>
+            <div class="measure bg-near-white shadow-6 br1 pa4">
+              <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat.</p>
             </div>
           </div>
         </div>
-        <div class="flex flex-row-ns items-start-ns mb5">
-          <div class="flex-none bg-white shadow-6 br1 pa3 mr4">
+      </section>
+      <!-- Body paintings -->
+      <section id="dolor-sit-amet" class="pv3 pv4-ns">
+        <div id="dolor-sit-amet" class="flex flex-column items-center flex-row-reverse-l items-start-l mb4 mb5-ns">
+          <div class="flex-none bg-near-white shadow-6 br1 pa3 mb3 mb0-l ml4-l">
             <div class="js-carousel-container hw-b">
-              <img class="transition-opacity" src="/assets/img/projects/emily/paintcombined2.png" alt="" height="350" width="auto">
-              <img class="transition-opacity" src="/assets/img/projects/emily/combined2.png" alt="" height="350" width="auto">
+              <img class="transition-opacity br1" src="/assets/img/projects/emily/paintcombined2.png" alt="" height="400" width="auto">
+              <img class="transition-opacity br1" src="/assets/img/projects/emily/combined2.png" alt="" height="400" width="auto">
             </div>
           </div>
-          <div class="bg-white shadow-6 br1 pa4 mt4">
-            <h3>Bodies</h3>
-            <p class="f5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat.</p>
+          <div class="flex flex-column items-center items-end-l">
+            <div class="measure bg-green white shadow-6 br1 pv2 ph3 mb3 mb4-l">
+              <h3>Dolor sit amet</h3>
+            </div>
+            <div class="measure bg-near-white shadow-6 br1 pa4 tr">
+              <p class="">This study investigates how physical appearance, specifically weight, may influence the way in which someone’s character is perceived. Considering these potential biases, the study further explores how the perception of a painted body may compare to that of a photographed body</p>
+            </div>
           </div>
         </div>
-        <div class="flex flex-row-ns items-start-ns mb5">
-          <div class="bg-white shadow-6 br1 pa4 mr4 mt4">
-            <h3>Networks</h3>
-            <p class="f5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat.</p>
-          </div>
-          <div class="flex-none bg-white shadow-6 br1 pa3">
+      </section>
+      <!-- Networks -->
+      <section id="consectetur-adipiscing" class="pv3 pv4-ns">
+        <div class="flex flex-column items-center flex-row-l items-start-l mb4 mb5-ns">
+          <div class="flex-none bg-near-white shadow-6 br1 pa3 mb3 mb0-l mr4-l">
             <div class="js-carousel-container hw-c">
-              <img class="transition-opacity" src="/assets/img/projects/gregor/sips1.png" alt="" height="350" width="auto">
-              <img class="transition-opacity" src="/assets/img/projects/gregor/sips2.png" alt="" height="350" width="auto">
-              <img class="transition-opacity" src="/assets/img/projects/gregor/sips3.png" alt="" height="350" width="auto">
-              <img class="transition-opacity" src="/assets/img/projects/gregor/sips4.png" alt="" height="350" width="auto">
-              <img class="transition-opacity" src="/assets/img/projects/gregor/sips5.png" alt="" height="350" width="auto">
+              <img class="transition-opacity br1" src="/assets/img/projects/gregor/sips1.png" alt="" height="400" width="auto">
+              <img class="transition-opacity br1" src="/assets/img/projects/gregor/sips2.png" alt="" height="400" width="auto">
+              <img class="transition-opacity br1" src="/assets/img/projects/gregor/sips3.png" alt="" height="400" width="auto">
+              <img class="transition-opacity br1" src="/assets/img/projects/gregor/sips4.png" alt="" height="400" width="auto">
+              <img class="transition-opacity br1" src="/assets/img/projects/gregor/sips5.png" alt="" height="400" width="auto">
+            </div>
+          </div>
+          <div class="flex flex-column items-center items-start-l">
+            <div class="measure bg-green white shadow-6 br1 pv2 ph3 mb3 mb4-l">
+              <h3>Consectetur adipiscing</h3>
+            </div>
+            <div class="measure bg-near-white shadow-6 br1 pa4">
+              <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Facial disfigurement -->
+      <section id="pellentesque-interdum" class="pv3 pv4-ns">
+        <div class="flex flex-column items-center flex-row-reverse-l items-start-l">
+          <div class="flex-none bg-near-white shadow-6 br1 pa3 mb3 mb0-l ml4-l">
+            <div class="js-carousel-container hw-d">
+              <img class="transition-opacity br1" src="/assets/img/projects/faces/CFD-WM-033-025-N.jpg" alt="" height="400" width="auto">
+              <img class="transition-opacity br1" src="/assets/img/projects/faces/Disfigured_MFace20.jpg" alt="" height="400" width="auto">
+            </div>
+          </div>
+          <div class="flex flex-column items-center items-end-l">
+            <div class="measure bg-green white shadow-6 br1 pv2 ph3 mb3 mb4-l">
+              <h3>Pellentesque interdum</h3>
+            </div>
+            <div class="measure bg-near-white shadow-6 br1 pa4 tr">
+              <p class="">Do judgments of beauty influence moral behavior? Although it seems obvious that beauty and morality should be independent, recent studies from our lab show that people with facial anomalies, like scars or paralysis, are seen as having worse social traits, including morally-relevant characteristics like untrustworthiness.</p>
             </div>
           </div>
         </div>
@@ -83,7 +123,7 @@ sections:
             {% endfor %}
           </div>
           <div class="js-vt-button pt3 pt4-ns">
-            <button class="w-100 f4 bg-jp-sage white tc b pa3 bn br2 dim-ns pointer">
+            <button class="w-100 bg-jp-sage white tc b pa3 bn br2 dim-ns pointer">
               <span class="mr2">
                 Show more
               </span>

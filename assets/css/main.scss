@@ -106,7 +106,7 @@ h1, h2, h3, h4, h5, .font-headers {
 
 .bg-jp-lightest-sage {
   // collection item headers
-  background-color: #f4f6f5
+  background-color: #f4f6f5;
 }
 
 .fill-white {
@@ -136,20 +136,32 @@ h1, h2, h3, h4, h5, .font-headers {
 
 .hw-a {
   // image stats
-  height: 350px;
-  width: 288px;
+  // height: 350px;
+  // width: 288px;
+  height: 400px;
+  width: 329px;
 }
 
 .hw-b {
   // bodies
-  height: 350px;
-  width: 377px;
+  // height: 350px;
+  // width: 377px;
+  height: 400px;
+  width: 431px;
 }
 
 .hw-c {
   // networks
-  height: 350px;
-  width: 350px;
+  // height: 350px;
+  // width: 350px;
+  height: 400px;
+  width: 400px;
+}
+
+.hw-d {
+  // faces
+  height: 400px;
+  width: 300px;
 }
 
 .transition-opacity {
