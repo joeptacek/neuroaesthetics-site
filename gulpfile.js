@@ -30,7 +30,7 @@ if (production) {
 gulp.task('data', function (cb) {
   const outputDir = '_data/external'
   const dataFilenames = ['news.json', 'publications.json']
-  const localDataSource = '../chatlab-site/_data/';
+  const localDataSource = '../chatlab-site/_data/'; // add option to just use the last request from GitHub, if it exists
   const remoteDataSource = 'https://raw.githubusercontent.com/joeptacek/chatlab-site/master/_data/'
   let httpError = false;
 

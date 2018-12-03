@@ -11,6 +11,7 @@ exclude:
 
   # WIP
   - _pages/research-new.html
+  - _pages/news-new.html
   - assets/img/projects
 
   # excluded by default (need to re-exclude because user _config.yml overwrites the default sequence, doesn't append to it)
