@@ -124,7 +124,7 @@ if (carouselContainers) {
   }
 
   function intervalGo() {
-    window.setInterval(carouselContainerAdvanceAll, 2500);
+    window.setInterval(carouselContainerAdvanceAll, 4500);
   }
 
   switch (document.readyState) {

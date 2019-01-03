@@ -1,10 +1,10 @@
 ---
 title: Home
-subtitle: Penn Center for Neuroaesthetics
-header-css: bg-sky
+big_header:
+  bh_title: Penn Center for Neuroaesthetics
+  bh_css: bg-sky
 description: Penn Center for Neuroaesthetics (PCfN), directed by Anjan Chatterjee, MD, FAAN. Converging an international community of investigators and creative experts to promote research and education in neuroaesthetics.
 sections:
-- Our mission
 - Basic research
 - Translational research
 - Education
@@ -12,45 +12,45 @@ sections:
 {% include header.html %}
 {% include page-nav.html %}
 
-<main class="f5 f4-m f3-l lh-copy">
+<main class="f4 f3-l lh-copy">
   <div class="min-vh-100 bg-jp-light-sage pa3 pa4-ns ph6-l">
     <div class="mw-55rem center">
-      <section id="{{ page.sections[0] | slugify }}" class="pv3 pv4-ns">
-        <div class="bg-white-90 shadow-6 br2">
-          <h2 class="bg-blue near-white pv4 ph3 ph4-ns lh-title b font-default tc br2 br--top mb0">{{ page.sections[0] }}</h2>
+      <section class="pv3 pv4-ns">
+        <div class="bg-white shadow-6 br2">
+          <h2 class="bg-blue near-white pv4 ph3 ph4-ns lh-title b font-default tc br2 br--top mb0">Our mission</h2>
           <div class="pa4 pa5-ns">
             <div class="mb3">
-              <p class="flex flex-column items-center db-ns">
-                <span class="dib dark-green b mb1 mb0-ns mr2-ns">Advance</span><span class="tc tl-ns">research in basic and applied neuroaesthetics</span>
+              <p class="">
+                <span class="dib dark-green b mr2">Advance</span><span class="tc tl-ns">research in basic and applied neuroaesthetics</span>
               </p>
             </div>
             <div class="mb3">
-              <p class="flex flex-column items-center db-ns">
-                <span class="dib dark-green b mb1 mb0-ns mr2-ns">Educate</span><span class="tc tl-ns">the next generation of scholars</span>
+              <p class="">
+                <span class="dib dark-green b mr2">Educate</span><span class="tc tl-ns">the next generation of scholars</span>
               </p>
             </div>
             <div class="mb3">
-              <p class="flex flex-column items-center db-ns">
-                <span class="dib dark-green b mb1 mb0-ns mr2-ns">Converge</span><span class="tc tl-ns">allied interdisciplinary interests</span>
+              <p class="">
+                <span class="dib dark-green b mr2">Converge</span><span class="tc tl-ns">allied interdisciplinary interests</span>
               </p>
             </div>
             <div class="mb3">
-              <p class="flex flex-column items-center db-ns">
-                <span class="dib dark-green b mb1 mb0-ns mr2-ns">Welcome</span><span class="tc tl-ns">investigators and creative experts</span>
+              <p class="">
+                <span class="dib dark-green b mr2">Welcome</span><span class="tc tl-ns">investigators and creative experts</span>
               </p>
             </div>
             <div class="mb3">
-              <p class="flex flex-column items-center db-ns">
-                <span class="dib dark-green b mb1 mb0-ns mr2-ns">Engage</span><span class="tc tl-ns">with the arts community</span>
+              <p class="">
+                <span class="dib dark-green b mr2">Engage</span><span class="tc tl-ns">with the arts community</span>
               </p>
             </div>
           </div>
         </div>
       </section>
-      <section id="{{ page.sections[1] | slugify }}" class="pv3 pv4-ns">
+      <section id="{{ page.sections[0] | slugify }}" class="pv3 pv4-ns">
         <div class="bg-white shadow-6 br1 pa4 pa5-ns mb3 mb4-ns">
           <h2 class="lh-title tracked-tight mb2">
-            {{ page.sections[1] }}
+            {{ page.sections[0] }}
           </h2>
           <hr class="w-100 ba b--moon-gray mb3 mb4-ns">
           <p class="mb3 mb4-ns">
@@ -64,21 +64,21 @@ sections:
             <!-- <span>🔎</span> -->
           </h3>
           <ul class="f6 f5-m f4-l list pl0">
-            <li class="hanging-indent mb2 mb3-ns">Is there a common neural currency to beauty across different domains — e.g., bodies, nature, objects, spaces?</li>
-            <li class="hanging-indent mb2 mb3-ns">How is the pleasure derived from art different from primary pleasures such as pleasure in food or sex?</li>
-            <li class="hanging-indent mb2 mb3-ns">What distinguishes utilitarian from non-utilitarian choices?</li>
-            <li class="hanging-indent mb2 mb3-ns">What are aesthetic emotions?</li>
-            <li class="hanging-indent mb2 mb3-ns">How do negative emotions give rise to pleasure in aesthetic contexts?</li>
-            <li class="hanging-indent mb2 mb3-ns">How does beauty influence other values such as morality?</li>
-            <li class="hanging-indent mb2 mb3-ns">What are the temporal dimensions of aesthetic experiences?</li>
-            <li class="hanging-indent ">How does context and education affect aesthetic experiences?</li>
+            <li class="mb2 mb3-ns">Is there a common neural currency to beauty across different domains — e.g., bodies, nature, objects, spaces?</li>
+            <li class="mb2 mb3-ns">How is the pleasure derived from art different from primary pleasures such as pleasure in food or sex?</li>
+            <li class="mb2 mb3-ns">What distinguishes utilitarian from non-utilitarian choices?</li>
+            <li class="mb2 mb3-ns">What are aesthetic emotions?</li>
+            <li class="mb2 mb3-ns">How do negative emotions give rise to pleasure in aesthetic contexts?</li>
+            <li class="mb2 mb3-ns">How does beauty influence other values such as morality?</li>
+            <li class="mb2 mb3-ns">What are the temporal dimensions of aesthetic experiences?</li>
+            <li class="">How does context and education affect aesthetic experiences?</li>
           </ul>
         </div>
       </section>
-      <section id="{{ page.sections[2] | slugify }}" class="pv3 pv4-ns">
+      <section id="{{ page.sections[1] | slugify }}" class="pv3 pv4-ns">
         <div class="bg-white shadow-6 br1 pa4 pa5-ns mb3 mb4-ns">
           <h2 class="lh-title tracked-tight mb2">
-            {{ page.sections[2] }}
+            {{ page.sections[1] }}
           </h2>
           <hr class="w-100 ba b--moon-gray mb3 mb4-ns">
           <p class="mb3 mb4-ns">
@@ -92,11 +92,11 @@ sections:
             <!-- <span>🚀</span> -->
           </h3>
           <ul class="f6 f5-m f4-l list pl0">
-            <li class="hanging-indent mb2 mb3-ns">How might aesthetic experiences be used therapeutically?</li>
-            <li class="hanging-indent mb2 mb3-ns">How might an understanding of psychological and neural responses to constructed spaces contribute to architectural design?</li>
-            <li class="hanging-indent mb2 mb3-ns">How does engagement with aesthetics and the arts contribute to well-being?</li>
-            <li class="hanging-indent mb2 mb3-ns">How does aesthetics influence product design and marketing?</li>
-            <li class="hanging-indent ">How can aesthetics facilitate learning?</li>
+            <li class="mb2 mb3-ns">How might aesthetic experiences be used therapeutically?</li>
+            <li class="mb2 mb3-ns">How might an understanding of psychological and neural responses to constructed spaces contribute to architectural design?</li>
+            <li class="mb2 mb3-ns">How does engagement with aesthetics and the arts contribute to well-being?</li>
+            <li class="mb2 mb3-ns">How does aesthetics influence product design and marketing?</li>
+            <li class="">How can aesthetics facilitate learning?</li>
           </ul>
         </div>
       </section>
@@ -105,13 +105,13 @@ sections:
           <p class="mb3 mb4-ns">
             Want to learn more about our research? Check out some of our latest publications!
           </p>
-          <a class="db bg-blue white tc b pv3 ph3 br2 link dim" href="/research.html">PCfN research →</a>
+          <a class="f5 f4-ns db bg-blue white tc b link dim pv3 ph3 br2" href="/research.html">PCfN research →</a>
         </div>
       </section>
-      <section id="{{ page.sections[3] | slugify }}" class="pv3 pv4-ns">
+      <section id="{{ page.sections[2] | slugify }}" class="pv3 pv4-ns">
         <div class="bg-white shadow-6 br1 pa4 pa5-ns mb3 mb4-ns">
           <h2 class="lh-title tracked-tight mb2">
-            {{ page.sections[3] }}
+            {{ page.sections[2] }}
           </h2>
           <hr class="w-100 ba b--moon-gray mb3 mb4-ns">
           <p class="mb3 mb4-ns">
@@ -124,10 +124,10 @@ sections:
             <!-- <span>🎓</span> -->
           </h3>
           <ul class="f6 f5-m f4-l list pl0">
-            <li class="hanging-indent mb2 mb3-ns">Graduate seminars and undergraudate courses</li>
-            <li class="hanging-indent mb2 mb3-ns">Publications, texts, and community resources</li>
-            <li class="hanging-indent mb2 mb3-ns">Symposia, public lectures, workshops, and meetings</li>
-            <li class="hanging-indent ">Collaborative events with arts venues and museums</li>
+            <li class="mb2 mb3-ns">Graduate seminars and undergraudate courses</li>
+            <li class="mb2 mb3-ns">Publications, texts, and community resources</li>
+            <li class="mb2 mb3-ns">Symposia, public lectures, workshops, and meetings</li>
+            <li class="">Collaborative events with arts venues and museums</li>
           </ul>
         </div>
       </section>

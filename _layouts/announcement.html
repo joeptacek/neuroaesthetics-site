@@ -18,13 +18,12 @@ layout: default
           <h2 class="tracked-tight mb3">{{ page.title }}</h2>
           {% unless page.content == "" %}
             <hr class="w-100 ba b--light-gray mb4"/>
-            <div class="lh-copy {% if page.links or page.ext_announcement %}mb4{% endif %}">
+            <div class="lh-copy{% if page.links or page.ext_announcement %} mb4{% endif %}">
               {{ content }}
             </div>
           {% endunless %}
           {% if page.links or page.ext_announcement %}
-            <hr class="w-100 ba b--light-gray mb4"/>
-            <div class="lh-copy pl2-ns">
+            <div class="lh-copy">
               <h3 class="tracked-tight mb2 mb3-ns">Links</h3>
               <ul class="list pl0">
                 {% if page.ext_announcement %}

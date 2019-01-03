@@ -1,21 +1,16 @@
 ---
 title: Research
-subtitle: Research and publications
-header-css: bg-leaves
+big_header:
+  bh_title: Research and publications
+  bh_css: bg-leaves
 description: Check out our latest publications or peruse the PCfN research archives.
 sections:
 - Publications
 ---
-{% capture header_content %}
-  <p>
-    The aim of neuroaesthetics research is to understand neural systems that underlie aesthetic experiences and choices. This includes investigating the nature and neural basis of beauty, art, design, and architecture.
-  </p>
-{% endcapture %}
-
 {% include header.html %}
 {% include page-nav.html %}
 
-<main class="f5 f4-ns">
+<main class="f4 f3-l lh-copy">
   <div class="min-vh-100 bg-jp-light-sage pa3 pa4-ns ph6-l">
     <div class="mw-55rem center lh-copy">
       <section id="{{ page.sections[0] | slugify }}" class="pv3 pv4-ns">
@@ -32,8 +27,8 @@ sections:
               {% endif %}
             {% endfor %}
           </div>
-          <div class="js-vt-button pt3 pt4-ns">
-            <button class="w-100 f4 bg-jp-sage white tc b pa3 bn br2 dim-ns pointer">
+          <div class="js-vt-button t3 pt4-ns">
+            <button class="f5 f4-ns w-100 bg-jp-sage white b dim-ns pv3 ph5-ns bn br3 pointer">
               <span class="mr2">
                 Show more
               </span>

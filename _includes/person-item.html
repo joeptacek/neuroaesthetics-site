@@ -11,7 +11,11 @@
           <h3 class="tc mid-gray tracked-tight tl-m mb2">{{ person.first_name }} {{ person.middle_initials}} {{ person.last_name }}</h2>
           {% if person.affiliation == "University of Pennsylvania" %}
             {% if person.program == "Penn Center for Neuroaesthetics" %}
-              <p class="silver">{{ person.position_short }}</p>
+              {% if person.position_short and person.position_short != "" %}
+                <p class="silver">{{ person.position_short }}</p>
+              {% else %}
+                <p class="silver">{{ person.position }}</p>
+              {% endif %}
             {% else %}
               <p class="mb1 silver">{{ person.school }}</p>
             {% endif %}

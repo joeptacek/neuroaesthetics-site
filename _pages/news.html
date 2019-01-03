@@ -1,7 +1,8 @@
 ---
 title: News
-subtitle: News and events
-header-css: bg-salt
+big_header:
+  bh_title: News and events
+  bh_css: bg-salt
 description: Stay up to date with PCfN news and upcoming events.
 sections:
 - Tweets
@@ -11,21 +12,21 @@ sections:
 {% include header.html %}
 {% include page-nav.html %}
 
-<main class="f5 f4-ns lh-copy">
+<main class="f4 f3-l lh-copy">
   <div class="min-vh-100 bg-jp-light-sage pa3 pa4-ns ph6-l">
     <div class="mw-55rem center">
       <section id="{{ page.sections[0] | slugify }}" class="pv3 pv4-ns">
         <div class="bg-white shadow-6 br2 mb4 mb5-ns">
           <h2 class="bg-blue near-white tc pv4 lh-title font-default b ph3 ph4-ns br2 br--top mb0">{{ page.sections[0] }}</h2>
-          <div class="pa3">
-            <div class="mb3">
+          <div class="pa3 pa4-ns">
+            <div class="mb3 mb4-ns">
               <a class="twitter-timeline" href="https://twitter.com/PCfN__" data-height="500" data-chrome="transparent noheader noborders nofooter" data-dnt="true">Tweets by PCfN__</a>
             </div>
-            <a class="db bg-blue white tc b pa3 br2 link dim" href="https://twitter.com/PCfN__" target="_blank">
+            <a class="f5 f4-ns db bg-blue white tc b link dim-ns pa3 br2" href="https://twitter.com/PCfN__" target="_blank">
               <span class="mr2">
                 PCfN Twitter
               </span>
-              {% octicon link-external height:16 class:"v-top fill-white" %}
+              {% octicon link-external height:16 class:"fill-white" %}
             </a>
           </div>
         </div>
@@ -55,7 +56,7 @@ sections:
               {% endunless %}
             {% endfor %}
           {% else %}
-            <div class="pv4 ph3 ph4-ns">
+            <div class="pv5 ph3 ph4-ns">
               <p class="tc silver">Check back soon!</p>
             </div>
           {% endif %}
@@ -75,8 +76,8 @@ sections:
                 {% endif %}
               {% endfor %}
             </div>
-            <div class="js-vt-button ph3 pb3">
-              <button class="w-100 bg-purple white tc b pa3 bn br2 dim-ns pointer">
+            <div class="js-vt-button ph3 ph4-ns pb3 pb4-ns">
+              <button class="f5 f4-ns w-100 bg-purple white b pv3 ph5-ns bn br2 dim-ns pointer">
                 <span class="mr2">
                   Show more
                 </span>
