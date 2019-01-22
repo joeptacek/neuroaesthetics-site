@@ -1,37 +1,38 @@
-const gulp = require('gulp');
 const bs = require('browser-sync').create();
 const { spawn, exec } = require('child_process');
 const https = require('https');
 const fs = require('fs');
 const path = require('path');
+const url = require('url');
+
+const gulp = require('gulp');
 const del = require('del');
 const mkdirp = require('mkdirp');
 const log = require('fancy-log');
-const url = require('url');
 
 const args = process.argv;
 const devLocalData = args.includes('--local');
 const production = args.includes('--production') || args.includes('deploy');
-let jekyllBuild, jekyllWatch;
-if (production) {
-  if (devLocalData) {
-    throw new Error("Cannot use `--local` with `--production` or `deploy`");
-  } else {
-    process.env['JEKYLL_ENV'] = "production";
-    jekyllBuild = 'bundle exec jekyll build --config _config-production.yml';
-    jekyllWatch = ['exec', 'jekyll', 'build', '--watch', '--config', '_config-production.yml'];
-  }
-} else {
+let jekyllBuildExec, jekyllWatchSpawn;
+if (!production) {
   process.env['JEKYLL_ENV'] = "development";
-  jekyllBuild = 'bundle exec jekyll build';
-  jekyllWatch = ['exec', 'jekyll', 'build', '--watch'];
+  jekyllBuildExec = 'bundle exec jekyll build';
+  jekyllWatchSpawn = ['exec', 'jekyll', 'build', '--watch'];
+} else {
+  if (!devLocalData) {
+    process.env['JEKYLL_ENV'] = "production";
+    jekyllBuildExec = 'bundle exec jekyll build --config _config-production.yml';
+    jekyllWatchSpawn = ['exec', 'jekyll', 'build', '--watch', '--config', '_config-production.yml'];
+  } else {
+    throw new Error("Cannot use `--local` with `--production` or `deploy`");
+  }
 }
 
 gulp.task('data', function (cb) {
-  const outputDir = '_data/external'
   const dataFilenames = ['news.json', 'publications.json']
-  const localDataSource = '../chatlab-site/_data/'; // add option to just use the last request from GitHub, if it exists
   const remoteDataSource = 'https://raw.githubusercontent.com/joeptacek/chatlab-site/master/_data/'
+  const localDataSource = '../chatlab-site/_data/'; // add option to just use the last request from GitHub, if it exists
+  const outputDir = '_data/external'
   let httpError = false;
 
   // rm -rf _data/ && mkdir _data
@@ -126,7 +127,7 @@ gulp.task('data', function (cb) {
 });
 
 gulp.task('build', ['data'], function (cb) {
-  exec(jekyllBuild, (error, stdout, stderr) => {
+  exec(jekyllBuildExec, (error, stdout, stderr) => {
     if (error) {
       return cb(error);
     } else if (stdout) {
@@ -139,10 +140,11 @@ gulp.task('build', ['data'], function (cb) {
 });
 
 gulp.task('watch', ['data'], function () {
-  spawn('bundle', jekyllWatch, { stdio: 'inherit' });
+  spawn('bundle', jekyllWatchSpawn, { stdio: 'inherit' });
   // build out cb() to make dependent tasks (e.g., serve) wait until jekyll watch is finished
 });
 
+// serve won't actually wait on watch b/c no cb()
 gulp.task('serve', ['watch'], function () {
   bs.init({
     host: '0.0.0.0',
