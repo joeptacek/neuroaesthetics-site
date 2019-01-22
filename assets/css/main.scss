@@ -38,6 +38,10 @@ h1, h2, h3, h4, h5, .font-headers {
   font-weight: normal;
 }
 
+.mw-20rem {
+  max-width: 20rem;
+}
+
 .mw-40rem {
   max-width: 40rem;
 }
@@ -158,36 +162,6 @@ h1, h2, h3, h4, h5, .font-headers {
   display: block !important;
 }
 
-.hw-a {
-  // image stats
-  height: 400px;
-  width: 320px;
-}
-
-.hw-b {
-  // bodies
-  height: 400px;
-  width: 430px;
-}
-
-.hw-c {
-  // networks
-  height: 400px;
-  width: 400px;
-}
-
-.hw-d {
-  // faces
-  height: 400px;
-  width: 300px;
-}
-
-.hw-e {
-  // pollock mondrian
-  height: 400px;
-  width: 320px;
-}
-
 .transition-opacity {
   transition: opacity 2s linear;
 }
@@ -195,12 +169,63 @@ h1, h2, h3, h4, h5, .font-headers {
 .js-carousel-container {
   position: relative;
 
-  > * {
+  img {
+    display: block; // squash inline-block gaps
+
     position: absolute;
     top: 0;
     left: 0;
+
+    // max-width: 100%; // tachyons already resets img to mw-100
+    // height: auto; // not necessary (?)
+
+    &:first-child {
+      position: static;
+    }
   }
 }
+
+// old stuff from js-carousel-container
+//
+// .hw-a {
+//   // image stats
+//   // height: 400px;
+//   // width: 320px;
+//   padding-bottom: 125%;
+//   max-width: 100%;
+// }
+//
+// .hw-b {
+//   // bodies
+//   // height: 400px;
+//   // width: 430px;
+//   padding-bottom: 93%;
+//   max-width: 100%;
+// }
+//
+// .hw-c {
+//   // networks
+//   // height: 400px;
+//   // width: 400px;
+//   padding-bottom: 100%;
+//   max-width: 100%;
+// }
+//
+// .hw-d {
+//   // faces
+//   // height: 400px;
+//   // width: 300px;
+//   padding-bottom: 133%;
+//   max-width: 100%;
+// }
+//
+// .hw-e {
+//   // pollock mondrian
+//   // height: 400px;
+//   // width: 320px;
+//   padding-bottom: 125%;
+//   max-width: 100%;
+// }
 
 .tablegen {
   display: block; // squash inline space
@@ -237,6 +262,10 @@ h1, h2, h3, h4, h5, .font-headers {
   .dim-ns:hover, .dim-ns:focus { opacity: .5; transition: none; }
   .dim-ns:active { opacity: .8; transition: none; }
 
+  .mw-20rem-ns {
+    max-width: 20rem;
+  }
+
   .mw-40rem-ns {
     max-width: 40rem;
   }
@@ -258,6 +287,10 @@ h1, h2, h3, h4, h5, .font-headers {
   .dim-m { opacity: 1; transition: none; }
   .dim-m:hover, .dim-m:focus { opacity: .5; transition: none; }
   .dim-m:active { opacity: .8; transition: none; }
+
+  .mw-20rem-m {
+    max-width: 20rem;
+  }
 
   .mw-40rem-m {
     max-width: 40rem;
@@ -281,6 +314,10 @@ h1, h2, h3, h4, h5, .font-headers {
   .dim-l:hover, .dim-l:focus { opacity: .5; transition: none; }
   .dim-l:active { opacity: .8; transition: none; }
 
+  .mw-20rem-l {
+    max-width: 20rem;
+  }
+
   .mw-40rem-l {
     max-width: 40rem;
   }
@@ -300,6 +337,44 @@ h1, h2, h3, h4, h5, .font-headers {
   .dbi-l {
     display: block !important;
   }
+
+  .js-carousel-container {
+    img {
+      // max-width: 20rem;
+    }
+  }
+
+  // old stuff from js-carousel-container
+  //
+  // .hw-a {
+  //   // image stats
+  //   height: 400px;
+  //   width: 320px;
+  // }
+  //
+  // .hw-b {
+  //   // bodies
+  //   height: 400px;
+  //   width: 430px;
+  // }
+  //
+  // .hw-c {
+  //   // networks
+  //   height: 400px;
+  //   width: 400px;
+  // }
+  //
+  // .hw-d {
+  //   // faces
+  //   height: 400px;
+  //   width: 300px;
+  // }
+  //
+  // .hw-e {
+  //   // pollock mondrian
+  //   height: 400px;
+  //   width: 320px;
+  // }
 
   .tablegen {
     tr[class^="row"] {
