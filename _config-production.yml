@@ -9,9 +9,6 @@ exclude:
   - README.md
   - assets/img/originals
 
-  # WIP
-  - assets/img/projects
-
   # excluded by default (need to re-exclude because user _config.yml overwrites the default sequence, doesn't append to it)
   - Gemfile
   - Gemfile.lock
