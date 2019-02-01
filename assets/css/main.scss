@@ -38,6 +38,10 @@ h1, h2, h3, h4, h5, .font-headers {
   font-weight: normal;
 }
 
+.ipsum {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
 .mw-20rem {
   max-width: 20rem;
 }
@@ -343,38 +347,6 @@ h1, h2, h3, h4, h5, .font-headers {
       // max-width: 20rem;
     }
   }
-
-  // old stuff from js-carousel-container
-  //
-  // .hw-a {
-  //   // image stats
-  //   height: 400px;
-  //   width: 320px;
-  // }
-  //
-  // .hw-b {
-  //   // bodies
-  //   height: 400px;
-  //   width: 430px;
-  // }
-  //
-  // .hw-c {
-  //   // networks
-  //   height: 400px;
-  //   width: 400px;
-  // }
-  //
-  // .hw-d {
-  //   // faces
-  //   height: 400px;
-  //   width: 300px;
-  // }
-  //
-  // .hw-e {
-  //   // pollock mondrian
-  //   height: 400px;
-  //   width: 320px;
-  // }
 
   .tablegen {
     tr[class^="row"] {
