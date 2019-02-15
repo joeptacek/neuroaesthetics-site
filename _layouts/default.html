@@ -22,7 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arvo|Questrial">
     <link rel="stylesheet" href="/assets/css/vendor/tachyons/tachyons.css">
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/main.css?{{ site.time | date: "%s" }}">
 
     {% if jekyll.environment == "production" %}
       <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -71,6 +71,6 @@
 
     <!-- SCRIPTS -->
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/main.js?{{ site.time | date: "%s" }}"></script>
   </body>
 </html>
