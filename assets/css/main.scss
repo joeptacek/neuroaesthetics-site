@@ -184,7 +184,8 @@ h1, h2, h3, h4, h5, .font-headers {
     // height: auto; // not necessary (?)
 
     &:first-child {
-      position: static;
+      position: relative;
+      z-index: 99; // so that first-child is in front of following children, masking these while javascript transitions the following children to opaque
     }
   }
 }
@@ -340,12 +341,6 @@ h1, h2, h3, h4, h5, .font-headers {
 
   .dbi-l {
     display: block !important;
-  }
-
-  .js-carousel-container {
-    img {
-      // max-width: 20rem;
-    }
   }
 
   .tablegen {

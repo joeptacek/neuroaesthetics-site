@@ -93,7 +93,9 @@ if (carouselContainers) {
   function carouselContainerInit(el) {
     var elChildren = el.children;
     for (var i = 0; i < elChildren.length; i++) {
-      if (i < elChildren.length - 1) {
+      elChildren[i].classList.add('transition-opacity');
+      if (i > 0) {
+        // make all children opaque except first child
         elChildren[i].classList.add('o-0');
       }
     }
