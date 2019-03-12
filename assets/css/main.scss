@@ -54,6 +54,10 @@ h1, h2, h3, h4, h5, .font-headers {
   max-width: 55rem;
 }
 
+.mw-64rem {
+  max-width: 64rem;
+}
+
 .min-h5 {
   min-height: 16rem; // from tachyons h5
 }
@@ -97,6 +101,16 @@ h1, h2, h3, h4, h5, .font-headers {
   background-image: url(/assets/img/backgrounds/goddard.png);
 }
 
+// .bg-jp-wintergreen {
+//   background-color: hsla(175, 46%, 60%, 1);
+//   background-color: #6ac8c0;
+// }
+//
+// .jp-wintergreen {
+//   color: hsla(175, 46%, 60%, 1);
+//   color: #6ac8c0;
+// }
+
 .bg-jp-dark-sage {
   // collection item buttons
   background-color: #6da291;
@@ -112,37 +126,22 @@ h1, h2, h3, h4, h5, .font-headers {
   background-color: #e1e8e6;
 }
 
+.bg-jp-lighter-sage {
+  // background-color: hsla(163, 13%, 92%, 1);
+  background-color: #e8edec;
+}
+
 .bg-jp-lightest-sage {
   // collection item headers
   background-color: #f4f6f5;
 }
 
-.bg-jp-blue {
-  background-color: #6290C3;
-}
-
-.jp-blue {
-  color: #6290C3;
-}
-
-.bg-jp-green {
-  background-color: #1B998B;
-}
-
-.jp-green {
-  color: #1B998B;
-}
-
-.bg-jp-purple {
-  background-color: #985F99;
-}
-
-.jp-purple {
-  color: #985F99;
-}
-
 .fill-white {
   fill: #fff;
+}
+
+.fill-near-white {
+  fill: #f4f4f4;
 }
 
 .fill-dark-green {
@@ -279,6 +278,10 @@ h1, h2, h3, h4, h5, .font-headers {
     max-width: 55rem;
   }
 
+  .mw-64rem-ns {
+    max-width: 64rem;
+  }
+
   .dni-ns {
     display: none !important;
   }
@@ -305,6 +308,10 @@ h1, h2, h3, h4, h5, .font-headers {
     max-width: 55rem;
   }
 
+  .mw-64rem-m {
+    max-width: 64rem;
+  }
+
   .dni-m {
     display: none !important;
   }
@@ -315,6 +322,10 @@ h1, h2, h3, h4, h5, .font-headers {
 }
 
 @media screen and (min-width: 60em) {
+  .bg-dark-green-l {
+    background-color: #137752;
+  }
+
   .dim-l { opacity: 1; transition: none; }
   .dim-l:hover, .dim-l:focus { opacity: .5; transition: none; }
   .dim-l:active { opacity: .8; transition: none; }
@@ -329,6 +340,10 @@ h1, h2, h3, h4, h5, .font-headers {
 
   .mw-55rem-l {
     max-width: 55rem;
+  }
+
+  .mw-64rem-l {
+    max-width: 64rem;
   }
 
   .bg-fixed {

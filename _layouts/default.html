@@ -1,74 +1,19 @@
 <!doctype html>
 <html>
   <!-- HEAD -->
-  <head>
-    <meta charset="utf-8">
-
-    {% if page.collection == "people" %}
-      <title>PCfN → Community → {{ page.first_name }} {{ page.middle_initials}} {{ page.last_name }}</title>
-      <meta name="description" content="Meet {{ page.first_name }} {{ page.middle_initials}} {{ page.last_name }}">
-    {% elsif page.collection == "events" %}
-      <title>PCfN → News → {{ page.title }}</title>
-      <meta name="description" content="Event page for {{ page.title }}">
-    {% elsif page.collection == "announcements" %}
-      <title>PCfN → News → {{ page.title }}</title>
-      <meta name="description" content="Announcment page for {{ page.title }}">
-    {% else %}
-      {% comment %} e.g., for _pages {% endcomment %}
-      <title>PCfN → {{ page.title }}</title>
-      <meta name="description" content="{{ page.description }}">
-    {% endif %}
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arvo|Questrial">
-    <link rel="stylesheet" href="/assets/css/vendor/tachyons/tachyons.css">
-    <link rel="stylesheet" href="/assets/css/main.css?{{ site.time | date: "%s" }}">
-
-    {% if jekyll.environment == "production" %}
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109208305-2"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-109208305-2');
-      </script>
-    {% endif %}
-  </head>
-
+  {% include partials/head.html %}
   <!-- BODY -->
   <body class="m0 mid-gray">
-    {% include header.html %}
+    <!-- HEADER -->
+    {% include partials/header.html %}
+    <!-- PAGE NAV -->
     {% if page.sections and page.sections != "" %}
-      {% include page-nav.html %}
+      {% include partials/page-nav.html %}
     {% endif %}
-
-    <!-- HEADER + MAIN -->
+    <!-- MAIN -->
     {{ content }}
-
     <!-- FOOTER -->
-    <footer class="bg-near-white pv5 ph3 ph4-m ph6-l bt b--moon-gray">
-      <div class="mw-55rem center flex flex-column items-center flex-row-reverse-ns items-center-ns justify-between-ns">
-        <a class="link dim mb4 mb0-ns" href="http://www.med.upenn.edu/" target="_blank">
-          <img class="o-70" src="/assets/img/logo/perelman-school-of-medicine-logo.png" alt="Logo for the Perelman School of Medicine at the University of Pennsylvania" width="175" height="auto">
-        </a>
-        <div class="silver tc tl-ns">
-          <p class="mb2 mb1-ns">
-            Penn Center for Neuroaesthetics
-          </p>
-          <p class="mb2 mb1-ns">
-            Copyright 2018
-          </p>
-          <p class="">
-            <a class="silver link underline dim" href="/contact.html">
-              Contact
-            </a>
-          </p>
-        </div>
-      </div>
-    </footer>
-
+    {% include partials/footer.html %}
     <!-- SCRIPTS -->
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script src="/assets/js/main.js?{{ site.time | date: "%s" }}"></script>

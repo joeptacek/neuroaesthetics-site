@@ -1,0 +1,20 @@
+<nav class="bg-jp-lightest-sage ph3 ph4-m ph6-l bb b--moon-gray">
+  <div class="mw-55rem center tc">
+    <h2 class="lh-title pv4 pt4-l pb3-l ph4 ph5-ns bb b--black-10 bn-l mb0">
+      On this page
+    </h2>
+    <nav class="js-vt-container dark-green f5 f4-ns pt3-l pb4-l ph5-l">
+      <ul class="js-vt-viewer flex flex-column flex-row-l justify-center list pl0 mb0" data-vt-viewer-type="show-hide">
+        {% for section in page.sections %}
+          <li class="dbi-l pv3 ph4 ph5-m pa0-l{% unless forloop.last %} bb b--black-10 bn-l mr4-l{% endunless %}"><a class="dark-green link dim-l" href="{{ section | slugify | prepend: '#' }}">{{ section }}</a></li>
+        {% endfor %}
+      </ul>
+      <div class="js-vt-button flex items-center justify-center dn-l dim-l pointer pv4" data-vt-button-extra-line-css="b--black-10">
+        {% octicon grabber height:24 class:"fill-dark-green" %}
+        <span class="ml3">
+          Sections
+        </span>
+      </div>
+    </nav>
+  </div>
+</nav>

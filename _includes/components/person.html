@@ -1,4 +1,4 @@
-<div class="f5">
+<div class="f5 lh-title">
   {% unless person.content == "" %}<a class="db link dim" href="{{ person.url }}">{% endunless %}
     <div class="flex flex-column items-center flex-row-m">
       {% comment %} flex: none to avoid shrinking; i.e., img should not participate in flex resizing {% endcomment %}
@@ -8,7 +8,8 @@
       </div>
       <div class="tc tl-m">
         <div class="mb3">
-          <h3 class="tc mid-gray tracked-tight tl-m mb2">{{ person.first_name }} {{ person.middle_initials}} {{ person.last_name }}</h2>
+          <!-- fix: h3 to h4 at appropriate size -->
+          <h3 class="tc mid-gray tracked-tight tl-m mb2">{{ person.first_name }} {{ person.middle_initials}} {{ person.last_name }}</h3>
           {% if person.affiliation == "University of Pennsylvania" %}
             {% if person.program == "Penn Center for Neuroaesthetics" %}
               {% if person.position_short and person.position_short != "" %}

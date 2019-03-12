@@ -5,85 +5,112 @@ big_header:
   bh_css: bg-salt
 description: Stay up to date with PCfN news and upcoming events.
 sections:
-- Tweets
-- Upcoming events
-- In the news
+- News feed
 ---
-<main class="f4 f3-l lh-copy">
-  <div class="min-vh-100 bg-jp-light-sage pa3 pa4-ns ph6-l">
-    <div class="mw-55rem center">
-      <section id="{{ page.sections[0] | slugify }}" class="pv3 pv4-ns">
-        <div class="bg-white shadow-6 br2 mb4 mb5-ns">
-          <h2 class="bg-blue near-white tc pv4 lh-title font-default b ph3 ph4-ns br2 br--top mb0">{{ page.sections[0] }}</h2>
-          <div class="pa3 pa4-ns">
-            <div class="mb3 mb4-ns">
-              <a class="twitter-timeline" href="https://twitter.com/PCfN__" data-height="500" data-chrome="transparent noheader noborders nofooter" data-dnt="true">Tweets by PCfN__</a>
-            </div>
-            <a class="f5 f4-ns db bg-blue white tc b link dim-ns pa3 br2" href="https://twitter.com/PCfN__" target="_blank">
-              <span class="mr2">
-                PCfN Twitter
-              </span>
-              {% octicon link-external height:16 class:"fill-white" %}
-            </a>
-          </div>
+<main class="bg-jp-lighter-sage f4 f3-l lh-copy min-vh-100 pa3 pa4-ns ph6-l">
+  <div class="mw-55rem center">
+    <section class="pv3 pv4-ns">
+      <div class="bg-white shadow-6 br2">
+        <h2 class="bg-blue near-white font-default lh-title b tc pv4 ph4 ph5-ns br2 br--top mb0">
+          New and upcoming
+        </h2>
+        <div class="pa4 pa5-ns">
+          <p>
+            Learn about upcoming events, check our latest announcements, and stay up to date with podcasts, videos, and other media exploring themes in contemporary neuroaesthetics.
+          </p>
         </div>
-      </section>
-      <section id="{{ page.sections[1] | slugify }}" class="pv3 pv4-ns">
-        <div class="bg-white shadow-6 br2 mb4 mb5-ns">
-          <h2 class="bg-dark-green near-white lh-title font-default b tc pv4 ph3 ph4-ns br2 br--top mb0">{{ page.sections[1] }}</h2>
-          {% assign upcoming_events = false %}
-          {% assign todays_date = site.time | date: "%Y-%m-%d" %}
-          {% assign events_sorted = site.events | sort: "date_start" %}
+      </div>
+    </section>
+    <section id="{{ page.sections[0] | slugify }}" class="pv3 pv4-ns">
+      <div class="bg-white shadow-6 br2">
+        <h2 class="bg-dark-green near-white font-default lh-title b tc pv4 ph4 ph5-ns br2 br--top mb0">
+          {{ page.sections[0] }}
+        </h2>
+        <!-- ANNOUNCEMENTS -->
+        <h3 id="announcements" class="bg-near-white light-silver lh-title font-default pv3 ph4 tc bt bb b--black-10 mb0">
+          Announcements
+        </h3>
+        {% assign ongoing_announcements = false %}
+        {% assign todays_date = site.time | date: "%Y-%m-%d" %}
+        {% assign announcements_sorted = site.announcements | sort: "date_start" %}
+        {% for announcement in announcements_sorted %}
+          {% assign ds = announcement.date_start | date: "%Y-%m-%d" %}
+          {% assign de = announcement.date_end | date: "%Y-%m-%d" %}
+          {% if todays_date >= ds and todays_date <= de %}
+            {% assign ongoing_announcements = true %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        {% if ongoing_announcements %}
+          {% assign first_announcement = true %}
+          {% for announcement in announcements_sorted %}
+            {% assign de = announcement.date_end | date: "%Y-%m-%d" %}
+            {% unless de < todays_date %}
+              <div class="pv4 ph3 ph4-ns{% unless first_announcement %} bt b--black-10{% endunless %}">
+                {% include components/announcement.html %}
+              </div>
+              {% assign first_announcement = false %}
+            {% endunless %}
+          {% endfor %}
+        {% else %}
+          <div class="pv5 ph3 ph4-ns">
+            <p class="f4 moon-gray tc">Check back soon!</p>
+          </div>
+        {% endif %}
+        <!-- EVENTS -->
+        <h3 id="events" class="bg-near-white light-silver lh-title font-default pv3 ph4 tc bt bb b--black-10 mb0">
+          Events
+        </h3>
+        {% assign upcoming_events = false %}
+        {% assign events_sorted = site.events | sort: "date_start" %}
+        {% for event in events_sorted %}
+          {% assign de = event.date_end | date: "%Y-%m-%d" %}
+          {% if de >= todays_date %}
+            {% assign upcoming_events = true %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        {% if upcoming_events %}
+          {% assign first_event = true %}
           {% for event in events_sorted %}
             {% assign de = event.date_end | date: "%Y-%m-%d" %}
-            {% if de >= todays_date %}
-              {% assign upcoming_events = true %}
-              {% break %}
-            {% endif %}
+            {% unless de < todays_date %}
+              <div class="pv4 ph3 ph4-ns{% unless first_event %} bt b--black-10{% endunless %}">
+                {% include components/event.html %}
+              </div>
+              {% assign first_event = false %}
+            {% endunless %}
           {% endfor %}
-          {% if upcoming_events %}
-            {% assign first_event = true %}
-            {% for event in events_sorted %}
-              {% assign de = event.date_end | date: "%Y-%m-%d" %}
-              {% unless de < todays_date %}
-                <div class="pv4 ph3 ph4-ns{% unless first_event %} bt b--light-gray{% endunless %}">
-                  {% include event-item.html %}
+        {% else %}
+          <div class="pv4 ph3 ph4-ns">
+            <p class="f4 moon-gray tc">Check back soon!</p>
+          </div>
+        {% endif %}
+        <!-- NEWS -->
+        <h3 class="bg-near-white light-silver lh-title font-default pv3 ph4 tc bt bb b--black-10 mb0">
+          News
+        </h3>
+        <div class="js-vt-container">
+          <div class="js-vt-viewer" data-vt-viewer-type="show-more" data-vt-show-more-init-visible="3" data-vt-show-more-max="5" data-vt-show-more-responsive="false">
+            {% assign news_sorted = site.data.external.news | sort: "date" | reverse %}
+            {% for news_item in news_sorted %}
+              {% if news_item.site_pcfn and news_item.archived == false %}
+                <div class="pv4 ph4 ph5-ns{% unless forloop.index == 1 %} bt b--black-10{% endunless %}">
+                  {% include components/news.html %}
                 </div>
-                {% assign first_event = false %}
-              {% endunless %}
+              {% endif %}
             {% endfor %}
-          {% else %}
-            <div class="pv5 ph3 ph4-ns">
-              <p class="tc silver">Check back soon!</p>
-            </div>
-          {% endif %}
-        </div>
-      </section>
-      <section id="{{ page.sections[2] | slugify }}" class="pv3 pv4-ns">
-        <div class="bg-white shadow-6 br2">
-          <h2 class="bg-purple near-white tc pv4 lh-title font-default b ph3 ph4-ns br2 br--top mb0">{{ page.sections[2] }}</h2>
-          <div class="js-vt-container">
-            <div class="js-vt-viewer" data-vt-viewer-type="show-more" data-vt-show-more-init-visible="3" data-vt-show-more-max="5" data-vt-show-more-responsive="false">
-              {% assign news_sorted = site.data.external.news | sort: "date" | reverse %}
-              {% for news_item in news_sorted %}
-                {% if news_item.site_pcfn and news_item.archived == false %}
-                  <div class="pv4 ph3 ph4-ns{% unless forloop.index == 1 %} bt b--light-gray{% endunless %}">
-                    {% include news-item.html %}
-                  </div>
-                {% endif %}
-              {% endfor %}
-            </div>
-            <div class="js-vt-button ph3 ph4-ns pb3 pb4-ns">
-              <button class="f5 f4-ns w-100 bg-purple white b pv3 ph5-ns bn br2 dim-ns pointer">
-                <span class="mr2">
-                  Show more
-                </span>
-                {% octicon chevron-down height:16 class:"v-top fill-white" %}
-              </button>
+          </div>
+          <div class="js-vt-button-wrap ph3 ph4-ns pb3 pb4-ns">
+            <div class="js-vt-button flex items-center justify-center bg-dark-green white dim-l pointer f5 f4-ns lh-title b w-100 pv3 ph5-ns br2">
+              <span class="mr3">
+                Show more
+              </span>
+              {% octicon chevron-down height:16 class:"fill-white" %}
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   </div>
 </main>

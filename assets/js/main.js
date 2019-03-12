@@ -9,22 +9,25 @@ if (VTContainers) {
     }
   }
 
-  function showMoreInit(el, showMoreInitVisible, showMoreResponsive) {
+  function showMoreInit(el, showMoreInitVisible) {
     var elChildren = el.children;
     for (var i = 0; i < elChildren.length; i++) {
       if (i > showMoreInitVisible - 1) {
         elChildren[i].classList.add('dni');
-        if (showMoreResponsive == "true") {
-          elChildren[i].classList.add('dbi-ns');
-        }
       }
     }
   }
 
-  function showHide(el) {
+  function showHide(el, elVTButtonExtraLineCSS) {
     var elChildren = el.children;
+    var elVTContainer = el.closest('.js-vt-container');
+    var elVTButton = elVTContainer.querySelector('.js-vt-button');
     for (var i = 0; i < elChildren.length; i++) {
       elChildren[i].classList.toggle('dni');
+    }
+    if (elVTButtonExtraLineCSS) {
+      elVTButton.classList.toggle('bt');
+      elVTButton.classList.toggle(elVTButtonExtraLineCSS);
     }
   }
 
@@ -32,7 +35,7 @@ if (VTContainers) {
     var flipCount = 0;
     var elChildren = el.children;
     var elVTContainer = el.closest('.js-vt-container');
-    var elVTButton = elVTContainer.querySelector('.js-vt-button');
+    var elVTButtonWrap = elVTContainer.querySelector('.js-vt-button-wrap');
     for (var i = 0; i < elChildren.length; i++) {
       if (elChildren[i].classList.contains('dni')) {
         elChildren[i].classList.remove('dni');
@@ -43,46 +46,44 @@ if (VTContainers) {
             break;
           }
         } else {
-          elVTButton.classList.add('dni');
+          elVTButtonWrap.classList.add('dni');
         }
       }
     }
   }
 
   function VTHandler(e) {
-    var clickedButtonEl = e.currentTarget;
-    var clickedVTContainer = clickedButtonEl.closest('.js-vt-container');
+    var clickedVTButton = e.currentTarget;
+    var clickedVTButtonExtraLineCSS = clickedVTButton.getAttribute('data-vt-button-extra-line-css');
+    var clickedVTContainer = clickedVTButton.closest('.js-vt-container');
     var clickedVTViewer = clickedVTContainer.querySelector('.js-vt-viewer');
     var clickedVTViewerType = clickedVTViewer.getAttribute('data-vt-viewer-type');
     var clickedVTViewerShowMoreMax = clickedVTViewer.getAttribute('data-vt-show-more-max');
     switch (clickedVTViewerType) {
       case 'show-hide':
-        showHide(clickedVTViewer);
-        clickedButtonEl.blur();
+        showHide(clickedVTViewer, clickedVTButtonExtraLineCSS);
         break;
       case 'show-more':
         showMore(clickedVTViewer, clickedVTViewerShowMoreMax);
-        clickedButtonEl.blur();
         break;
     }
   }
 
   for (var i = 0; i < VTContainers.length; i++) {
     var thisVTContainer = VTContainers[i];
-    var thisVTButtonEl = thisVTContainer.querySelector('button');
+    var thisVTButton = thisVTContainer.querySelector('.js-vt-button');
     var thisVTViewer = thisVTContainer.querySelector('.js-vt-viewer');
     var thisVTViewerType = thisVTViewer.getAttribute('data-vt-viewer-type');
     var thisVTViewerInitVisible = thisVTViewer.getAttribute('data-vt-show-more-init-visible');
-    var thisVTViewerShowMoreResponsive = thisVTViewer.getAttribute('data-vt-show-more-responsive');
     switch (thisVTViewerType) {
       case 'show-hide':
         showHideInit(thisVTViewer);
         break;
       case 'show-more':
-        showMoreInit(thisVTViewer, thisVTViewerInitVisible, thisVTViewerShowMoreResponsive);
+        showMoreInit(thisVTViewer, thisVTViewerInitVisible);
         break;
     }
-    thisVTButtonEl.addEventListener('click', VTHandler);
+    thisVTButton.addEventListener('click', VTHandler);
   }
 }
 

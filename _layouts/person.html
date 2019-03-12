@@ -1,36 +1,41 @@
 ---
 layout: default
 ---
-<main class="f5 f4-ns">
-  <section class="min-vh-100 bg-jp-light-sage ph3 pv4 ph4-m pv5-ns ph6-l">
-    <div class="mw-40rem center">
-      <div class="mb4 mb5-ns">
-        <div class="bg-jp-lightest-sage pv3 ph4 ba b--moon-gray br1 br--top">
-          <p class="tl">
-            {% if page.affiliation == "University of Pennsylvania" %}
-              {% if page.program == "Penn Center for Neuroaesthetics" %}
-                <a class="b mr2 link underline black dim" href="/community.html#at-pcfn">Community</a>
-                <span class="b mr2">→</span>
-                <span class="b mr2">At PCfN</span>
-              {% else %}
-                <a class="b mr2 link underline black dim" href="/community.html#affiliated-faculty-at-penn">Community</a>
-                <span class="b mr2">→</span>
-                <span class="b mr2">Penn Faculty</span>
-              {% endif %}
-            {% else %}
-              <a class="b mr2 link underline black dim" href="/community.html#other-collaborators">Community</a>
+<main class="bg-jp-lighter-sage f5 f4-ns min-vh-100 pa3 pa4-ns ph6-l">
+  <div class="mw-40rem center">
+    <section class="pv3 pv4-ns">
+      <div class="bg-white ba b--moon-gray br2">
+        <p class="bg-near-white pv3 ph4 bb b--moon-gray br2 br--top mb0">
+          {% if page.affiliation == "University of Pennsylvania" %}
+            {% if page.program == "Penn Center for Neuroaesthetics" %}
+              <a class="b mr2 link underline mid-gray dim" href="/community.html#at-the-center">Community</a>
               <span class="b mr2">→</span>
-              <span class="b mr2">Other Collaborators</span>
+              <span class="b mr2">At the center</span>
+            {% else %}
+              <a class="b mr2 link underline mid-gray dim" href="/community.html#affiliated-faculty">Community</a>
+              <span class="b mr2">→</span>
+              <span class="b mr2">Affiliated faculty</span>
             {% endif %}
-          </p>
-        </div>
-        <div class="f5 bg-white pa4 {% if page.content != "" or page.links %}pt5{% else %}pa5{% endif %} bl br bb b--moon-gray br1 br--bottom">
-          <img class="db center br-100 pa1 ba bw1 b--moon-gray mb4" src="/assets/img/people/225/{{ page.photo }}" alt="{{ page.first_name }} {{ page.middle_initials}} {{ page.last_name }}" height="auto" width="225">
-          <h2 class="tracked-tight tc mb2">{{ page.first_name }} {{ page.middle_initials}} {{ page.last_name }}</h2>
+          {% else %}
+            <a class="b mr2 link underline mid-gray dim" href="/community.html#other-collaborators">Community</a>
+            <span class="b mr2">→</span>
+            <span class="b mr2">Other collaborators</span>
+          {% endif %}
+        </p>
+        <div class="f5 pa4">
+          <div class="pv4">
+            <img class="db center br-100 pa1 ba bw1 b--moon-gray" src="/assets/img/people/225/{{ page.photo }}" alt="{{ page.first_name }} {{ page.middle_initials}} {{ page.last_name }}" height="auto" width="225">
+          </div>
+          <h2 class="tracked-tight tc mb2">
+            {{ page.first_name }} {{ page.middle_initials}} {{ page.last_name }}
+          </h2>
           <div class="mb4">
             {% if page.affiliation == "University of Pennsylvania" %}
               {% if page.position %}
                 <p class="f4 tc mb2">{{ page.position }}</p>
+              {% endif %}
+              {% if page.affiliation %}
+                <p class="tc silver mb1">{{ page.affiliation }}</p>
               {% endif %}
               {% if page.school %}
                 <p class="tc silver mb1">{{ page.school }}</p>
@@ -39,19 +44,23 @@ layout: default
                 <p class="i tc silver">{{ page.department }}</p>
               {% endif %}
             {% else %}
-              <p class="tc silver">{{ page.affiliation }}</p>
+              {% if page.affiliation %}
+                <p class="tc silver mb0">{{ page.affiliation }}</p>
+              {% endif %}
             {% endif %}
           </div>
-          {% unless page.content == "" %}
+          {% if page.content != "" or page.links %}
             <hr class="w-100 ba b--light-gray mb4"/>
-            <div class="lh-copy{% if page.links %} mb4{% endif %}">
+          {% endif %}
+          {% if page.content != "" %}
+            <div class="lh-copy mb4">
               {{ content }}
             </div>
-          {% endunless %}
+          {% endif %}
           {% if page.links %}
-            <div class="lh-copy">
+            <div class="lh-copy mb4">
               <h3 class="tracked-tight mb2 mb3-ns">Links</h3>
-              <ul class="list pl0">
+              <ul class="list pl0 mb0">
                 {% for link_item in page.links %}
                   <li class="mb2 lh-title">
                     <a class="link blue underline dim" href="{{ link_item.link_url }}" target="_blank">
@@ -62,21 +71,17 @@ layout: default
               </ul>
             </div>
           {% endif %}
-        </div>
-      </div>
-      <div class="">
-        <p class="tc">
           {% if page.affiliation == "University of Pennsylvania" %}
             {% if page.program == "Penn Center for Neuroaesthetics" %}
-              <a class="dib w-100 link bg-jp-dark-sage white dim ph4 pv3 br2" href="/community.html#at-pcfn">← Back to Community</a>
+              <a class="dib bg-jp-dark-sage white link dim f5 f4-ns tc w-100 pv3 ph4 br2" href="/community.html#at-the-center">← Back to Community</a>
             {% else %}
-              <a class="dib w-100 link bg-jp-dark-sage white dim ph4 pv3 br2" href="/community.html#affiliated-faculty-at-penn">← Back to Community</a>
+              <a class="dib bg-jp-dark-sage white link dim f5 f4-ns tc w-100 pv3 ph4 br2" href="/community.html#affiliated-faculty">← Back to Community</a>
             {% endif %}
           {% else %}
-            <a class="dib w-100 link bg-jp-dark-sage white dim ph4 pv3 br2" href="/community.html#other-collaborators">← Back to Community</a>
+            <a class="dib bg-jp-dark-sage white link dim f5 f4-ns tc w-100 pv3 ph4 br2" href="/community.html#other-collaborators">← Back to Community</a>
           {% endif %}
-        </p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </main>

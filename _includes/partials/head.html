@@ -1,0 +1,32 @@
+<head>
+  <meta charset="utf-8">
+  {% case page.collection %}
+    {% when "people" %}
+      <title>PCfN → Community → {{ page.first_name }} {{ page.middle_initials}} {{ page.last_name }}</title>
+      <meta name="description" content="Meet {{ page.first_name }} {{ page.middle_initials}} {{ page.last_name }}">
+    {% when "events" %}
+      <title>PCfN → News → {{ page.title }}</title>
+      <meta name="description" content="Event page for {{ page.title }}">
+    {% when "announcements" %}
+      <title>PCfN → News → {{ page.title }}</title>
+      <meta name="description" content="Announcment page for {{ page.title }}">
+    {% else %}
+      {% comment %} e.g., for _pages {% endcomment %}
+      <title>PCfN → {{ page.title }}</title>
+      <meta name="description" content="{{ page.description }}">
+  {% endcase %}
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arvo|Questrial">
+  <link rel="stylesheet" href="/assets/css/vendor/tachyons/tachyons.css">
+  <link rel="stylesheet" href="/assets/css/main.css?{{ site.time | date: "%s" }}">
+  {% if jekyll.environment == "production" %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109208305-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-109208305-2');
+    </script>
+  {% endif %}
+</head>
