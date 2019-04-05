@@ -14,12 +14,17 @@ layout: default
           <h2 class="tracked-tight mb3">
             {{ page.title }}
           </h2>
-          {% if page.subtitle %}
-            <p class="mb4">
-              {{ page.subtitle }}
+          <div class="mb4">
+            {% if page.source %}
+              <p class="mb3">
+                {{ page.source }}
+              </p>
+            {% endif %}
+            <p class="silver">
+              {{ page.date_start | date: "%B %e, %Y" }}
             </p>
-          {% endif %}
-          {% if page.content != "" or page.links or page.ext_announcement %}
+          </div>
+          {% if page.content != "" or page.links or page.ext_announcement_url %}
             <hr class="w-100 ba b--light-gray mb4"/>
           {% endif %}
           {% if page.content != "" %}
@@ -27,14 +32,14 @@ layout: default
               {{ content }}
             </div>
           {% endif %}
-          {% if page.links or page.ext_announcement %}
+          {% if page.links or page.ext_announcement_url %}
             <div class="lh-copy mb4">
               <h3 class="tracked-tight mb2 mb3-ns">Links</h3>
               <ul class="list pl0 mb0">
-                {% if page.ext_announcement %}
+                {% if page.ext_announcement_url %}
                   <li class="mb2 lh-title">
-                    <a class="link blue underline dim" href="{{ page.ext_announcement.link_url }}" target="_blank">
-                      {{ page.ext_announcement.link_name }}
+                    <a class="link blue underline dim" href="{{ page.ext_announcement_url }}" target="_blank">
+                      External link
                     </a>
                   </li>
                 {% endif %}

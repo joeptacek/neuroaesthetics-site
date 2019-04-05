@@ -15,22 +15,22 @@ layout: default
             {{ page.title }}
           </h2>
           <div class="mb4">
-            {% if page.subtitle %}
+            {% if page.source %}
               <p class="mb3">
-                {{ page.subtitle }}
+                {{ page.source }}
               </p>
             {% endif %}
             {% if page.date_start == page.date_end %}
-              <p class="silver mb3">
+              <p class="silver">
                 {{ page.date_start | date: "%B %e, %Y" }}
               </p>
             {% else %}
-              <p class="silver mb3">
+              <p class="silver">
                 {{ page.date_start | date: "%B %e" }} - {{ page.date_end | date: "%B %e, %Y" }}
               </p>
             {% endif %}
           </div>
-          {% if page.content != "" or page.links or page.ext_event %}
+          {% if page.content != "" or page.links or page.ext_event_url %}
             <hr class="w-100 ba b--light-gray mb4"/>
           {% endif %}
           {% if page.content != "" %}
@@ -38,14 +38,14 @@ layout: default
               {{ content }}
             </div>
           {% endif %}
-          {% if page.links or page.ext_event %}
+          {% if page.links or page.ext_event_url %}
             <div class="lh-copy mb4">
               <h3 class="tracked-tight mb2 mb3-ns">Links</h3>
               <ul class="list pl0 mb0">
-                {% if page.ext_event %}
+                {% if page.ext_event_url %}
                   <li class="mb2 lh-title">
-                    <a class="link blue underline dim" href="{{ page.ext_event.link_url }}" target="_blank">
-                      {{ page.ext_event.link_name }}
+                    <a class="link blue underline dim" href="{{ page.ext_event_url }}" target="_blank">
+                      External link
                     </a>
                   </li>
                 {% endif %}
