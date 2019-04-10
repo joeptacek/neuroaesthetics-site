@@ -6,7 +6,7 @@
     <div class="bg-green pv2 white o-90">
       <div class="ph3 ph4-m ph6-l">
         <p class="tc mw-55rem center">
-          <a class="link underline near-white" href="{% if announcement.ext_announcement %}{{ announcement.ext_announcement.link_url }}{% else %}{{ announcement.url }}{% endif %}" {% if announcement.ext_announcement %}target="_blank"{% endif %}>
+          <a class="link underline near-white" href="{% if announcement.ext_announcement_url %}{{ announcement.ext_announcement_url }}{% else %}{{ announcement.url }}{% endif %}" {% if announcement.ext_announcement_url %}target="_blank"{% endif %}>
             <span class="b">{{ announcement.source }}</span>: {{ announcement.title }}
           </a>
         </p>
