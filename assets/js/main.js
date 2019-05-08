@@ -39,7 +39,7 @@ if (VTContainers) {
     for (var i = 0; i < elChildren.length; i++) {
       if (elChildren[i].classList.contains('dni')) {
         elChildren[i].classList.remove('dni');
-        elChildren[i].classList.remove('dni-ns');
+        // elChildren[i].classList.remove('dni-ns'); // ??
         flipCount++;
         if (i < elChildren.length - 1) {
           if (flipCount > showMoreMax - 1) {

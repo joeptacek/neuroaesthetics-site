@@ -1,10 +1,11 @@
 <div class="f5 f4-ns lh-title">
-  <a class="flex flex-column items-center link dim" href="{% if announcement.ext_announcement_url %}{{ announcement.ext_announcement_url }}{% else %}{{ announcement.url }}{% endif %}" {% if announcement.ext_announcement_url %}target="_blank"{% endif %}>
-    <!-- fix: h3 to h4 at appropriate size -->
-    <h3 class="measure tracked-tight dark-green tc mb3">{{ announcement.title | smartify }}</h3>
+  <a class="db link dim" href="{% if announcement.ext_announcement_url %}{{ announcement.ext_announcement_url }}{% else %}{{ announcement.url }}{% endif %}" {% if announcement.ext_announcement_url %}target="_blank"{% endif %}>
+    <h4 class="dark-green mb3">
+      {{ announcement.title | smartify }}
+    </h3>
     {% if announcement.source %}
-      <p class="measure bg-dark-green near-white pv1 ph2 br2 tc b mb3">{{ announcement.source }}</p>
+      <p class="bg-dark-green dib near-white pv1 ph2 br2 b mb3">{{ announcement.source }}</p>
     {% endif %}
-    <p class="silver tc">{{ announcement.date_start | date: "%B %e, %Y" }}</p>
+    <p class="silver">{{ announcement.date_start | date: "%B %e, %Y" }}</p>
   </a>
 </div>

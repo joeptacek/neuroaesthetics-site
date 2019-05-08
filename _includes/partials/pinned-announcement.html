@@ -1,15 +1,21 @@
+{% comment %}
+  grabs the LATEST announcement that hasn't ended yet
+{% endcomment %}
 {% assign todays_date = site.time | date: "%Y-%m-%d" %}
-{% for announcement in site.announcements %}
+{% assign announcements_sorted = site.announcements | sort: "date_start" | reverse %}
+{% for announcement in announcements_sorted %}
   {% assign ds = announcement.date_start | date: "%Y-%m-%d" %}
   {% assign de = announcement.date_end | date: "%Y-%m-%d" %}
   {% if todays_date >= ds and todays_date <= de %}
     <div class="bg-green pv2 white o-90">
       <div class="ph3 ph4-m ph6-l">
-        <p class="tc mw-55rem center">
-          <a class="link underline near-white" href="{% if announcement.ext_announcement_url %}{{ announcement.ext_announcement_url }}{% else %}{{ announcement.url }}{% endif %}" {% if announcement.ext_announcement_url %}target="_blank"{% endif %}>
-            <span class="b">{{ announcement.source }}</span>: {{ announcement.title }}
-          </a>
-        </p>
+        <div class="flex justify-center mw-64rem center ph2 ph3-m ph0-l">
+          <p>
+            <a class="link near-white" href="{% if announcement.ext_announcement_url %}{{ announcement.ext_announcement_url }}{% else %}{{ announcement.url }}{% endif %}" {% if announcement.ext_announcement_url %}target="_blank"{% endif %}>
+              <span class="b">{{ announcement.source }}:</span> <span class="underline">{{ announcement.title }}</span>
+            </a>
+          </p>
+        </div>
       </div>
     </div>
     {% break %}

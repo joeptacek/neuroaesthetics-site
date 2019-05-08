@@ -5,48 +5,54 @@ big_header:
   bh_css: bg-goddard
 description: Meet the multidisciplinary community of individuals and groups affiliated with PCfN, here at Penn and around the world.
 sections:
+- Who we are
 - People and groups
 ---
-<main class="bg-jp-lighter-sage f4 f3-l lh-copy min-vh-100 pa3 pa4-ns ph6-l">
+<main class="bg-jp-lighter-sage f4-m f3-l lh-copy min-vh-100 pa3 pa4-ns ph6-l">
   <div class="mw-55rem center">
-    <section class="pv3 pv4-ns">
+    <section id="{{ page.sections[0] | slugify }}" class="pv3 pv4-ns">
       <div class="bg-white shadow-6 br2">
-        <h2 class="bg-blue near-white font-default lh-title b tc pv4 ph4 ph5-ns br2 br--top mb0">
-          Who we are
+        <h2 class="bg-blue near-white font-default lh-title b pt4 pb3 pt5-ns pb4-ns ph3 ph4-m ph5-l br2 br--top mb0">
+          {{ page.sections[0] }}
         </h2>
-        <div class="pa4 pa5-ns">
+        <div class="pa3 pa4-m pa5-l">
           <p>
             We bring people together whose expertise converge on neuroaesthetics scientific aims. This includes researchers at the University of Pennsylvania, as well as other collaborating people and groups from around the world.
           </p>
         </div>
       </div>
     </section>
-    <section id="{{ page.sections[0] | slugify }}" class="pv3 pv4-ns">
+    <section id="{{ page.sections[1] | slugify }}" class="pv3 pv4-ns">
       <div class="bg-white shadow-6 br2">
-        <div class="bg-dark-green near-white tc br2 br--top">
-          <h2 class="font-default lh-title b pv4 ph4 ph5-ns bb b--black-20 mb0">
-            {{ page.sections[0] }}
+        <div class="bg-dark-green near-white br2 br--top">
+          <h2 class="dn db-l font-default lh-title b pt5 pb4 ph5 mb0">
+            {{ page.sections[1] }}
           </h2>
-          <nav class="js-vt-container f5 f4-ns pv3-l ph5-l">
-            <ul class="js-vt-viewer flex flex-column flex-row-l justify-center bg-white-10 bg-dark-green-l list pl0 mb0" data-vt-viewer-type="show-hide">
-              <li class="dbi-l pv3 ph4 ph5-m pa0-l bb b--black-20 bn-l mr4-l"><a class="white link dim-l" href="#at-the-center">At the center</a></li>
-              <li class="dbi-l pv3 ph4 ph5-m pa0-l bb b--black-20 bn-l mr4-l"><a class="white link dim-l" href="#penn-faculty">Penn faculty</a></li>
-              <li class="dbi-l pv3 ph4 ph5-m pa0-l bb b--black-20 bn-l mr4-l"><a class="white link dim-l" href="#other-collaborators">Other collaborators</a></li>
-              <li class="dbi-l pv3 ph4 ph5-m pa0-l"><a class="white link dim-ns" href="#affiliated-groups">Affiliated groups</a></li>
-            </ul>
-            <div class="js-vt-button flex items-center justify-center dn-l dim-l pointer pv3" data-vt-button-extra-line-css="b--black-20">
-              {% octicon grabber height:24 class:"fill-white" %}
-              <span class="ml3">
-                Sections
-              </span>
+          <div class="js-vt-container">
+            <div class="f5 f4-ns near-white">
+              <div class="js-vt-button flex items-center justify-between dn-l pt4 pb3 pt5-m pb4-m ph3 ph4-m pointer">
+                <h2 class="font-default lh-title b mr3 mb0">
+                  {{ page.sections[1] }}
+                </h2>
+                {% octicon grabber height:24 class:"fill-near-white" %}
+              </div>
+              <ul class="bg-near-white js-vt-viewer flex flex-column flex-row-l list pv3-l ph3 ph4-m ph5-l bb b--black-10 mb0" data-vt-viewer-type="show-hide">
+                <li class="dbi-l pv3 pa0-l mr4-l"><a class="dark-green link dim-l" href="#at-the-center">At the center</a></li>
+                <li class="dbi-l pb3 pa0-l mr4-l"><a class="dark-green link dim-l" href="#penn-faculty">Penn faculty</a></li>
+                <li class="dbi-l pb3 pa0-l mr4-l"><a class="dark-green link dim-l" href="#other-collaborators">Other collaborators</a></li>
+                <li class="dbi-l pb3 pa0-l"><a class="dark-green link dim-ns" href="#affiliated-groups">Affiliated groups</a></li>
+              </ul>
             </div>
-          </nav>
+          </div>
         </div>
         <!-- PCfN -->
-        <h3 id="at-the-center" class="bg-near-white light-silver font-default lh-title tc pv3 ph4 bt bb b--black-10 mb0">
-          At the center
-        </h3>
-        <div class="pt5 ph4 ph5-ns">
+        <div class="pt4 pt5-l ph3 ph4-m ph5-l">
+          <h3 id="at-the-center" class="lh-title mb1 mb2-ns">
+            At the center
+          </h3>
+          <hr class="w-100 ba b--moon-gray">
+        </div>
+        <div class="pt4 ph3 ph4-m ph5-l">
           {% assign people_sorted_by_name = site.people | where: "program", "Penn Center for Neuroaesthetics" | where_exp: "item", "item.category != 'research'" %}
           <table class="tablegen w-100">
             {% tablerow person in people_sorted_by_name cols:3 %}
@@ -67,10 +73,13 @@ sections:
           </table>
         </div>
         <!-- Penn faculty -->
-        <h3 id="penn-faculty" class="bg-near-white light-silver font-default lh-title tc pv3 ph4 bt bb b--black-10 mb0">
-          Penn faculty
-        </h3>
-        <div class="pt5 ph4 ph5-ns">
+        <div class="ph3 ph4-m ph5-l">
+          <h3 id="penn-faculty" class="lh-title mb1 mb2-ns">
+            Penn faculty
+          </h3>
+          <hr class="w-100 ba b--moon-gray">
+        </div>
+        <div class="pt4 ph3 ph4-m ph5-l">
           {% assign people_sorted_by_name = site.people | where: "affiliation", "University of Pennsylvania" | where_exp: "item", "item.program != 'Penn Center for Neuroaesthetics'" | sort: "last_name" %}
           <table class="tablegen w-100">
             <tbody>
@@ -83,10 +92,13 @@ sections:
           </table>
         </div>
         <!-- Other affiliates -->
-        <h3 id="other-collaborators" class="bg-near-white light-silver font-default lh-title tc pv3 ph4 bt bb b--black-10 mb0">
-          Other collaborators
-        </h3>
-        <div class="pt5 ph4 ph5-ns">
+        <div class="ph3 ph4-m ph5-l">
+          <h3 id="other-collaborators" class="lh-title mb1 mb2-ns">
+            Other collaborators
+          </h3>
+          <hr class="w-100 ba b--moon-gray">
+        </div>
+        <div class="pt4 ph3 ph4-m ph5-l">
           {% assign people_sorted_by_name = site.people | where_exp: "item", "item.affiliation != 'University of Pennsylvania'" | sort: "last_name" %}
           <table class="tablegen w-100">
             <tbody>
@@ -99,38 +111,43 @@ sections:
           </table>
         </div>
         <!-- Affiliated groups -->
-        <h3 id="affiliated-groups" class="bg-near-white light-silver font-default lh-title tc pv3 ph4 bt bb b--black-10 mb0">
-          Affiliated groups
-        </h3>
-        <div class="pv5 ph4 ph5-ns">
-          <div class="flex flex-column flex-row-ns items-center justify-center mb5">
-            <a class="mb5 mb0-ns link dim mr5-ns" href="http://ccn.upenn.edu/" target="_blank">
-              <img class="" src="/assets/img/logo/center-for-cognitive-neuroscience-logo.png" alt="Logo of the Center for Cognitive Neuroscience" width="350" height="auto">
-            </a>
-            <a class="link dim" href="https://web.sas.upenn.edu/mindcore/" target="_blank">
-              <img class="" src="/assets/img/logo/mindcore-logo.png" alt="Logo of mindCORE" width="350" height="auto">
-            </a>
-          </div>
-          <div class="flex flex-column flex-row-ns items-center justify-center mb5">
-            <a class="mb5 mb0-ns link dim mr5-ns" href="https://neuroethics.upenn.edu/" target="_blank">
-              <img class="" src="/assets/img/logo/center-for-neuroscience-and-society-logo.png" alt="Logo of the Center for Neuroscience and Society" width="350" height="auto">
-            </a>
-            <a class="link dim" href="https://neuro.wharton.upenn.edu/" target="_blank">
-              <img class="" src="/assets/img/logo/wharton-neuroscience-initiative-logo.png" alt="Logo of the Edwin & Fanny Gray Hall Center for Human Appearance" width="350" height="auto">
-            </a>
-          </div>
-          <div class="flex flex-column flex-row-ns items-center justify-center mb5">
-            <a class="mb5 mb0-ns link dim mr5-ns" href="http://www.med.upenn.edu/center-for-human-appearance/" target="_blank">
-              <img class="" src="/assets/img/logo/center-for-human-appearance-logo.jpg" alt="Logo of the Edwin & Fanny Gray Hall Center for Human Appearance" width="225" height="auto">
-            </a>
-            <a class="link dim" href="https://www.barnesfoundation.org/" target="_blank">
-              <img class="" src="/assets/img/logo/barnes-foundation-logo.jpg" alt="Logo of Barnes Foundation" width="350" height="auto">
-            </a>
-          </div>
-          <div class="flex flex-column flex-row-ns items-center justify-center mb5">
-            <a class="link dim" href="https://globalwellnessinstitute.org/" target="_blank">
-              <img class="" src="/assets/img/logo/global-wellness-institute-logo.png" alt="Logo of the Global Wellness Institute" width="350" height="auto">
-            </a>
+        <div class="ph3 ph4-m ph5-l">
+          <h3 id="affiliated-groups" class="lh-title mb1 mb2-ns">
+            Affiliated groups
+          </h3>
+          <hr class="w-100 ba b--moon-gray">
+        </div>
+        <div class="pv5 ph3 ph4-m ph5-l">
+          <div class="ph3">
+            <div class="flex flex-column flex-row-ns items-center justify-center mb5">
+              <a class="mb5 mb0-ns link dim mr5-ns" href="http://ccn.upenn.edu/" target="_blank">
+                <img class="" src="/assets/img/logo/center-for-cognitive-neuroscience-logo.png" alt="Logo of the Center for Cognitive Neuroscience" width="350" height="auto">
+              </a>
+              <a class="link dim" href="https://web.sas.upenn.edu/mindcore/" target="_blank">
+                <img class="" src="/assets/img/logo/mindcore-logo.png" alt="Logo of mindCORE" width="350" height="auto">
+              </a>
+            </div>
+            <div class="flex flex-column flex-row-ns items-center justify-center mb5">
+              <a class="mb5 mb0-ns link dim mr5-ns" href="https://neuroethics.upenn.edu/" target="_blank">
+                <img class="" src="/assets/img/logo/center-for-neuroscience-and-society-logo.png" alt="Logo of the Center for Neuroscience and Society" width="350" height="auto">
+              </a>
+              <a class="link dim" href="https://neuro.wharton.upenn.edu/" target="_blank">
+                <img class="" src="/assets/img/logo/wharton-neuroscience-initiative-logo.png" alt="Logo of the Edwin & Fanny Gray Hall Center for Human Appearance" width="350" height="auto">
+              </a>
+            </div>
+            <div class="flex flex-column flex-row-ns items-center justify-center mb5">
+              <a class="mb5 mb0-ns link dim mr5-ns" href="http://www.med.upenn.edu/center-for-human-appearance/" target="_blank">
+                <img class="" src="/assets/img/logo/center-for-human-appearance-logo.jpg" alt="Logo of the Edwin & Fanny Gray Hall Center for Human Appearance" width="225" height="auto">
+              </a>
+              <a class="link dim" href="https://www.barnesfoundation.org/" target="_blank">
+                <img class="" src="/assets/img/logo/barnes-foundation-logo.jpg" alt="Logo of Barnes Foundation" width="350" height="auto">
+              </a>
+            </div>
+            <div class="flex flex-column flex-row-ns items-center justify-center mb5">
+              <a class="link dim" href="https://globalwellnessinstitute.org/" target="_blank">
+                <img class="" src="/assets/img/logo/global-wellness-institute-logo.png" alt="Logo of the Global Wellness Institute" width="350" height="auto">
+              </a>
+            </div>
           </div>
         </div>
       </div>
