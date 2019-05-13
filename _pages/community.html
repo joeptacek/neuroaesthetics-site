@@ -52,7 +52,10 @@ sections:
               At the center
             </h3>
             <hr class="w-100 ba b--moon-gray mb3 mb4-l">
-            {% assign people_sorted_by_name = site.people | where: "program", "Penn Center for Neuroaesthetics" | where_exp: "item", "item.category != 'research'" %}
+            {% assign people_director = site.people | where: "program", "Penn Center for Neuroaesthetics" | where: "category", "director" %}
+            {% assign people_artist_in_residence = site.people | where: "program", "Penn Center for Neuroaesthetics" | where: "category", "artist_in_residence" %}
+            {% assign people_pcfn = people_director | concat: people_artist_in_residence %}
+            {% assign people_sorted_by_name = people_pcfn | sort: "last_name" %}
             <table class="tablegen w-100">
               {% tablerow person in people_sorted_by_name cols:3 %}
                 <div class="pv4 ph3-l">
@@ -60,7 +63,10 @@ sections:
                 </div>
               {% endtablerow %}
             </table>
-            {% assign people_sorted_by_name = site.people | where: "program", "Penn Center for Neuroaesthetics" | where: "category", "research" | sort: "last_name" %}
+            {% assign people_research = site.people | where: "program", "Penn Center for Neuroaesthetics" | where: "category", "research" %}
+            {% assign people_staff = site.people | where: "program", "Penn Center for Neuroaesthetics" | where: "category", "staff" %}
+            {% assign people_pcfn = people_research | concat: people_staff %}
+            {% assign people_sorted_by_name = people_pcfn | sort: "last_name" %}
             <table class="tablegen w-100">
               <tbody>
                 {% tablerow person in people_sorted_by_name cols:3 %}
