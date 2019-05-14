@@ -52,29 +52,29 @@ sections:
               At the center
             </h3>
             <hr class="w-100 ba b--moon-gray mb3 mb4-l">
-            {% assign people_director = site.people | where: "program", "Penn Center for Neuroaesthetics" | where: "category", "director" %}
-            {% assign people_artist_in_residence = site.people | where: "program", "Penn Center for Neuroaesthetics" | where: "category", "artist_in_residence" %}
-            {% assign people_pcfn = people_director | concat: people_artist_in_residence %}
-            {% assign people_sorted_by_name = people_pcfn | sort: "last_name" %}
+            {% comment %}
+              For PCfN people, use the `rank` property to establish category display order: 900-999 = directors, 800-899 = staff, 700-799 = artist-inresidence, 600-699 = postdoc, 500-599 = student researcher
+              Count down from top of a series to establish individual display order: 999 for AC, 998 for EC; for postdocs, use 600 to leave relative individual rank ambiguous, sorting by last name
+              Jekyll provides the Liquid filter `group_by` as a means to sort an array of objects into groups according to their properties, i.e., one group for each value of a given property
+              The `group_by` filter returns an array of objects, each corresponding to a group; each group object has the following properties: name (the property value shared by members in this group), items (array of items in the group), size (number of items in group)
+              This permits sorting by two properties (first sort by rank, then by last name). The nested results (arrays inside objects inside array) must be flattened into an array for `tablerow`
+            {% endcomment %}
+            {% assign people_grouped_by_rank = site.people | where: "program", "Penn Center for Neuroaesthetics" | group_by:"rank" | sort: "name" | reverse %}
+            {% for group in people_grouped_by_rank %}
+              {% if forloop.first %}
+                {% assign group_sorted = group.items | sort: "last_name" %}
+                {% assign people_sorted_by_name = group_sorted %}
+              {% else %}
+                {% assign group_sorted = group.items | sort: "last_name" %}
+                {% assign people_sorted_by_name = people_sorted_by_name | concat: group_sorted %}
+              {% endif %}
+            {% endfor %}
             <table class="tablegen w-100">
               {% tablerow person in people_sorted_by_name cols:3 %}
                 <div class="pv4 ph3-l">
                   {% include components/person.html %}
                 </div>
               {% endtablerow %}
-            </table>
-            {% assign people_research = site.people | where: "program", "Penn Center for Neuroaesthetics" | where: "category", "research" %}
-            {% assign people_staff = site.people | where: "program", "Penn Center for Neuroaesthetics" | where: "category", "staff" %}
-            {% assign people_pcfn = people_research | concat: people_staff %}
-            {% assign people_sorted_by_name = people_pcfn | sort: "last_name" %}
-            <table class="tablegen w-100">
-              <tbody>
-                {% tablerow person in people_sorted_by_name cols:3 %}
-                  <div class="pv4 ph3-l">
-                    {% include components/person.html %}
-                  </div>
-                {% endtablerow %}
-              </tbody>
             </table>
           </section>
           <section id="penn-faculty" class="pt3 pt4-l">
