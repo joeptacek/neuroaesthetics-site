@@ -1,5 +1,5 @@
 <div class="f5 f4-ns lh-title">
-  <a class="db link dim" href="{{ news_item.url }}" target="_blank">
+  <a class="db link dim{% if news_item.reprints and news_item.reprints != "" %} mb3{% endif %}" href="{{ news_item.url }}" target="_blank">
     <!-- fix: h3 to h4 at appropriate size -->
     <h4 class="dark-green mb3">
       {{ news_item.title | smartify }}
@@ -7,4 +7,13 @@
     <p class="bg-dark-green dib near-white pv1 ph2 br2 b mb3">{{ news_item.source }}</p>
     <p class="silver">{{ news_item.date | date: "%B %e, %Y" }}</p>
   </a>
+  {% if news_item.reprints and news_item.reprints != "" %}
+    {% comment %} TODO: move style attribute to stylesheet {% endcomment %}
+    <p class="f6 f5-ns silver">
+      Additional coverage:
+      {% for reprint in news_item.reprints %}
+        <a class="link blue underline dim" href="{{ reprint.url }}" target="_blank">{{ reprint.source }}</a>{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    </p>
+  {% endif %}
 </div>
