@@ -53,13 +53,13 @@ sections:
             </h3>
             <hr class="w-100 ba b--moon-gray mb3 mb4-l">
             {% comment %}
-              For PCfN people, use the `rank` property to establish category display order: 900-999 = directors, 800-899 = staff, 700-799 = artist-inresidence, 600-699 = postdoc, 500-599 = student researcher
+              For PCfN people, use the `rank` property to establish category display order: 900-999 = directors, 800-899 = staff, 700-799 = artist-in-residence, 600-699 = postdoc, 500-599 = student researcher
               Count down from top of a series to establish individual display order: 999 for AC, 998 for EC; for postdocs, use 600 to leave relative individual rank ambiguous, sorting by last name
               Jekyll provides the Liquid filter `group_by` as a means to sort an array of objects into groups according to their properties, i.e., one group for each value of a given property
               The `group_by` filter returns an array of objects, each corresponding to a group; each group object has the following properties: name (the property value shared by members in this group), items (array of items in the group), size (number of items in group)
               This permits sorting by two properties (first sort by rank, then by last name). The nested results (arrays inside objects inside array) must be flattened into an array for `tablerow`
             {% endcomment %}
-            {% assign people_grouped_by_rank = site.people | where: "program", "Penn Center for Neuroaesthetics" | group_by:"rank" | sort: "name" | reverse %}
+            {% assign people_grouped_by_rank = site.people | where_exp: "item", "item.alum != true" | where: "program", "Penn Center for Neuroaesthetics" | group_by:"rank" | sort: "name" | reverse %}
             {% for group in people_grouped_by_rank %}
               {% if forloop.first %}
                 {% assign group_sorted = group.items | sort: "last_name" %}

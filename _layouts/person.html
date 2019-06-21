@@ -6,16 +6,14 @@ layout: default
     <section class="pv3 pv4-ns">
       <div class="bg-white ba b--moon-gray br2">
         <p class="bg-near-white pv3 ph4 bb b--moon-gray br2 br--top mb0">
-          {% if page.affiliation == "University of Pennsylvania" %}
-            {% if page.program == "Penn Center for Neuroaesthetics" %}
-              <a class="b mr2 link underline mid-gray dim" href="/community.html#at-the-center">Community</a>
-              <span class="b mr2">→</span>
-              <span class="b mr2">At the center</span>
-            {% else %}
-              <a class="b mr2 link underline mid-gray dim" href="/community.html#affiliated-faculty">Community</a>
-              <span class="b mr2">→</span>
-              <span class="b mr2">Affiliated faculty</span>
-            {% endif %}
+          {% if page.program == "Penn Center for Neuroaesthetics" %}
+            <a class="b mr2 link underline mid-gray dim" href="/community.html#at-the-center">Community</a>
+            <span class="b mr2">→</span>
+            <span class="b mr2">At the center</span>
+          {% elsif page.affiliation == "University of Pennsylvania" %}
+            <a class="b mr2 link underline mid-gray dim" href="/community.html#penn-faculty">Community</a>
+            <span class="b mr2">→</span>
+            <span class="b mr2">Affiliated faculty</span>
           {% else %}
             <a class="b mr2 link underline mid-gray dim" href="/community.html#other-collaborators">Community</a>
             <span class="b mr2">→</span>
@@ -71,12 +69,10 @@ layout: default
               </ul>
             </div>
           {% endif %}
-          {% if page.affiliation == "University of Pennsylvania" %}
-            {% if page.program == "Penn Center for Neuroaesthetics" %}
-              <a class="dib bg-jp-dark-sage white link dim f5 f4-ns tc w-100 pv3 ph4 br2" href="/community.html#at-the-center">← Back to Community</a>
-            {% else %}
-              <a class="dib bg-jp-dark-sage white link dim f5 f4-ns tc w-100 pv3 ph4 br2" href="/community.html#affiliated-faculty">← Back to Community</a>
-            {% endif %}
+          {% if page.program == "Penn Center for Neuroaesthetics" %}
+            <a class="dib bg-jp-dark-sage white link dim f5 f4-ns tc w-100 pv3 ph4 br2" href="/community.html#at-the-center">← Back to Community</a>
+          {% elsif page.affiliation == "University of Pennsylvania" %}
+            <a class="dib bg-jp-dark-sage white link dim f5 f4-ns tc w-100 pv3 ph4 br2" href="/community.html#penn-faculty">← Back to Community</a>
           {% else %}
             <a class="dib bg-jp-dark-sage white link dim f5 f4-ns tc w-100 pv3 ph4 br2" href="/community.html#other-collaborators">← Back to Community</a>
           {% endif %}

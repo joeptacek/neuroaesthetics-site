@@ -13,16 +13,14 @@
             {{ person.first_name }} {{ person.middle_initials}} {{ person.last_name }}
           </h4>
           <div class="f5">
-            {% if person.affiliation == "University of Pennsylvania" %}
-              {% if person.program == "Penn Center for Neuroaesthetics" %}
-                {% if person.position_short and person.position_short != "" %}
-                  <p class="silver">{{ person.position_short }}</p>
-                {% else %}
-                  <p class="silver">{{ person.position }}</p>
-                {% endif %}
+            {% if person.program == "Penn Center for Neuroaesthetics" %}
+              {% if person.position_short and person.position_short != "" %}
+                <p class="silver">{{ person.position_short }}</p>
               {% else %}
-                <p class="mb1 silver">{{ person.school }}</p>
+                <p class="silver">{{ person.position }}</p>
               {% endif %}
+            {% elsif person.affiliation == "University of Pennsylvania" %}
+              <p class="mb1 silver">{{ person.school }}</p>
             {% else %}
               <p class="silver">{{ person.affiliation }}</p>
             {% endif %}
