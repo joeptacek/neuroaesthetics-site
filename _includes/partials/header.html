@@ -1,11 +1,11 @@
-<header class="flex flex-column{% if page.big_header and page.big_header != "" %} {{ page.big_header.bh_css }} bg-cover bg-fixed min-vh-100 bb bw2 b--dark-green{% endif %}">
+<header class="flex flex-column{% if page.big_header and page.big_header != "" %} {{ page.big_header.bh_css }} bg-cover bg-fixed-l min-vh-100 min-vh-75-tall bb bw3 b--dark-green{% endif %}">
   <!-- SITE NAV -->
   {% include partials/site-nav.html %}
   <!-- PINNED ANNOUNCEMENT -->
   {% include partials/pinned-announcement.html %}
   {% if page.big_header and page.big_header != "" %}
     <!-- BIG TITLE CARD -->
-    <div class="flex-ns justify-center-ns items-center-ns min-vh-100-ns ph3 pv6 ph4-m ph6-l">
+    <div class="flex-ns justify-center-ns items-center-ns vh-100-ns vh-75-tall ph3 pv6 ph4-m ph6-l">
       <div class="flex-auto flex flex-column justify-center f5 f4-ns bg-near-white shadow-6 min-h5 mw-55rem lh-copy br2 ba b--light-silver pa4 pa5-ns o-95">
         <h1 class="lh-solid tracked-tight tc">
           {{ page.big_header.bh_title }}
