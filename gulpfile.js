@@ -150,7 +150,8 @@ gulp.task('serve', ['watch'], function () {
     host: '0.0.0.0',
     files: '_site/**',
     server: '_site',
-    notify: false
+    notify: false,
+    ghostMode: false
   });
 });
 
