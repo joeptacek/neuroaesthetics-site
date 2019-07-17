@@ -7,7 +7,7 @@ const url = require('url');
 
 const gulp = require('gulp');
 const del = require('del');
-const mkdirp = require('mkdirp');
+const mkdirp = require('mkdirp'); // no longer required in Node 10 and up?
 const log = require('fancy-log');
 
 const args = process.argv;
