@@ -100,7 +100,7 @@ sections:
               Other collaborators
             </h3>
             <hr class="w-100 ba b--moon-gray mb3 mb4-l">
-            {% assign people_sorted_by_name = site.people | where_exp: "item", "item.affiliation != 'University of Pennsylvania'" | sort: "last_name" %}
+            {% assign people_sorted_by_name = site.people | where_exp: "item", "item.affiliation != 'University of Pennsylvania'" | where_exp: "item", "item.program != 'Penn Center for Neuroaesthetics'" | sort: "last_name" %}
             <table class="tablegen w-100">
               <tbody>
                 {% tablerow person in people_sorted_by_name cols:3 %}
