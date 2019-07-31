@@ -1,11 +1,19 @@
 <div class="f5 f4-ns lh-title">
   <a class="db link dim" href="{% if announcement.ext_announcement_url %}{{ announcement.ext_announcement_url }}{% else %}{{ announcement.url }}{% endif %}" {% if announcement.ext_announcement_url %}target="_blank"{% endif %}>
-    <h4 class="dark-green mb3">
-      {{ announcement.title | smartify }}
-    </h3>
-    {% if announcement.source %}
-      <p class="bg-dark-green dib near-white pv1 ph2 br2 b mb3">{{ announcement.source }}</p>
-    {% endif %}
-    <p class="silver">{{ announcement.date_start | date: "%B %e, %Y" }}</p>
+    <div class="flex flex-column items-center flex-row-l">
+      <div class="flex-none mb4 mb0-l mr5-l">
+        {% assign jazzicon = announcement.title | slugify: "ascii" | prepend: "partials/jazzicon/announcements/" | append: ".html" %}
+        {% include {{ jazzicon }} %}
+      </div>
+      <div class="tc tl-l">
+        <h4 class="dark-green mb3">
+          {{ announcement.title | smartify }}
+        </h3>
+        {% if announcement.source %}
+          <p class="dib dark-green tc tl-l b pv1 ph2 ba bw1 b--dark-green br2 mb3">{{ announcement.source }}</p>
+        {% endif %}
+        <p class="silver">{{ announcement.date_start | date: "%B %e, %Y" }}</p>
+      </div>
+    </div>
   </a>
 </div>

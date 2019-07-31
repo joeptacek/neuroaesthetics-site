@@ -6,6 +6,11 @@
 
 # Jekyll
 /_data/external/
+/_puppeteer/*
+!/_puppeteer/root/
+/_puppeteer/root/*
+!/_puppeteer/root/index.*
+/_includes/partials/jazzicon/
 /_site/
 /.sass-cache/
 /.jekyll-cache/
