@@ -20,8 +20,6 @@ collections:
   pages:
     output: true
     permalink: /:name
-  ideas:
-    output: true
   people:
     output: true
   announcements:
