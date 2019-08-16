@@ -93,6 +93,10 @@ h1, h2, h3, h4, h5, .font-headers {
   min-height: 16rem; // from tachyons h5
 }
 
+.min-vh-50 {
+  min-height: 50vh;
+}
+
 // BACKGROUND IMAGES
 
 .bg-cover {
