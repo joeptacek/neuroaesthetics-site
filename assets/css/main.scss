@@ -259,6 +259,20 @@ h1, h2, h3, h4, h5, .font-headers {
   }
 }
 
+.twitter-timeline {
+  /*
+  fix for Twitter widget
+  by default iframe width is set to content width on ios. content is larger than
+  viewport, so overflows. explicitly setting the width fixes this. can stay
+  responsive by setting very small width and then min-width. need to include
+  !important to override width set by Twitter widget
+  */
+  width: 0 !important;
+  min-width: 100% !important;
+}
+
+// BREAKPOINT: NOT SMALL (NS)
+
 @media screen and (min-width: 30em) {
   .dim-ns { opacity: 1; transition: none; }
   .dim-ns:hover, .dim-ns:focus { opacity: .5; transition: none; }
