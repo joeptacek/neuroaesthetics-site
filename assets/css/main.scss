@@ -262,10 +262,11 @@ h1, h2, h3, h4, h5, .font-headers {
 .twitter-timeline {
   /*
   fix for Twitter widget
-  by default iframe width is set to content width on ios. content is larger than
-  viewport, so overflows. explicitly setting the width fixes this. can stay
-  responsive by setting very small width and then min-width. need to include
-  !important to override width set by Twitter widget
+  by default iframe width is set to content width on ios
+  content is larger than viewport, so overflows
+  explicitly setting the width fixes this
+  can stay responsive by setting very small width and then min-width
+  need to include !important to override width set by Twitter widget
   */
   width: 0 !important;
   min-width: 100% !important;
@@ -301,7 +302,13 @@ h1, h2, h3, h4, h5, .font-headers {
   .dbi-ns {
     display: block !important;
   }
+
+  .bg-transparent-ns {
+    background-color: transparent;
+  }
 }
+
+// BREAKPOINT: MEDIUM (M)
 
 @media screen and (min-width: 30em) and (max-width: 60em) {
   .dim-m { opacity: 1; transition: none; }
@@ -332,6 +339,8 @@ h1, h2, h3, h4, h5, .font-headers {
     display: block !important;
   }
 }
+
+// BREAKPOINT: LARGE (L)
 
 @media screen and (min-width: 60em) {
   .dim-l { opacity: 1; transition: none; }
@@ -418,6 +427,8 @@ h1, h2, h3, h4, h5, .font-headers {
     }
   }
 }
+
+// BREAKPOINT: TALL
 
 @media screen and (min-height: 960px) {
   .vh-50-tall {
