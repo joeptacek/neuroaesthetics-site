@@ -93,10 +93,6 @@ h1, h2, h3, h4, h5, .font-headers {
   min-height: 16rem; // from tachyons h5
 }
 
-.min-vh-50 {
-  min-height: 50vh;
-}
-
 // BACKGROUND IMAGES
 
 .bg-cover {
@@ -272,6 +268,30 @@ h1, h2, h3, h4, h5, .font-headers {
   min-width: 100% !important;
 }
 
+// BREAKPOINT: TALL
+
+@media screen and (min-height: 960px) {
+  .vh-50-tall {
+    height: 50vh;
+  }
+
+  .vh-75-tall {
+    height: 75vh;
+  }
+
+  .min-vh-75-tall {
+    min-height: 75vh;
+  }
+}
+
+@media (hover: none) {
+  .bg-fixed-l {
+    // targeting large-breakpoint ios contexts (ipad pro, ipad horiz)
+    background-attachment: scroll;
+  }
+}
+
+
 // BREAKPOINT: NOT SMALL (NS)
 
 @media screen and (min-width: 30em) {
@@ -407,6 +427,10 @@ h1, h2, h3, h4, h5, .font-headers {
     background-size: 6px;
   }
 
+  .bg-white-90-l {
+    background-color: rgba( 255, 255, 255, .9 ); // tachyons white-90
+  }
+
   .dni-l {
     display: none !important;
   }
@@ -425,32 +449,5 @@ h1, h2, h3, h4, h5, .font-headers {
       // or else this flex item will resize according to content length
       width: calc(100% / 3);
     }
-  }
-}
-
-// BREAKPOINT: TALL
-
-@media screen and (min-height: 960px) {
-  .vh-50-tall {
-    height: 50vh;
-  }
-
-  .vh-75-tall {
-    height: 75vh;
-  }
-
-  .min-vh-50-tall {
-    min-height: 50vh;
-  }
-
-  .min-vh-75-tall {
-    min-height: 75vh;
-  }
-}
-
-@media (hover: none) {
-  .bg-fixed-l {
-    // targeting large-breakpoint ios contexts (ipad pro, ipad horiz)
-    background-attachment: scroll;
   }
 }
