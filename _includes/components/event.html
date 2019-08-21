@@ -13,9 +13,9 @@
           <p class="dib dark-green tc tl-l b pv1 ph2 ba bw1 b--dark-green br2 mb3">{{ event.source }}</p>
         {% endif %}
         {% if event.date_start == event.date_end %}
-          <p class="silver">{{ event.date_start | date: "%B %e, %Y" }}</p>
+          <p class="silver mb0">{{ event.date_start | date: "%B %e, %Y" }}</p>
         {% else %}
-          <p class="silver">{{ event.date_start | date: "%B %e" }} - {{ event.date_end | date: "%B %e, %Y" }}</p>
+          <p class="silver mb0">{{ event.date_start | date: "%B %e" }} - {{ event.date_end | date: "%B %e, %Y" }}</p>
         {% endif %}
       </div>
     </div>
