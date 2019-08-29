@@ -1,0 +1,20 @@
+<div class="f5 f4-ns lh-title">
+  <div class="flex flex-column items-center flex-row-l items-start-l">
+    <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mb4 mb0-l mr5-l">
+      <img class="db br1" src="{{ resource.img }}" alt="Thumbnail for {{ resource.title }}" />
+    </div>
+    <div class="tc-m tl-l">
+      <h3 class="dark-green font-default mb3">
+        {{ resource.title | smartify }}
+      </h3>
+      <p class="silver tl mb3">
+        {{ resource.description }}
+      </p>
+      {% for link in resource.links %}
+        <ul class="mb0 list pl0">
+          <li><a class="blue underline link dim-l" href="{{ link.url }}" target="_blank">{{ link.name }}</a></li>
+        </ul>
+      {% endfor %}
+    </div>
+  </div>
+</div>

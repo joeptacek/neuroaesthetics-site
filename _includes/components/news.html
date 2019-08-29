@@ -6,10 +6,10 @@
         {% include {{ jazzicon }} %}
       </div>
       <div class="tc tl-l">
-        <h4 class="dark-green tc tl-l mb3">
+        <h4 class="dark-green font-default f4 f3-ns mb3">
           {{ news_item.title | smartify }}
         </h4>
-        <p class="dib dark-green tc tl-l b pv1 ph2 ba bw1 b--dark-green br2 mb3">
+        <p class="dib dark-green b pv1 ph2 ba bw1 b--dark-green br2 mb3">
           {% if news_item.source_short and news_item.source_short != "" %}
             <span class="dn-ns">{{ news_item.source_short }}</span>
             <span class="dn dib-ns">{{ news_item.source }}</span>
@@ -17,7 +17,7 @@
             {{ news_item.source }}
           {% endif %}
         </p>
-        <p class="silver tc tl-l mb0">{{ news_item.date | date: "%B %e, %Y" }}</p>
+        <p class="silver mb0">{{ news_item.date | date: "%B %e, %Y" }}</p>
       </div>
     </div>
   </a>

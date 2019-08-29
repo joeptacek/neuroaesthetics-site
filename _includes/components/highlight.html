@@ -1,0 +1,22 @@
+<div class="f5 f4-ns lh-title">
+  <a class="db link dim" href="{{ highlight.url }}" target="_blank">
+    <div class="flex flex-column items-center flex-row-l">
+      <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mb4 mb0-l mr5-l">
+        <img class="db br1" src="{{ highlight.highlights_data.highlights_photo }}" alt="Thumbnail for {{ hightlight.title }}" />
+      </div>
+      <div class="tc tl-l">
+        <h4 class="dark-green font-default f4 f3-ns mb3">
+          {{ highlight.title | smartify }}
+        </h4>
+        <p class="dib dark-green b pv1 ph2 ba bw1 b--dark-green br2">
+          {% if highlight.source_short and highlight.source_short != "" %}
+            <span class="dn-ns">{{ highlight.source_short }}</span>
+            <span class="dn dib-ns">{{ highlight.source }}</span>
+          {% else %}
+            {{ highlight.source }}
+          {% endif %}
+        </p>
+      </div>
+    </div>
+  </a>
+</div>

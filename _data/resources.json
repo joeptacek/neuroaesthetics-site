@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Assesssment of Art Attributes (AAA)",
+    "img": "/assets/img/resources/AAA.jpg",
+    "description": "The AAA is an instrument designed to assess six formal-perceptual and six conceptual-representational attributes using 24 paintings from the Western canon.",
+    "links": [
+      {
+        "name": "Download link",
+        "url": "http://ccn.upenn.edu/chatterjee/assets/downloads/AAA.zip"
+      },
+      {
+        "name": "Original publication",
+        "url": "http://ccn.upenn.edu/chatterjee/assets/pdf/publications/Chatterjee_Widick_Sternschein_Smith_Bromberger_2010_01.pdf"
+      }
+    ]
+  },
+  {
+    "title": "Assesssment of Preference for Balance (APB)",
+    "img": "/assets/img/resources/APB.jpg",
+    "description": "Here, we introduce the assessment of preference for balance (APB) and report a method to derive an objective balance score.",
+    "links": [
+      {
+        "name": "Original publication",
+        "url": "http://ccn.upenn.edu/chatterjee/assets/downloads/APB.zip"
+      },
+      {
+        "name": "Original publication",
+        "url": "http://ccn.upenn.edu/chatterjee/assets/pdf/publications/Wilson_Chatterjee_2005_01.pdf"
+      }
+    ]
+  }
+]

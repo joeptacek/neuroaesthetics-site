@@ -1,7 +1,7 @@
 ---
 title: News
 big_header:
-  bh_title: News and events
+  bh_title: News and media
   bh_css: bg-salt
 description: Stay up to date with PCfN news and upcoming events.
 sections:
@@ -14,6 +14,27 @@ sections:
         <h2 class="bg-dark-green near-white font-default lh-title b pt4 pb3 pt5-ns pb4-ns ph3 ph4-m ph5-l br2 br--top mb0">
           {{ page.sections[0] }}
         </h2>
+        <!-- HIGHLIGHTS -->
+        <h3 id="highlights" class="bg-near-white light-silver lh-title font-default pv3 ph3 ph4-m ph5-l bt bb b--black-10 mb0">
+          Media highlights
+        </h3>
+        <div class="js-vt-container">
+          <div class="js-vt-viewer" data-vt-viewer-type="show-more" data-vt-show-more-init-visible="2" data-vt-show-more-max="3" data-vt-show-more-responsive="false">
+            {% assign highlights_sorted = site.data.external.news | where_exp: "item", "item.highlights_data" | sort: "highlights_data.highlights_rank" | reverse %}
+            {% for highlight in highlights_sorted %}
+              <div class="pv4 ph3 ph4-m ph5-l{% unless forloop.index == 1 %} bt b--black-10{% endunless %}">
+                {% include components/highlight.html %}
+              </div>
+            {% endfor %}
+          </div>
+          <div class="js-vt-button-wrap ph3 ph4-ns pb3 pb4-ns">
+            <div class="js-vt-button flex items-center justify-center w-100 bg-near-white dim-l pointer f5 f4-ns lh-title light-silver b pv3 ph5-ns br2 shadow-6">
+              <span class="mr3">
+                Show more
+              </span>
+            </div>
+          </div>
+        </div>
         <!-- ANNOUNCEMENTS -->
         {% assign ongoing_announcements = false %}
         {% assign todays_date = site.time | date: "%Y-%m-%d" %}
@@ -83,11 +104,10 @@ sections:
             {% endfor %}
           </div>
           <div class="js-vt-button-wrap ph3 ph4-ns pb3 pb4-ns">
-            <div class="js-vt-button flex items-center justify-center w-100 bg-near-white dim-l pointer f5 f4-ns lh-title dark-green b pv3 ph5-ns br2 shadow-6">
+            <div class="js-vt-button flex items-center justify-center w-100 bg-near-white dim-l pointer f5 f4-ns lh-title light-silver b pv3 ph5-ns br2 shadow-6">
               <span class="mr3">
                 Show more
               </span>
-              {% octicon chevron-down height:16 class:"fill-dark-green" %}
             </div>
           </div>
         </div>
