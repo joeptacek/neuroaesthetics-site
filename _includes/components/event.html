@@ -6,11 +6,11 @@
         {% include {{ jazzicon }} %}
       </div>
       <div class="tc tl-l">
-        <h4 class="dark-green font-default f4 f3-ns mb3">
+        <h4 class="dark-green font-default b f4 f3-ns mb3">
           {{ event.title | smartify }}
         </h4>
         {% if event.source %}
-          <p class="dib dark-green b pv1 ph2 ba bw1 b--dark-green br2 mb3">{{ event.source }}</p>
+          <p class="dib dark-green pv1 ph2 ba bw1 b--dark-green br2 mb3">{{ event.source }}</p>
         {% endif %}
         {% if event.date_start == event.date_end %}
           <p class="silver mb0">{{ event.date_start | date: "%B %e, %Y" }}</p>
