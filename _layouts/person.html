@@ -28,19 +28,18 @@ layout: default
             {{ page.first_name }} {{ page.middle_initials}} {{ page.last_name }}
           </h2>
           <div class="mb4">
-            {% if page.affiliation == "University of Pennsylvania" %}
-              {% if page.position %}
+            {% if page.program == "Penn Center for Neuroaesthetics" or page.affiliation == "University of Pennsylvania" %}
+              {% if page.program == "Penn Center for Neuroaesthetics" %}
                 <p class="f4 tc mb2">{{ page.position }}</p>
               {% endif %}
-              {% if page.affiliation %}
-                <p class="tc silver mb1">{{ page.affiliation }}</p>
-              {% endif %}
-              {% if page.school %}
-                <p class="tc silver mb1">{{ page.school }}</p>
-              {% endif %}
-              {% if page.department %}
-                <p class="i tc silver">{{ page.department }}</p>
-              {% endif %}
+              <p class="tc silver mb1">{{ page.affiliation }}</p>
+              <p class="tc silver mb0">{{ page.school }}</p>
+              {% comment %}
+                Skip departments?
+                {% if page.department %}
+                  <p class="i tc silver mb0">{{ page.department }}</p>
+                {% endif %}
+              {% endcomment %}
             {% else %}
               {% if page.affiliation %}
                 <p class="tc silver mb0">{{ page.affiliation }}</p>
