@@ -7,13 +7,16 @@
       <h3 class="dark-green font-default mb3">
         {{ resource.title | smartify }}
       </h3>
-      <p class="silver tl mb3">
+      <p class="tl mb3">
         {{ resource.description }}
       </p>
-      {% for link in resource.links %}
-        <ul class="mb0 list pl0">
-          <li><a class="blue underline link dim-l" href="{{ link.url }}" target="_blank">{{ link.name }}</a></li>
-        </ul>
+      {% for source in resource.sources %}
+        <div class="silver{% unless forloop.last %} mb3{% endunless %}">
+          <p class="mb1">{{ source.title }}</p>
+          {% for link in source.links %}
+            <p class="pl2 mb0"><span class="dn-m">↳ </span><a class="blue underline link dim-l" href="{{ link.url }}" target="_blank">{{ link.title }}</a>
+          {% endfor %}
+        </div>
       {% endfor %}
     </div>
   </div>
