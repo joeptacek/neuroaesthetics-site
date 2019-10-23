@@ -2,8 +2,10 @@
   <a class="db link dim" href="{% if announcement.ext_announcement_url %}{{ announcement.ext_announcement_url }}{% else %}{{ announcement.url }}{% endif %}" {% if announcement.ext_announcement_url %}target="_blank"{% endif %}>
     <div class="flex flex-column items-center flex-row-l">
       <div class="flex-none mb4 mb0-l mr5-l">
-        {% assign jazzicon = announcement.title | slugify: "ascii" | prepend: "partials/jazzicon/announcements/" | append: ".html" %}
-        {% include {{ jazzicon }} %}
+        <div class="flex pa1 ba br-100 b--moon-gray">
+          {% assign jazzicon = announcement.title | slugify: "ascii" | prepend: "partials/jazzicon/announcements/" | append: ".html" %}
+          {% include {{ jazzicon }} %}
+        </div>
       </div>
       <div class="tc tl-l">
         <h4 class="dark-green font-default b f4 f3-ns mb3">
