@@ -1,19 +1,19 @@
 <nav class="bg-jp-lightest-sage pv4 ph3 ph4-m ph6-l bb b--moon-gray">
-  <div class="mw-55rem center">
+  <div class="mw-64rem center">
     <h2 class="dn db-l f3 tc mb4">
       On this page
     </h2>
     <div class="js-vt-container ph2 ph3-m ph0-l">
-      <div class="f5 f4-ns dark-green">
+      <div class="f5 f4-ns bluegreen">
         <div class="js-vt-button flex items-center justify-between dn-l pointer">
           <h2 class="f4 f3-m font-default lh-title mr3 mb0">
             On this page
           </h2>
-          {% octicon grabber height:24 class:"fill-dark-green" %}
+          {% octicon grabber height:24 class:"fill-bluegreen" %}
         </div>
         <ul class="js-vt-viewer flex flex-column flex-row-l justify-center list pl0 mb0" data-vt-viewer-type="show-hide">
           {% for section in page.sections %}
-            <li class="dbi-l{% if forloop.first %} pt4 pb2{% elsif forloop.last %} pt2{% else %} pv2{% endif %} pa0-l {% unless forloop.last %} mr4-l{% endunless %}"><a class="dark-green link dim-l" href="{{ section | slugify | prepend: '#' }}">{{ section }}</a></li>
+            <li class="dbi-l{% if forloop.first %} pt4 pb2{% elsif forloop.last %} pt2{% else %} pv2{% endif %} pa0-l {% unless forloop.last %} mr4-l{% endunless %}"><a class="bluegreen link dim-l" href="{{ section | slugify | prepend: '#' }}">{{ section }}</a></li>
           {% endfor %}
         </ul>
       </div>

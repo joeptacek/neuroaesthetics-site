@@ -1,4 +1,6 @@
 // TODO REFACTOR GULPFILE FOR GULP 4 / NODE 10
+// TODO minify css and js
+// TODO pipeline to automate resizing, optimize images, generate responsive html elements
 
 // builtin
 const bs = require('browser-sync').create();

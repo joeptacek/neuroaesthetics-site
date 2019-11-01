@@ -3,6 +3,7 @@ title: Research
 big_header:
   bh_title: Research and publications
   bh_background: bg-wall
+  bh_caption: "By <a class='white link underline dim-l' href='http://www.jessieandkatey.com' target='_blank'>Jessie and Katey</a>"
 description: Check out our latest publications or peruse the PCfN research archives.
 sections:
 - What we do
@@ -11,10 +12,10 @@ sections:
 - Publications
 ---
 <main class="bg-pattern-circuit f4-m f3-l lh-copy min-vh-100 pa3 pa4-m pv5-l ph6-l">
-  <div class="mw-55rem center">
+  <div class="mw-64rem center">
     <section id="{{ page.sections[0] | slugify }}" class="pv3 pv4-m pv5-l">
       <div class="bg-white shadow-6 br2">
-        <h2 class="bg-blue near-white font-default lh-title b pt4 pb3 pt5-ns pb4-ns ph3 ph4-m ph5-l br2 br--top mb0">
+        <h2 class="bg-liberty near-white font-default lh-title b pt4 pb3 pt5-ns pb4-ns ph3 ph4-m ph5-l br2 br--top bb bw3 b--white-20 mb0">
           {{ page.sections[0] }}
         </h2>
         <div class="pa3 pa4-m pa5-l">
@@ -26,25 +27,23 @@ sections:
     </section>
     <section id="{{ page.sections[1] | slugify }}" class="pv3 pv4-m pv5-l">
       <div class="bg-white shadow-6 br2">
-        <div class="bg-dark-green near-white br2 br--top">
-          <h2 class="dn db-l font-default lh-title b pt5 pb4 ph5 mb0">
+        <div class="bg-bluegreen near-white br2 br--top bb bw3 b--white-20">
+          <h2 class="font-default lh-title b pt4 pb3 pt5-ns pb4-ns ph3 ph4-m ph5-l mb0">
             {{ page.sections[1] }}
           </h2>
-          <div class="js-vt-container">
-            <div class="f5 f4-ns near-white">
-              <div class="js-vt-button flex items-center justify-between dn-l pt4 pb3 pt5-m pb4-m ph3 ph4-m pointer">
-                <h2 class="font-default lh-title b mr3 mb0">
-                  {{ page.sections[1] }}
-                </h2>
-                {% octicon grabber height:24 class:"fill-near-white" %}
-              </div>
-              <ul class="bg-near-white js-vt-viewer flex flex-column flex-row-l list pv3-l ph3 ph4-m ph5-l bb b--black-10 mb0" data-vt-viewer-type="show-hide">
-                <li class="dbi-l pv3 pa0-l mr4-l"><a class="dark-green link dim-l" href="#the-built-environment-and-wellness">The built environment & wellness</a></li>
-                <li class="dbi-l pb3 pa0-l mr4-l"><a class="dark-green link dim-l" href="#beauty-and-morality">Beauty & morality</a></li>
-                <li class="dbi-l pb3 pa0-l"><a class="dark-green link dim-l" href="#engagement-with-art">Engagement with art</a></li>
-              </ul>
-            </div>
+        </div>
+        <div class="js-vt-container f5 f4-ns bg-near-white bluegreen">
+          <div class="js-vt-button flex items-center justify-between dn-l pv2 pv3-m ph3 ph4-m pointer">
+            <span class="b mr3 mb0">
+              Menu
+            </span>
+            {% octicon grabber height:24 class:"fill-bluegreen" %}
           </div>
+          <ul class="js-vt-viewer flex flex-column flex-row-l list pv3-l ph3 ph4-m ph5-l bb b--black-10 mb0" data-vt-viewer-type="show-hide">
+            <li class="dbi-l pb1 pb2-ns pa0-l mr4-l"><a class="bluegreen link dim-l" href="#the-built-environment-and-wellness">The built environment & wellness</a></li>
+            <li class="dbi-l pb1 pb2-ns pa0-l mr4-l"><a class="bluegreen link dim-l" href="#beauty-and-morality">Beauty & morality</a></li>
+            <li class="dbi-l pb2 pb3-ns pa0-l"><a class="bluegreen link dim-l" href="#engagement-with-art">Engagement with art</a></li>
+          </ul>
         </div>
         <div class="pv3 pv4-l ph3 ph4-m ph5-l">
           <section id="the-built-environment-and-wellness" class="pv3 pv4-l">
@@ -216,7 +215,7 @@ sections:
     </section>
     <section id="{{ page.sections[2] | slugify }}" class="pv3 pv4-m pv5-l">
       <div class="bg-white shadow-6 br2">
-        <h2 class="bg-dark-green near-white font-default lh-title b pt4 pb3 pt5-ns pb4-ns ph3 ph4-m ph5-l br2 br--top mb0">
+        <h2 class="bg-bluegreen near-white font-default lh-title b pt4 pb3 pt5-ns pb4-ns ph3 ph4-m ph5-l br2 br--top mb0 bb bw3 b--white-20">
           {{ page.sections[2] }}
         </h2>
         {% for resource in site.data.resources %}
@@ -228,7 +227,7 @@ sections:
     </section>
     <section id="{{ page.sections[3] | slugify }}" class="pv3 pv4-m pv5-l">
       <div class="bg-white shadow-6 br2">
-        <h2 class="bg-dark-green near-white font-default lh-title b pt4 pb3 pt5-ns pb4-ns ph3 ph4-m ph5-l br2 br--top mb0">
+        <h2 class="bg-bluegreen near-white font-default lh-title b pt4 pb3 pt5-ns pb4-ns ph3 ph4-m ph5-l br2 br--top mb0 bb bw3 b--white-20">
           {{ page.sections[3] }}
         </h2>
         <div class="js-vt-container">

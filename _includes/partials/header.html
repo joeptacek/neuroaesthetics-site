@@ -1,15 +1,26 @@
-<header class="flex flex-column{% if page.big_header and page.big_header != "" %} {{ page.big_header.bh_background }} bg-cover bg-fixed-l bb bw3 b--dark-green{% endif %}">
+<header class="flex flex-column{% if page.big_header and page.big_header != "" %} {{ page.big_header.bh_background }} bg-cover bg-fixed-l bb bw3 b--bluegreen{% endif %}">
   <!-- SITE NAV -->
   {% include partials/site-nav.html %}
   <!-- PINNED ANNOUNCEMENT -->
-  {% include partials/pinned-announcement.html %}
   {% if page.big_header and page.big_header != "" %}
     <!-- BIG TITLE CARD -->
-    <div class="flex-ns justify-center-ns items-center-ns vh-100-ns vh-75-tall pv6 ph3 ph4-m ph6-l">
-      <div class="flex-auto flex flex-column justify-center f5 f4-ns bg-near-white shadow-6 min-h5 mw-55rem lh-copy br3 ba b--light-silver pa4 pa5-ns o-95">
-        <h1 class="lh-solid tracked-tight tc">
-          {{ page.big_header.bh_title }}
-        </h1>
+    <div class="relative shadow-7">
+      <div class="absolute top-0 left-0 right-0">
+        {% include partials/pinned-announcement.html %}
+      </div>
+      <div class="relative flex-ns justify-center-ns items-center-ns vh-100-ns vh-75-tall pv7 ph3 ph4-m ph6-l">
+        <div class="flex-auto flex flex-column justify-center f5 f4-ns bg-near-white shadow-5 min-h5 mw-55rem lh-copy br3 pa4 pa5-ns o-95">
+          <h1 class="lh-solid tracked-tight tc">
+            {{ page.big_header.bh_title }}
+          </h1>
+        </div>
+      </div>
+      <div class="absolute bottom-0 left-0 right-0">
+        <div class="flex justify-end pa3">
+          <p class="bg-bluegreen o-90 f6 white pa2 br2 shadow-5">
+            {{ page.big_header.bh_caption }}
+          </p>
+        </div>
       </div>
     </div>
   {% endif %}
