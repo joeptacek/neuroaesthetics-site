@@ -5,15 +5,15 @@
   {% if page.big_header and page.big_header != "" %}
     <!-- BIG TITLE CARD -->
     <div class="relative shadow-7">
-      <div class="absolute top-0 left-0 right-0">
-        {% include partials/pinned-announcement.html %}
-      </div>
       <div class="relative flex-ns justify-center-ns items-center-ns vh-100-ns vh-75-tall pv7 ph3 ph4-m ph6-l">
         <div class="flex-auto flex flex-column justify-center f5 f4-ns bg-near-white shadow-5 min-h5 mw-55rem lh-copy br3 pa4 pa5-ns o-95">
           <h1 class="lh-solid tracked-tight tc">
             {{ page.big_header.bh_title }}
           </h1>
         </div>
+      </div>
+      <div class="absolute top-0 left-0 right-0">
+        {% include partials/pinned-announcement.html %}
       </div>
       <div class="absolute bottom-0 left-0 right-0">
         <div class="flex justify-end pa3">

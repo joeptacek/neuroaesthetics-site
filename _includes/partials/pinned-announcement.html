@@ -7,15 +7,16 @@
   {% assign ds = announcement.date_start | date: "%Y-%m-%d" %}
   {% assign de = announcement.date_end | date: "%Y-%m-%d" %}
   {% if todays_date >= ds and todays_date <= de %}
-    <div class="bg-bluegreen pv2 white o-90 shadow-5">
-      <div class="ph3 ph4-m ph6-l">
-        <div class="flex justify-center mw-64rem center ph2 ph3-m ph0-l">
-          <p>
-            <a class="link near-white" href="{% if announcement.ext_announcement_url %}{{ announcement.ext_announcement_url }}{% else %}{{ announcement.url }}{% endif %}" {% if announcement.ext_announcement_url %}target="_blank"{% endif %}>
-              <span class="b">{{ announcement.source }}:</span> <span class="underline">{{ announcement.title }}</span>
-            </a>
-          </p>
-        </div>
+    <div class="bg-bluegreen o-90 white pv2 ph3 ph4-m ph6-l shadow-5">
+      <div class="mw-64rem center ph2 ph3-m ph0-l">
+        <p class="tc">
+          <span class="b">
+            {{ announcement.source }}:
+          </span>
+          <a class="link underline dim-l near-white" href="{% if announcement.ext_announcement_url %}{{ announcement.ext_announcement_url }}{% else %}{{ announcement.url }}{% endif %}" {% if announcement.ext_announcement_url %}target="_blank"{% endif %}>
+            {{ announcement.title }}
+          </a>
+        </p>
       </div>
     </div>
     {% break %}
