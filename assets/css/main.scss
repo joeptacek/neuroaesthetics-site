@@ -60,6 +60,34 @@ h1, h2, h3, h4, h5, .font-headers {
     font-weight: normal;
 }
 
+// COLUMNS
+
+.columns-1 {
+  columns: 1;
+}
+
+.columns-2 {
+  columns: 2;
+}
+
+.columns-3 {
+  columns: 3;
+}
+
+.break-inside-avoid {
+  break-inside: avoid;
+}
+
+.column-gap-4 {
+  column-gap: 2rem; // i.e., consistent with pa4
+}
+
+// HYPHENS
+
+.hyphens-auto {
+  hyphens: auto;
+}
+
 // COLOR
 
 .bluegreen {
@@ -122,6 +150,10 @@ h1, h2, h3, h4, h5, .font-headers {
   background-image: url(/assets/img/backgrounds/goddard.jpg);
 }
 
+.bg-flickr-goddard {
+  background-image: url(/assets/img/backgrounds/flickr-goddard.jpg);
+}
+
 .bg-salt {
   background-image: url(/assets/img/backgrounds/salt.jpg);
 }
@@ -132,6 +164,10 @@ h1, h2, h3, h4, h5, .font-headers {
 
 .bg-wall {
   background-image: url(/assets/img/backgrounds/wall.jpg);
+}
+
+.bg-wall2 {
+  background-image: url(/assets/img/backgrounds/wall2.jpg);
 }
 
 .bg-leaves2 {
@@ -155,11 +191,7 @@ h1, h2, h3, h4, h5, .font-headers {
 }
 
 .bg-museum {
-  background-image:
-    linear-gradient(
-      rgba(255, 255, 255, 0.4),
-      rgba(255, 255, 255, 0.4)),
-    url(/assets/img/backgrounds/sergei-akulich-564980-unsplash.jpg);
+  background-image: url(/assets/img/backgrounds/sergei-akulich-564980-unsplash.jpg);
 }
 
 .bg-peopleflow {
@@ -243,6 +275,11 @@ h1, h2, h3, h4, h5, .font-headers {
 .b--bluegreen {
   // from colorcombos.com (ColorCombo248)
   border-color: #177F75;
+}
+
+.b--liberty {
+  // from colorcombos.com (ColorCombo248)
+  border-color: #4357AD;
 }
 
 // SHADOWS
@@ -386,6 +423,22 @@ h1, h2, h3, h4, h5, .font-headers {
   .bg-transparent-ns {
     background-color: transparent;
   }
+
+  .columns-1-ns {
+    columns: 1;
+  }
+
+  .columns-2-ns {
+    columns: 2;
+  }
+
+  .columns-3-ns {
+    columns: 3;
+  }
+
+  .break-inside-avoid-ns {
+    break-inside: avoid;
+  }
 }
 
 // BREAKPOINT: MEDIUM (M)
@@ -417,6 +470,22 @@ h1, h2, h3, h4, h5, .font-headers {
 
   .dbi-m {
     display: block !important;
+  }
+
+  .columns-1-m {
+    columns: 1;
+  }
+
+  .columns-2-m {
+    columns: 2;
+  }
+
+  .columns-3-m {
+    columns: 3;
+  }
+
+  .break-inside-avoid-m {
+    break-inside: avoid;
   }
 }
 
@@ -486,5 +555,21 @@ h1, h2, h3, h4, h5, .font-headers {
       // or else this flex item will resize according to content length
       width: calc(100% / 3);
     }
+  }
+
+  .columns-1-l {
+    columns: 1;
+  }
+
+  .columns-2-l {
+    columns: 2;
+  }
+
+  .columns-3-l {
+    columns: 4;
+  }
+
+  .break-inside-avoid-l {
+    break-inside: avoid;
   }
 }

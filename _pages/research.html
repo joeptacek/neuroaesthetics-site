@@ -1,61 +1,93 @@
 ---
 title: Research
 big_header:
-  bh_title: Research and publications
+  bh_title: Research
   bh_background: bg-wall
   bh_caption: "By <a class='white link underline dim-l' href='http://www.jessieandkatey.com' target='_blank'>Jessie and Katey</a>"
-description: Check out our latest publications or peruse the PCfN research archives.
+description: Check out PCfN projects, publications, and resources.
 sections:
-- What we do
 - Current projects
-- Resources
-- Publications
+- Neuroaesthetics publications
+- Neuroaesthetics resources
 ---
-<main class="bg-pattern-circuit f4-m f3-l lh-copy min-vh-100 pa3 pa4-m pv5-l ph6-l">
-  <div class="mw-64rem center">
+<main class="relative bg-pattern-circuit f4-m f3-l lh-copy min-vh-100 pa3 pa4-m pv5-l ph6-l">
+  <div class="absolute absolute--fill dn db-l {{ page.big_header.bh_background }} bg-cover bg-fixed-l"></div>
+  <div class="absolute absolute--fill dn db-l bg-pattern-circuit o-90"></div>
+  <div class="relative mw-64rem center">
+
+
     <section id="{{ page.sections[0] | slugify }}" class="pv3 pv4-m pv5-l">
-      <div class="bg-white shadow-6 br2">
-        <h2 class="bg-liberty near-white font-default lh-title b pt4 pb3 pt5-ns pb4-ns ph3 ph4-m ph5-l br2 br--top bb bw3 b--white-20 mb0">
-          {{ page.sections[0] }}
-        </h2>
+
+      <div class="bg-white shadow-6 br2 bt bw3 b--bluegreen">
+
         <div class="pa3 pa4-m pa5-l">
-          <p>
-            Our research involves a wide range of topics and approaches. Current projects focus on the built environment and wellness, beauty and morality, and engagement with art.
-          </p>
-        </div>
-      </div>
-    </section>
-    <section id="{{ page.sections[1] | slugify }}" class="pv3 pv4-m pv5-l">
-      <div class="bg-white shadow-6 br2">
-        <div class="bg-bluegreen near-white br2 br--top bb bw3 b--white-20">
-          <h2 class="font-default lh-title b pt4 pb3 pt5-ns pb4-ns ph3 ph4-m ph5-l mb0">
-            {{ page.sections[1] }}
+          <h2 class="bluegreen font-default lh-title b mb1 mb2-ns">
+            {{ page.sections[0] }}
           </h2>
-        </div>
-        <div class="js-vt-container f5 f4-ns bg-near-white bluegreen">
-          <div class="js-vt-button flex items-center justify-between dn-l pv2 pv3-m ph3 ph4-m pointer">
-            <span class="b mr3 mb0">
-              Menu
-            </span>
-            {% octicon grabber height:24 class:"fill-bluegreen" %}
-          </div>
-          <ul class="js-vt-viewer flex flex-column flex-row-l list pv3-l ph3 ph4-m ph5-l bb b--black-10 mb0" data-vt-viewer-type="show-hide">
-            <li class="dbi-l pb1 pb2-ns pa0-l mr4-l"><a class="bluegreen link dim-l" href="#the-built-environment-and-wellness">The built environment & wellness</a></li>
-            <li class="dbi-l pb1 pb2-ns pa0-l mr4-l"><a class="bluegreen link dim-l" href="#beauty-and-morality">Beauty & morality</a></li>
-            <li class="dbi-l pb2 pb3-ns pa0-l"><a class="bluegreen link dim-l" href="#engagement-with-art">Engagement with art</a></li>
-          </ul>
-        </div>
-        <div class="pv3 pv4-l ph3 ph4-m ph5-l">
+          <hr class="w-100 ba b--bluegreen mb3 mb4-ns">
+
+          <section class="pb3 pb4-l">
+            <p class="mb0">
+              Our research involves a wide range of topics and approaches. Current projects focus on the built environment and wellness, beauty and morality, and engagement with art.
+            </p>
+          </section>
+
+          <section id="beauty-and-morality" class="pv3 pv4-l">
+            <h3 class="bluegreen font-default lh-title b mb1 mb2-ns">
+              Beauty and morality
+            </h3>
+            <hr class="w-100 ba b--bluegreen mb3 mb4-ns">
+
+            <div class="flex flex-column items-center flex-row-l items-start-l mb4 mb5-l">
+              <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mr5-l mb2 mb3-m mb0-l">
+                <div class="js-carousel-container">
+                  <img class="br1" src="/assets/img/projects/faces/modified.jpg" alt="" height="" width="">
+                  <img class="br1" src="/assets/img/projects/faces/original.jpg" alt="" height="" width="">
+                </div>
+              </div>
+              <div class="flex flex-column items-center flex-column-reverse-l items-start-l">
+                <p class="f6 f5-l light-silver mb3 mb0-l">
+                  Original image from the <a class="link blue underline dim-l" href="https://chicagofaces.org" target="_blank">Chicago Face Database</a>
+                </p>
+                <p class="f5 f4-l mb0 mb3-l">
+                  Our research shows that people with facial anomalies, such as scars or paralysis, are viewed as having worse social traits. These problematic stereotypes are associated with implicit biases and neural responses suggestive of diminished empathy and possibly, dehumanization.
+                </p>
+                <p>
+                  <!-- Dummy last-child to absorb stupid *:last-child { margin-bottom: 0 !important } -->
+                </p>
+              </div>
+            </div>
+
+            <div class="flex flex-column items-center flex-row-l items-start-l mb4 mb5-l">
+              <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mr5-l mb2 mb3-m mb0-l">
+                <div class="js-carousel-container">
+                  <img class="br1" src="/assets/img/projects/bodies/original.png" alt="" height="" width="">
+                  <img class="br1" src="/assets/img/projects/bodies/painted.png" alt="" height="" width="">
+                </div>
+              </div>
+              <div class="flex flex-column items-center flex-column-reverse-l items-start-l">
+                <p class="f6 f5-l light-silver mb3 mb0-l">
+                  Original images from the <a class="link blue underline dim-l" href="http://www.uconnruddcenter.org/" target="_blank">UConn Rudd Center for Food Policy & Obesity</a>
+                </p>
+                <p class="f5 f4-l mb0 mb3-l">
+                  We also study how individuals are judged based on other physical features such as body weight. We examine whether these sorts of harmful biases are malleable and context dependent—for instance, when photographs are modified to look like works of art.                </p>
+                <p>
+                  <!-- Dummy last-child to absorb stupid *:last-child { margin-bottom: 0 !important } -->
+                </p>
+              </div>
+            </div>
+
+          </section>
+
+
           <section id="the-built-environment-and-wellness" class="pv3 pv4-l">
-            <h3 class="lh-title mb2">
+            <h3 class="bluegreen font-default lh-title b mb1 mb2-ns">
               The built environment and wellness
             </h3>
-            <hr class="w-100 ba b--moon-gray mb3 mb4-ns">
-            <p class="mb4 mb5-l">
-              Most people in the developed world spend more than 90% of their time in built environments. We're investigating how these environments affect our sense of well-being and can either promote or interfere with human flourishing.
-            </p>
+            <hr class="w-100 ba b--bluegreen mb3 mb4-ns">
+
             <div class="flex flex-column items-center flex-row-l items-start-l mb4 mb5-l">
-              <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mr5-l mb3 mb0-l">
+              <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mr5-l mb2 mb3-m mb0-l">
                 <div class="js-carousel-container">
                   <img class="br1" src="/assets/img/projects/architecture/steven-spassov-54423-unsplash.jpg" alt="" height="" width="">
                   <img class="br1" src="/assets/img/projects/architecture/jean-philippe-delberghe-756057-unsplash.jpg" alt="" height="" width="">
@@ -75,8 +107,9 @@ sections:
                 </p>
               </div>
             </div>
+
             <div class="flex flex-column items-center flex-row-l items-start-l mb4 mb5-l">
-              <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mr5-l mb3 mb0-l">
+              <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mr5-l mb2 mb3-m mb0-l">
                 <div class="js-carousel-container">
                   <img class="br1" src="/assets/img/projects/ewingcole/view1.jpg" alt="" height="" width="">
                   <img class="br1" src="/assets/img/projects/ewingcole/view2.jpg" alt="" height="" width="">
@@ -95,62 +128,18 @@ sections:
                 </p>
               </div>
             </div>
+
           </section>
-          <section id="beauty-and-morality" class="pv3 pv4-l">
-            <h3 class="lh-title mb2">
-              Beauty and morality
-            </h3>
-            <hr class="w-100 ba b--moon-gray mb3 mb4-ns">
-            <p class="mb4 mb5-l">
-              Our brains respond automatically to beauty, and these automatic responses have downstream consequences in our attitudes, biases, and behavior.
-            <div class="flex flex-column items-center flex-row-l items-start-l mb4 mb5-l">
-              <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mr5-l mb3 mb0-l">
-                <div class="js-carousel-container">
-                  <img class="br1" src="/assets/img/projects/faces/scar.jpg" alt="" height="" width="">
-                  <img class="br1" src="/assets/img/projects/faces/original.jpg" alt="" height="" width="">
-                </div>
-              </div>
-              <div class="flex flex-column items-center flex-column-reverse-l items-start-l">
-                <p class="f6 f5-l light-silver mb3 mb0-l">
-                  Original image from the <a class="link blue underline dim-l" href="https://chicagofaces.org" target="_blank">Chicago Face Database</a>
-                </p>
-                <p class="f5 f4-l mb0 mb3-l">
-                  Our research shows that people with facial anomalies, such as scars or paralysis, are viewed as having worse social traits. These problematic stereotypes are associated with implicit biases and neural responses suggestive of diminished empathy and possibly, dehumanization.
-                </p>
-                <p>
-                  <!-- Dummy last-child to absorb stupid *:last-child { margin-bottom: 0 !important } -->
-                </p>
-              </div>
-            </div>
-            <div class="flex flex-column items-center flex-row-l items-start-l mb4 mb5-l">
-              <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mr5-l mb3 mb0-l">
-                <div class="js-carousel-container">
-                  <img class="br1" src="/assets/img/projects/bodies/original.png" alt="" height="" width="">
-                  <img class="br1" src="/assets/img/projects/bodies/painted.png" alt="" height="" width="">
-                </div>
-              </div>
-              <div class="flex flex-column items-center flex-column-reverse-l items-start-l">
-                <p class="f6 f5-l light-silver mb3 mb0-l">
-                  Original images from the <a class="link blue underline dim-l" href="http://www.uconnruddcenter.org/" target="_blank">UConn Rudd Center for Food Policy & Obesity</a>
-                </p>
-                <p class="f5 f4-l mb0 mb3-l">
-                  We also study how individuals are judged based on other physical features such as body weight. We examine whether these sorts of harmful biases are malleable and context dependent—for instance, when photographs are modified to look like works of art.                </p>
-                <p>
-                  <!-- Dummy last-child to absorb stupid *:last-child { margin-bottom: 0 !important } -->
-                </p>
-              </div>
-            </div>
-          </section>
-          <section id="engagement-with-art" class="pv3 pv4-l">
-            <h3 class="lh-title mb2">
+
+
+          <section id="engagement-with-art" class="pt3 pv3-m pv4-l">
+            <h3 class="bluegreen font-default lh-title b mb1 mb2-ns">
               Engagement with art
             </h3>
-            <hr class="w-100 ba b--moon-gray mb3 mb4-ns">
-            <p class="mb4 mb5-l">
-              Humans have a decorative impulse, as evidenced by the aesthetic care taken in crafting objects and artifacts throughout human history. We're interested in understanding the nature of engagement with the arts—the paradox that seemingly non-utilitarian features of objects have such a persistent grip on us.
-            </p>
+            <hr class="w-100 ba b--bluegreen mb3 mb4-ns">
+
             <div class="flex flex-column items-center flex-row-l items-start-l mb4 mb5-l">
-              <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mr5-l mb3 mb0-l">
+              <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mr5-l mb2 mb3-m mb0-l">
                 <div class="js-carousel-container">
                   <img class="br1" src="/assets/img/projects/gradients/original.png" alt="" height="" width="">
                   <img class="br1" src="/assets/img/projects/gradients/gradients-strength.png" alt="" height="" width="">
@@ -169,8 +158,9 @@ sections:
                 </p>
               </div>
             </div>
+
             <div class="flex flex-column items-center flex-row-l items-start-l mb4 mb5-l">
-              <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mr5-l mb3 mb0-l">
+              <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mr5-l mb2 mb3-m mb0-l">
                 <div class="js-carousel-container">
                   <img class="br1" src="/assets/img/projects/motion/pma-mondrian.jpg" alt="" height="" width="">
                   <img class="br1" src="/assets/img/projects/motion/pma-pollock.jpg" alt="" height="" width="">
@@ -188,8 +178,9 @@ sections:
                 </p>
               </div>
             </div>
+
             <div class="flex flex-column items-center flex-row-l items-start-l">
-              <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mr5-l mb3 mb0-l">
+              <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mr5-l mb2 mb3-m mb0-l">
                 <div class="js-carousel-container">
                   <img class="br1" src="/assets/img/projects/networks/network-1.png" alt="" height="" width="">
                   <img class="br1" src="/assets/img/projects/networks/network-2.png" alt="" height="" width="">
@@ -210,28 +201,39 @@ sections:
                 </p>
               </div>
             </div>
+
           </section>
+
+          <section class="pt3 pt4-l">
+            <div class="flex flex-column items-start flex-row-ns items-center-ns">
+              <span class="w-100 mb3 mb0-ns mr4-ns">
+                Neuroaesthetics projects are conducted through our associated research group, ChatLab.
+              </span>
+              <a class="flex-none f5 f4-ns bluegreen tc b link dim-l w-100 w-auto-ns pv2 ph3 ba bw1 br3 b--bluegreen" href="/chatlab.html" target="_blank">
+                Website for ChatLab →
+              </a>
+            </div>
+          </section>
+
         </div>
+
       </div>
+
     </section>
-    <section id="{{ page.sections[2] | slugify }}" class="pv3 pv4-m pv5-l">
-      <div class="bg-white shadow-6 br2">
-        <h2 class="bg-bluegreen near-white font-default lh-title b pt4 pb3 pt5-ns pb4-ns ph3 ph4-m ph5-l br2 br--top mb0 bb bw3 b--white-20">
-          {{ page.sections[2] }}
-        </h2>
-        {% for resource in site.data.resources %}
-          <div class="pv4 ph3 ph4-m ph5-l{% unless forloop.index == 1 %} bt b--black-10{% endunless %}">
-            {% include components/resource.html %}
-          </div>
-        {% endfor %}
-      </div>
-    </section>
-    <section id="{{ page.sections[3] | slugify }}" class="pv3 pv4-m pv5-l">
-      <div class="bg-white shadow-6 br2">
-        <h2 class="bg-bluegreen near-white font-default lh-title b pt4 pb3 pt5-ns pb4-ns ph3 ph4-m ph5-l br2 br--top mb0 bb bw3 b--white-20">
-          {{ page.sections[3] }}
-        </h2>
+
+    <section id="{{ page.sections[1] | slugify }}" class="pv3 pv4-m pv5-l">
+
+      <div class="bg-white shadow-6 br2 bt bw3 b--bluegreen">
+
+        <div class="pt3 pt4-m pt5-l ph3 ph4-m ph5-l">
+          <h2 class="bluegreen font-default lh-title b mb1 mb2-ns">
+            {{ page.sections[1] }}
+          </h2>
+          <hr class="w-100 ba b--bluegreen">
+        </div>
+
         <div class="js-vt-container">
+          {% comment %} inserted extra pt3-l after hr bc more slightly more distance is necessary between the preceeding hr and following bt {% endcomment %}
           <div class="js-vt-viewer" data-vt-viewer-type="show-more" data-vt-show-more-init-visible="5" data-vt-show-more-max="10" data-vt-show-more-responsive="false">
             {% assign pubs_sorted = site.data.external.publications | where: "category", "neuroaesthetics" | sort: "work_post_date_fake" | reverse %}
             {% for publication in pubs_sorted %}
@@ -248,7 +250,46 @@ sections:
             </div>
           </div>
         </div>
+
       </div>
     </section>
+
+    <section id="{{ page.sections[2] | slugify }}" class="pv3 pv4-m pv5-l">
+
+      <div class="bg-white shadow-6 br2 bt bw3 b--bluegreen mb4 mb5-m mb6-l">
+
+        <div class="pt3 pt4-m pt5-l ph3 ph4-m ph5-l">
+          <h2 class="bluegreen font-default lh-title b mb1 mb2-ns">
+            {{ page.sections[2] }}
+          </h2>
+          <hr class="w-100 ba b--bluegreen">
+        </div>
+
+        <div class="">
+          {% comment %} inserted extra pt3-l after hr bc more slightly more distance is necessary between the preceeding hr and following bt {% endcomment %}
+          {% for resource in site.data.resources %}
+            <div class="pv4 ph3 ph4-m ph5-l{% unless forloop.index == 1 %} bt b--black-10{% endunless %}">
+              {% include components/resource.html %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="bg-white shadow-6 mw-40rem center br2 pa3 pa4-m pa5-l">
+        <h2 class="font-default lh-title tc">
+          Learn more about PCfN!
+          <!-- LEAVE OUT PER AC/EC: Meet our community, check out our research, or catch up on the latest news! -->
+        </h2>
+        <div class="flex flex-column flex-row-ns">
+          <a class="db bg-liberty shadow-6 white f5 f4-ns white tc b link dim-l w-100 pa2 pa3-ns br2 mb2 mb0-ns mr2-ns" href="/community.html">Community</a>
+          <a class="db bg-liberty shadow-6 white f5 f4-ns white tc b link dim-l w-100 pa2 pa3-ns br2" href="/news.html">News</a>
+        </div>
+      </div>
+
+
+    </section>
+
+
+
   </div>
 </main>

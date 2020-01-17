@@ -1,0 +1,33 @@
+<div class="f5 f4-ns lh-title">
+  <div class="flex flex-column flex-row-l items-center items-start-l">
+    {% comment %} flex: none to avoid shrinking; i.e., img should not participate in flex resizing {% endcomment %}
+    <div class="flex-none pa1 mb3 mr5-l mb0-l ba br-100 b--moon-gray">
+      {% comment %} display: block to avoid space under img, otherwise parent container and its border are stretched {% endcomment %}
+      <img class="db br-100" src="/assets/img/people/225/{{ person.photo }}" alt="{{ person.first_name }} {{ person.middle_initials}} {{ person.last_name }}" height="auto" width="225">
+    </div>
+    <div class="">
+      <h4 class="tc tl-l mb2">
+        {{ person.first_name }} {{ person.middle_initials}} {{ person.last_name }}
+      </h4>
+      <p class="f5 silver tc tl-l{% if person.links %} mb2{% else %} mb3{% endif %}">{{ person.chatlab_position }}</p>
+      {% if person.links %}
+        <ul class="flex justify-center justify-start-l f5 list pl0 mb3">
+          {% for link_item in person.links %}
+            <li class="lh-title{% unless forloop.last %} mr3{% endunless %}">
+              <a class="link blue underline dim" href="{{ link_item.link_url }}" target="_blank">
+                {{ link_item.link_name }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+      {% if person.bio_short %}
+        <p class="tl mb0">
+          {{ person.bio_short }}
+        </p>
+      {% else %}
+        {{ person.content }}
+      {% endif %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,379 @@
+---
+title: ChatLab
+big_header:
+  bh_title: ChatLab
+  bh_background: bg-flickr-goddard
+  bh_caption: "By <a class='white link underline dim-l' href='https://flic.kr/p/AUVbka' target='_blank'>Steven Minicola</a>"
+description: Lab website for ChatLab, directed by Anjan Chatterjee, MD, FAAN.
+sections:
+- About ChatLab
+- ChatLab people
+- ChatLab research & publications
+- ChatLab news & media
+---
+<main class="relative bg-pattern-circuit f4-m f3-l lh-copy min-vh-100 pa3 pa4-m pv5-l ph6-l">
+  <div class="absolute absolute--fill dn db-l {{ page.big_header.bh_background }} bg-cover bg-fixed-l"></div>
+  <div class="absolute absolute--fill dn db-l bg-pattern-circuit o-90"></div>
+  <div class="relative mw-64rem center">
+
+    <section id="{{ page.sections[0] | slugify }}" class="pv3 pv4-m pv5-l">
+
+      <div class="bg-white shadow-6 br2 bt bw3 b--bluegreen">
+
+        <div class="pa3 pa4-m pa5-l">
+
+          <h2 class="bluegreen font-default lh-title b mb1 mb2-ns">
+            {{ page.sections[0] }}
+          </h2>
+          <hr class="w-100 ba b--bluegreen mb3 mb4-ns">
+
+          <p class="mb3">
+            We explore beauty, language, cognition, and the brain using converging evidence from behavioral, neuroimaging, and lesion studies. We investigate a wide range of cognitive processes, including those underlying aesthetic experiences, the use of figurative and spatial language, and event representation. We're also interested in ethical questions raised by neuroscientific progress.
+          </p>
+          <p class="mb0">
+            Our lab is affiliated with both the <a class="blue link underline dim-l" href="https://neuroaesthetics.med.upenn.edu/" target="_blank">Penn Center for Neuroaesthetics (PCfN)</a> and the <a class="blue link underline dim-l" href="http://ccn.upenn.edu/" target="_blank">Center for Cognitive Neuroscience (CCN)</a>.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="{{ page.sections[1] | slugify }}" class="pv3 pv4-m pv5-l">
+
+      <div class="bg-white shadow-6 br2 bt bw3 b--bluegreen">
+
+        <div class="pa3 pa4-m pa5-l">
+
+          <h2 class="bluegreen font-default lh-title b mb1 mb2-ns">
+            {{ page.sections[1] }}
+          </h2>
+          <hr class="w-100 ba b--bluegreen mb3 mb4-ns">
+
+          <div class="pa2 ba br2 b--moon-gray mb4 mb5-l">
+            <img class="db w-100 br2" src="http://ccn.upenn.edu/chatterjee/assets/img/group/800/chatlab-2019-02-01.jpg" alt="ChatLab group photo" />
+          </div>
+
+          <!-- DIRECTORS -->
+          <h3 class="bluegreen font-default lh-title b mb1 mb2-ns">
+            Director
+          </h3>
+          <hr class="w-100 ba b--bluegreen mb0 mb3-ns">
+          <div class="mb3 mb4-l">
+            {% assign people_sorted_by_name = site.people | where: "at_chatlab", "true" | where_exp: "item", "item.alum != true" | sort: "last_name" %}
+            {% assign directors = people_sorted_by_name | where: "chatlab_role", "director" %}
+            {% for person in directors %}
+              <div class="pv3 pv4-l">
+                {% include components/person_chatlab.html %}
+              </div>
+            </div>
+            {% endfor %}
+
+          <!-- STAFF -->
+          <h3 class="bluegreen font-default lh-title b mb1 mb2-ns">
+            Staff
+          </h3>
+          <hr class="w-100 ba b--bluegreen mb0 mb3-ns">
+          <div class="mb3 mb4-l">
+            {% assign staff = people_sorted_by_name | where: "chatlab_role", "staff" %}
+            {% for person in staff %}
+              <div class="pv3 pv4-l">
+                {% include components/person_chatlab.html %}
+              </div>
+            {% endfor %}
+          </div>
+
+          <!-- POSTDOCS -->
+          <h3 class="bluegreen font-default lh-title b mb1 mb2-ns">
+            Postdoctoral researchers
+          </h3>
+          <hr class="w-100 ba b--bluegreen mb0 mb3-ns">
+          <div class="mb3 mb4-l">
+            {% assign postdocs = people_sorted_by_name | where: "chatlab_role", "postdoctoral_researcher" %}
+            {% for person in postdocs %}
+              <div class="pv3 pv4-l">
+                {% include components/person_chatlab.html %}
+              </div>
+            {% endfor %}
+          </div>
+
+          <!-- STUDENT RESEARCHERS -->
+          <h3 class="bluegreen font-default lh-title b mb1 mb2-ns">
+            Student researchers
+          </h3>
+          <hr class="w-100 ba b--bluegreen mb0 mb3-ns">
+          <div class="mb3 mb4-l">
+            {% assign students = people_sorted_by_name | where: "chatlab_role", "student_researcher" %}
+            {% for person in students %}
+              <div class="pv3 pv4-l">
+                {% include components/person_chatlab.html %}
+              </div>
+            {% endfor %}
+          </div>
+
+          <!-- ALUMNI -->
+          <h3 class="bluegreen font-default lh-title b mb1 mb2-ns">
+            Alumni
+          </h3>
+          <hr class="w-100 ba b--bluegreen mb3 mb4-ns">
+          <div class="columns-1 columns-2-m columns-3-l column-gap-4">
+            <div class="break-inside-avoid mb4">
+              <h4 class="f5 f4-ns bluegreen font-default b mb3">Postdoctoral researchers</h4>
+              {% assign chatlab_alums = site.data.chatlab_people | where: "alum", "true" | where: "category", "postdoctoral_researchers" | sort: "middle_last_name" %}
+              {% for person in chatlab_alums %}
+                <h5 class="f6 f5-ns font-default lh-title mb1">
+                  {{ person.first_name}} {{ person.middle_last_name }}
+                </h5>
+              {% endfor %}
+            </div>
+            <div class="break-inside-avoid mb4">
+              <h4 class="f5 f4-ns bluegreen font-default b mb3">Visiting researchers</h4>
+              {% assign chatlab_alums = site.data.chatlab_people | where: "alum", "true" | where: "category", "visiting_researchers" | sort: "middle_last_name" %}
+              {% for person in chatlab_alums %}
+                <h5 class="f6 f5-ns font-default lh-title mb1">
+                  {{ person.first_name}} {{ person.middle_last_name }}
+                </h5>
+              {% endfor %}
+            </div>
+            <div class="break-inside-avoid mb4">
+              <h4 class="f5 f4-ns bluegreen font-default b mb3">Medical students</h4>
+              {% assign chatlab_alums = site.data.chatlab_people | where: "alum", "true" | where: "student_category", "medical_students" | sort: "middle_last_name" %}
+              {% for person in chatlab_alums %}
+                <h5 class="f6 f5-ns font-default lh-title mb1">
+                  {{ person.first_name}} {{ person.middle_last_name }}
+                </h5>
+              {% endfor %}
+            </div>
+            <div class="break-inside-avoid mb4">
+              <h4 class="f5 f4-ns bluegreen font-default b mb3">Graduate students</h4>
+              {% assign chatlab_alums = site.data.chatlab_people | where: "alum", "true" | where: "student_category", "graduate_students" | sort: "middle_last_name" %}
+              {% for person in chatlab_alums %}
+                <h5 class="f6 f5-ns font-default lh-title mb1">
+                  {{ person.first_name}} {{ person.middle_last_name }}
+                </h5>
+              {% endfor %}
+            </div>
+            <div class="break-inside-avoid mb4">
+              <h4 class="f5 f4-ns bluegreen font-default b mb3">Postbaccalaureate students</h4>
+              {% assign chatlab_alums = site.data.chatlab_people | where: "alum", "true" | where: "student_category", "post_baccalaureate_students" | sort: "middle_last_name" %}
+              {% for person in chatlab_alums %}
+                <h5 class="f6 f5-ns font-default lh-title mb1">
+                  {{ person.first_name}} {{ person.middle_last_name }}
+                </h5>
+              {% endfor %}
+            </div>
+            <div class="break-inside-avoid mb4">
+              <h4 class="f5 f4-ns bluegreen font-default b mb3">Undergraduate & high school students</h4>
+              {% assign chatlab_alums = site.data.chatlab_people | where: "alum", "true" | where: "student_category", "undergraduate_or_hs_students" | sort: "middle_last_name" %}
+              {% for person in chatlab_alums %}
+                <h5 class="f6 f5-ns font-default lh-title mb1">
+                  {{ person.first_name}} {{ person.middle_last_name }}
+                </h5>
+              {% endfor %}
+            </div>
+            <div class="break-inside-avoid mb4">
+              <h4 class="f5 f4-ns bluegreen font-default b mb3">Lab managers</h4>
+              {% assign chatlab_alums = site.data.chatlab_people | where: "alum", "true" | where: "staff_category", "lab_managers" | sort: "middle_last_name" %}
+              {% for person in chatlab_alums %}
+                <h5 class="f6 f5-ns font-default lh-title mb1">
+                  {{ person.first_name}} {{ person.middle_last_name }}
+                </h5>
+              {% endfor %}
+            </div>
+            <div class="break-inside-avoid mb4">
+              <h4 class="f5 f4-ns bluegreen font-default b mb3">Patient coordinators</h4>
+              {% assign chatlab_alums = site.data.chatlab_people | where: "alum", "true" | where: "staff_category", "patient_coordinators" | sort: "middle_last_name" %}
+              {% for person in chatlab_alums %}
+                <h5 class="f6 f5-ns font-default lh-title mb1">
+                  {{ person.first_name}} {{ person.middle_last_name }}
+                </h5>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section id="{{ page.sections[2] | slugify }}" class="pv3 pv4-m pv5-l">
+
+      <div class="bg-white shadow-6 br2 bt bw3 b--bluegreen">
+
+        <div class="pt3 pt4-m pt5-l ph3 ph4-m ph5-l">
+          <h2 class="bluegreen font-default lh-title b mb1 mb2-ns">
+            {{ page.sections[2] }}
+          </h2>
+          <hr class="w-100 ba b--bluegreen">
+        </div>
+
+        <div class="pv3 pv4-ns ph3 ph4-m ph5-l bb b--black-10">
+          <h3 class="bluegreen font-default lh-title b mb3">
+            Neuroaesthetics
+          </h3>
+          <p class="mb0">
+            Neuroaesthetics refers to the role of the brain in evaluating visual stimuli and their aesthetic appeal. Our research ranges from aesthetic choices of brain-injured individuals to aesthetic preferences in everyday life (in architecture, art, and facial beauty).
+          </p>
+        </div>
+        <div class="js-vt-container">
+          <div class="js-vt-viewer" data-vt-viewer-type="show-more" data-vt-show-more-init-visible="3" data-vt-show-more-max="10" data-vt-show-more-responsive="false">
+            {% assign pubs_sorted = site.data.external.publications | where: "category", "neuroaesthetics" | sort: "work_post_date_fake" | reverse %}
+            {% for publication in pubs_sorted %}
+              <div class="pv3 pv4-ns ph3 ph4-m ph5-l{% unless forloop.first %} bt b--black-10{% endunless %}">
+                {% include components/publication.html %}
+              </div>
+            {% endfor %}
+          </div>
+          <div class="js-vt-button-wrap ph3 ph4-ns pb3 pb4-ns">
+            <div class="js-vt-button flex items-center justify-center w-100 bg-near-white shadow-6 dim-l pointer f5 f4-ns lh-title light-silver b pv3 ph5-ns br2">
+              <span class="mr3">
+                Show more
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pv3 pv4-ns ph3 ph4-m ph5-l bt bb b--black-10">
+          <h3 class="bluegreen font-default lh-title b mb3">
+            Language & space
+          </h3>
+          <p class="mb0">
+            The lab’s research on language and space is concerned with a variety of concepts. Our primary interests lie in spatial and gestural representations in language, as well as in the processing of metaphoric and figurative language in patients and controls.
+          </p>
+        </div>
+        <div class="js-vt-container">
+          <div class="js-vt-viewer" data-vt-viewer-type="show-more" data-vt-show-more-init-visible="3" data-vt-show-more-max="10" data-vt-show-more-responsive="false">
+            {% assign pubs_sorted = site.data.external.publications | where: "category", "language_and_space" | sort: "work_post_date_fake" | reverse %}
+            {% for publication in pubs_sorted %}
+              <div class="pv3 pv4-ns ph3 ph4-m ph5-l{% unless forloop.first %} bt b--black-10{% endunless %}">
+                {% include components/publication.html %}
+              </div>
+            {% endfor %}
+          </div>
+          <div class="js-vt-button-wrap ph3 ph4-ns pb3 pb4-ns">
+            <div class="js-vt-button flex items-center justify-center w-100 bg-near-white shadow-6 dim-l pointer f5 f4-ns lh-title light-silver b pv3 ph5-ns br2">
+              <span class="mr3">
+                Show more
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pv3 pv4-ns ph3 ph4-m ph5-l bt bb b--black-10">
+          <h3 class="bluegreen font-default lh-title b mb3">
+            Event representation
+          </h3>
+          <p class="mb0">
+            Our examination of event representation focuses on how humans visualize and process moving events and infer causality within these events, as well as focusing on the neural bases of processing action-based information in general.
+          </p>
+        </div>
+        <div class="js-vt-container">
+          <div class="js-vt-viewer" data-vt-viewer-type="show-more" data-vt-show-more-init-visible="3" data-vt-show-more-max="10" data-vt-show-more-responsive="false">
+            {% assign pubs_sorted = site.data.external.publications | where: "category", "event_representation" | sort: "work_post_date_fake" | reverse %}
+            {% for publication in pubs_sorted %}
+              <div class="pv3 pv4-ns ph3 ph4-m ph5-l{% unless forloop.first %} bt b--black-10{% endunless %}">
+                {% include components/publication.html %}
+              </div>
+            {% endfor %}
+          </div>
+          <div class="js-vt-button-wrap ph3 ph4-ns pb3 pb4-ns">
+            <div class="js-vt-button flex items-center justify-center w-100 bg-near-white shadow-6 dim-l pointer f5 f4-ns lh-title light-silver b pv3 ph5-ns br2">
+              <span class="mr3">
+                Show more
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pv3 pv4-ns ph3 ph4-m ph5-l bt bb b--black-10">
+          <h3 class="bluegreen font-default lh-title b mb3">
+            Neuroethics
+          </h3>
+          <p class="mb0">
+            Neuroethics focuses mainly on the ethical implications of neuroscientific progress, such as “cosmetic neurology,” the use of drugs to enhance cognitive performance and ability.
+          </p>
+        </div>
+        <div class="js-vt-container">
+          <div class="js-vt-viewer" data-vt-viewer-type="show-more" data-vt-show-more-init-visible="3" data-vt-show-more-max="10" data-vt-show-more-responsive="false">
+            {% assign pubs_sorted = site.data.external.publications | where: "category", "neuroethics" | sort: "work_post_date_fake" | reverse %}
+            {% for publication in pubs_sorted %}
+              <div class="pv3 pv4-ns ph3 ph4-m ph5-l{% unless forloop.first %} bt b--black-10{% endunless %}">
+                {% include components/publication.html %}
+              </div>
+            {% endfor %}
+          </div>
+          <div class="js-vt-button-wrap ph3 ph4-ns pb3 pb4-ns">
+            <div class="js-vt-button flex items-center justify-center w-100 bg-near-white shadow-6 dim-l pointer f5 f4-ns lh-title light-silver b pv3 ph5-ns br2">
+              <span class="mr3">
+                Show more
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pv3 pv4-ns ph3 ph4-m ph5-l bt bb b--black-10">
+          <h3 class="bluegreen font-default lh-title b mb3">
+            Miscellaneous
+          </h3>
+          <p class="mb0">
+            Cognitive neurology covers many different areas and we are interested in a number of these facets of brain and behavior. These topics include visuospatial attention, methodology in cognitive neuroscience, as well as some case study research.
+          </p>
+        </div>
+        <div class="js-vt-container">
+          <div class="js-vt-viewer" data-vt-viewer-type="show-more" data-vt-show-more-init-visible="3" data-vt-show-more-max="10" data-vt-show-more-responsive="false">
+            {% assign pubs_sorted = site.data.external.publications | where: "category", "miscellaneous" | sort: "work_post_date_fake" | reverse %}
+            {% for publication in pubs_sorted %}
+              <div class="pv3 pv4-ns ph3 ph4-m ph5-l{% unless forloop.first %} bt b--black-10{% endunless %}">
+                {% include components/publication.html %}
+              </div>
+            {% endfor %}
+          </div>
+          <div class="js-vt-button-wrap ph3 ph4-ns pb3 pb4-ns">
+            <div class="js-vt-button flex items-center justify-center w-100 bg-near-white shadow-6 dim-l pointer f5 f4-ns lh-title light-silver b pv3 ph5-ns br2">
+              <span class="mr3">
+                Show more
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="{{ page.sections[3] | slugify }}" class="pv3 pv4-m pv5-l">
+
+      <div class="bg-white shadow-6 br2 bt bw3 b--bluegreen">
+
+        <div class="pt3 pt4-m pt5-l ph3 ph4-m ph5-l">
+          <h2 class="bluegreen font-default lh-title b mb1 mb2-ns">
+            {{ page.sections[3] }}
+          </h2>
+          <hr class="w-100 ba b--bluegreen">
+        </div>
+
+        <div class="js-vt-container">
+          <div class="js-vt-viewer" data-vt-viewer-type="show-more" data-vt-show-more-init-visible="5" data-vt-show-more-max="5" data-vt-show-more-responsive="false">
+            {% comment %}not sorting by date for now because json has been manually ordered when there are two items with same date{% endcomment %}
+            {% assign news_sorted = site.data.external.news %}
+            {% for news_item in news_sorted %}
+              {% if news_item.archived == false %}
+                <div class="pv4 ph3 ph4-m ph5-l{% unless forloop.index == 1 %} bt b--black-10{% endunless %}">
+                  {% include components/news.html %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+          <div class="js-vt-button-wrap ph3 ph4-ns pb3 pb4-ns">
+            <div class="js-vt-button flex items-center justify-center w-100 bg-near-white shadow-6 dim-l pointer f5 f4-ns lh-title light-silver b pv3 ph5-ns br2">
+              <span class="mr3">
+                Show more
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>

@@ -4,22 +4,80 @@ big_header:
   bh_title: Contact information
   bh_background: bg-tag
   bh_caption: "Artist unknown"
-description: Get in touch with PCfN.
+description: Contact information for PCfN.
 sections:
-- Penn proud
-- Contact us
-- Visit the center
+- Contact information
 ---
-<main class="bg-pattern-circuit f4-m f3-l lh-copy min-vh-100 pa3 pa4-m pv5-l ph6-l">
-  <div class="mw-64rem center">
+<main class="relative bg-pattern-circuit f4-m f3-l lh-copy min-vh-100 pa3 pa4-m pv5-l ph6-l">
+  <div class="absolute absolute--fill dn db-l {{ page.big_header.bh_background }} bg-cover bg-fixed-l"></div>
+  <div class="absolute absolute--fill dn db-l bg-pattern-circuit o-95"></div>
+  <div class="relative mw-64rem center">
     <section id="{{ page.sections[0] | slugify }}" class="pv3 pv4-m pv5-l">
-      <div class="bg-white shadow-6 br2">
-        <h2 class="bg-liberty near-white font-default lh-title b pt4 pb3 pt5-ns pb4-ns ph3 ph4-m ph5-l br2 br--top bb bw3 b--white-20 mb0">
-          {{ page.sections[0] }}
-        </h2>
+
+      <div class="bg-white shadow-6 br2 bt bw3 b--bluegreen">
+
         <div class="pa3 pa4-m pa5-l">
+
+          <h2 class="bluegreen font-default lh-title b mb1 mb2-ns">
+            Get in touch
+          </h2>
+          <hr class="w-100 ba b--bluegreen mb3 mb4-ns">
+
+          <p class="mb3">
+            Follow PCfN on <a class="link dim blue underline" href="https://twitter.com/PCfN__" target="_blank">Twitter</a> to stay up to date with our latest events and announcements.
+          </p>
+          <p class="mb3">
+            To send correspondance by mail, please be sure to use the following postal address:
+          </p>
+          <p class="lh-title i pl2 mb3 mb4-ns">
+            Dr. Anjan Chatterjee<br />
+            <span class="dn-ns">Dept.</span><span class="dn di-ns">Department</span> of Neurology<br />
+            3 West Gates Building<br />
+            3400 Spruce Street<br />
+            Philadelphia, PA 19104
+          </p>
+          <p class="mb3 mb4-ns">
+            You can also use this contact form to send us a message and/or sign up for PCfN email announcements.
+          </p>
+          <form class="mb3 mb4-ns mb5-l" method="POST" action="https://formspree.io/jptacek@pennmedicine.upenn.edu">
+            <p class="mb3"><input class="pa3 w-100 ba br2 b--moon-gray" type="text" name="_replyto" placeholder="Your email address" required></p>
+            <p class="mb3"><input class="pa3 w-100 ba br2 b--moon-gray" type="text" name="name" placeholder="Your name" required></p>
+            <textarea class="pa3 w-100 ba br2 b--moon-gray mb3 mb4-ns" name="message" placeholder="Your message (optional)"></textarea>
+            <p class="mb3">Sign up for PCfN announcements?</p>
+            <div class="mb3 mb4-ns">
+              <input class="mr3 ba b--moon-gray" type="radio" name="listserv" value="yes">Yes<br />
+              <input class="mr3 ba b--moon-gray" type="radio" name="listserv" value="no" checked>No
+            </div>
+            <p class="mb0"><button class="bg-liberty white ba pv3 ph5 bn br2 shadow-6" type="submit">Send</button></p>
+            <input type="hidden" name="_subject" value="PCfN correspondence">
+            <input type="hidden" name="_cc" value="eica@pennmedicine.upenn.edu">
+            <input type="hidden" name="_next" value="/contact.html">
+          </form>
+
+          <h2 class="bluegreen font-default lh-title b mb1 mb2-ns">
+            Visit the center
+          </h2>
+          <hr class="w-100 ba b--bluegreen mb3 mb4-ns">
+
+          <p class="mb3">
+            You can find us in <a class="link dim blue underline" href="https://www.facilities.upenn.edu/maps/locations/goddard-laboratories" target="_blank">Goddard Laboratories</a>, located on campus at the following address:
+          </p>
+          <p class="lh-title i pl2 mb3 mb4-ns">
+            Goddard Laboratories<br />
+            3710 Hamilton Walk<br />
+            Philadelphia, PA 19104
+          </p>
+          <div class="flex overflow-hidden pa1 ba br1 b--moon-gray mb4 mb5-l">
+            <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.627747650211!2d-75.2007002495201!3d39.94971557932122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c658deded741%3A0x79d33462666f83bf!2sGoddard+Laboratories!5e0!3m2!1sen!2sus!4v1537468767541" width="600" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+
+          <h2 class="bluegreen font-default lh-title b mb1 mb2-ns">
+            Penn proud
+          </h2>
+          <hr class="w-100 ba b--bluegreen mb3 mb4-ns">
+
           <p>
-            Here at the <a class="link dim blue underline" href="https://www.upenn.edu/" target="_blank">University of Pennsylvania</a>, the PCfN is affiliated with the following departments and schools:
+            Here at the <a class="link dim blue underline" href="https://www.upenn.edu/" target="_blank">University of Pennsylvania</a>, we're affiliated with the following departments and schools:
           </p>
           <ul class="list pl2">
             <li><a class="link dim blue underline" href="http://www.med.upenn.edu/neurology/" target="_blank">Department of Neurology</a></li>
@@ -28,73 +86,13 @@ sections:
             <li><a class="link dim blue underline" href="https://www.design.upenn.edu/" target="_blank">Stuart Weitzman School of Design</a></li>
             <li><a class="link dim blue underline" href="https://www.wharton.upenn.edu/" target="_blank">Wharton School</a></li>
           </ul>
+
         </div>
+
       </div>
     </section>
-    <section id="{{ page.sections[1] | slugify }}" class="pv3 pv4-m pv5-l">
-      <div class="bg-white shadow-6 br2">
-        <h2 class="bg-bluegreen near-white font-default lh-title b pt4 pb3 pt5-ns pb4-ns ph3 ph4-m ph5-l br2 br--top bb bw3 b--white-20 mb0">
-          {{ page.sections[1] }}
-        </h2>
-        <div class="pa3 pa4-m pa5-l bb b--black-10">
-          <p>
-            Follow PCfN on <a class="link dim blue underline" href="https://twitter.com/PCfN__" target="_blank">Twitter</a> to stay in the loop with the latest events and announcements.
-          </p>
-          <p>
-            To send correspondance by mail, please be sure to use the following postal address:
-          </p>
-          <p class="pl2 lh-title i">
-            Dr. Anjan Chatterjee<br />
-            <span class="dn-ns">Dept.</span><span class="dn di-ns">Department</span> of Neurology<br />
-            3 West Gates Building<br />
-            3400 Spruce Street<br />
-            Philadelphia, PA 19104
-          </p>
-        </div>
-        <div class="pa3 pa4-m pa5-l">
-          <p>
-            You can also use this contact form to send us a message and/or sign up for PCfN email announcements.
-          </p>
-          <p>
-            <form method="POST" action="https://formspree.io/jptacek@pennmedicine.upenn.edu">
-              <p class="mb3"><input class="pa3 w-100 ba br2 b--moon-gray" type="text" name="_replyto" placeholder="Your email address" required></p>
-              <p class="mb3"><input class="pa3 w-100 ba br2 b--moon-gray" type="text" name="name" placeholder="Your name" required></p>
-              <p class="mb3"><textarea class="pa3 w-100 ba br2 b--moon-gray" name="message" placeholder="Your message (optional)"></textarea></p>
-              <p class="mb4">
-                Sign up for PCfN announcements?<br />
-                <input class="mr3 ba b--moon-gray" type="radio" name="listserv" value="yes">Yes<br />
-                <input class="mr3 ba b--moon-gray" type="radio" name="listserv" value="no" checked>No
-              </p>
-              <p class="mb0"><button class="bg-liberty white ba pv3 ph5 bn br2 shadow-6" type="submit">Send</button></p>
-              <input type="hidden" name="_subject" value="PCfN correspondence">
-              <input type="hidden" name="_cc" value="eica@pennmedicine.upenn.edu">
-              <input type="hidden" name="_next" value="/contact.html">
-            </form>
-          </p>
-        </div>
-      </div>
-    </section>
-    <section id="{{ page.sections[2] | slugify }}" class="pv3 pv4-m pv5-l">
-      <div class="bg-white shadow-6 br2">
-        <h2 class="bg-bluegreen near-white font-default lh-title b pt4 pb3 pt5-ns pb4-ns ph3 ph4-m ph5-l br2 br--top bb bw3 b--white-20 mb0">
-          {{ page.sections[2] }}
-        </h2>
-        <div class="pa3 pa4-m pa5-l">
-          <div class="mb4">
-            <p>
-              You can find us in <a class="link dim blue underline" href="https://www.facilities.upenn.edu/maps/locations/goddard-laboratories" target="_blank">Goddard Laboratories</a>, located on campus at the following address:
-            </p>
-            <p class="pl2 lh-title i">
-              Goddard Laboratories<br />
-              3710 Hamilton Walk<br />
-              Philadelphia, PA 19104
-            </p>
-          </div>
-          <div class="flex overflow-hidden pa1 ba br1 b--moon-gray">
-            <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.627747650211!2d-75.2007002495201!3d39.94971557932122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c658deded741%3A0x79d33462666f83bf!2sGoddard+Laboratories!5e0!3m2!1sen!2sus!4v1537468767541" width="600" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
+
+
+
   </div>
 </main>

@@ -1,25 +1,130 @@
 ---
 title: News
 big_header:
-  bh_title: News and media
+  bh_title: News & media
   bh_background: bg-shapecolor
   bh_caption: "By <a class='white link underline dim-l' href='http://www.adamcrawfordart.com/' target='_blank'>Adam Crawford</a>"
-description: Stay up to date with PCfN news and upcoming events.
+description: Stay up to date with the latest PCfN news & media.
 sections:
-- News feed
+- Events & announcements
+- Neuroaesthetics news & media
 ---
-<main class="bg-pattern-circuit f4-m f3-l lh-copy min-vh-100 pa3 pa4-m pv5-l ph6-l">
-  <div class="mw-64rem center">
+<main class="relative bg-pattern-circuit f4-m f3-l lh-copy min-vh-100 pa3 pa4-m pv5-l ph6-l">
+  <div class="absolute absolute--fill dn db-l {{ page.big_header.bh_background }} bg-cover bg-fixed-l"></div>
+  <div class="absolute absolute--fill dn db-l bg-pattern-circuit o-90"></div>
+  <div class="relative mw-64rem center">
+
+    <!-- ANNOUNCEMENTS / EVENTS LOOKUP -->
+    {% assign ongoing_announcements = false %}
+    {% assign todays_date = site.time | date: "%Y-%m-%d" %}
+    {% assign announcements_sorted = site.announcements | sort: "date_start" | reverse %}
+    {% for announcement in announcements_sorted %}
+      {% assign ds = announcement.date_start | date: "%Y-%m-%d" %}
+      {% assign de = announcement.date_end | date: "%Y-%m-%d" %}
+      {% if todays_date >= ds and todays_date <= de %}
+        {% assign ongoing_announcements = true %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+
+    {% assign upcoming_events = false %}
+    {% assign events_sorted = site.events | sort: "date_start" %}
+    {% for event in events_sorted %}
+      {% assign de = event.date_end | date: "%Y-%m-%d" %}
+      {% if de >= todays_date %}
+        {% assign upcoming_events = true %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+
     <section id="{{ page.sections[0] | slugify }}" class="pv3 pv4-m pv5-l">
-      <div class="bg-white shadow-6 br2">
-        <h2 class="bg-bluegreen near-white font-default lh-title b pt4 pb3 pt5-ns pb4-ns ph3 ph4-m ph5-l br2 br--top bb bw3 b--white-20 mb0">
-          {{ page.sections[0] }}
-        </h2>
+
+      <div class="bg-white shadow-6 br2 bt bw3 b--bluegreen">
+
+        <div class="pt3 pt4-m pt5-l ph3 ph4-m ph5-l">
+          <h2 class="bluegreen font-default lh-title b mb1 mb2-ns">
+            {{ page.sections[0] }}
+          </h2>
+          <hr class="w-100 ba b--bluegreen">
+        </div>
+
+
+        {% if ongoing_announcements or upcoming_events %}
+
+          <!-- ANNOUNCEMENTS -->
+          {% if ongoing_announcements %}
+            {% assign first_announcement = true %}
+            {% for announcement in announcements_sorted %}
+              {% assign de = announcement.date_end | date: "%Y-%m-%d" %}
+              {% unless de < todays_date %}
+                <div class="pv4 ph3 ph4-m ph5-l{% unless first_announcement %} bt b--black-10{% endunless %}">
+                  {% include components/announcement.html %}
+                </div>
+                {% assign first_announcement = false %}
+              {% endunless %}
+            {% endfor %}
+          {% endif %}
+
+          <!-- EVENTS -->
+          {% if upcoming_events %}
+            {% assign first_event = true %}
+            {% for event in events_sorted %}
+              {% assign de = event.date_end | date: "%Y-%m-%d" %}
+              {% unless de < todays_date %}
+                <div class="pv4 ph3 ph4-m ph5-l{% if first_event and ongoing_announcements %} bt b--black-10{% elsif first_event != 'true' %}{% endif %}">
+                  {% include components/event.html %}
+                </div>
+                {% assign first_event = false %}
+              {% endunless %}
+            {% endfor %}
+          {% endif %}
+
+        {% else %}
+
+        <div class="pt3 pt4-ns pb3 pb4-m pb5-l ph3 ph4-m ph5-l">
+          <p class="silver mb3 mb4-ns">
+            Check back later for upcoming neuroaesthetics events!
+          </p>
+          <div class="flex flex-column flex-row-l">
+            <a class="blue underline link dim-l mb2 mb0-l mr3-l" href="https://mindcore.sas.upenn.edu/events/" target="_blank">MindCORE events calendar</a>
+            <a class="blue underline link dim-l" href="https://penntoday.upenn.edu/events" target="_blank">Other events at Penn</a>
+          </div>
+        </div>
+
+        {% endif %}
+
+      </div>
+
+    </section>
+
+
+    <section id="{{ page.sections[1] | slugify }}" class="pv3 pv4-m pv5-l">
+
+      <div class="bg-white shadow-6 br2 bt bw3 b--bluegreen mb4 mb5-m mb6-l">
+
+        <div class="pt3 pt4-m pt5-l ph3 ph4-m ph5-l">
+          <h2 class="bluegreen font-default lh-title b mb1 mb2-ns">
+            {{ page.sections[1] }}
+          </h2>
+          <hr class="w-100 ba b--bluegreen">
+        </div>
+
+        <div class="pv3 pv4-ns ph3 ph4-m ph5-l">
+          <p class="">
+            Watch our videos or catch up with the latest neuroaesthetics news. For more videos related to neuroaesthetics, check out our <a class="blue underline link dim-l" href="https://www.youtube.com/playlist?list=PLSqOaqctiByl6Fjat9lutWJesGwe-8cyF" target="_blank">YouTube playlist.</a>
+          </p>
+        </div>
+
+        <div class="pt3 pt4-ns ph3 ph4-m ph5-l">
+          <h3 class="bluegreen font-default lh-title b mb1 mb2-ns">
+            Videos
+          </h3>
+          <hr class="w-100 ba b--bluegreen">
+        </div>
+
         <!-- HIGHLIGHTS -->
-        <h3 id="highlights" class="bg-near-white silver lh-title font-default b pv3 ph3 ph4-m ph5-l bt bb b--black-10 mb0">
-          Media highlights
-        </h3>
         <div class="js-vt-container">
+          {% comment %} inserted extra pt3-l after hr bc more slightly more distance is necessary between the preceeding hr and following bt {% endcomment %}
           <div class="js-vt-viewer" data-vt-viewer-type="show-more" data-vt-show-more-init-visible="2" data-vt-show-more-max="3" data-vt-show-more-responsive="false">
             {% assign highlights_sorted = site.data.external.news | where_exp: "item", "item.highlights_data" | sort: "highlights_data.highlights_rank" | reverse %}
             {% for highlight in highlights_sorted %}
@@ -36,64 +141,17 @@ sections:
             </div>
           </div>
         </div>
-        <!-- ANNOUNCEMENTS -->
-        {% assign ongoing_announcements = false %}
-        {% assign todays_date = site.time | date: "%Y-%m-%d" %}
-        {% assign announcements_sorted = site.announcements | sort: "date_start" | reverse %}
-        {% for announcement in announcements_sorted %}
-          {% assign ds = announcement.date_start | date: "%Y-%m-%d" %}
-          {% assign de = announcement.date_end | date: "%Y-%m-%d" %}
-          {% if todays_date >= ds and todays_date <= de %}
-            {% assign ongoing_announcements = true %}
-            {% break %}
-          {% endif %}
-        {% endfor %}
-        {% if ongoing_announcements %}
-          <h3 id="announcements" class="bg-near-white silver lh-title font-default b pv3 ph3 ph4-m ph5-l bt bb b--black-10 mb0">
-            Announcements
+
+        <div class="pt4 ph3 ph4-m ph5-l bt b--black-10">
+          <h3 class="bluegreen font-default lh-title b mb1 mb2-ns">
+            News
           </h3>
-          {% assign first_announcement = true %}
-          {% for announcement in announcements_sorted %}
-            {% assign de = announcement.date_end | date: "%Y-%m-%d" %}
-            {% unless de < todays_date %}
-              <div class="pv4 ph3 ph4-m ph5-l {% unless first_announcement %} bt b--black-10{% endunless %}">
-                {% include components/announcement.html %}
-              </div>
-              {% assign first_announcement = false %}
-            {% endunless %}
-          {% endfor %}
-        {% endif %}
-        <!-- EVENTS -->
-        {% assign upcoming_events = false %}
-        {% assign events_sorted = site.events | sort: "date_start" %}
-        {% for event in events_sorted %}
-          {% assign de = event.date_end | date: "%Y-%m-%d" %}
-          {% if de >= todays_date %}
-            {% assign upcoming_events = true %}
-            {% break %}
-          {% endif %}
-        {% endfor %}
-        {% if upcoming_events %}
-          <h3 id="events" class="bg-near-white silver lh-title font-default b pv3 ph3 ph4-m ph5-l bt bb b--black-10 mb0">
-            Events
-          </h3>
-          {% assign first_event = true %}
-          {% for event in events_sorted %}
-            {% assign de = event.date_end | date: "%Y-%m-%d" %}
-            {% unless de < todays_date %}
-              <div class="pv4 ph3 ph4-m ph5-l {% unless first_event %} bt b--black-10{% endunless %}">
-                {% include components/event.html %}
-              </div>
-              {% assign first_event = false %}
-            {% endunless %}
-          {% endfor %}
-        {% endif %}
+          <hr class="w-100 ba b--bluegreen">
+        </div>
+
         <!-- NEWS -->
-        <h3 class="bg-near-white silver lh-title font-default b pv3 ph3 ph4-m ph5-l bt bb b--black-10 mb0">
-          News
-        </h3>
         <div class="js-vt-container">
-          <div class="js-vt-viewer" data-vt-viewer-type="show-more" data-vt-show-more-init-visible="3" data-vt-show-more-max="5" data-vt-show-more-responsive="false">
+          <div class="js-vt-viewer" data-vt-viewer-type="show-more" data-vt-show-more-init-visible="5" data-vt-show-more-max="5" data-vt-show-more-responsive="false">
             {% comment %}not sorting by date for now because json has been manually ordered when there are two items with same date{% endcomment %}
             {% assign news_sorted = site.data.external.news %}
             {% for news_item in news_sorted %}
@@ -112,7 +170,21 @@ sections:
             </div>
           </div>
         </div>
+
       </div>
+
+      <div class="bg-white shadow-6 mw-40rem center br2 pa3 pa4-m pa5-l">
+        <h2 class="font-default lh-title tc">
+          Learn more about PCfN!
+          <!-- LEAVE OUT PER AC/EC: Meet our community, check out our research, or catch up on the latest news! -->
+        </h2>
+        <div class="flex flex-column flex-row-ns">
+          <a class="db bg-liberty shadow-6 white f5 f4-ns white tc b link dim-l w-100 pa2 pa3-ns br2 mb2 mb0-ns mr2-ns" href="/community.html">Community</a>
+          <a class="db bg-liberty shadow-6 white f5 f4-ns white tc b link dim-l w-100 pa2 pa3-ns br2" href="/research.html">Research</a>
+        </div>
+      </div>
+
     </section>
+
   </div>
 </main>

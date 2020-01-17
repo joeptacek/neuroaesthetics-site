@@ -1,0 +1,81 @@
+<div class="flex justify-center" data-lightbox="container">
+
+  {% unless person.content == "" %}<button class="bg-transparent link dim bn pointer" type="button" data-lightbox="open">{% endunless %}
+    <div class="f5 f4-ns lh-title">
+      <div class="flex flex-column items-center flex-row-m">
+        {% comment %} flex: none to avoid shrinking; i.e., img should not participate in flex resizing {% endcomment %}
+        <div class="flex-none mb3 mr4-m mb0-m pa1 ba b--moon-gray br-100">
+          {% comment %} display: block to avoid space under img, otherwise parent container and its border are stretched {% endcomment %}
+          <img class="db br-100" src="/assets/img/people/225/{{ person.photo }}" alt="{{ person.first_name }} {{ person.middle_initials}} {{ person.last_name }}" height="auto" width="225">
+        </div>
+        <div class="tc tl-m">
+          <h4 class="tc mid-gray tracked-tight tl-m mb2">
+            {{ person.first_name }} {{ person.middle_initials}} {{ person.last_name }}
+          </h4>
+          <div class="f5">
+            {% if person.at_pcfn %}
+              {% if person.position_short and person.position_short != "" %}
+                <p class="silver">{{ person.position_short }}</p>
+              {% else %}
+                <p class="silver">{{ person.position }}</p>
+              {% endif %}
+            {% elsif person.affiliation == "University of Pennsylvania" %}
+              <p class="mb1 silver">{{ person.school }}</p>
+            {% else %}
+              <p class="silver">{{ person.affiliation }}</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% unless person.content == "" %}</button>{% endunless %}
+
+
+
+  <div class="dni" data-lightbox="viewer">
+    <div class="fixed absolute--fill flex flex-column justify-center items-center bg-black-20" data-lightbox="background">
+      <div class="bg-white mw-55rem h-75 pt3 pt4-ns ph3 ph4-ns br3">
+
+
+          <div class="flex flex-column flex-row-ns h-75">
+            <div class="flex-none mb3 mb0-ns mr4-ns">
+              <img class="br-100" src="/assets/img/people/225/{{ person.photo }}" alt="{{ person.first_name }} {{ person.middle_initials}} {{ person.last_name }}" height="auto" width="225">
+            </div>
+
+
+            <div class="f5 f4-ns h-100 overflow-scroll">
+              <h4 class="tracked-tight mb3">
+                {{ person.first_name }} {{ person.middle_initials}} {{ person.last_name }}
+              </h4>
+              {% if person.at_pcfn %}
+                {% if person.position_short and person.position_short != "" %}
+                  <p class="silver">{{ person.position_short }}</p>
+                {% else %}
+                  <p class="silver">{{ person.position }}</p>
+                {% endif %}
+              {% elsif person.affiliation == "University of Pennsylvania" %}
+                <p class="mb1 silver">{{ person.school }}</p>
+              {% else %}
+                <p class="silver">{{ person.affiliation }}</p>
+              {% endif %}
+              <p class="">
+                {{ person.content }}
+              </p>
+            </div>
+          </div>
+
+
+          <div class="flex justify-center items-center h-25">
+            <button class="bg-near-white shadow-6 f5 f4-ns w-100 pa3 bn br3" type="button" data-lightbox="close">
+              Close
+            </button>
+          </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+</div>

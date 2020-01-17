@@ -1,3 +1,5 @@
+// TODO: get rid of a lot of these init functions? just add these styles to CSS classes?
+
 // View Toggle
 
 var VTContainers = document.getElementsByClassName('js-vt-container');
@@ -54,7 +56,10 @@ if (VTContainers) {
 
   function VTHandler(e) {
     var clickedVTButton = e.currentTarget;
+
+    // deprecated?
     var clickedVTButtonExtraLineCSS = clickedVTButton.getAttribute('data-vt-button-extra-line-css');
+
     var clickedVTContainer = clickedVTButton.closest('.js-vt-container');
     var clickedVTViewer = clickedVTContainer.querySelector('.js-vt-viewer');
     var clickedVTViewerType = clickedVTViewer.getAttribute('data-vt-viewer-type');
@@ -136,5 +141,56 @@ if (carouselContainers) {
       break;
     default:
       intervalGo();
+  }
+}
+
+// Lightboxs
+
+const lightboxOpenButtons = document.querySelectorAll('[data-lightbox="open"]');
+const lightboxCloseButtons = document.querySelectorAll('[data-lightbox="close"]');
+const lightboxBackgrounds = document.querySelectorAll('[data-lightbox="background"]')
+if (lightboxOpenButtons || lightboxCloseButtons) {
+
+  function openLightboxButton(e) {
+    const clickedLightboxOpenButton = e.currentTarget;
+    const clickedLightboxContainer = clickedLightboxOpenButton.closest('[data-lightbox="container"]');
+    const clickedLightboxViewer = clickedLightboxContainer.querySelector('[data-lightbox="viewer"]');
+    clickedLightboxViewer.classList.remove('dni');
+    document.body.classList.add('overflow-hidden'); // scroll lock (doesn't work on ios)
+  }
+
+  function closeLightboxButton(e) {
+    const clickedLightboxCloseButton = e.currentTarget;
+    const clickedLightboxContainer = clickedLightboxCloseButton.closest('[data-lightbox="container"]');
+    const clickedLightboxViewer = clickedLightboxContainer.querySelector('[data-lightbox="viewer"]');
+    clickedLightboxViewer.classList.add('dni');
+    document.body.classList.remove('overflow-hidden'); // scroll lock (doesn't work on ios)
+  }
+
+  function closeLightboxBackground(e) {
+    const clickedLightboxBackground = e.currentTarget; // element where the event listener is attached
+    const clickedElement = e.target; // element where the event was triggered (possibly a child)
+    if (clickedElement == clickedLightboxBackground) {
+      const clickedLightboxContainer = clickedLightboxBackground.closest('[data-lightbox="container"]');
+      const clickedLightboxViewer = clickedLightboxContainer.querySelector('[data-lightbox="viewer"]');
+      clickedLightboxViewer.classList.add('dni');
+
+      document.body.classList.remove('overflow-hidden'); // scroll lock (doesn't work on ios)
+    }
+  }
+
+  for (var i = 0; i < lightboxOpenButtons.length; i++) {
+    let thisLightboxOpenButton = lightboxOpenButtons[i];
+    thisLightboxOpenButton.addEventListener('click', openLightboxButton);
+  }
+
+  for (var i = 0; i < lightboxCloseButtons.length; i++) {
+    let thisLightboxCloseButton = lightboxCloseButtons[i];
+    thisLightboxCloseButton.addEventListener('click', closeLightboxButton);
+  }
+
+  for (var i = 0; i < lightboxBackgrounds.length; i++) {
+    let thisLightboxBackground = lightboxBackgrounds[i];
+    thisLightboxBackground.addEventListener('click', closeLightboxBackground);
   }
 }
