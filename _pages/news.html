@@ -14,29 +14,6 @@ sections:
   <div class="absolute absolute--fill dn db-l bg-pattern-circuit o-90"></div>
   <div class="relative mw-64rem center">
 
-    <!-- ANNOUNCEMENTS / EVENTS LOOKUP -->
-    {% assign ongoing_announcements = false %}
-    {% assign todays_date = site.time | date: "%Y-%m-%d" %}
-    {% assign announcements_sorted = site.announcements | sort: "date_start" | reverse %}
-    {% for announcement in announcements_sorted %}
-      {% assign ds = announcement.date_start | date: "%Y-%m-%d" %}
-      {% assign de = announcement.date_end | date: "%Y-%m-%d" %}
-      {% if todays_date >= ds and todays_date <= de %}
-        {% assign ongoing_announcements = true %}
-        {% break %}
-      {% endif %}
-    {% endfor %}
-
-    {% assign upcoming_events = false %}
-    {% assign events_sorted = site.events | sort: "date_start" %}
-    {% for event in events_sorted %}
-      {% assign de = event.date_end | date: "%Y-%m-%d" %}
-      {% if de >= todays_date %}
-        {% assign upcoming_events = true %}
-        {% break %}
-      {% endif %}
-    {% endfor %}
-
     <section id="{{ page.sections[0] | slugify }}" class="pv3 pv4-m pv5-l">
 
       <div class="bg-white shadow-6 br2 bt bw3 b--bluegreen">
@@ -48,6 +25,28 @@ sections:
           <hr class="w-100 ba b--bluegreen">
         </div>
 
+        <!-- ANNOUNCEMENTS / EVENTS LOOKUP -->
+        {% assign ongoing_announcements = false %}
+        {% assign todays_date = site.time | date: "%Y-%m-%d" %}
+        {% assign announcements_sorted = site.announcements | sort: "date_start" | reverse %}
+        {% for announcement in announcements_sorted %}
+          {% assign ds = announcement.date_start | date: "%Y-%m-%d" %}
+          {% assign de = announcement.date_end | date: "%Y-%m-%d" %}
+          {% if todays_date >= ds and todays_date <= de %}
+            {% assign ongoing_announcements = true %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
+        {% assign upcoming_events = false %}
+        {% assign events_sorted = site.events | sort: "date_start" %}
+        {% for event in events_sorted %}
+          {% assign de = event.date_end | date: "%Y-%m-%d" %}
+          {% if de >= todays_date %}
+            {% assign upcoming_events = true %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
 
         {% if ongoing_announcements or upcoming_events %}
 

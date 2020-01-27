@@ -290,8 +290,8 @@ h1, h2, h3, h4, h5, .font-headers {
 }
 
 .shadow-7 {
-  // inset shadow (top)
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) inset;
+  // inset shadow (top + bottom)
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) inset, 0 -4px 8px 0 rgba(0, 0, 0, 0.2) inset;
 }
 
 // OPACITY
