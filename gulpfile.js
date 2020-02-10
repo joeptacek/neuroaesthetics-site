@@ -1,4 +1,5 @@
 // TODO REFACTOR GULPFILE FOR GULP 4 / NODE 10
+// TODO retire old code related to data requests from GitHub
 // TODO minify css and js
 // TODO pipeline to automate resizing, optimize images, generate responsive html elements
 
@@ -133,7 +134,7 @@ gulp.task('data', function (cb) {
   }
 });
 
-gulp.task('freejazz', ['data'], function(cb) {
+gulp.task('freejazz', function(cb) {
   // clean output dir
   const outputDir = '_includes/partials/jazzicon';
   del([outputDir + '/']).then(delPaths => {
@@ -149,7 +150,7 @@ gulp.task('freejazz', ['data'], function(cb) {
           const allJSON = {};
 
           // add news data from JSON file to allJSON
-          allJSON['news'] = JSON.parse(fs.readFileSync('_data/external/news.json')); // TODO use async file operations here and elsewhere below
+          allJSON['news'] = JSON.parse(fs.readFileSync('_data/news.json')); // TODO use async file operations here and elsewhere below
 
           // take a path to Jekyll collection and return an array containing a front matter object for each file
           function getCollectionArray(collectionPath) {
@@ -229,7 +230,7 @@ gulp.task('freejazz', ['data'], function(cb) {
   });
 });
 
-gulp.task('build', ['data', 'freejazz'], function (cb) {
+gulp.task('build', ['freejazz'], function (cb) {
   exec(jekyllBuildExec, (error, stdout, stderr) => {
     if (error) {
       return cb(error);
@@ -242,7 +243,7 @@ gulp.task('build', ['data', 'freejazz'], function (cb) {
   });
 });
 
-gulp.task('watch', ['data', 'freejazz'], function () {
+gulp.task('watch', ['freejazz'], function () {
   spawn('bundle', jekyllWatchSpawn, { stdio: 'inherit' });
   // jekyll-watch uses 'listen' gem, which throws (non-fatal) "duplicate directory" errors when a watched dir contains symlinks (e.g., in node_modules/puppeteer/.local-chromium); doesn't help to add 'node_modules' to jekyll exclude list
   // maybe watch and rebuild jekyll using gulp watch instead of jekyll-watch?

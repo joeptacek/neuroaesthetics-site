@@ -223,7 +223,7 @@ sections:
         </div>
         <div class="js-vt-container">
           <div class="js-vt-viewer" data-vt-viewer-type="show-more" data-vt-show-more-init-visible="3" data-vt-show-more-max="10" data-vt-show-more-responsive="false">
-            {% assign pubs_sorted = site.data.external.publications | where: "category", "neuroaesthetics" | sort: "work_post_date_fake" | reverse %}
+            {% assign pubs_sorted = site.data.publications | where: "category", "neuroaesthetics" | sort: "work_post_date_fake" | reverse %}
             {% for publication in pubs_sorted %}
               <div class="pv3 pv4-ns ph3 ph4-m ph5-l{% unless forloop.first %} bt b--black-10{% endunless %}">
                 {% include components/publication.html %}
@@ -249,7 +249,7 @@ sections:
         </div>
         <div class="js-vt-container">
           <div class="js-vt-viewer" data-vt-viewer-type="show-more" data-vt-show-more-init-visible="3" data-vt-show-more-max="10" data-vt-show-more-responsive="false">
-            {% assign pubs_sorted = site.data.external.publications | where: "category", "language_and_space" | sort: "work_post_date_fake" | reverse %}
+            {% assign pubs_sorted = site.data.publications | where: "category", "language_and_space" | sort: "work_post_date_fake" | reverse %}
             {% for publication in pubs_sorted %}
               <div class="pv3 pv4-ns ph3 ph4-m ph5-l{% unless forloop.first %} bt b--black-10{% endunless %}">
                 {% include components/publication.html %}
@@ -275,7 +275,7 @@ sections:
         </div>
         <div class="js-vt-container">
           <div class="js-vt-viewer" data-vt-viewer-type="show-more" data-vt-show-more-init-visible="3" data-vt-show-more-max="10" data-vt-show-more-responsive="false">
-            {% assign pubs_sorted = site.data.external.publications | where: "category", "event_representation" | sort: "work_post_date_fake" | reverse %}
+            {% assign pubs_sorted = site.data.publications | where: "category", "event_representation" | sort: "work_post_date_fake" | reverse %}
             {% for publication in pubs_sorted %}
               <div class="pv3 pv4-ns ph3 ph4-m ph5-l{% unless forloop.first %} bt b--black-10{% endunless %}">
                 {% include components/publication.html %}
@@ -301,7 +301,7 @@ sections:
         </div>
         <div class="js-vt-container">
           <div class="js-vt-viewer" data-vt-viewer-type="show-more" data-vt-show-more-init-visible="3" data-vt-show-more-max="10" data-vt-show-more-responsive="false">
-            {% assign pubs_sorted = site.data.external.publications | where: "category", "neuroethics" | sort: "work_post_date_fake" | reverse %}
+            {% assign pubs_sorted = site.data.publications | where: "category", "neuroethics" | sort: "work_post_date_fake" | reverse %}
             {% for publication in pubs_sorted %}
               <div class="pv3 pv4-ns ph3 ph4-m ph5-l{% unless forloop.first %} bt b--black-10{% endunless %}">
                 {% include components/publication.html %}
@@ -327,7 +327,7 @@ sections:
         </div>
         <div class="js-vt-container">
           <div class="js-vt-viewer" data-vt-viewer-type="show-more" data-vt-show-more-init-visible="3" data-vt-show-more-max="10" data-vt-show-more-responsive="false">
-            {% assign pubs_sorted = site.data.external.publications | where: "category", "miscellaneous" | sort: "work_post_date_fake" | reverse %}
+            {% assign pubs_sorted = site.data.publications | where: "category", "miscellaneous" | sort: "work_post_date_fake" | reverse %}
             {% for publication in pubs_sorted %}
               <div class="pv3 pv4-ns ph3 ph4-m ph5-l{% unless forloop.first %} bt b--black-10{% endunless %}">
                 {% include components/publication.html %}
@@ -360,7 +360,7 @@ sections:
         <div class="js-vt-container">
           <div class="js-vt-viewer" data-vt-viewer-type="show-more" data-vt-show-more-init-visible="5" data-vt-show-more-max="5" data-vt-show-more-responsive="false">
             {% comment %}not sorting by date for now because json has been manually ordered when there are two items with same date{% endcomment %}
-            {% assign news_sorted = site.data.external.news %}
+            {% assign news_sorted = site.data.news %}
             {% for news_item in news_sorted %}
               {% if news_item.archived == false %}
                 <div class="pv4 ph3 ph4-m ph5-l{% unless forloop.index == 1 %} bt b--black-10{% endunless %}">

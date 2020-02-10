@@ -5,7 +5,6 @@
 /vendor/
 
 # Jekyll
-/_data/external/
 /_puppeteer/*
 !/_puppeteer/root/
 /_puppeteer/root/*
