@@ -107,6 +107,10 @@ h1, h2, h3, h4, h5, .font-headers {
 
 // WIDTH
 
+.w-16rem {
+  width: 16rem;
+}
+
 .mw-20rem {
   max-width: 20rem;
 }
@@ -124,6 +128,10 @@ h1, h2, h3, h4, h5, .font-headers {
 }
 
 // HEIGHT
+
+.h-16rem {
+  height: 16rem;
+}
 
 .min-h5 {
   min-height: 16rem; // from tachyons h5
@@ -246,6 +254,144 @@ h1, h2, h3, h4, h5, .font-headers {
   background-color: #e9ebec;
 }
 
+// BACKGROUND GRADIENTS
+
+.bg-gradient-theme {
+  background: linear-gradient(#4357AD, #177F75);
+}
+
+// RAINBOW 1 (based on: https://dribbble.com/shots/5933293-Dopely-Colors-17)
+
+.bg-gradient-rainbow-1a {
+  background: linear-gradient(147deg, #FA897B, #FFDD94);
+}
+
+.bg-gradient-rainbow-1b {
+  background: linear-gradient(147deg, #FFDD94, #D0E6A5);
+}
+
+.bg-gradient-rainbow-1c {
+  background: linear-gradient(147deg, #D0E6A5, #86E3CE);
+}
+
+.bg-gradient-rainbow-1d {
+  background: linear-gradient(147deg, #86E3CE, #CCABD8);
+}
+
+.bg-gradient-rainbow-1e {
+  background: linear-gradient(147deg, #CCABD8, #FA897B);
+}
+
+// RAINBOW 2 (https://www.schemecolor.com/happy-rainbow.php)
+
+.bg-gradient-rainbow-2a {
+  background: linear-gradient(#DF4757, #E88C54);
+}
+
+.bg-gradient-rainbow-2b {
+  background: linear-gradient(#E88C54, #F8E846);
+}
+
+.bg-gradient-rainbow-2c {
+  background: linear-gradient(#F8E846, #64D87F);
+}
+
+.bg-gradient-rainbow-2d {
+  background: linear-gradient(#64D87F, #5392D2);
+}
+
+.bg-gradient-rainbow-2e {
+  background: linear-gradient(#5392D2, #6144D0);
+}
+
+// RAINBOW 3 (https://www.schemecolor.com/double-rainbow.php)
+
+.bg-gradient-rainbow-3a {
+  background: linear-gradient(#D71729, #FC9127);
+}
+
+.bg-gradient-rainbow-3b {
+  background: linear-gradient(#FC9127, #FFFB62);
+}
+
+.bg-gradient-rainbow-3c {
+  background: linear-gradient(#FFFB62, #8BE071);
+}
+
+.bg-gradient-rainbow-3d {
+  background: linear-gradient(#8BE071, #1076E2);
+}
+
+.bg-gradient-rainbow-3e {
+  background: linear-gradient(#1076E2, #673295);
+}
+
+// RAINBOW 4 (https://www.schemecolor.com/rainbow-on.php)
+
+.bg-gradient-rainbow-4a {
+  background: linear-gradient(#F9874E, #FAC758);
+}
+
+.bg-gradient-rainbow-4b {
+  background: linear-gradient(#FAC758, #8CC788);
+}
+
+.bg-gradient-rainbow-4c {
+  background: linear-gradient(#8CC788, #53B3A6);
+}
+
+.bg-gradient-rainbow-4d {
+  background: linear-gradient(#53B3A6, #6691CC);
+}
+
+.bg-gradient-rainbow-4e {
+  background: linear-gradient(#6691CC, #C587C4);
+}
+
+// RAINBOW 5 (https://www.schemecolor.com/chinese-rainbow-color-palette.php)
+
+.bg-gradient-rainbow-5a {
+  background: linear-gradient(#AA361A, #F27242);
+}
+
+.bg-gradient-rainbow-5b {
+  background: linear-gradient(#F27242, #FFB200);
+}
+
+.bg-gradient-rainbow-5c {
+  background: linear-gradient(#FFB200, #78C848);
+}
+
+.bg-gradient-rainbow-5d {
+  background: linear-gradient(#78C848, #325292);
+}
+
+.bg-gradient-rainbow-5e {
+  background: linear-gradient(#325292, #3D2564);
+}
+
+// RAINBOW 6 (https://www.schemecolor.com/american-rainbow-color-palette.php)
+
+.bg-gradient-rainbow-6a {
+  background: linear-gradient(#B22032, #FE8B01);
+}
+
+.bg-gradient-rainbow-6b {
+  background: linear-gradient(#FE8B01, #F4B404);
+}
+
+.bg-gradient-rainbow-6c {
+  background: linear-gradient(#F4B404, #33B333);
+}
+
+.bg-gradient-rainbow-6d {
+  background: linear-gradient(#33B333, #3B3B6B);
+}
+
+.bg-gradient-rainbow-6e {
+  background: linear-gradient(#3B3B6B, #421A55);
+}
+
 // FILLS
 
 .fill-white {
@@ -292,6 +438,11 @@ h1, h2, h3, h4, h5, .font-headers {
 .shadow-7 {
   // inset shadow (top + bottom)
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) inset, 0 -4px 8px 0 rgba(0, 0, 0, 0.2) inset;
+}
+
+.shadow-8 {
+  // subtle inset shadow
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1) inset;
 }
 
 // OPACITY

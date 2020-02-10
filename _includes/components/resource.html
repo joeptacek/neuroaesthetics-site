@@ -1,7 +1,15 @@
 <div class="f5 f4-ns lh-title">
   <div class="flex flex-column items-center flex-row-l items-start-l">
-    <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mb4 mb0-l mr5-l">
-      <img class="db br1" src="{{ resource.img }}" alt="Thumbnail for {{ resource.title }}" />
+    <div class="flex-none w-16rem h-16rem pa1 ba br-100 b--moon-gray mb4 mb0-l mr5-l">
+      <div class="{{ resource.css.background }} w-100 h-100 br-100">
+        <div class="w-100 h-100 ba bw5 br-100 b--white-30 shadow-8">
+          <div class="flex justify-center items-center w-100 h-100 pa4 br-100">
+            <p class="{{ resource.css.text }} white-90 tc b mb0">
+              {{ resource.title_short }}
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="tc-m tl-l">
       <h3 class="bluegreen font-default mb3">

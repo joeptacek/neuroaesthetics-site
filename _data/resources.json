@@ -1,7 +1,11 @@
 [
   {
     "title": "Assesssment of Art Attributes (AAA)",
-    "img": "/assets/img/resources/AAA.jpg",
+    "title_short": "AAA",
+    "css": {
+      "background": "bg-gradient-rainbow-1a",
+      "text": "f2"
+    },
     "description": "The AAA is an instrument designed to assess six formal-perceptual and six conceptual-representational attributes using 24 paintings from the Western canon.",
     "sources": [
       {
@@ -21,7 +25,11 @@
   },
   {
     "title": "Assesssment of Preference for Balance (APB)",
-    "img": "/assets/img/resources/APB.jpg",
+    "title_short": "APB",
+    "css": {
+      "background": "bg-gradient-rainbow-1b",
+      "text": "f2"
+    },
     "description": "Here, we introduce the assessment of preference for balance (APB) and report a method to derive an objective balance score.",
     "sources": [
       {
@@ -41,7 +49,11 @@
   },
   {
     "title": "Face Image Meta-Database (fIMDb)",
-    "img": "/assets/img/resources/fIMDb.jpg",
+    "title_short": "fIMDb",
+    "css": {
+      "background": "bg-gradient-rainbow-1c",
+      "text": "f2"
+    },
     "description": "The fIMDb provides detailed information about sources for face photographs intended for use in research.",
     "sources": [
       {
@@ -57,7 +69,11 @@
   },
   {
     "title": "Cardillo Normed Metaphors",
-    "img": "/assets/img/resources/metaphors.jpg",
+    "title_short": "Cardillo Metaphors",
+    "css": {
+      "background": "bg-gradient-rainbow-1d",
+      "text": "f3"
+    },
     "description": "We provide 400 pairs of matched metaphoric and literal sentences. The set features metaphors of three types (nominal-entity, nominal-event, and predicate) and two modalities (sound, motion), and has been normed on 10+ psycholinguistic and theoretically-relevant properties (e.g. familiarity, interpretability, imageability, beauty).",
     "sources": [
       {
