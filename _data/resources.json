@@ -116,5 +116,33 @@
         ]
       }
     ]
+  },
+  {
+    "title": "Ratinginstrument für zweidimensionale bildnerische Arbeiten (RizbA)—Rating Instrument for Two-Dimensional Pictorial Work",
+    "title_short": "RizbA",
+    "css": {
+      "background": "bg-gradient-rainbow-1e",
+      "text": "f2"
+    },
+    "description": "The RizbA is a 26-item survey designed to evaluate pictorial expression, as theoretically defined by 7 content areas: representation, color, shape, space, motion, composition, expression. English translations for survey items are provided in the original publication, and an empirically-validated version of the translated survey is in development.",
+    "sources": [
+      {
+        "title": "Schoch, K., Gruber, H., Ostermann, T. (2017)",
+        "links": [
+          {
+            "title": "View publication",
+            "url": "https://doi.org/10.1016/j.aip.2017.04.014"
+          },
+          {
+            "title": "View preprint (available on Zenodo)",
+            "url": "https://doi.org/10.5281/zenodo.1479694"
+          },
+          {
+            "title": "Download materials (available on Zenodo)",
+            "url": "https://zenodo.org/record/3529361"
+          }
+        ]
+      }
+    ]
   }
 ]
