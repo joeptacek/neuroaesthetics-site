@@ -2,8 +2,8 @@
   <meta charset="utf-8">
   {% case page.collection %}
     {% when "people" %}
-      <title>PCfN → Community → {{ page.first_name }} {{ page.middle_initials}} {{ page.last_name }}</title>
-      <meta name="description" content="Meet {{ page.first_name }} {{ page.middle_initials}} {{ page.last_name }}">
+      <title>PCfN → Community → {{ page.first_name }} {% if page.middle_initials %}{{ page.middle_initials}} {% endif %}{{ page.last_name }}</title>
+      <meta name="description" content="Meet {{ page.first_name }} {% if page.middle_initials %}{{ page.middle_initials}} {% endif %}{{ page.last_name }}">
     {% when "events" %}
       <title>PCfN → News → {{ page.title }}</title>
       <meta name="description" content="Event page for {{ page.title }}">

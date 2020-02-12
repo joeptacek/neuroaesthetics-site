@@ -3,11 +3,11 @@
     {% comment %} flex: none to avoid shrinking; i.e., img should not participate in flex resizing {% endcomment %}
     <div class="flex-none pa1 mb3 mr5-l mb0-l ba br-100 b--moon-gray">
       {% comment %} display: block to avoid space under img, otherwise parent container and its border are stretched {% endcomment %}
-      <img class="db br-100" src="/assets/img/people/225/{{ person.photo }}" alt="{{ person.first_name }} {{ person.middle_initials}} {{ person.last_name }}" height="auto" width="225">
+      <img class="db br-100" src="{{ person.photo }}" alt="{{ person.first_name }} {% if person.middle_initials %}{{ person.middle_initials}} {% endif %}{{ person.last_name }}" height="auto" width="225">
     </div>
     <div class="">
       <h4 class="tc tl-l mb2">
-        {{ person.first_name }} {{ person.middle_initials}} {{ person.last_name }}
+        {{ person.first_name }} {% if person.middle_initials %}{{ person.middle_initials}} {% endif %}{{ person.last_name }}
       </h4>
       <p class="f5 silver tc tl-l{% if person.links %} mb2{% else %} mb3{% endif %}">{{ person.chatlab_position }}</p>
       {% if person.links %}
