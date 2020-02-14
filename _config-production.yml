@@ -19,7 +19,7 @@ future: true # to publish announcement / event documents with filename date in f
 collections:
   pages:
     output: true
-    permalink: /:name
+    permalink: /:path:output_ext
   ideas:
     output: false
   people:

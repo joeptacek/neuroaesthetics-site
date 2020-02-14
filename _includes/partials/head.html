@@ -19,6 +19,10 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arvo|Questrial">
   <link rel="stylesheet" href="/assets/css/vendor/tachyons/tachyons.css">
   <link rel="stylesheet" href="/assets/css/main.css?{{ site.time | date: "%s" }}">
+  {% if page.url == "/index.html" %}
+    {% comment %} Specify canonical URL for /index.html {% endcomment %}
+    <link rel="canonical" href="https://neuroaesthetics.med.upenn.edu/">
+  {% endif %}
   {% if jekyll.environment == "production" %}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109208305-2"></script>
