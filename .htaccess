@@ -1,0 +1,19 @@
+## CACHING
+
+# cache for maximum of 1 year
+Header set Cache-Control "max-age=31536000, must-revalidate"
+
+# may use cached HTML only after validating with server
+<filesMatch "\.(html)$">
+  Header set Cache-Control "no-cache"
+</filesMatch>
+
+# query strings are manually appended to URLs when updating image files
+# query strings are automatically appended to URLs for CSS/JS (during build)
+
+## REWRITES
+
+# redirect to HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
