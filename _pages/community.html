@@ -35,21 +35,21 @@ sections:
               The `group_by` filter returns an array of objects, each corresponding to a group; each group object has the following properties: name (the property value shared by members in this group), items (array of items in the group), size (number of items in group)
               This permits sorting by two properties (first sort by rank, then by last name). The nested results (arrays inside objects inside array) must be flattened into an array for `tablerow`
             {% endcomment %}
-            {% assign people_grouped_by_rank = site.people | where_exp: "item", "item.alum != true" | where: "at_pcfn", "true" | group_by:"pcfn_rank" | sort: "name" | reverse %}
-            {% for group in people_grouped_by_rank %}
+            {% assign pcfn_current = site.data.people | where: "pcfn_group", "true" | where_exp: "item", "item.pcfn_alum != true" | group_by:"pcfn_rank" | sort: "name" | reverse %}
+            {% for group in pcfn_current %}
               {% if forloop.first %}
-                {% assign group_sorted = group.items | sort: "last_name" %}
-                {% assign people_sorted_by_name = group_sorted %}
+                {% assign pcfn_current_by_name = group.items | sort: "last_name" %}
+                {% assign pcfn_current_by_name_and_group = pcfn_current_by_name %}
               {% else %}
-                {% assign group_sorted = group.items | sort: "last_name" %}
-                {% assign people_sorted_by_name = people_sorted_by_name | concat: group_sorted %}
+                {% assign pcfn_current_by_name = group.items | sort: "last_name" %}
+                {% assign pcfn_current_by_name_and_group = pcfn_current_by_name_and_group | concat: pcfn_current_by_name %}
               {% endif %}
             {% endfor %}
             <table class="tablegen w-100">
               <tbody>
-                {% tablerow person in people_sorted_by_name cols:3 %}
+                {% tablerow person in pcfn_current_by_name_and_group cols:3 %}
                   <div class="pv3 pv4-l ph3-l">
-                    {% include components/person_pcfn.html %}
+                    {% include components/person_community.html %}
                   </div>
                 {% endtablerow %}
               </tbody>
@@ -85,12 +85,12 @@ sections:
           <hr class="w-100 ba b--bluegreen mb3 mb4-l">
 
           <!-- Penn faculty -->
-          {% assign people_sorted_by_name = site.people | where: "affiliation", "University of Pennsylvania" | where_exp: "item", "item.at_pcfn != true" | where_exp: "item", "item.at_chatlab != true" | sort: "last_name" %}
+          {% assign penn_faculty = site.data.people | where: "penn_faculty_group", "true" | sort: "last_name" %}
           <table class="tablegen w-100">
             <tbody>
-              {% tablerow person in people_sorted_by_name cols:3 %}
+              {% tablerow person in penn_faculty cols:3 %}
                 <div class="pv3 pv4-l ph3-l">
-                  {% include components/person_pcfn.html %}
+                  {% include components/person_community.html %}
                 </div>
               {% endtablerow %}
             </tbody>
@@ -114,12 +114,12 @@ sections:
           <hr class="w-100 ba b--bluegreen mb3 mb4-l">
 
           <!-- Other affiliates -->
-          {% assign people_sorted_by_name = site.people | where_exp: "item", "item.affiliation != 'University of Pennsylvania'" | where_exp: "item", "item.at_pcfn != true" | where_exp: "item", "item.at_advisory_board != true" | sort: "last_name" %}
+          {% assign other_collaborators = site.data.people | where: "other_collaborators_group", "true" | sort: "last_name" %}
           <table class="tablegen w-100">
             <tbody>
-              {% tablerow person in people_sorted_by_name cols:3 %}
+              {% tablerow person in other_collaborators cols:3 %}
                 <div class="pv3 pv4-l ph3-l">
-                  {% include components/person_pcfn.html %}
+                  {% include components/person_community.html %}
                 </div>
               {% endtablerow %}
             </tbody>

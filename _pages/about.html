@@ -50,8 +50,8 @@ sections:
           </h2>
           <hr class="w-100 ba b--bluegreen mb3">
 
-          {% assign advisory_board_sorted = site.people | where: "at_advisory_board", "true" | sort: "last_name" %}
-          {% for person in advisory_board_sorted %}
+          {% assign advisory_board = site.data.people | where: "advisory_board_group", "true" | sort: "last_name" %}
+          {% for person in advisory_board %}
             <div class="flex flex-column flex-row-l items-center items-start-l pv3 pv4-l">
               <div class="flex-none pa1 ba br-100 b--moon-gray mb3 mb0-l mr5-l">
                 <img class="db br-100" src="{{ person.photo }}" alt="{{ person.first_name }} {% if person.middle_initials %}{{ person.middle_initials}} {% endif %}{{ person.last_name }}" />

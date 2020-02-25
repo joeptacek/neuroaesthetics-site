@@ -6,15 +6,15 @@ layout: default
     <section class="pv3 pv4-m pv5-l">
       <div class="bg-white ba b--moon-gray br2">
         <p class="bg-near-white pv3 ph4 bb b--moon-gray br2 br--top mb0">
-          {% if page.at_pcfn %}
+          {% if page.pcfn_group %}
             <a class="b mr2 link underline mid-gray dim" href="/community.html#at-the-center">Community</a>
             <span class="b mr2">→</span>
             <span class="b mr2">At the center</span>
-          {% elsif page.affiliation == "University of Pennsylvania" %}
+          {% elsif page.penn_faculty_group %}
             <a class="b mr2 link underline mid-gray dim" href="/community.html#penn-faculty">Community</a>
             <span class="b mr2">→</span>
             <span class="b mr2">Affiliated faculty</span>
-          {% else %}
+          {% elsif page.other_collaborators_group %}
             <a class="b mr2 link underline mid-gray dim" href="/community.html#other-collaborators">Community</a>
             <span class="b mr2">→</span>
             <span class="b mr2">Other collaborators</span>
@@ -28,30 +28,27 @@ layout: default
             {{ page.first_name }} {% if page.middle_initials %}{{ page.middle_initials}} {% endif %}{{ page.last_name }}
           </h2>
           <div class="mb4">
-            {% if page or page.affiliation == "University of Pennsylvania" %}
-              {% if page.at_pcfn %}
-                <p class="f4 tc mb2">{{ page.position }}</p>
+            {% if page.pcfn_group %}
+              <p class="f4 tc mb2">{{ page.pcfn_title }}</p>
+              {% if page.affiliation == "University of Pennsylvania" %}
+                <p class="silver tc mb1">{{ page.affiliation }}</p>
+                <p class="silver tc mb0">{{ page.penn_school }}</p>
+              {% else %}
+                <p class="silver tc mb0">{{ page.affiliation }}</p>
               {% endif %}
-              <p class="tc silver mb1">{{ page.affiliation }}</p>
-              <p class="tc silver mb0">{{ page.school }}</p>
-              {% comment %}
-                Skip departments?
-                {% if page.department %}
-                  <p class="i tc silver mb0">{{ page.department }}</p>
-                {% endif %}
-              {% endcomment %}
-            {% else %}
-              {% if page.affiliation %}
-                <p class="tc silver mb0">{{ page.affiliation }}</p>
-              {% endif %}
+            {% elsif page.penn_faculty_group %}
+              <p class="silver tc mb1">{{ page.affiliation }}</p>
+              <p class="silver tc mb0">{{ page.penn_school }}</p>
+            {% elsif page.other_collaborators_group %}
+              <p class="silver tc mb0">{{ page.affiliation }}</p>
             {% endif %}
           </div>
-          {% if page.content != "" or page.links %}
+          {% if page.bio != "" or page.links %}
             <hr class="w-100 ba b--light-gray mb4"/>
           {% endif %}
           {% if page.content != "" %}
             <div class="lh-copy mb4">
-              {{ content }}
+              {{ page.bio }}
             </div>
           {% endif %}
           {% if page.links %}
@@ -68,11 +65,11 @@ layout: default
               </ul>
             </div>
           {% endif %}
-          {% if page.at_pcfn %}
+          {% if page.pcfn_group %}
             <a class="dib bg-near-white light-silver link dim f5 f4-ns tc w-100 pv3 ph4 br2 shadow-6" href="/community.html#at-the-center">Back to Community</a>
-          {% elsif page.affiliation == "University of Pennsylvania" %}
+          {% elsif page.penn_faculty_group %}
             <a class="dib bg-near-white light-silver link dim f5 f4-ns tc w-100 pv3 ph4 br2 shadow-6" href="/community.html#penn-faculty">Back to Community</a>
-          {% else %}
+          {% elsif page.other_collaborators_group %}
             <a class="dib bg-near-white light-silver link dim f5 f4-ns tc w-100 pv3 ph4 br2 shadow-6" href="/community.html#other-collaborators">Back to Community</a>
           {% endif %}
         </div>

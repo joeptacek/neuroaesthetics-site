@@ -14,7 +14,8 @@ exclude:
   - Gemfile.lock
   - node_modules
 
-future: true # to publish announcement / event documents with filename date in future
+# to publish announcement / event documents with filename date in future
+future: true
 
 collections:
   pages:
@@ -22,8 +23,6 @@ collections:
     permalink: /:path:output_ext
   ideas:
     output: false
-  people:
-    output: true
   announcements:
     output: true
   events:
@@ -35,10 +34,6 @@ defaults:
   values:
     layout: "default"
 - scope:
-    path: "_people"
-  values:
-    layout: "person"
-- scope:
     path: "_events"
   values:
     layout: "event"
@@ -46,3 +41,25 @@ defaults:
     path: "_announcements"
   values:
     layout: "announcement"
+
+page_gen:
+- data: people
+  template: person
+  name: name_slug
+  dir: people
+  filter_condition: record["pcfn_group"] && record["pcfn_alum"] == false
+- data: people
+  template: person
+  name: name_slug
+  dir: people
+  filter_condition: record["chatlab_group"] && record["chatlab_alum"] == false
+- data: people
+  template: person
+  name: name_slug
+  dir: people
+  filter: penn_faculty_group
+- data: people
+  template: person
+  name: name_slug
+  dir: people
+  filter: other_collaborators_group

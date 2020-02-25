@@ -134,7 +134,13 @@ h1, h2, h3, h4, h5, .font-headers {
 }
 
 .min-h5 {
+  // for main title card in header
   min-height: 16rem; // from tachyons h5
+}
+
+.max-h-75 {
+  // lightbox experiment
+  max-height: 75%;
 }
 
 // BACKGROUND IMAGES
@@ -414,6 +420,11 @@ h1, h2, h3, h4, h5, .font-headers {
 .fill-bluegreen {
   // from colorcombos.com (ColorCombo248)
   fill: #177F75;
+}
+
+.fill-liberty {
+  // from colorcombos.com (ColorCombo248)
+  fill: #4357AD;
 }
 
 // BORDERS

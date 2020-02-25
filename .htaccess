@@ -1,4 +1,4 @@
-## CACHING
+# CACHEING
 
 # cache for maximum of 1 year
 Header set Cache-Control "max-age=31536000, must-revalidate"
@@ -11,7 +11,12 @@ Header set Cache-Control "max-age=31536000, must-revalidate"
 # query strings are manually appended to URLs when updating image files
 # query strings are automatically appended to URLs for CSS/JS (during build)
 
-## REWRITES
+# REDIRECTS
+
+# updated name in URL
+Redirect 301 /people/yoed-kennett.html https://neuroaesthetics.med.upenn.edu/people/yoed-kenett.html
+
+# REWRITES
 
 # redirect to HTTPS
 RewriteEngine On

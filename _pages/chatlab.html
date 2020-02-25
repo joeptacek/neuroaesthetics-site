@@ -66,9 +66,9 @@ sections:
           </h3>
           <hr class="w-100 ba b--bluegreen mb0 mb3-ns">
           <div class="mb3 mb4-l">
-            {% assign people_sorted_by_name = site.people | where: "at_chatlab", "true" | where_exp: "item", "item.alum != true" | sort: "last_name" %}
-            {% assign directors = people_sorted_by_name | where: "chatlab_role", "director" %}
-            {% for person in directors %}
+            {% assign chatlab_current = site.data.people | where: "chatlab_group", "true" | where_exp: "item", "item.chatlab_alum != true" | sort: "last_name" %}
+            {% assign director = chatlab_current | where: "chatlab_role", "director" %}
+            {% for person in director %}
               <div class="pv3 pv4-l">
                 {% include components/person_chatlab.html %}
               </div>
@@ -81,7 +81,7 @@ sections:
           </h3>
           <hr class="w-100 ba b--bluegreen mb0 mb3-ns">
           <div class="mb3 mb4-l">
-            {% assign staff = people_sorted_by_name | where: "chatlab_role", "staff" %}
+            {% assign staff = chatlab_current | where: "chatlab_role", "staff" %}
             {% for person in staff %}
               <div class="pv3 pv4-l">
                 {% include components/person_chatlab.html %}
@@ -95,7 +95,7 @@ sections:
           </h3>
           <hr class="w-100 ba b--bluegreen mb0 mb3-ns">
           <div class="mb3 mb4-l">
-            {% assign postdocs = people_sorted_by_name | where: "chatlab_role", "postdoctoral_researcher" %}
+            {% assign postdocs = chatlab_current | where: "chatlab_role", "postdoctoral_researcher" %}
             {% for person in postdocs %}
               <div class="pv3 pv4-l">
                 {% include components/person_chatlab.html %}
@@ -109,7 +109,7 @@ sections:
           </h3>
           <hr class="w-100 ba b--bluegreen mb0 mb3-ns">
           <div class="mb3 mb4-l">
-            {% assign students = people_sorted_by_name | where: "chatlab_role", "student_researcher" %}
+            {% assign students = chatlab_current | where: "chatlab_role", "student_researcher" %}
             {% for person in students %}
               <div class="pv3 pv4-l">
                 {% include components/person_chatlab.html %}
@@ -125,73 +125,74 @@ sections:
           <div class="columns-1 columns-2-m columns-3-l column-gap-4">
             <div class="break-inside-avoid mb4">
               <h4 class="f5 f4-ns bluegreen font-default b mb3">Postdoctoral researchers</h4>
-              {% assign chatlab_alums = site.data.chatlab_people | where: "alum", "true" | where: "category", "postdoctoral_researchers" | sort: "middle_last_name" %}
-              {% for person in chatlab_alums %}
+              {% assign chatlab_alums = site.data.people | where: "chatlab_group", "true" | where: "chatlab_alum", "true" | sort: "last_name" %}
+              {% assign postdocs_alums = chatlab_alums | where: "chatlab_role", "postdoctoral_researcher" %}
+              {% for person in postdocs_alums %}
                 <h5 class="f6 f5-ns font-default lh-title mb1">
-                  {{ person.first_name}} {{ person.middle_last_name }}
+                  {{ person.first_name }} {% if person.middle_initials %}{{ person.middle_initials}} {% endif %}{{ person.last_name }}
                 </h5>
               {% endfor %}
             </div>
             <div class="break-inside-avoid mb4">
               <h4 class="f5 f4-ns bluegreen font-default b mb3">Visiting researchers</h4>
-              {% assign chatlab_alums = site.data.chatlab_people | where: "alum", "true" | where: "category", "visiting_researchers" | sort: "middle_last_name" %}
-              {% for person in chatlab_alums %}
+              {% assign visiting_alums = chatlab_alums | where: "chatlab_role", "visiting_researcher" %}
+              {% for person in visiting_alums %}
                 <h5 class="f6 f5-ns font-default lh-title mb1">
-                  {{ person.first_name}} {{ person.middle_last_name }}
+                  {{ person.first_name }} {% if person.middle_initials %}{{ person.middle_initials}} {% endif %}{{ person.last_name }}
                 </h5>
               {% endfor %}
             </div>
             <div class="break-inside-avoid mb4">
               <h4 class="f5 f4-ns bluegreen font-default b mb3">Medical students</h4>
-              {% assign chatlab_alums = site.data.chatlab_people | where: "alum", "true" | where: "student_category", "medical_students" | sort: "middle_last_name" %}
-              {% for person in chatlab_alums %}
+              {% assign medical_alums = chatlab_alums | where: "chatlab_student_role", "medical_student" %}
+              {% for person in medical_alums %}
                 <h5 class="f6 f5-ns font-default lh-title mb1">
-                  {{ person.first_name}} {{ person.middle_last_name }}
+                  {{ person.first_name }} {% if person.middle_initials %}{{ person.middle_initials}} {% endif %}{{ person.last_name }}
                 </h5>
               {% endfor %}
             </div>
             <div class="break-inside-avoid mb4">
               <h4 class="f5 f4-ns bluegreen font-default b mb3">Graduate students</h4>
-              {% assign chatlab_alums = site.data.chatlab_people | where: "alum", "true" | where: "student_category", "graduate_students" | sort: "middle_last_name" %}
-              {% for person in chatlab_alums %}
+              {% assign graduate_alums = chatlab_alums | where: "chatlab_student_role", "graduate_student" %}
+              {% for person in graduate_alums %}
                 <h5 class="f6 f5-ns font-default lh-title mb1">
-                  {{ person.first_name}} {{ person.middle_last_name }}
+                  {{ person.first_name }} {% if person.middle_initials %}{{ person.middle_initials}} {% endif %}{{ person.last_name }}
                 </h5>
               {% endfor %}
             </div>
             <div class="break-inside-avoid mb4">
               <h4 class="f5 f4-ns bluegreen font-default b mb3">Postbaccalaureate students</h4>
-              {% assign chatlab_alums = site.data.chatlab_people | where: "alum", "true" | where: "student_category", "post_baccalaureate_students" | sort: "middle_last_name" %}
-              {% for person in chatlab_alums %}
+              {% assign postbacc_alums = chatlab_alums | where: "chatlab_student_role", "postbaccalaureate_student" %}
+              {% for person in postbacc_alums %}
                 <h5 class="f6 f5-ns font-default lh-title mb1">
-                  {{ person.first_name}} {{ person.middle_last_name }}
+                  {{ person.first_name }} {% if person.middle_initials %}{{ person.middle_initials}} {% endif %}{{ person.last_name }}
                 </h5>
               {% endfor %}
             </div>
             <div class="break-inside-avoid mb4">
               <h4 class="f5 f4-ns bluegreen font-default b mb3">Undergraduate & high school students</h4>
-              {% assign chatlab_alums = site.data.chatlab_people | where: "alum", "true" | where: "student_category", "undergraduate_or_hs_students" | sort: "middle_last_name" %}
-              {% for person in chatlab_alums %}
+              {% assign undergrad_hs_alums = chatlab_alums | where: "chatlab_student_role", "undergraduate_or_hs_student" %}
+              {% for person in undergrad_hs_alums %}
                 <h5 class="f6 f5-ns font-default lh-title mb1">
-                  {{ person.first_name}} {{ person.middle_last_name }}
+                  {{ person.first_name }} {% if person.middle_initials %}{{ person.middle_initials}} {% endif %}{{ person.last_name }}
                 </h5>
               {% endfor %}
             </div>
             <div class="break-inside-avoid mb4">
               <h4 class="f5 f4-ns bluegreen font-default b mb3">Lab managers</h4>
-              {% assign chatlab_alums = site.data.chatlab_people | where: "alum", "true" | where: "staff_category", "lab_managers" | sort: "middle_last_name" %}
-              {% for person in chatlab_alums %}
+              {% assign lab_manager_alums = chatlab_alums | where: "chatlab_staff_role", "lab_manager" %}
+              {% for person in lab_manager_alums %}
                 <h5 class="f6 f5-ns font-default lh-title mb1">
-                  {{ person.first_name}} {{ person.middle_last_name }}
+                  {{ person.first_name }} {% if person.middle_initials %}{{ person.middle_initials}} {% endif %}{{ person.last_name }}
                 </h5>
               {% endfor %}
             </div>
             <div class="break-inside-avoid mb4">
               <h4 class="f5 f4-ns bluegreen font-default b mb3">Patient coordinators</h4>
-              {% assign chatlab_alums = site.data.chatlab_people | where: "alum", "true" | where: "staff_category", "patient_coordinators" | sort: "middle_last_name" %}
-              {% for person in chatlab_alums %}
+              {% assign patient_coord_alums = chatlab_alums | where: "chatlab_staff_role", "patient_coordinator" %}
+              {% for person in patient_coord_alums %}
                 <h5 class="f6 f5-ns font-default lh-title mb1">
-                  {{ person.first_name}} {{ person.middle_last_name }}
+                  {{ person.first_name }} {% if person.middle_initials %}{{ person.middle_initials}} {% endif %}{{ person.last_name }}
                 </h5>
               {% endfor %}
             </div>
