@@ -31,8 +31,8 @@ if (!production) {
 } else {
   if (!devLocalData) {
     process.env['JEKYLL_ENV'] = 'production';
-    jekyllBuildExec = 'bundle exec jekyll build --config _config-production.yml';
-    jekyllWatchSpawn = ['exec', 'jekyll', 'build', '--watch', '--config', '_config-production.yml'];
+    jekyllBuildExec = 'bundle exec jekyll build';
+    jekyllWatchSpawn = ['exec', 'jekyll', 'build', '--watch'];
   } else {
     throw new Error('Cannot use `--local` with `--production` or `deploy`');
   }
