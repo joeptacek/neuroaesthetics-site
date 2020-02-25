@@ -154,7 +154,7 @@ sections:
             {% comment %}not sorting by date for now because json has been manually ordered when there are two items with same date{% endcomment %}
             {% assign news_sorted = site.data.news %}
             {% for news_item in news_sorted %}
-              {% if news_item.site_pcfn and news_item.archived == false %}
+              {% if news_item.filter_pcfn and news_item.archived == false %}
                 <div class="pv4 ph3 ph4-m ph5-l{% unless forloop.index == 1 %} bt b--black-10{% endunless %}">
                   {% include components/news.html %}
                 </div>
