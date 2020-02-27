@@ -1,20 +1,19 @@
 <head>
   <meta charset="utf-8">
-  {% case page.collection %}
-    {% when "people" %}
-      <title>PCfN → Community → {{ page.first_name }} {% if page.middle_initials %}{{ page.middle_initials}} {% endif %}{{ page.last_name }}</title>
-      <meta name="description" content="Meet {{ page.first_name }} {% if page.middle_initials %}{{ page.middle_initials}} {% endif %}{{ page.last_name }}">
-    {% when "events" %}
-      <title>PCfN → News → {{ page.title }}</title>
-      <meta name="description" content="Event page for {{ page.title }}">
-    {% when "announcements" %}
-      <title>PCfN → News → {{ page.title }}</title>
-      <meta name="description" content="Announcment page for {{ page.title }}">
-    {% else %}
-      {% comment %} e.g., for _pages {% endcomment %}
-      <title>PCfN → {{ page.title }}</title>
-      <meta name="description" content="{{ page.description }}">
-  {% endcase %}
+  {% if page.collection == "events" %}
+    <title>PCfN → News → {{ page.title }}</title>
+    <meta name="description" content="Event page for {{ page.title }}">
+  {% elsif page.collection == "announcements" %}
+    <title>PCfN → News → {{ page.title }}</title>
+    <meta name="description" content="Announcment page for {{ page.title }}">
+  {% elsif page.dir contains "people" %}
+    <title>PCfN → Community → {{ page.first_name }} {% if page.middle_initials %}{{ page.middle_initials}} {% endif %}{{ page.last_name }}</title>
+    <meta name="description" content="Meet {{ page.first_name }} {% if page.middle_initials %}{{ page.middle_initials}} {% endif %}{{ page.last_name }}">
+  {% else %}
+    {% comment %} e.g., for _pages {% endcomment %}
+    <title>PCfN → {{ page.title }}</title>
+    <meta name="description" content="{{ page.description }}">
+  {% endif %}
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arvo|Questrial">
   <link rel="stylesheet" href="/assets/css/vendor/tachyons/tachyons.css">
