@@ -715,6 +715,25 @@
     "link": false
   },
   {
+    "work_authors": "Hartung, F. Kenett, Y. N., Cardillo, E. R., Humphries, S., Klooster, N. Chatterjee, A.",
+    "work_year": 2020,
+    "work_title": "Context matters: Novel metaphors in supportive and non-supportive contexts",
+    "work_publication_format": "article_in_journal",
+    "work_doi": "10.1016/j.neuroimage.2020.116645",
+    "work_post_date_fake": 39,
+    "work_post_date": "2020-02-15",
+    "pdf": "/assets/pdf/publications/Hartung_Kenett_Cardillo_Humphries_Klooster_Chatterjee_2020_01.pdf",
+    "category": "language_and_space",
+    "journal_title": "NeuroImage",
+    "journal_advance": false,
+    "journal_preprint": false,
+    "journal_vol": 212,
+    "journal_pages_start": 116645,
+    "journal_pages_stop": 116645,
+    "review": false,
+    "link": false
+  },
+  {
     "work_authors": "Humphries, S., Klooster, N., Cardillo, E. R., Weintraub, D., Rick, J., & Chatterjee, A.",
     "work_year": 2019,
     "work_title": "From action to abstraction: The sensorimotor grounding of metaphor in Parkinson’s disease",
