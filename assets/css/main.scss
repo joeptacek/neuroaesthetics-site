@@ -1,12 +1,12 @@
 ---
 # front matter required for jekyll to compile sass
 ---
-// VARIABLES
+// VARIABLES ===================================================================
 
 $font-stack: 'Questrial', sans-serif;
 $font-stack-headers: 'Arvo', serif;
 
-// RESETS
+// RESETS ======================================================================
 
 * {
   // rethink?
@@ -527,7 +527,7 @@ h1, h2, h3, h4, h5, .font-headers {
   min-width: 100% !important;
 }
 
-// BREAKPOINT: TALL
+// BREAKPOINT: TALL ============================================================
 
 @media screen and (min-height: 960px) {
   .vh-50-tall {
@@ -550,8 +550,7 @@ h1, h2, h3, h4, h5, .font-headers {
   }
 }
 
-
-// BREAKPOINT: NOT SMALL (NS)
+// BREAKPOINT: NOT SMALL (NS) ==================================================
 
 @media screen and (min-width: 30em) {
   .dim-ns { opacity: 1; transition: none; }
@@ -603,7 +602,7 @@ h1, h2, h3, h4, h5, .font-headers {
   }
 }
 
-// BREAKPOINT: MEDIUM (M)
+// BREAKPOINT: MEDIUM (M) ======================================================
 
 @media screen and (min-width: 30em) and (max-width: 60em) {
   .dim-m { opacity: 1; transition: none; }
@@ -651,7 +650,7 @@ h1, h2, h3, h4, h5, .font-headers {
   }
 }
 
-// BREAKPOINT: LARGE (L)
+// BREAKPOINT: LARGE (L) =======================================================
 
 @media screen and (min-width: 60em) {
   .dim-l { opacity: 1; transition: none; }
