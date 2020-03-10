@@ -715,7 +715,23 @@
     "link": false
   },
   {
-    "work_authors": "Hartung, F. Kenett, Y. N., Cardillo, E. R., Humphries, S., Klooster, N. Chatterjee, A.",
+    "work_authors": "Weisberg, S., & Chatterjee, A.",
+    "work_year": 2020,
+    "work_title": "Spatial direction comprehension in images, arrows, and words in two patients with posterior cortical atrophy",
+    "work_publication_format": "article_in_journal",
+    "work_doi": "10.31219/osf.io/euty7",
+    "work_post_date_fake": 40,
+    "work_post_date": "2020-03-04",
+    "pdf": "/assets/pdf/publications/Weisberg_Chatterjee_2020_01.pdf",
+    "category": "language_and_space",
+    "journal_title": "OSF Preprints",
+    "journal_advance": false,
+    "journal_preprint": true,
+    "review": false,
+    "link": false
+  },
+  {
+    "work_authors": "Hartung, F. Kenett, Y. N., Cardillo, E. R., Humphries, S., Klooster, N., & Chatterjee, A.",
     "work_year": 2020,
     "work_title": "Context matters: Novel metaphors in supportive and non-supportive contexts",
     "work_publication_format": "article_in_journal",
