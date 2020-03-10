@@ -1,5 +1,5 @@
 <div class="f5 f4-ns lh-title">
-  {% unless person.content == "" %}<a class="db link dim" href="/people/{{ person.name_slug }}.html">{% endunless %}
+  <a class="db link dim-bio" href="/people/{{ person.name_slug }}.html">
     <div class="flex flex-column items-center flex-row-m">
       {% comment %} flex: none to avoid shrinking; i.e., img should not participate in flex resizing {% endcomment %}
       <div class="flex-none mb3 mr4-m mb0-m pa1 ba b--moon-gray br-100">
@@ -25,5 +25,5 @@
         </div>
       </div>
     </div>
-  {% unless person.content == "" %}</a>{% endunless %}
+  </a>
 </div>

@@ -9,9 +9,9 @@ sections:
 - Events & announcements
 - Neuroaesthetics news & media
 ---
-<main class="relative bg-pattern-circuit f4-m f3-l lh-copy min-vh-100 pa3 pa4-m pv5-l ph6-l">
+<main class="relative bg-near-white f4-m f3-l lh-copy min-vh-100 pa3 pa4-m pv5-l ph6-l">
   <div class="absolute absolute--fill dn db-l {{ page.big_header.bh_background }} bg-cover bg-fixed-l"></div>
-  <div class="absolute absolute--fill dn db-l bg-pattern-circuit o-90"></div>
+  <div class="absolute absolute--fill dn db-l bg-near-white o-90"></div>
   <div class="relative mw-64rem center">
 
     <section id="{{ page.sections[0] | slugify }}" class="pv3 pv4-m pv5-l">
@@ -78,17 +78,36 @@ sections:
             {% endfor %}
           {% endif %}
 
+          <div class="pv3 pv4-m pt4-l pb5-l ph3 ph4-m ph5-l bt bn-l b--black-10">
+            <div class="flex flex-column flex-row-l">
+              <p class="mb2 mb0-l mr3-l">
+                More events:
+              </p>
+              <a class="blue underline link dim-l mb2 mb0-l mr3-l" href="https://mindcore.sas.upenn.edu/events/" target="_blank">MindCORE events calendar</a>
+              <a class="blue underline link dim-l" href="https://penntoday.upenn.edu/events" target="_blank">Other events at Penn</a>
+            </div>
+          </div>
+
         {% else %}
 
-        <div class="pt3 pt4-ns pb3 pb4-m pb5-l ph3 ph4-m ph5-l">
-          <p class="silver mb3 mb4-ns">
-            Check back later for upcoming neuroaesthetics events!
-          </p>
-          <div class="flex flex-column flex-row-l">
-            <a class="blue underline link dim-l mb2 mb0-l mr3-l" href="https://mindcore.sas.upenn.edu/events/" target="_blank">MindCORE events calendar</a>
-            <a class="blue underline link dim-l" href="https://penntoday.upenn.edu/events" target="_blank">Other events at Penn</a>
+          <div class="pv3 pv4-ns ph3 ph4-m ph5-l">
+            <div class="flex items-center mb3 mb4-m mb5-l">
+              {% octicon calendar height:64 class:"fill-bluegreen" %}
+              <p class="silver ml4">
+                Check back later for upcoming neuroaesthetics events!
+              </p>
+            </div>
           </div>
-        </div>
+          <div class="pb3 pb4-m pb5-l ph3 ph4-m ph5-l">
+            <div class="flex flex-column flex-row-l">
+              <p class="mb2 mb0-l mr3-l">
+                More events:
+              </p>
+              <a class="blue underline link dim-l mb2 mb0-l mr3-l" href="https://mindcore.sas.upenn.edu/events/" target="_blank">MindCORE events calendar</a>
+              <a class="blue underline link dim-l" href="https://penntoday.upenn.edu/events" target="_blank">Other events at Penn</a>
+            </div>
+          </div>
+
 
         {% endif %}
 
@@ -110,7 +129,7 @@ sections:
 
         <div class="pv3 pv4-ns ph3 ph4-m ph5-l">
           <p class="">
-            Watch our videos or catch up with the latest neuroaesthetics news. For more videos related to neuroaesthetics, check out our <a class="blue underline link dim-l" href="https://www.youtube.com/playlist?list=PLSqOaqctiByl6Fjat9lutWJesGwe-8cyF" target="_blank">YouTube playlist.</a>
+            Learn more about neuroaesthetics and catch up with the latest news. For more videos, check out our <a class="blue underline link dim-l" href="https://www.youtube.com/playlist?list=PLSqOaqctiByl6Fjat9lutWJesGwe-8cyF" target="_blank">YouTube playlist</a>.
           </p>
         </div>
 
@@ -132,8 +151,8 @@ sections:
               </div>
             {% endfor %}
           </div>
-          <div class="js-vt-button-wrap ph3 ph4-ns pb3 pb4-ns">
-            <div class="js-vt-button flex items-center justify-center w-100 bg-near-white dim-l pointer f5 f4-ns lh-title light-silver b pv3 ph5-ns br2 shadow-6">
+          <div class="js-vt-button-wrap pb3 pb4-ns ph3 ph4-m ph5-l">
+            <div class="js-vt-button flex items-center justify-center w-100 bg-near-white shadow-6 silver f5 f4-ns b lh-title dim-l pointer pv4 ph5-ns br2">
               <span class="mr3">
                 Show more
               </span>
@@ -141,7 +160,7 @@ sections:
           </div>
         </div>
 
-        <div class="pt4 ph3 ph4-m ph5-l bt b--black-10">
+        <div class="pt4 ph3 ph4-m ph5-l">
           <h3 class="bluegreen font-default lh-title b mb1 mb2-ns">
             News
           </h3>
@@ -162,7 +181,7 @@ sections:
             {% endfor %}
           </div>
           <div class="js-vt-button-wrap ph3 ph4-ns pb3 pb4-ns">
-            <div class="js-vt-button flex items-center justify-center w-100 bg-near-white dim-l pointer f5 f4-ns lh-title light-silver b pv3 ph5-ns br2 shadow-6">
+            <div class="js-vt-button flex items-center justify-center w-100 bg-near-white shadow-6 silver f5 f4-ns b lh-title dim-l pointer pv4 ph5-ns br2">
               <span class="mr3">
                 Show more
               </span>
