@@ -1,5 +1,5 @@
 <div class="f5 f4-ns lh-title">
-  <a class="db link dim" href="{% if event.ext_event_url %}{{ event.ext_event_url }}{% else %}{{ event.url }}{% endif %}" {% if event.ext_event_url %}target="_blank"{% endif %}>
+  <a class="db link dim-l" href="{% if event.ext_event_url %}{{ event.ext_event_url }}{% else %}{{ event.url }}{% endif %}" {% if event.ext_event_url %}target="_blank"{% endif %}>
     <div class="flex flex-column items-center flex-row-l">
       <div class="flex-none mb4 mb0-l mr5-l">
         <div class="flex pa1 ba br-100 b--moon-gray">
@@ -8,7 +8,7 @@
         </div>
       </div>
       <div class="tc tl-l">
-        <h4 class="f5 f4-m f3-l bluegreen font-default b mb3">
+        <h4 class="f4 f3-l bluegreen font-default b mb3">
           {{ event.title | smartify }}
         </h4>
         {% if event.source %}

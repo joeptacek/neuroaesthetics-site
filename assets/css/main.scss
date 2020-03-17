@@ -415,6 +415,10 @@ h1, h2, h3, h4, h5, .font-headers {
   fill: #f4f4f4;
 }
 
+.fill-light-silver {
+  fill: #aaa;
+}
+
 .fill-silver {
   fill: #999;
 }
@@ -664,8 +668,8 @@ h1, h2, h3, h4, h5, .font-headers {
   .dim-l:hover, .dim-l:focus { opacity: .5; transition: none; }
   .dim-l:active { opacity: .8; transition: none; }
 
-  .w-150-px-l {
-    width: 150px;
+  .w-160-px-l {
+    width: 160px;
   }
 
   .mw-20rem-l {

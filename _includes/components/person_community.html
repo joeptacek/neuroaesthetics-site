@@ -1,9 +1,7 @@
 <div class="f5 f4-ns lh-title">
-  <a class="db link dim-bio" href="/people/{{ person.name_slug }}.html">
+  <a class="db link dim-l" href="/people/{{ person.name_slug }}.html">
     <div class="flex flex-column items-center flex-row-m">
-      {% comment %} flex: none to avoid shrinking; i.e., img should not participate in flex resizing {% endcomment %}
       <div class="flex-none mb3 mr4-m mb0-m pa1 ba b--moon-gray br-100">
-        {% comment %} display: block to avoid space under img, otherwise parent container and its border are stretched {% endcomment %}
         <img class="db br-100" src="{{ person.photo }}" alt="{{ person.first_name }} {% if person.middle_initials %}{{ person.middle_initials}} {% endif %}{{ person.last_name }}" width="225" />
       </div>
       <div class="tc tl-m">

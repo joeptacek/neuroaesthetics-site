@@ -1,14 +1,19 @@
 <div class="f5 f4-ns lh-title">
-  <a class="db link dim" href="{{ highlight.url }}" target="_blank">
+  <a class="db link dim-l{% if highlight.links %} mb4{% endif %}" href="{{ highlight.url }}" target="_blank">
     <div class="flex flex-column items-center flex-row-l">
       <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mb4 mb0-l mr5-l">
         <img class="db br1" src="{{ highlight.highlights_data.highlights_photo }}" alt="Thumbnail for {{ hightlight.title }}" />
       </div>
       <div class="tc tl-l">
-        <h4 class="f5 f4-m f3-l bluegreen b font-default mb3">
+        <div class="flex items-center justify-center justify-start-l silver mb2">
+          <p class="mb0 mr3">{{ highlight.date | date: "%B %e, %Y" }}</p>
+          <div class="dn flex-ns items-center-ns">{% octicon device-camera-video height: 18 class:"fill-light-silver" %}</div>
+          <div class="flex items-center dn-ns">{% octicon device-camera-video height: 14 class:"fill-light-silver" %}</div>
+        </div>
+        <h4 class="f4 f3-l bluegreen b font-default mb3">
           {{ highlight.title | smartify }}
         </h4>
-        <p class="dib bluegreen pv1 ph2 ba bw1 b--bluegreen br2">
+        <p class="dib bluegreen pv1 ph2 ba bw1 b--bluegreen br2 mb0">
           {% if highlight.source_short and highlight.source_short != "" %}
             <span class="dn-ns">{{ highlight.source_short }}</span>
             <span class="dn dib-ns">{{ highlight.source }}</span>
@@ -19,4 +24,12 @@
       </div>
     </div>
   </a>
+  {% if highlight.links %}
+    <p class="f6 f5-m f4-l tc tl-l silver">
+      {{ highlight.links.list_title }}:
+      {% for link in highlight.links.list %}
+        <a class="link blue underline dim" href="{{ link.url }}" target="_blank">{{ link.name }}</a>{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    </p>
+  {% endif %}
 </div>
