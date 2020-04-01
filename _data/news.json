@@ -1,5 +1,19 @@
 [
   {
+    "title": "What Is Art Good For?",
+    "source": "Brain, Behavior, and Beauty",
+    "date": "2020-04-01",
+    "url": "https://www.psychologytoday.com/us/blog/brain-behavior-and-beauty/202004/what-is-art-good",
+    "category": "print",
+    "archived": false,
+    "filter_pcfn": true,
+    "blog_data": {
+      "img": "/assets/img/blog/anjan-chatterjee--mural-by-desiree-guinn.jpg",
+      "img_attribution": "Mural by Desireé Guinn, photo by Anjan Chatterjee",
+      "teaser": "Many shelter in place during the pandemic only going out for walks. Can street art be a salve for wounded times?"
+    }
+  },
+  {
     "title": "How the Brain Responds to Architecture",
     "source": "Brain, Behavior, and Beauty",
     "date": "2020-02-26",
@@ -128,7 +142,7 @@
     "archived": false,
     "filter_pcfn": true,
     "blog_data": {
-      "img": "/assets/img/blog/william-gowers-after-st-leger--paralysis agitans.jpg",
+      "img": "/assets/img/blog/william-gowers-after-st-leger--paralysis-agitans.jpg",
       "img_attribution": "Image by William Gowers after St. Leger, from the Internet Archive",
       "teaser": "Thought and language in early Parkinson’s disease teaches us about the relationship between body and mind."
     }
