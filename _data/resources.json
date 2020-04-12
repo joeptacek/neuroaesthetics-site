@@ -68,10 +68,30 @@
     ]
   },
   {
+    "title": "ChatLab Facial Anomaly Database (CFAD)",
+    "title_short": "CFAD",
+    "css": {
+      "background": "bg-gradient-rainbow-1d",
+      "text": "f2"
+    },
+    "description": "The CFAD was developed to facilitate research on biases towards individuals with facial anomalies. The database allows searching by age, sex, ethnicity, pose, and type/etiology of anomaly. Retrieve original stimuli or view images at various stages of pre-processing, e.g., normalized to interpupillary distance.",
+    "sources": [
+      {
+        "title": "The CFAD is available on the website of Cliff Workman, Ph.D.",
+        "links": [
+          {
+            "title": "Visit CFAD website",
+            "url": "https://cliffordworkman.com/resources/"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "title": "Cardillo Normed Metaphors",
     "title_short": "Cardillo Metaphors",
     "css": {
-      "background": "bg-gradient-rainbow-1d",
+      "background": "bg-gradient-rainbow-1e",
       "text": "f3"
     },
     "description": "We provide 400 pairs of matched metaphoric and literal sentences. The set features metaphors of three types (nominal-entity, nominal-event, and predicate) and two modalities (sound, motion), and has been normed on 10+ psycholinguistic and theoretically-relevant properties (e.g. familiarity, interpretability, imageability, beauty).",
@@ -121,7 +141,7 @@
     "title": "Ratinginstrument für zweidimensionale bildnerische Arbeiten (RizbA)—Rating Instrument for Two-Dimensional Pictorial Work",
     "title_short": "RizbA",
     "css": {
-      "background": "bg-gradient-rainbow-1e",
+      "background": "bg-gradient-rainbow-1a",
       "text": "f2"
     },
     "description": "The RizbA is a 26-item survey designed to evaluate pictorial expression, as theoretically defined by 7 content areas: representation, color, shape, space, motion, composition, expression. English translations for survey items are provided in the original publication, and an empirically-validated version of the translated survey is in development.",
