@@ -54,7 +54,7 @@ sections:
 
             {% assign projects_built_env = site.data.projects | where: "category", "the_built_environment_and_wellness" %}
             {% for project in projects_built_env %}
-              {% include components/project.html %}
+              {% include components/project.html param=project %}
             {% endfor %}
 
           </section>
@@ -68,7 +68,7 @@ sections:
 
             {% assign projects_engagement = site.data.projects | where: "category", "engagement_with_art" %}
             {% for project in projects_engagement %}
-              {% include components/project.html %}
+              {% include components/project.html param=project %}
             {% endfor %}
 
           </section>
