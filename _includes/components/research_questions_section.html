@@ -1,0 +1,24 @@
+<div class="flex flex-column items-center flex-row-l items-start-l mb4 mb5-ns">
+  <div class="flex-none mw-20rem-ns pa1 ba br1 br-100-ns b--moon-gray mb2 mb3-m mb0-l mr5-l">
+    <img class="db br1 br-100-ns" src="{{ include.param.img_src }}" alt="{{ include.param.img_alt }}" />
+  </div>
+  <div class="flex flex-column">
+    <p class="self-center-m self-start-l order-last-l f6 f5-l light-silver mw-20rem-m mb3 mb0-l">
+      {{ include.param.img_attribution }}
+    </p>
+    <h3 class="bluegreen font-default lh-title b mb3">
+      {{ include.param.section_title }}
+    </h3>
+    <p class="mb3 mb4-ns">
+      {{ include.param.section_description }}
+    </p>
+    <ul class="list gray f5 f4-ns lh-title pl0 mb0 mb4-l">
+      {% for question in include.param.question_list %}
+        <li class="{% unless forloop.last %}mb2 mb3-ns{% endunless %}">{{ question }}</li>
+      {% endfor %}
+    </ul>
+    <p>
+      <!-- Dummy last-child to absorb stupid *:last-child { margin-bottom: 0 !important } -->
+    </p>
+  </div>
+</div>
