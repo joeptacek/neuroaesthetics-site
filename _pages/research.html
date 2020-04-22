@@ -38,44 +38,10 @@ sections:
             </h3>
             <hr class="w-100 ba b--bluegreen mb3 mb4-ns">
 
-            <div class="flex flex-column items-center flex-row-l items-start-l mb4 mb5-l">
-              <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mr5-l mb2 mb3-m mb0-l">
-                <div class="js-carousel-container">
-                  <img class="br1" src="/assets/img/projects/faces/modified.jpg" alt="" height="" width="">
-                  <img class="br1" src="/assets/img/projects/faces/original.jpg" alt="" height="" width="">
-                </div>
-              </div>
-              <div class="flex flex-column">
-                <p class="self-center-m self-start-l order-last-l f6 f5-l light-silver mw-20rem-m mb3 mb0-l">
-                  Original image from the <a class="link blue underline dim-l" href="https://chicagofaces.org" target="_blank">Chicago Face Database</a>
-                </p>
-                <p class="f5 f4-l mb0 mb3-l">
-                  Our research shows that people with facial anomalies, such as scars or paralysis, are viewed as having worse social traits. These problematic stereotypes are associated with implicit biases and neural responses suggestive of diminished empathy and possibly, dehumanization.
-                </p>
-                <p>
-                  <!-- Dummy last-child to absorb stupid *:last-child { margin-bottom: 0 !important } -->
-                </p>
-              </div>
-            </div>
-
-            <div class="flex flex-column items-center flex-row-l items-start-l mb4 mb5-l">
-              <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mr5-l mb2 mb3-m mb0-l">
-                <div class="js-carousel-container">
-                  <img class="br1" src="/assets/img/projects/bodies/original.png" alt="" height="" width="">
-                  <img class="br1" src="/assets/img/projects/bodies/painted.png" alt="" height="" width="">
-                </div>
-              </div>
-              <div class="flex flex-column">
-                <p class="self-center-m self-start-l order-last-l f6 f5-l light-silver mw-20rem-m mb3 mb0-l">
-                  Original images from the <a class="link blue underline dim-l" href="http://www.uconnruddcenter.org/" target="_blank">UConn Rudd Center for Food Policy & Obesity</a>
-                </p>
-                <p class="f5 f4-l mb0 mb3-l">
-                  We also study how individuals are judged based on other physical features such as body weight. We examine whether these sorts of harmful biases are malleable and context dependent—for instance, when photographs are modified to look like works of art.                </p>
-                <p>
-                  <!-- Dummy last-child to absorb stupid *:last-child { margin-bottom: 0 !important } -->
-                </p>
-              </div>
-            </div>
+            {% assign projects_beauty_morality = site.data.projects | where: "category", "beauty_and_morality" %}
+            {% for project in projects_beauty_morality %}
+              {% include components/project.html param=project %}
+            {% endfor %}
 
           </section>
 
@@ -86,123 +52,27 @@ sections:
             </h3>
             <hr class="w-100 ba b--bluegreen mb3 mb4-ns">
 
-            <div class="flex flex-column items-center flex-row-l items-start-l mb4 mb5-l">
-              <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mr5-l mb2 mb3-m mb0-l">
-                <div class="js-carousel-container">
-                  <img class="br1" src="/assets/img/projects/architecture/steven-spassov-54423-unsplash.jpg" alt="" height="" width="">
-                  <img class="br1" src="/assets/img/projects/architecture/jean-philippe-delberghe-756057-unsplash.jpg" alt="" height="" width="">
-                  <img class="br1" src="/assets/img/projects/architecture/john-towner-133303-unsplash.jpg" alt="" height="" width="">
-                  <img class="br1" src="/assets/img/projects/architecture/manu-schwendener-7567-unsplash.jpg" alt="" height="" width="">
-                </div>
-              </div>
-              <div class="flex flex-column">
-                <p class="self-center-m self-start-l order-last-l f6 f5-l light-silver mw-20rem-m mb3 mb0-l">
-                  Images by <a class="link blue underline dim-l" href="https://unsplash.com/@stevenspassov" target="_blank">Steven Spassov</a>, <a class="link blue underline dim-l" href="https://unsplash.com/@jipy32" target="_blank">Jean-Philipe Delberghe</a>, <a class="link blue underline dim-l" href="https://unsplash.com/@heytowner" target="_blank">John Towner</a>, and <a class="link blue underline dim-l" href="https://unsplash.com/@manuschwendener" target="_blank">Manu Schwendener</a>
-                </p>
-                <p class="f5 f4-l mb0 mb3-l">
-                  What are the specific features of interior and exterior spaces that promote wellness? We investigate how various design features, such as ceiling height or wall curvature, can determine our experiences along certain psychological dimensions—coherence, fascination, and hominess.
-                </p>
-                <p>
-                  <!-- Dummy last-child to absorb stupid *:last-child { margin-bottom: 0 !important } -->
-                </p>
-              </div>
-            </div>
-
-            <div class="flex flex-column items-center flex-row-l items-start-l mb4 mb5-l">
-              <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mr5-l mb2 mb3-m mb0-l">
-                <div class="js-carousel-container">
-                  <img class="br1" src="/assets/img/projects/ewingcole/view1.jpg" alt="" height="" width="">
-                  <img class="br1" src="/assets/img/projects/ewingcole/view2.jpg" alt="" height="" width="">
-                  <img class="br1" src="/assets/img/projects/ewingcole/floorplan.png" alt="" height="" width="">
-                </div>
-              </div>
-              <div class="flex flex-column">
-                <p class="self-center-m self-start-l order-last-l f6 f5-l light-silver mw-20rem-m mb3 mb0-l">
-                  Images from <a class="link blue underline dim-l" href="https://www.ewingcole.com/" target="_blank">EwingCole</a>
-                </p>
-                <p class="f5 f4-l mb0 mb3-l">
-                  In collaboration with the architecture firm <a class="link blue underline dim-l" href="https://www.ewingcole.com/" target="_blank">EwingCole</a>, we're using neuroaesthetics principles to help design residential spaces for people with short term memory deficits. A new memory care facility incorporating these principles will be built in Quakertown, Pennsylvania.
-                </p>
-                <p>
-                  <!-- Dummy last-child to absorb stupid *:last-child { margin-bottom: 0 !important } -->
-                </p>
-              </div>
-            </div>
+            {% assign projects_built_env = site.data.projects | where: "category", "the_built_environment_and_wellness" %}
+            {% for project in projects_built_env %}
+              {% include components/project.html %}
+            {% endfor %}
 
           </section>
 
 
-          <section id="engagement-with-art" class="pt3 pv3-m pv4-l">
+          <section id="engagement-with-art" class="pv3 pv4-l">
             <h3 class="bluegreen font-default lh-title b mb1 mb2-ns">
               Engagement with art
             </h3>
             <hr class="w-100 ba b--bluegreen mb3 mb4-ns">
 
-            <div class="flex flex-column items-center flex-row-l items-start-l mb4 mb5-l">
-              <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mr5-l mb2 mb3-m mb0-l">
-                <div class="js-carousel-container">
-                  <img class="br1" src="/assets/img/projects/gradients/original.png" alt="" height="" width="">
-                  <img class="br1" src="/assets/img/projects/gradients/gradients-strength.png" alt="" height="" width="">
-                  <img class="br1" src="/assets/img/projects/gradients/gradients-orientation.png" alt="" height="" width="">
-                </div>
-              </div>
-              <div class="flex flex-column">
-                <p class="self-center-m self-start-l order-last-l f6 f5-l light-silver mw-20rem-m mb3 mb0-l">
-                  Portrait of Louise-Antoinette Feuardent by Jean-François Millet, from the <a class="link blue underline dim-l" href="http://www.getty.edu/museum/" target="_blank">J. Paul Getty Museum</a> online collection
-                </p>
-                <p class="f5 f4-l mb0 mb3-l">
-                  There are many ways to measure the physical properties of an image. One approach is to study patterns in low level features, such as in the distribution of visual edges in a work of art. Based on the strength and orientation of edges, we can quantify properties such as visual complexity and measure the extent to which these properties affect our aesthetic preferences.
-                </p>
-                <p>
-                  <!-- Dummy last-child to absorb stupid *:last-child { margin-bottom: 0 !important } -->
-                </p>
-              </div>
-            </div>
-
-            <div class="flex flex-column items-center flex-row-l items-start-l mb4 mb5-l">
-              <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mr5-l mb2 mb3-m mb0-l">
-                <div class="js-carousel-container">
-                  <img class="br1" src="/assets/img/projects/motion/pma-mondrian.jpg" alt="" height="" width="">
-                  <img class="br1" src="/assets/img/projects/motion/pma-pollock.jpg" alt="" height="" width="">
-                </div>
-              </div>
-              <div class="flex flex-column">
-                <p class="self-center-m self-start-l order-last-l f6 f5-l light-silver mw-20rem-m mb3 mb0-l">
-                  No. 22 by Jackson Pollock and Composition with Blue and Yellow by Piet Mondrian, from the <a class="link blue underline dim-l" href="https://www.philamuseum.org/" target="_blank">Philadelphia Museum of Art</a> online collection
-                </p>
-                <p class="f5 f4-l mb0 mb3-l">
-                  Individuals perceive a varying quality of motion in abstract work by artists like Jackson Pollock and Piet Mondrian. We examine how this motion affects aesthetic preferences. We're also exploring whether preferences for motion are affected in individuals with Parkinson’s disease, who may have difficulty forming representations of action and movement.
-                </p>
-                <p>
-                  <!-- Dummy last-child to absorb stupid *:last-child { margin-bottom: 0 !important } -->
-                </p>
-              </div>
-            </div>
-
-            <div class="flex flex-column items-center flex-row-l items-start-l">
-              <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mr5-l mb2 mb3-m mb0-l">
-                <div class="js-carousel-container">
-                  <img class="br1" src="/assets/img/projects/networks/network-1.png" alt="" height="" width="">
-                  <img class="br1" src="/assets/img/projects/networks/network-2.png" alt="" height="" width="">
-                  <img class="br1" src="/assets/img/projects/networks/network-3.png" alt="" height="" width="">
-                  <img class="br1" src="/assets/img/projects/networks/network-4.png" alt="" height="" width="">
-                  <img class="br1" src="/assets/img/projects/networks/network-5.png" alt="" height="" width="">
-                </div>
-              </div>
-              <div class="flex flex-column">
-                <p class="self-center-m self-start-l order-last-l f6 f5-l light-silver mw-20rem-m mb3 mb0-l">
-                  Images from the <a class="link blue underline dim-l" href="https://neuroaesthetics.med.upenn.edu/" target="_blank">Penn Center for Neuroaesthetics</a>
-                </p>
-                <p class="f5 f4-l mb0 mb3-l">
-                  There is enormous variety in the universe of visual art. A powerful method to bring order to this chaos is network analysis. Networks help us cluster images that have similar physical properties or that have been described using similar language. These groupings help us reveal underlying patterns in how we respond to art and what drives our appreciation for beauty.
-                </p>
-                <p>
-                  <!-- Dummy last-child to absorb stupid *:last-child { margin-bottom: 0 !important } -->
-                </p>
-              </div>
-            </div>
+            {% assign projects_engagement = site.data.projects | where: "category", "engagement_with_art" %}
+            {% for project in projects_engagement %}
+              {% include components/project.html %}
+            {% endfor %}
 
           </section>
+
 
           <section class="pt3 pt4-l">
             <div class="flex flex-column items-start flex-row-ns items-center-ns">
