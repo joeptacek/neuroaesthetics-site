@@ -22,87 +22,11 @@ description: Penn Center for Neuroaesthetics (PCfN), directed by Anjan Chatterje
           </h2>
           <hr class="w-100 ba b--bluegreen mb3 mb4-ns">
 
-          <div class="flex flex-column items-center flex-row-l items-start-l mb4 mb5-ns">
-            <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mb2 mb3-m mb0-l mr5-l">
-              <div class="js-carousel-container">
-                <img class="br1" src="/assets/img/themes/beauty-morality/modified.jpg" alt="Modified version of image from the Chicago Face Database" />
-                <img class="br1" src="/assets/img/themes/beauty-morality/original.jpg" alt="Image from the Chicago Face Database" />
-              </div>
-            </div>
-            <div class="flex flex-column">
-              <p class="self-center-m self-start-l order-last-l f6 f5-l light-silver mw-20rem-m mb3 mb0-l">
-                Original image from the <a class="link blue underline dim-l" href="https://chicagofaces.org" target="_blank">Chicago Face Database</a>
-              </p>
-              <h3 class="self-center-m bluegreen lh-title font-default b mb3">
-                Beauty and morality
-              </h3>
-              <p class="f5 f4-ns mb3">
-                Our brains respond automatically to beauty, and these automatic responses have downstream consequences in our attitudes, biases, and behavior.
-              </p>
-              <a class="flex-none self-center self-start-l f5 f4-ns bluegreen tc b link dim-l w-100 w-auto-ns pv2 ph3 ba bw1 br3 b--bluegreen mb3-l" href="/research.html#beauty-and-morality">
-                Current projects →
-              </a>
-              <p>
-                <!-- Dummy last-child to absorb stupid *:last-child { margin-bottom: 0 !important } -->
-              </p>
-            </div>
-          </div>
+          {% assign themes = site.data.themes %}
+          {% for theme in themes %}
+            {% include components/theme.html param=theme %}
+          {% endfor %}
 
-          <div class="flex flex-column items-center flex-row-l items-start-l mb4 mb5-ns">
-            <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mb2 mb3-m mb0-l mr5-l">
-              <div class="js-carousel-container">
-                <img class="br1" src="/assets/img/themes/built-environment/vince-fleming-Ie5wWGbtA4g-unsplash.jpg" alt="Image by Vince Fleming" />
-                <img class="br1" src="/assets/img/themes/built-environment/ryoji-iwata-G_cvhHbo7OY-unsplash.jpg" alt="Image by Ryoji Iwata" />
-                <img class="br1" src="/assets/img/themes/built-environment/christian-fregnan-1WBtk8m-Xxs-unsplash.jpg" alt="Image by Christian Fregnan" />
-                <img class="br1" src="/assets/img/themes/built-environment/jp-valery-b8CdVExTuUw-unsplash.jpg" alt="Image by Jp Valery" />
-              </div>
-            </div>
-            <div class="flex flex-column">
-              <p class="self-center-m self-start-l order-last-l f6 f5-l light-silver mw-20rem-m mb3 mb0-l">
-                Images by <a class="link blue underline dim-l" href="https://unsplash.com/@vincefleming" target="_blank">Vince Fleming</a>, <a class="link blue underline dim-l" href="https://unsplash.com/@ryoji__iwata" target="_blank">Ryoji Iwata</a>, <a class="link blue underline dim-l" href="https://unsplash.com/@christianfregnan" target="_blank">Christian Fregnan</a>, and <a class="link blue underline dim-l" href="https://unsplash.com/@jpvalery" target="_blank">Jp Valery</a>
-              </p>
-              <h3 class="self-center-m bluegreen lh-title font-default b mb3">
-                The built environment and wellness
-              </h3>
-              <p class="f5 f4-ns mb3">
-                Most people in the developed world spend more than 90% of their time in built environments. We're investigating how these environments affect our sense of well-being and can either promote or interfere with human flourishing.
-              </p>
-              <a class="flex-none self-center self-start-l f5 f4-ns bluegreen tc b link dim-l w-100 w-auto-ns pv2 ph3 ba bw1 br3 b--bluegreen mb3-l" href="/research.html#the-built-environment-and-wellness">
-                Current projects →
-              </a>
-              <p>
-                <!-- Dummy last-child to absorb stupid *:last-child { margin-bottom: 0 !important } -->
-              </p>
-            </div>
-          </div>
-
-          <div class="flex flex-column items-center flex-row-l items-start-l mb4 mb5-ns">
-            <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mb2 mb3-m mb0-l mr5-l">
-              <div class="js-carousel-container">
-                <img class="br1" src="/assets/img/themes/engagement-with-art/christian-fregnan-ewiYQxLTGEU-unsplash.jpg" alt="Image by Christian Fregnan" />
-                <img class="br1" src="/assets/img/themes/engagement-with-art/ian-dooley-ZLBzMGle-nE-unsplash.jpg" alt="Image by ian dooley" />
-                <img class="br1" src="/assets/img/themes/engagement-with-art/stijn-te-strake-VwhZm4LRQYs-unsplash.jpg" alt="Image by Stijn te Strake" />
-                <img class="br1" src="/assets/img/themes/engagement-with-art/vaclav-pluhar-uqMBLm8bAdA-unsplash.jpg" alt="Image by Václav Pluhař" />
-              </div>
-            </div>
-            <div class="flex flex-column">
-              <p class="self-center-m self-start-l order-last-l f6 f5-l light-silver mw-20rem-m mb3 mb0-l">
-                Images by <a class="link blue underline dim-l" href="https://unsplash.com/@christianfregnan" target="_blank">Christian Fregnan</a>, <a class="link blue underline dim-l" href="https://unsplash.com/@sadswim" target="_blank">ian dooley</a>, <a class="link blue underline dim-l" href="https://unsplash.com/@stijntestrake" target="_blank">Stijn te Strake</a>, and <a class="link blue underline dim-l" href="https://unsplash.com/@vaclavpluhar" target="_blank">Václav Pluhař</a>
-              </p>
-              <h3 class="self-center-m bluegreen lh-title font-default b mb3">
-                Engagement with art
-              </h3>
-              <p class="f5 f4-ns mb3">
-                Humans have a decorative impulse, as evidenced by the aesthetic care taken in crafting objects and artifacts throughout human history. We're interested in understanding the nature of engagement with the arts—the paradox that seemingly non-utilitarian features of objects have such a persistent grip on us.
-              </p>
-              <a class="flex-none self-center self-start-l f5 f4-ns bluegreen tc b link dim-l w-100 w-auto-ns pv2 ph3 ba bw1 br3 b--bluegreen mb3-l" href="/research.html#engagement-with-art">
-                Current projects →
-              </a>
-              <p>
-                <!-- Dummy last-child to absorb stupid *:last-child { margin-bottom: 0 !important } -->
-              </p>
-            </div>
-          </div>
 
           <h2 class="bluegreen font-default lh-title b mb1 mb2-ns">
             Questions

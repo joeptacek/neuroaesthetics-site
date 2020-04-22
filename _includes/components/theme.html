@@ -1,0 +1,26 @@
+<div class="flex flex-column items-center flex-row-l items-start-l mb4 mb5-ns">
+  <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mb2 mb3-m mb0-l mr5-l">
+    <div class="js-carousel-container">
+      {% for img in include.param.img_carousel %}
+        <img class="br1" src="{{ img.img_src }}" alt="{{ img.img_alt }}" />
+      {% endfor %}
+    </div>
+  </div>
+  <div class="flex flex-column">
+    <p class="self-center-m self-start-l order-last-l f6 f5-l light-silver mw-20rem-m mb3 mb0-l">
+      {{ include.param.img_attribution }}
+    </p>
+    <h3 class="self-center-m bluegreen lh-title font-default b mb3">
+      {{ include.param.theme_title }}
+    </h3>
+    <p class="f5 f4-ns mb3">
+      {{ include.param.theme_description }}
+    </p>
+    <a class="flex-none self-center self-start-l f5 f4-ns bluegreen tc b link dim-l w-100 w-auto-ns pv2 ph3 ba bw1 br3 b--bluegreen mb3-l" href="{{ include.param.link }}">
+      Current projects →
+    </a>
+    <p>
+      <!-- Dummy last-child to absorb stupid *:last-child { margin-bottom: 0 !important } -->
+    </p>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+[
+  {
+    "theme_title": "Beauty and morality",
+    "img_carousel": [
+      {
+        "img_src": "/assets/img/themes/beauty-morality/modified.jpg",
+        "img_alt": "Modified version of image from the Chicago Face Database"
+      },
+      {
+        "img_src": "/assets/img/themes/beauty-morality/original.jpg",
+        "img_alt": "Image from the Chicago Face Database"
+      }
+    ],
+    "img_attribution": "Original image from the <a class='link blue underline dim-l' href='https://chicagofaces.org' target='_blank'>Chicago Face Database</a>",
+    "theme_description": "Our brains respond automatically to beauty, and these automatic responses have downstream consequences in our attitudes, biases, and behavior.",
+    "link": "/research.html#beauty-and-morality"
+  },
+  {
+    "theme_title": "The built environment and wellness",
+    "img_carousel": [
+      {
+        "img_src": "/assets/img/themes/built-environment/vince-fleming-Ie5wWGbtA4g-unsplash.jpg",
+        "img_alt": "Image by Vince Fleming"
+      },
+      {
+        "img_src": "/assets/img/themes/built-environment/ryoji-iwata-G_cvhHbo7OY-unsplash.jpg",
+        "img_alt": "Image by Ryoji Iwata"
+      },
+      {
+        "img_src": "/assets/img/themes/built-environment/christian-fregnan-1WBtk8m-Xxs-unsplash.jpg",
+        "img_alt": "Image by Christian Fregnan"
+      },
+      {
+        "img_src": "/assets/img/themes/built-environment/jp-valery-b8CdVExTuUw-unsplash.jpg",
+        "img_alt": "Image by Jp Valery"
+      }
+    ],
+    "img_attribution": "Images by <a class='link blue underline dim-l' href='https://unsplash.com/@vincefleming' target='_blank'>Vince Fleming</a>, <a class='link blue underline dim-l' href='https://unsplash.com/@ryoji__iwata' target='_blank'>Ryoji Iwata</a>, <a class='link blue underline dim-l' href='https://unsplash.com/@christianfregnan' target='_blank'>Christian Fregnan</a>, and <a class='link blue underline dim-l' href='https://unsplash.com/@jpvalery' target='_blank'>Jp Valery</a>",
+    "theme_description": "Most people in the developed world spend more than 90% of their time in built environments. We're investigating how these environments affect our sense of well-being and can either promote or interfere with human flourishing.",
+    "link": "/research.html#the-built-environment-and-wellness"
+  },
+  {
+    "theme_title": "Engagement with art",
+    "img_carousel": [
+      {
+        "img_src": "/assets/img/themes/engagement-with-art/christian-fregnan-ewiYQxLTGEU-unsplash.jpg",
+        "img_alt": "Image by Christian Fregnan"
+      },
+      {
+        "img_src": "/assets/img/themes/engagement-with-art/ian-dooley-ZLBzMGle-nE-unsplash.jpg",
+        "img_alt": "Image by ian dooley"
+      },
+      {
+        "img_src": "/assets/img/themes/engagement-with-art/stijn-te-strake-VwhZm4LRQYs-unsplash.jpg",
+        "img_alt": "Image by Stijn te Strake"
+      },
+      {
+        "img_src": "/assets/img/themes/engagement-with-art/vaclav-pluhar-uqMBLm8bAdA-unsplash.jpg",
+        "img_alt": "Image by Václav Pluhař"
+      }
+    ],
+    "img_attribution": "Images by <a class='link blue underline dim-l' href='https://unsplash.com/@christianfregnan' target='_blank'>Christian Fregnan</a>, <a class='link blue underline dim-l' href='https://unsplash.com/@sadswim' target='_blank'>ian dooley</a>, <a class='link blue underline dim-l' href='https://unsplash.com/@stijntestrake' target='_blank'>Stijn te Strake</a>, and <a class='link blue underline dim-l' href='https://unsplash.com/@vaclavpluhar' target='_blank'>Václav Pluhař</a>",
+    "theme_description": "Humans have a decorative impulse, as evidenced by the aesthetic care taken in crafting objects and artifacts throughout human history. We're interested in understanding the nature of engagement with the arts—the paradox that seemingly non-utilitarian features of objects have such a persistent grip on us.",
+    "link": "/research.html#engagement-with-art"
+  }
+]
