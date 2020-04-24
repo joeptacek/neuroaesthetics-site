@@ -3,12 +3,12 @@
     "category": "beauty_and_morality",
     "img_carousel": [
       {
-        "img_src": "/assets/img/projects/faces/modified.jpg",
-        "img_alt": ""
+        "img_src": "/assets/img/projects/faces/modified.jpg?ver=2",
+        "img_alt": "Modified image from the Chicago Face Database"
       },
       {
-        "img_src": "/assets/img/projects/faces/original.jpg",
-        "img_alt": ""
+        "img_src": "/assets/img/projects/faces/original.jpg?ver=2",
+        "img_alt": "Original image from the Chicago Face Database"
       }
     ],
     "img_attribution": "Original image from the <a class='link blue underline dim-l' href='https://chicagofaces.org' target='_blank'>Chicago Face Database</a>",
@@ -18,12 +18,12 @@
     "category": "beauty_and_morality",
     "img_carousel": [
       {
-        "img_src": "/assets/img/projects/bodies/original.png",
-        "img_alt": ""
+        "img_src": "/assets/img/projects/bodies/original.jpg?ver=2",
+        "img_alt": "Original image from the UConn Rudd Center for Food Policy & Obesity"
       },
       {
-        "img_src": "/assets/img/projects/bodies/painted.png",
-        "img_alt": ""
+        "img_src": "/assets/img/projects/bodies/painted.jpg?ver=2",
+        "img_alt": "Modified image from the UConn Rudd Center for Food Policy & Obesity"
       }
     ],
     "img_attribution": "Original images from the <a class='link blue underline dim-l' href='http://www.uconnruddcenter.org/' target='_blank'>UConn Rudd Center for Food Policy & Obesity</a>",
@@ -33,20 +33,20 @@
     "category": "the_built_environment_and_wellness",
     "img_carousel": [
       {
-        "img_src": "/assets/img/projects/architecture/steven-spassov-54423-unsplash.jpg",
-        "img_alt": ""
+        "img_src": "/assets/img/projects/architecture/steven-spassov-54423-unsplash.jpg?ver=2",
+        "img_alt": "Architectural photo by Steven Spassov"
       },
       {
-        "img_src": "/assets/img/projects/architecture/jean-philippe-delberghe-756057-unsplash.jpg",
-        "img_alt": ""
+        "img_src": "/assets/img/projects/architecture/jean-philippe-delberghe-756057-unsplash.jpg?ver=2",
+        "img_alt": "Architectural photo by Jean-Phillipe Delberghe"
       },
       {
-        "img_src": "/assets/img/projects/architecture/john-towner-133303-unsplash.jpg",
-        "img_alt": ""
+        "img_src": "/assets/img/projects/architecture/john-towner-133303-unsplash.jpg?ver=2",
+        "img_alt": "Architectural photo by John Towner"
       },
       {
-        "img_src": "/assets/img/projects/architecture/manu-schwendener-7567-unsplash.jpg",
-        "img_alt": ""
+        "img_src": "/assets/img/projects/architecture/manu-schwendener-7567-unsplash.jpg?ver=2",
+        "img_alt": "Architectural photo by Manu Schwendener"
       }
     ],
     "img_attribution": "Images by <a class='link blue underline dim-l' href='https://unsplash.com/@stevenspassov' target='_blank'>Steven Spassov</a>, <a class='link blue underline dim-l' href='https://unsplash.com/@jipy32' target='_blank'>Jean-Philipe Delberghe</a>, <a class='link blue underline dim-l' href='https://unsplash.com/@heytowner' target='_blank'>John Towner</a>, and <a class='link blue underline dim-l' href='https://unsplash.com/@manuschwendener' target='_blank'>Manu Schwendener</a>",
@@ -56,16 +56,16 @@
     "category": "the_built_environment_and_wellness",
     "img_carousel": [
       {
-        "img_src": "/assets/img/projects/ewingcole/view1.jpg",
-        "img_alt": ""
+        "img_src": "/assets/img/projects/ewingcole/view1.jpg?ver=2",
+        "img_alt": "Architectural rendering of memory care facility by EwingCole"
       },
       {
-        "img_src": "/assets/img/projects/ewingcole/view2.jpg",
-        "img_alt": ""
+        "img_src": "/assets/img/projects/ewingcole/view2.jpg?ver=2",
+        "img_alt": "Architectural rendering of memory care facility by EwingCole"
       },
       {
-        "img_src": "/assets/img/projects/ewingcole/floorplan.png",
-        "img_alt": ""
+        "img_src": "/assets/img/projects/ewingcole/floorplan.jpg?ver=2",
+        "img_alt": "Floor plan of memory care facility by EwingCole"
       }
     ],
     "img_attribution": "Images from <a class='link blue underline dim-l' href='https://www.ewingcole.com/' target='_blank'>EwingCole</a>",
@@ -75,16 +75,16 @@
     "category": "engagement_with_art",
     "img_carousel": [
       {
-        "img_src": "/assets/img/projects/gradients/original.png",
-        "img_alt": ""
+        "img_src": "/assets/img/projects/gradients/original.jpg?ver=2",
+        "img_alt": "Portrait of Louise-Antoinette Feuardent by Jean-François Millet"
       },
       {
-        "img_src": "/assets/img/projects/gradients/gradients-strength.png",
-        "img_alt": ""
+        "img_src": "/assets/img/projects/gradients/gradients-strength.jpg?ver=2",
+        "img_alt": "Image showing strength of gradients in portrait"
       },
       {
-        "img_src": "/assets/img/projects/gradients/gradients-orientation.png",
-        "img_alt": ""
+        "img_src": "/assets/img/projects/gradients/gradients-orientation.jpg?ver=2",
+        "img_alt": "Image showing orientation of gradients in portrait"
       }
     ],
     "img_attribution": "Portrait of Louise-Antoinette Feuardent by Jean-François Millet, from the <a class='link blue underline dim-l' href='http://www.getty.edu/museum/' target='_blank'>J. Paul Getty Museum</a> online collection",
@@ -94,12 +94,12 @@
     "category": "engagement_with_art",
     "img_carousel": [
       {
-        "img_src": "/assets/img/projects/motion/pma-mondrian.jpg",
-        "img_alt": ""
+        "img_src": "/assets/img/projects/motion/pma-mondrian.jpg?ver=2",
+        "img_alt": "No. 22 by Jackson Pollock"
       },
       {
-        "img_src": "/assets/img/projects/motion/pma-pollock.jpg",
-        "img_alt": ""
+        "img_src": "/assets/img/projects/motion/pma-pollock.jpg?ver=2",
+        "img_alt": "Composition with Blue and Yellow by Piet Mondrian"
       }
     ],
     "img_attribution": "No. 22 by Jackson Pollock and Composition with Blue and Yellow by Piet Mondrian, from the <a class='link blue underline dim-l' href='https://www.philamuseum.org/' target='_blank'>Philadelphia Museum of Art</a> online collection",
@@ -109,24 +109,24 @@
     "category": "engagement_with_art",
     "img_carousel": [
       {
-        "img_src": "/assets/img/projects/networks/network-1.png",
-        "img_alt": ""
+        "img_src": "/assets/img/projects/networks/network-1.jpg?ver=2",
+        "img_alt": "Image showing network analysis conducted on visual art"
       },
       {
-        "img_src": "/assets/img/projects/networks/network-2.png",
-        "img_alt": ""
+        "img_src": "/assets/img/projects/networks/network-2.jpg?ver=2",
+        "img_alt": "Image showing network analysis conducted on visual art"
       },
       {
-        "img_src": "/assets/img/projects/networks/network-3.png",
-        "img_alt": ""
+        "img_src": "/assets/img/projects/networks/network-3.jpg?ver=2",
+        "img_alt": "Image showing network analysis conducted on visual art"
       },
       {
-        "img_src": "/assets/img/projects/networks/network-4.png",
-        "img_alt": ""
+        "img_src": "/assets/img/projects/networks/network-4.jpg?ver=2",
+        "img_alt": "Image showing network analysis conducted on visual art"
       },
       {
-        "img_src": "/assets/img/projects/networks/network-5.png",
-        "img_alt": ""
+        "img_src": "/assets/img/projects/networks/network-5.jpg?ver=2",
+        "img_alt": "Image showing network analysis conducted on visual art"
       }
     ],
     "img_attribution": "Images from the <a class='link blue underline dim-l' href='https://neuroaesthetics.med.upenn.edu/' target='_blank'>Penn Center for Neuroaesthetics</a>",
