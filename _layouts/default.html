@@ -4,16 +4,22 @@
   {% include partials/head.html %}
   <!-- BODY -->
   <body class="m0 mid-gray">
-    <!-- HEADER -->
-    {% include partials/header.html %}
-    <!-- PAGE NAV -->
-    {% if page.sections and page.sections != "" %}
-      {% include partials/page-nav.html %}
+    <!-- BACKGROUND -->
+    {% if page.big_header and page.big_header != "" %}
+      <div class="fixed {{ page.big_header.bh_background }} bg-cover w-100 vh-100"></div>
     {% endif %}
-    <!-- MAIN -->
-    {{ content }}
-    <!-- FOOTER -->
-    {% include partials/footer.html %}
+    <!-- HEADER -->
+    <div class="relative">
+      {% include partials/header.html %}
+      <!-- PAGE NAV -->
+      {% if page.sections and page.sections != "" %}
+        {% include partials/page-nav.html %}
+      {% endif %}
+      <!-- MAIN -->
+      {{ content }}
+      <!-- FOOTER -->
+      {% include partials/footer.html %}
+    </div>
     <!-- SCRIPTS -->
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script src="/assets/js/main.js?{{ site.time | date: "%s" }}"></script>
