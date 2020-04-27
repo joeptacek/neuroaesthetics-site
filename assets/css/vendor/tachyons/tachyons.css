@@ -1,4 +1,4 @@
-/*! TACHYONS v4.12.0 | http://tachyons.io */
+/*! TACHYONS v4.12.0 | http://tachyons.io | MODIFIED BY JP */
 /*
  *
  *      ________            ______
@@ -184,6 +184,19 @@ template { display: none; }
  * Add the correct display in IE 10.
  */
 [hidden] { display: none; }
+/*
+
+  JP RESET
+
+  Margin reset. Resets defaults applied by browser and normalize.css
+  Must declare this before Tachyons or else classes like .nt1 won't work.
+  Only including most common elements needing margin reset, can add more later as necessary
+
+*/
+h1, h2, h3, h4, h5, h6, p, ol, ul, li, hr {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 /* Modules */
 /*
 

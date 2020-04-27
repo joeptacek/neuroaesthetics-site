@@ -6,21 +6,6 @@
 $font-stack: 'Questrial', sans-serif;
 $font-stack-headers: 'Arvo', serif;
 
-// RESETS ======================================================================
-
-* {
-  // rethink?
-  margin-top: 0 !important; // breaks tachyons classes targeting margin-top
-}
-
-* {
-  &:last-child {
-    // rethink?
-    margin-bottom: 0 !important;
-    // margin-right: 0 !important; // breaks tachyons .center class i.e., can't do `margin: 0 auto`
-  }
-}
-
 // OVERRIDE TACHYONS
 
 .dim { opacity: 1; transition: none; }

@@ -29,7 +29,7 @@ sections:
           <p class="mb3">
             We explore beauty, language, cognition, and the brain using converging evidence from behavioral, neuroimaging, and lesion studies. We investigate a wide range of cognitive processes, including those underlying aesthetic experiences, the use of figurative and spatial language, and event representation. We're also interested in ethical questions raised by neuroscientific progress.
           </p>
-          <p class="mb0">
+          <p>
             Our lab is affiliated with both the <a class="blue link underline dim-l" href="https://neuroaesthetics.med.upenn.edu/" target="_blank">Penn Center for Neuroaesthetics (PCfN)</a> and the <a class="blue link underline dim-l" href="http://ccn.upenn.edu/" target="_blank">Center for Cognitive Neuroscience (CCN)</a>.
           </p>
 
@@ -63,7 +63,7 @@ sections:
           <h3 class="bluegreen font-default lh-title b mb1 mb2-ns">
             Director
           </h3>
-          <hr class="w-100 ba b--bluegreen mb0 mb3-ns">
+          <hr class="w-100 ba b--bluegreen mb3-ns">
           <div class="mb3 mb4-l">
             {% assign chatlab_current = site.data.people | where: "chatlab_group", "true" | where_exp: "item", "item.chatlab_alum != true" | sort: "last_name" %}
             {% assign director = chatlab_current | where: "chatlab_role", "director" %}
@@ -78,7 +78,7 @@ sections:
           <h3 class="bluegreen font-default lh-title b mb1 mb2-ns">
             Staff
           </h3>
-          <hr class="w-100 ba b--bluegreen mb0 mb3-ns">
+          <hr class="w-100 ba b--bluegreen mb3-ns">
           <div class="mb3 mb4-l">
             {% assign staff = chatlab_current | where: "chatlab_role", "staff" %}
             {% for person in staff %}
@@ -92,7 +92,7 @@ sections:
           <h3 class="bluegreen font-default lh-title b mb1 mb2-ns">
             Postdoctoral researchers
           </h3>
-          <hr class="w-100 ba b--bluegreen mb0 mb3-ns">
+          <hr class="w-100 ba b--bluegreen mb3-ns">
           <div class="mb3 mb4-l">
             {% assign postdocs = chatlab_current | where: "chatlab_role", "postdoctoral_researcher" %}
             {% for person in postdocs %}
@@ -106,7 +106,7 @@ sections:
           <h3 class="bluegreen font-default lh-title b mb1 mb2-ns">
             Student researchers
           </h3>
-          <hr class="w-100 ba b--bluegreen mb0 mb3-ns">
+          <hr class="w-100 ba b--bluegreen mb3-ns">
           <div class="mb3 mb4-l">
             {% assign students = chatlab_current | where: "chatlab_role", "student_researcher" %}
             {% for person in students %}
@@ -217,7 +217,7 @@ sections:
           <h3 class="bluegreen font-default lh-title b mb3">
             Neuroaesthetics
           </h3>
-          <p class="mb0">
+          <p>
             Neuroaesthetics refers to the role of the brain in evaluating visual stimuli and their aesthetic appeal. Our research ranges from aesthetic choices of brain-injured individuals to aesthetic preferences in everyday life (in architecture, art, and facial beauty).
           </p>
         </div>
@@ -243,7 +243,7 @@ sections:
           <h3 class="bluegreen font-default lh-title b mb3">
             Language & space
           </h3>
-          <p class="mb0">
+          <p>
             The lab’s research on language and space is concerned with a variety of concepts. Our primary interests lie in spatial and gestural representations in language, as well as in the processing of metaphoric and figurative language in patients and controls.
           </p>
         </div>
@@ -269,7 +269,7 @@ sections:
           <h3 class="bluegreen font-default lh-title b mb3">
             Event representation
           </h3>
-          <p class="mb0">
+          <p>
             Our examination of event representation focuses on how humans visualize and process moving events and infer causality within these events, as well as focusing on the neural bases of processing action-based information in general.
           </p>
         </div>
@@ -295,7 +295,7 @@ sections:
           <h3 class="bluegreen font-default lh-title b mb3">
             Neuroethics
           </h3>
-          <p class="mb0">
+          <p>
             Neuroethics focuses mainly on the ethical implications of neuroscientific progress, such as “cosmetic neurology,” the use of drugs to enhance cognitive performance and ability.
           </p>
         </div>
@@ -321,7 +321,7 @@ sections:
           <h3 class="bluegreen font-default lh-title b mb3">
             Miscellaneous
           </h3>
-          <p class="mb0">
+          <p>
             Cognitive neurology covers many different areas and we are interested in a number of these facets of brain and behavior. These topics include visuospatial attention, methodology in cognitive neuroscience, as well as some case study research.
           </p>
         </div>

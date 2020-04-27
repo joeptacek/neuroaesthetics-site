@@ -4,7 +4,7 @@
       <div class="{{ resource.css.background }} w-100 h-100 br-100">
         <div class="w-100 h-100 ba bw5 br-100 b--white-30 shadow-8">
           <div class="flex justify-center items-center w-100 h-100 pa4 br-100">
-            <p class="{{ resource.css.text }} white-90 tc b mb0">
+            <p class="{{ resource.css.text }} white-90 tc b">
               {{ resource.title_short }}
             </p>
           </div>
@@ -22,7 +22,7 @@
         <div class="silver{% unless forloop.last %} mb3{% endunless %}">
           <p class="mb1">{{ source.title }}</p>
           {% for link in source.links %}
-            <p class="pl2 mb0"><span class="dn-m">↳ </span><a class="blue underline link dim-l" href="{{ link.url }}" target="_blank">{{ link.title }}</a>
+            <p class="pl2"><span class="dn-m">↳ </span><a class="blue underline link dim-l" href="{{ link.url }}" target="_blank">{{ link.title }}</a>
           {% endfor %}
         </div>
       {% endfor %}

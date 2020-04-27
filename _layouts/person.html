@@ -42,15 +42,15 @@ layout: default
                   <p class="f4 mid-gray mb2">{{ page.pcfn_title }}</p>
                   {% if page.affiliation == "University of Pennsylvania" %}
                     <p class="mb1">{{ page.affiliation }}</p>
-                    <p class="mb0">{{ page.penn_school }}</p>
+                    <p>{{ page.penn_school }}</p>
                   {% else %}
-                    <p class="mb0">{{ page.affiliation }}</p>
+                    <p>{{ page.affiliation }}</p>
                   {% endif %}
                 {% elsif page.penn_faculty_group %}
                   <p class="mb1">{{ page.affiliation }}</p>
-                  <p class="mb0">{{ page.penn_school }}</p>
+                  <p>{{ page.penn_school }}</p>
                 {% elsif page.other_collaborators_group %}
-                  <p class="mb0">{{ page.affiliation }}</p>
+                  <p>{{ page.affiliation }}</p>
                 {% endif %}
               </div>
 
@@ -73,7 +73,7 @@ layout: default
               <h3 class="mb3">
                 Links
               </h3>
-              <ul class="flex flex-column flex-row-ns flex-wrap-ns list pl0 mb0">
+              <ul class="flex flex-column flex-row-ns flex-wrap-ns list pl0">
                 {% for link_item in page.links %}
                   <li class="flex-none mw-100 lh-title mb2{% unless forloop.last %} mr3-ns{% endunless %}">
                     <a class="link blue underline dim-l" href="{{ link_item.link_url }}" target="_blank">

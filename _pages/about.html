@@ -30,16 +30,13 @@ sections:
               <p class="self-center-m self-start-l order-last-l f6 f5-l light-silver mw-20rem-m mb3 mb0-l">
                 Image by <a class="link blue underline dim-l" href="https://unsplash.com/@photoholgic" target="_blank">Holger Link</a>
               </p>
-              <ul class="list lh-title tc-m pl0 mb0 mb4-l">
+              <ul class="list lh-title tc-m pl0 mb4-l">
                 <li class="mb3">Advance research in basic and applied neuroaesthetics</li>
                 <li class="mb3">Educate the next generation of scientists</li>
                 <li class="mb3">Converge allied interdisciplinary interests</li>
                 <li class="mb3">Welcome investigators and creative experts</li>
-                <li class="">Engage with the arts community</li>
+                <li>Engage with the arts community</li>
               </ul>
-              <p>
-                <!-- Dummy last-child to absorb stupid *:last-child { margin-bottom: 0 !important } -->
-              </p>
             </div>
           </div>
 
@@ -62,10 +59,10 @@ sections:
                 <p class="f5 tc tl-l silver mb3">
                   {{ person.advisory_board_title }}
                 </p>
-                <p class="{% if person.links %}mb2 mb3-l{% else %} mb0{% endif %}">
+                <p class="{% if person.links %}mb2 mb3-l{% endif %}">
                   {{ person.bio }}
                 </p>
-                <p class="">
+                <p>
                   <a class="f5 blue underline link dim-l" href="{{ person.links[0].link_url }}">{{ person.links[0].link_name }}</a>
                 </p>
               </div>
@@ -76,11 +73,10 @@ sections:
       </div>
 
       <div class="bg-white shadow-6 mw-55rem center br2 pa3 pa4-m pa5-l">
-        <h2 class="font-default lh-title tc">
+        <h2 class="font-default lh-title tc mb3 mb4-ns">
           Learn more about PCfN!
-          <!-- LEAVE OUT PER AC/EC: Meet our community, check out our research, or catch up on the latest news! -->
         </h2>
-        <div class="">
+        <div>
           <div class="flex flex-column flex-row-ns">
             <a class="db bg-liberty shadow-6 white f5 f4-ns white tc b link dim-l w-100 pa2 pa3-ns br2 mb2 mb0-ns mr2-ns" href="/community.html">Community</a>
             <a class="db bg-liberty shadow-6 white f5 f4-ns white tc b link dim-l w-100 pa2 pa3-ns br2 mb2 mb0-ns mr2-ns" href="/research.html">Research</a>

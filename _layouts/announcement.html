@@ -28,7 +28,7 @@ layout: default
                 </p>
               {% endif %}
 
-              <p class="mb0">
+              <p>
                 {{ page.date_start | date: "%B %e, %Y" }}
               </p>
             </div>
@@ -50,7 +50,7 @@ layout: default
               <h3 class="mb3">
                 Links
               </h3>
-              <ul class="flex flex-column flex-row-ns flex-wrap-ns list pl0 mb0">
+              <ul class="flex flex-column flex-row-ns flex-wrap-ns list pl0">
                 {% if page.ext_announcement_url %}
                   <li class="flex-none mw-100 lh-title mb2{% unless forloop.last %} mr3-ns{% endunless %}">
                     <a class="link blue underline dim-l" href="{{ page.ext_announcement_url }}" target="_blank">

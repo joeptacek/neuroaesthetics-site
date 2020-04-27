@@ -3,7 +3,7 @@
     <div class="flex-none pa1 mb3 mr5-l mb0-l ba br-100 b--moon-gray">
       <img class="db br-100" src="{{ person.photo }}" alt="{{ person.first_name }} {% if person.middle_initials %}{{ person.middle_initials}} {% endif %}{{ person.last_name }}" />
     </div>
-    <div class="">
+    <div>
       <h4 class="tc tl-l mb2">
         {{ person.first_name }} {% if person.middle_initials %}{{ person.middle_initials}} {% endif %}{{ person.last_name }}
       </h4>
@@ -19,7 +19,7 @@
           {% endfor %}
         </ul>
       {% endif %}
-      <p class="tl mb0">
+      <p class="tl">
         {{ person.chatlab_bio }}
       </p>
     </div>

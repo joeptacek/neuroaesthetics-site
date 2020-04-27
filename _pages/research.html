@@ -26,7 +26,7 @@ sections:
           <hr class="w-100 ba b--bluegreen mb3 mb4-ns">
 
           <section class="pb3 pb4-l">
-            <p class="mb0">
+            <p>
               Our research involves a wide range of topics and approaches. Current projects focus on the built environment and wellness, beauty and morality, and engagement with art.
             </p>
           </section>
@@ -134,7 +134,7 @@ sections:
           <hr class="w-100 ba b--bluegreen">
         </div>
 
-        <div class="">
+        <div>
           {% comment %} inserted extra pt3-l after hr bc more slightly more distance is necessary between the preceeding hr and following bt {% endcomment %}
           {% for resource in site.data.resources %}
             <div class="pv4 ph3 ph4-m ph5-l{% unless forloop.index == 1 %} bt b--black-10{% endunless %}">
@@ -145,9 +145,8 @@ sections:
       </div>
 
       <div class="bg-white shadow-6 mw-40rem center br2 pa3 pa4-m pa5-l">
-        <h2 class="font-default lh-title tc">
+        <h2 class="font-default lh-title tc mb3 mb4-ns">
           Learn more about PCfN!
-          <!-- LEAVE OUT PER AC/EC: Meet our community, check out our research, or catch up on the latest news! -->
         </h2>
         <div class="flex flex-column flex-row-ns">
           <a class="db bg-liberty shadow-6 white f5 f4-ns white tc b link dim-l w-100 pa2 pa3-ns br2 mb2 mb0-ns mr2-ns" href="/community.html">Community</a>

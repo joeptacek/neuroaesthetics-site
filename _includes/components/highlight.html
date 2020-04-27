@@ -6,14 +6,14 @@
       </div>
       <div class="tc tl-l">
         <div class="flex items-center justify-center justify-start-l silver mb2">
-          <p class="mb0 mr3">{{ highlight.date | date: "%B %e, %Y" }}</p>
+          <p class="mr3">{{ highlight.date | date: "%B %e, %Y" }}</p>
           <div class="dn flex-ns items-center-ns">{% octicon device-camera-video height: 18 class:"fill-light-silver" %}</div>
           <div class="flex items-center dn-ns">{% octicon device-camera-video height: 14 class:"fill-light-silver" %}</div>
         </div>
         <h4 class="f4 f3-l bluegreen b font-default mb3">
           {{ highlight.title | smartify }}
         </h4>
-        <p class="dib bluegreen pv1 ph2 ba bw1 b--bluegreen br2 mb0">
+        <p class="dib bluegreen pv1 ph2 ba bw1 b--bluegreen br2">
           {% if highlight.source_short and highlight.source_short != "" %}
             <span class="dn-ns">{{ highlight.source_short }}</span>
             <span class="dn dib-ns">{{ highlight.source }}</span>
