@@ -1,15 +1,15 @@
 <!doctype html>
-<html>
+<html class="bg-near-white">
   <!-- HEAD -->
   {% include partials/head.html %}
   <!-- BODY -->
-  <body class="m0 mid-gray">
+  <body class="mid-gray">
     <!-- BACKGROUND -->
     {% if page.big_header and page.big_header != "" %}
-      <div class="fixed {{ page.big_header.bh_background }} bg-cover w-100 vh-100"></div>
+      <div class="fixed force-repaint {{ page.big_header.bh_background }} bg-cover w-100 vh-100"></div>
     {% endif %}
     <!-- HEADER -->
-    <div class="relative">
+    <div class="force-repaint relative">
       {% include partials/header.html %}
       <!-- PAGE NAV -->
       {% if page.sections and page.sections != "" %}

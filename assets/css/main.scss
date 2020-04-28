@@ -137,6 +137,21 @@ h1, h2, h3, h4, h5, .font-headers {
   background-position: 50% 50%;
 }
 
+.force-repaint {
+  // Fixing bug on mobile Safari:
+  //
+  // Opening site-nav menu pushes down adjacent header elements (e.g., page title card),
+  // but screen isn't fully repainted (new view superimposed on old); also, fixed
+  // background is briefly cut off when scrolling down from top
+  //
+  // https://stackoverflow.com/questions/8840580/force-dom-redraw-refresh-on-chrome-mac/27971913#27971913
+  transform: translateZ(0);
+}
+
+.transform-0 {
+  transform: rotateX(20deg);
+}
+
 .bg-sky {
   background-image: url(/assets/img/backgrounds/sky.jpg);
 }

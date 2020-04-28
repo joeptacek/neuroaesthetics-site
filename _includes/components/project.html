@@ -1,4 +1,4 @@
-<div class="flex flex-column items-center flex-row-l items-start-l mb4 mb5-l">
+<div class="flex flex-column items-center flex-row-l items-start-l {% unless forloop.last %}mb4 mb5-l{% endunless %}">
   <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mr5-l mb2 mb3-m mb0-l">
     <div class="js-carousel-container">
       {% for img in include.param.img_carousel %}
