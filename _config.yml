@@ -9,13 +9,13 @@ exclude:
   - README.md
   - assets/img/originals
 
-  # excluded by default (need to re-exclude because user _config.yml overwrites the default sequence, doesn't append to it)
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-
 # to publish announcement / event documents with filename date in future
 future: true
+
+# to prevent jekyll build process from globbering gulp output
+keep_files:
+  - "assets/css"
+  - "assets/js"
 
 collections:
   pages:

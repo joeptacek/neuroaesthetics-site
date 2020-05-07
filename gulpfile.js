@@ -6,18 +6,24 @@
 const bs = require('browser-sync').create();
 const { spawn, exec } = require('child_process');
 const fs = require('fs');
+const fsp = require('fs').promises;
 const path = require('path');
 const url = require('url');
 
 // npm
 const gulp = require('gulp');
 const del = require('del');
-const mkdirp = require('mkdirp'); // no longer required in Node 10 and up?
 const log = require('fancy-log');
 const puppeteer = require('puppeteer');
 const browserify = require('browserify');
 const gm = require('gray-matter');
+const postcss = require('gulp-postcss');
+const atImport = require('postcss-import');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+const uglify = require('gulp-uglify');
 
+// args
 const args = process.argv;
 const production = args.includes('deploy') || args.includes('--production');
 if (production) {
@@ -30,12 +36,12 @@ if (production) {
 
 function freejazz(cb) {
   // clean output dir
-  const outputDir = '_includes/partials/jazzicon';
-  del([outputDir + '/']).then(delPaths => {
+  const outputDir = '_includes/partials/jazzicon/';
+  del([outputDir]).then(delPaths => {
     if (delPaths.length > 0) {
       log(`Freejazz: Cleaned ${outputDir}`);
     }
-    mkdirp(outputDir).then(made => {
+    fsp.mkdir(outputDir).then(made => {
       // use puppeteer to load/scrape jazzicons generated from Jekyll data/collections
       async function puppeteerTasks() {
 
@@ -62,7 +68,7 @@ function freejazz(cb) {
 
         // write allJSON to data.json
         fs.writeFileSync('_puppeteer/root/data.json', JSON.stringify(allJSON));
-        log('Freejazz: Wrote data.json to _puppeteer/root')
+        log('Freejazz: Wrote data to _puppeteer/root/data.json');
 
         // launch puppeteer and load index.html
         // TODO maybe handle rejected promises for the following awaits
@@ -93,7 +99,7 @@ function freejazz(cb) {
             const divId = await page.evaluate(el => el.id, jazzicons[i]); // div id should be the slug of the news article title used to generate the jazzicon
             fs.writeFileSync(path.join(dest, subfolder, divId + '.html'), divHTML);
           }
-          log('Freejazz: Scraped jazzicons to ' + path.join(dest, subfolder));
+          log('Freejazz: Scraped jazzicons to ' + path.join(dest, subfolder) + '/');
         }
 
         // scrape news, announcements, events
@@ -114,12 +120,34 @@ function freejazz(cb) {
           // run puppeteer
           puppeteerTasks();
       });
-    }).catch(mkdirpError => {
-      cb(mkdirpError);
+    }).catch(mkdirError => {
+      cb(mkdirError);
     });
   }).catch(delError => {
     cb(delError)
   });
+}
+
+function clean() {
+  return del(['_site/assets/css/**', '_site/assets/js/**']);
+}
+
+function css() {
+  // import tachyons.css into main.css, autoprefix, minify
+  return gulp.src('_assets/css/main.css')
+    .pipe(postcss([
+      atImport(),
+      autoprefixer(),
+      cssnano()
+    ]))
+    .pipe(gulp.dest('_site/assets/css'));
+}
+
+function js() {
+  // uglify main.js
+  return gulp.src('_assets/js/main.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('_site/assets/js'));
 }
 
 function jekyll() {
@@ -158,6 +186,8 @@ function watch() {
     ],
     gulp.series(freejazz, jekyll)
   );
+  gulp.watch('_assets/css/**', css);
+  gulp.watch('_assets/js/main.js', js);
 }
 
 function rsync() {
@@ -168,7 +198,8 @@ function rsync() {
   return spawn('rsync', ['-ahzP', '--delete', '-e', 'ssh', rsyncSource, rsyncDest], { stdio: 'inherit' });
 }
 
-const build = gulp.series(freejazz, jekyll);
+const html = gulp.series(freejazz, jekyll);
+const build = gulp.series(clean, css, js, html);
 
 exports.build = build;
 exports.deploy = gulp.series(build, rsync);

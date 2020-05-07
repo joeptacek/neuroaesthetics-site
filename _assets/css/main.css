@@ -1,5 +1,4 @@
-/* VARIABLES ================================================================ */
-
+@import "tachyons-modified.css";
 
 /* OVERRIDE TACHYONS */
 
@@ -29,18 +28,6 @@ h1, h2, h3, h4, h5, .font-headers {
   color: #ccc;
   font-weight: normal;
   opacity: 1; /* Firefox */
-}
-
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #ccc;
-  font-weight: normal;
-}
-
-::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: #ccc;
-  font-weight: normal;
 }
 
 /* COLUMNS */
@@ -119,11 +106,6 @@ h1, h2, h3, h4, h5, .font-headers {
 .min-h5 {
   /* for main title card in header */
   min-height: 16rem; /* from tachyons h5 */
-}
-
-.max-h-75 {
-  /* lightbox experiment */
-  max-height: 75%;
 }
 
 /* BACKGROUND IMAGES */
