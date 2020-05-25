@@ -1,11 +1,11 @@
 <div class="f5 f4-ns lh-title">
   <div class="flex flex-column items-center flex-row-l items-start-l">
     <div class="flex-none w-16rem h-16rem pa1 ba br-100 b--moon-gray mb4 mb0-l mr5-l">
-      <div class="{{ resource.css.background }} w-100 h-100 br-100">
+      <div class="{{ include.param.css.background }} w-100 h-100 br-100">
         <div class="w-100 h-100 ba bw5 br-100 b--white-30 shadow-8">
           <div class="flex justify-center items-center w-100 h-100 pa4 br-100">
-            <p class="{{ resource.css.text }} white-90 tc b">
-              {{ resource.title_short }}
+            <p class="{{ include.param.css.text }} white-90 tc b">
+              {{ include.param.title_short }}
             </p>
           </div>
         </div>
@@ -13,12 +13,12 @@
     </div>
     <div class="tc-m tl-l">
       <h3 class="bluegreen font-default tc tl-l mb3">
-        {{ resource.title | smartify }}
+        {{ include.param.title | smartify }}
       </h3>
       <p class="tl mb3">
-        {{ resource.description }}
+        {{ include.param.description }}
       </p>
-      {% for source in resource.sources %}
+      {% for source in include.param.sources %}
         <div class="silver{% unless forloop.last %} mb3{% endunless %}">
           <p class="mb1">{{ source.title }}</p>
           {% for link in source.links %}

@@ -1,0 +1,31 @@
+/* TODO: optimize for non-retina devices, enhance for retina iMacs ========== */
+
+.bg-angles { background-image: url(/assets/img/responsive/jpg/backgrounds/bg--angles--1280w.jpg); }
+.bg-flickr-goddard { background-image: url(/assets/img/responsive/jpg/backgrounds/bg--flickr-goddard--1280w.jpg); }
+.bg-lips { background-image: url(/assets/img/responsive/jpg/backgrounds/bg--lips--1280w.jpg); }
+.bg-museum { background-image: url(/assets/img/responsive/jpg/backgrounds/bg--sergei-akulich-564980-unsplash--1280w.jpg); }
+.bg-shapecolor { background-image: url(/assets/img/responsive/jpg/backgrounds/bg--shapecolor--1280w.jpg); }
+.bg-tag { background-image: url(/assets/img/responsive/jpg/backgrounds/bg--tag--1280w.jpg); }
+.bg-wall { background-image: url(/assets/img/responsive/jpg/backgrounds/bg--wall--1280w.jpg); }
+
+/* MEDIUM (TACHYONS) ======================================================== */
+@media screen and (min-width: 30em) and (max-width: 60em) {
+  .bg-angles { background-image: url(/assets/img/responsive/jpg/backgrounds/bg--angles--1920w.jpg); }
+  .bg-flickr-goddard { background-image: url(/assets/img/responsive/jpg/backgrounds/bg--flickr-goddard--1920w.jpg); }
+  .bg-lips { background-image: url(/assets/img/responsive/jpg/backgrounds/bg--lips--2560w.jpg); }
+  .bg-museum { background-image: url(/assets/img/responsive/jpg/backgrounds/bg--sergei-akulich-564980-unsplash--1920w.jpg); }
+  .bg-shapecolor { background-image: url(/assets/img/responsive/jpg/backgrounds/bg--shapecolor--1920w.jpg); }
+  .bg-tag { background-image: url(/assets/img/responsive/jpg/backgrounds/bg--tag--1920w.jpg); }
+  .bg-wall { background-image: url(/assets/img/responsive/jpg/backgrounds/bg--wall--1920w.jpg); }
+}
+
+/* LARGE (TACHYONS) ========================================================= */
+@media screen and (min-width: 60em) {
+  .bg-angles { background-image: url(/assets/img/responsive/jpg/backgrounds/bg--angles--2560w.jpg); }
+  .bg-flickr-goddard { background-image: url(/assets/img/responsive/jpg/backgrounds/bg--flickr-goddard--2560w.jpg); }
+  .bg-lips { background-image: url(/assets/img/responsive/jpg/backgrounds/bg--lips--2560w.jpg); }
+  .bg-museum { background-image: url(/assets/img/responsive/jpg/backgrounds/bg--sergei-akulich-564980-unsplash--2560w.jpg); }
+  .bg-shapecolor { background-image: url(/assets/img/responsive/jpg/backgrounds/bg--shapecolor--2560w.jpg); }
+  .bg-tag { background-image: url(/assets/img/responsive/jpg/backgrounds/bg--tag--2560w.jpg); }
+  .bg-wall { background-image: url(/assets/img/responsive/jpg/backgrounds/bg--wall--2560w.jpg); }
+}

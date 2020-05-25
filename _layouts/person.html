@@ -27,8 +27,13 @@ layout: default
 
           <div class="flex flex-column flex-row-l items-center justify-center mb4">
 
-            <div class="flex-none mb4 mb0-l mr4-l">
-              <img class="db center br-100 pa1 ba bw1 b--moon-gray" src="{{ page.photo }}" alt="{{ page.first_name }} {% if page.middle_initials %}{{ page.middle_initials}} {% endif %}{{ page.last_name }}" />
+            <div class="flex-none pa1 ba br-100 b--moon-gray mb4 mb0-l mr4-l">
+              <img class="db br-100"
+                   src="{{ page.img_src_320w }}"
+                   srcset="{{ page.img_src_320w }} 320w,
+                           {{ page.img_src_320w | replace: '--320w', '--640w' }} 640w"
+                   sizes="250px"
+                   alt="{{ page.first_name }} {% if page.middle_initials %}{{ page.middle_initials}} {% endif %}{{ page.last_name }}" />
             </div>
 
             <div class="tc tl-l lh-title">

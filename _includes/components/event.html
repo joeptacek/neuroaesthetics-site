@@ -1,23 +1,23 @@
 <div class="f5 f4-ns lh-title">
-  <a class="db link dim-l" href="{% if event.ext_event_url %}{{ event.ext_event_url }}{% else %}{{ event.url }}{% endif %}" {% if event.ext_event_url %}target="_blank"{% endif %}>
+  <a class="db link dim-l" href="{% if include.param.ext_event_url %}{{ include.param.ext_event_url }}{% else %}{{ include.param.url }}{% endif %}" {% if include.param.ext_event_url %}target="_blank"{% endif %}>
     <div class="flex flex-column items-center flex-row-l">
       <div class="flex-none mb4 mb0-l mr5-l">
         <div class="flex pa1 ba br-100 b--moon-gray">
-          {% assign jazzicon = event.title | slugify: "ascii" | prepend: "partials/jazzicon/events/" | append: ".html" %}
+          {% assign jazzicon = include.param.title | slugify: "ascii" | prepend: "partials/jazzicon/events/" | append: ".html" %}
           {% include {{ jazzicon }} %}
         </div>
       </div>
       <div class="tc tl-l">
         <h4 class="f4 f3-l bluegreen font-default b mb3">
-          {{ event.title | smartify }}
+          {{ include.param.title | smartify }}
         </h4>
-        {% if event.source %}
-          <p class="dib bluegreen pv1 ph2 ba bw1 b--bluegreen br2 mb3">{{ event.source }}</p>
+        {% if include.param.source %}
+          <p class="dib bluegreen pv1 ph2 ba bw1 b--bluegreen br2 mb3">{{ include.param.source }}</p>
         {% endif %}
-        {% if event.date_start == event.date_end %}
-          <p class="silver">{{ event.date_start | date: "%B %e, %Y" }}</p>
+        {% if include.param.date_start == include.param.date_end %}
+          <p class="silver">{{ include.param.date_start | date: "%B %e, %Y" }}</p>
         {% else %}
-          <p class="silver">{{ event.date_start | date: "%B %e" }} - {{ event.date_end | date: "%B %e, %Y" }}</p>
+          <p class="silver">{{ include.param.date_start | date: "%B %e" }} - {{ include.param.date_end | date: "%B %e, %Y" }}</p>
         {% endif %}
       </div>
     </div>

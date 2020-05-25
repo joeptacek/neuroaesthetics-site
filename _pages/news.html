@@ -56,7 +56,7 @@ sections:
               {% assign de = announcement.date_end | date: "%Y-%m-%d" %}
               {% unless de < todays_date %}
                 <div class="pv4 ph3 ph4-m ph5-l{% unless first_announcement %} bt b--black-10{% endunless %}">
-                  {% include components/announcement.html %}
+                  {% include components/announcement.html param=announcement %}
                 </div>
                 {% assign first_announcement = false %}
               {% endunless %}
@@ -70,7 +70,7 @@ sections:
               {% assign de = event.date_end | date: "%Y-%m-%d" %}
               {% unless de < todays_date %}
                 <div class="pv4 ph3 ph4-m ph5-l{% if first_event and ongoing_announcements %} bt b--black-10{% elsif first_event != 'true' %}{% endif %}">
-                  {% include components/event.html %}
+                  {% include components/event.html param=event %}
                 </div>
                 {% assign first_event = false %}
               {% endunless %}
@@ -144,7 +144,7 @@ sections:
             {% assign highlights_sorted = site.data.news | where_exp: "item", "item.highlights_data" | sort: "date" | reverse %}
             {% for highlight in highlights_sorted %}
               <div class="pv4 ph3 ph4-m ph5-l{% unless forloop.index == 1 %} bt b--black-10{% endunless %}">
-                {% include components/highlight.html %}
+                {% include components/highlight.html param=highlight %}
               </div>
             {% endfor %}
           </div>
@@ -176,7 +176,7 @@ sections:
             {% assign blog_sorted = site.data.news | where_exp: "item", "item.blog_data" | sort: "date" | reverse %}
             {% for blog_post in blog_sorted %}
               <div class="pv4 ph3 ph4-m ph5-l{% unless forloop.index == 1 %} bt b--black-10{% endunless %}">
-                {% include components/blog_post.html %}
+                {% include components/blog_post.html param=blog_post %}
               </div>
             {% endfor %}
           </div>
@@ -204,7 +204,7 @@ sections:
             {% for news_item in news_sorted %}
               {% if news_item.filter_pcfn and news_item.archived == false %}
                 <div class="pv4 ph3 ph4-m ph5-l{% unless forloop.index == 1 %} bt b--black-10{% endunless %}">
-                  {% include components/news.html %}
+                  {% include components/news.html param=news_item %}
                 </div>
               {% endif %}
             {% endfor %}

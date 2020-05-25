@@ -23,11 +23,16 @@ sections:
           <hr class="w-100 ba b--bluegreen mb3 mb4-m mb5-l">
 
           <div class="flex flex-column flex-row-l items-center mb4 mb5-l">
-            <div class="flex-none mw-20rem-ns pa1 ba br1 br-100-ns b--moon-gray mb2 mb3-m mb0-l mr5-l">
-              <img class="db br1 br-100-ns" src="/assets/img/mission/holger-link-krmjTrp_OpI-unsplash.jpg" />
+            <div class="flex-none pa1 ba br1 br-100-ns b--moon-gray mb2 mb3-m mb0-l mr5-l">
+              <img class="db br1 br-100-ns"
+                   src="/assets/img/responsive/jpg/mw320/mission/holger-link-krmjTrp_OpI-unsplash--320w.jpg"
+                   srcset="/assets/img/responsive/jpg/mw320/mission/holger-link-krmjTrp_OpI-unsplash--320w.jpg 320w,
+                           /assets/img/responsive/jpg/mw320/mission/holger-link-krmjTrp_OpI-unsplash--640w.jpg 640w"
+                   sizes="320px"
+                   alt="Image by Holger Link" />
             </div>
             <div class="flex flex-column">
-              <p class="self-center-m self-start-l order-last-l f6 f5-l light-silver mw-20rem-m mb3 mb0-l">
+              <p class="self-center-m self-start-l order-last-l f6 f5-l light-silver mw-320px-m mb3 mb0-l">
                 Image by <a class="link blue underline dim-l" href="https://unsplash.com/@photoholgic" target="_blank">Holger Link</a>
               </p>
               <ul class="list lh-title tc-m pl0 mb4-l">
@@ -50,7 +55,12 @@ sections:
           {% for person in advisory_board %}
             <div class="flex flex-column flex-row-l items-center items-start-l pv3 pv4-l">
               <div class="flex-none pa1 ba br-100 b--moon-gray mb3 mb0-l mr5-l">
-                <img class="db br-100" src="{{ person.photo }}" alt="{{ person.first_name }} {% if person.middle_initials %}{{ person.middle_initials}} {% endif %}{{ person.last_name }}" />
+                <img class="db br-100"
+                     src="{{ person.img_src_320w }}"
+                     srcset="{{ person.img_src_320w }} 320w,
+                             {{ person.img_src_320w | replace: '--320w', '--640w' }} 640w"
+                     sizes="250px"
+                     alt="{{ person.first_name }} {% if person.middle_initials %}{{ person.middle_initials}} {% endif %}{{ person.last_name }}" />
               </div>
               <div class="lh-title f5 f4-ns">
                 <h3 class="tc tl-l mb2">

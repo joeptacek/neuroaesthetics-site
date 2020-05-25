@@ -16,6 +16,7 @@ future: true
 keep_files:
   - "assets/css"
   - "assets/js"
+  - "assets/img/responsive"
 
 collections:
   pages:

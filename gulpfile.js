@@ -1,27 +1,35 @@
-// TODO minify css and js
-// TODO pipeline to automate resizing, optimize images, generate responsive html elements
 // TODO use strict?
 
 // builtin
-const bs = require('browser-sync').create();
-const { spawn, exec } = require('child_process');
+const { spawn } = require('child_process');
 const fs = require('fs');
 const fsp = require('fs').promises;
 const path = require('path');
 const url = require('url');
 
-// npm
+// general
 const gulp = require('gulp');
+const bs = require('browser-sync').create();
 const del = require('del');
 const log = require('fancy-log');
+const cache = require('gulp-cached');
+
+// freejazz
 const puppeteer = require('puppeteer');
 const browserify = require('browserify');
 const gm = require('gray-matter');
+
+// styles
 const postcss = require('gulp-postcss');
 const atImport = require('postcss-import');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
+
+// scripts
 const uglify = require('gulp-uglify');
+
+// images
+const responsive = require('gulp-responsive');
 
 // args
 const args = process.argv;
@@ -129,7 +137,11 @@ function freejazz(cb) {
 }
 
 function clean() {
-  return del(['_site/assets/css/**', '_site/assets/js/**']);
+  return del([
+    '_site/assets/css/**',
+    '_site/assets/js/**',
+    '_site/assets/img/responsive/**'
+  ]);
 }
 
 function css() {
@@ -150,6 +162,140 @@ function js() {
     .pipe(gulp.dest('_site/assets/js'));
 }
 
+function img() {
+  // TODO: add WEBP
+  return gulp.src('_assets/img/src/**')
+    .pipe(cache('images')) // filters out images already processed
+    .pipe(responsive(
+      {
+        'png/mw320/**': [
+          {
+            width: 320,
+            rename: {
+              suffix: '--320w',
+              extname: '.png'
+            }
+          },
+          {
+            width: 320 * 2,
+            rename: {
+              suffix: '--640w',
+              extname: '.png'
+            }
+          }
+        ],
+        'png/mw640/**': [
+          {
+            width: 320,
+            rename: {
+              suffix: '--320w',
+              extname: '.png'
+            }
+          },
+          {
+            width: 320 * 2,
+            rename: {
+              suffix: '--640w',
+              extname: '.png'
+            }
+          },
+          {
+            width: 320 * 4,
+            rename: {
+              suffix: '--1280w',
+              extname: '.png'
+            }
+          }
+        ],
+        'jpg/mw320/**': [
+          {
+            width: 320,
+            rename: {
+              suffix: '--320w',
+              extname: '.jpg'
+            }
+          },
+          {
+            width: 320 * 2,
+            rename: {
+              suffix: '--640w',
+              extname: '.jpg'
+            }
+          }
+        ],
+        'jpg/mw1280/**': [
+          {
+            width: 320,
+            rename: {
+              suffix: '--320w',
+              extname: '.jpg'
+            }
+          },
+          {
+            width: 320 * 2,
+            rename: {
+              suffix: '--640w',
+              extname: '.jpg'
+            }
+          },
+          {
+            width: 320 * 4,
+            rename: {
+              suffix: '--1280w',
+              extname: '.jpg'
+            }
+          },
+          {
+            width: 320 * 8,
+            rename: {
+              suffix: '--2560w',
+              extname: '.jpg'
+            }
+          }
+        ],
+        'jpg/backgrounds/**': [
+          // currently using background-image for backgrounds (not img element + imgsrc/sizes)
+          // background-image allows background-size: cover, background-position: 50% 50%, etc.
+          // however, can't automatically switch using w-descriptors + sizes (as w/ img element)
+          // thus, switching sizes with media queries: default, medium (30em), large (60em)
+          //
+          // TODO: widths and media queries currently sort of arbitrary; best to optimize
+          // ...maybe include 960w (640h for 1.5 aspect) for the shortest non-retina phones
+          // ...maybe target `resolution` media feature
+          {
+            width: 1280,
+            rename: {
+              suffix: '--1280w',
+              extname: '.jpg'
+            }
+          },
+          {
+            width: 1280 * 1.5,
+            rename: {
+              suffix: '--1920w',
+              extname: '.jpg'
+            }
+          },
+          {
+            width: 1280 * 2,
+            rename: {
+              suffix: '--2560w',
+              extname: '.jpg'
+            }
+          }
+        ]
+      },
+      {
+        progressive: true,
+        withoutEnlargement: false, // OK to enlarge
+        errorOnUnusedConfig: false, // when gulp-cached filters unchanged
+        quality: 80, // default
+        withMetadata: false // default
+      }
+    ))
+    .pipe(gulp.dest('_site/assets/img/responsive'));
+}
+
 function jekyll() {
   return spawn('bundle', ['exec', 'jekyll', 'build'], { stdio: 'inherit' });
 }
@@ -165,6 +311,9 @@ function serve(cb) {
 }
 
 function watch() {
+  gulp.watch('_assets/img/src/**', img);
+  gulp.watch('_assets/css/**', css);
+  gulp.watch('_assets/js/main.js', js);
   gulp.watch(
     [
       '_data/**', '!_data/news.json',
@@ -186,8 +335,6 @@ function watch() {
     ],
     gulp.series(freejazz, jekyll)
   );
-  gulp.watch('_assets/css/**', css);
-  gulp.watch('_assets/js/main.js', js);
 }
 
 function rsync() {
@@ -198,8 +345,9 @@ function rsync() {
   return spawn('rsync', ['-ahzP', '--delete', '-e', 'ssh', rsyncSource, rsyncDest], { stdio: 'inherit' });
 }
 
+// TODO: maybe move freejazz into parallel with css, js, img (make more async first)
 const html = gulp.series(freejazz, jekyll);
-const build = gulp.series(clean, css, js, html);
+const build = gulp.series(clean, gulp.parallel(css, js, img), html);
 
 exports.build = build;
 exports.deploy = gulp.series(build, rsync);

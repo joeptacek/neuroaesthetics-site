@@ -1,4 +1,6 @@
+/* IMPORTS VIA POSTCSS-IMPORT */
 @import "tachyons-modified.css";
+@import "responsive-backgrounds.css";
 
 /* OVERRIDE TACHYONS */
 
@@ -81,7 +83,7 @@ h1, h2, h3, h4, h5, .font-headers {
   width: 16rem;
 }
 
-.mw-20rem {
+.mw-320px {
   max-width: 20rem;
 }
 
@@ -130,69 +132,6 @@ h1, h2, h3, h4, h5, .font-headers {
   transform: translateZ(0);
 }
 
-.transform-0 {
-  transform: rotateX(20deg);
-}
-
-.bg-sky {
-  background-image: url(/assets/img/backgrounds/sky.jpg);
-}
-
-.bg-leaves {
-  background-image: url(/assets/img/backgrounds/leaves.jpg);
-}
-
-.bg-goddard {
-  background-image: url(/assets/img/backgrounds/goddard.jpg);
-}
-
-.bg-flickr-goddard {
-  background-image: url(/assets/img/backgrounds/flickr-goddard.jpg);
-}
-
-.bg-salt {
-  background-image: url(/assets/img/backgrounds/salt.jpg);
-}
-
-.bg-sand {
-  background-image: url(/assets/img/backgrounds/sand.jpg);
-}
-
-.bg-wall {
-  background-image: url(/assets/img/backgrounds/wall.jpg);
-}
-
-.bg-wall2 {
-  background-image: url(/assets/img/backgrounds/wall2.jpg);
-}
-
-.bg-leaves2 {
-  background-image: url(/assets/img/backgrounds/leaves2.jpg);
-}
-
-.bg-shapecolor {
-  background-image: url(/assets/img/backgrounds/shapecolor.jpg);
-}
-
-.bg-tag {
-  background-image: url(/assets/img/backgrounds/tag.jpg);
-}
-
-.bg-angles {
-  background-image: url(/assets/img/backgrounds/angles.jpg);
-}
-
-.bg-museum {
-  background-image: url(/assets/img/backgrounds/sergei-akulich-564980-unsplash.jpg);
-}
-
-.bg-peopleflow {
-  background-image:
-    linear-gradient(
-      rgba(255, 255, 255, 0.4),
-      rgba(255, 255, 255, 0.4)),
-    url(/assets/img/backgrounds/christopher-burns-286429-unsplash.jpg);
-}
 
 /* BACKGROUND TEXTURES */
 
@@ -512,16 +451,8 @@ h1, h2, h3, h4, h5, .font-headers {
 /* BREAKPOINT: TALL ========================================================= */
 
 @media screen and (min-height: 960px) {
-  .vh-50-tall {
-    height: 50vh;
-  }
-
   .vh-75-tall {
     height: 75vh;
-  }
-
-  .min-vh-75-tall {
-    min-height: 75vh;
   }
 }
 
@@ -532,7 +463,7 @@ h1, h2, h3, h4, h5, .font-headers {
   .dim-ns:hover, .dim-ns:focus { opacity: .5; transition: none; }
   .dim-ns:active { opacity: .8; transition: none; }
 
-  .mw-20rem-ns {
+  .mw-320px-ns {
     max-width: 20rem;
   }
 
@@ -584,7 +515,7 @@ h1, h2, h3, h4, h5, .font-headers {
   .dim-m:hover, .dim-m:focus { opacity: .5; transition: none; }
   .dim-m:active { opacity: .8; transition: none; }
 
-  .mw-20rem-m {
+  .mw-320px-m {
     max-width: 20rem;
   }
 
@@ -636,7 +567,7 @@ h1, h2, h3, h4, h5, .font-headers {
     width: 160px;
   }
 
-  .mw-20rem-l {
+  .mw-320px-l {
     max-width: 20rem;
   }
 

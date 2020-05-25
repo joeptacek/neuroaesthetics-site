@@ -1,7 +1,7 @@
 [
   {
     "section_title": "Basic",
-    "img_src": "/assets/img/questions/sergei-akulich-564980-unsplash.jpg",
+    "img_src_320w": "/assets/img/responsive/jpg/mw320/questions/sergei-akulich-564980-unsplash--320w.jpg",
     "img_alt": "Image by Sergei Akulich",
     "img_attribution": "Image by <a class='link blue underline dim-l' href='https://unsplash.com/@sakulich' target='_blank'>Sergei Akulich</a>",
     "section_description": "The aim of neuroaesthetics is to understand neural systems that underlie aesthetic experiences and choices. This includes investigating the nature and neural basis of beauty, art, design, and architecture.",
@@ -18,7 +18,7 @@
   },
   {
     "section_title": "Translational",
-    "img_src": "/assets/img/questions/christopher-burns-286429-unsplash.jpg",
+    "img_src_320w": "/assets/img/responsive/jpg/mw320/questions/christopher-burns-286429-unsplash--320w.jpg",
     "img_alt": "Image by Christopher Burns",
     "img_attribution": "Image by <a class='link blue underline dim-l' href='https://unsplash.com/@christopher__burns' target='_blank'>Christopher Burns</a>",
     "section_description": "Neuroaesthetics applications are relevant to medicine and beyond into domains of society and culture.",

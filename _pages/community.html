@@ -2,7 +2,7 @@
 title: Community
 big_header:
   bh_title: Community
-  bh_background: bg-leaves2
+  bh_background: bg-lips
   bh_caption: "By <a class='white link underline dim-l' href='http://www.ladypinknyc.com/' target='_blank'>Lady Pink</a>"
 description: Meet the multidisciplinary community of individuals and groups affiliated with PCfN, here at Penn and around the world.
 sections:
@@ -47,8 +47,8 @@ sections:
             <table class="tablegen w-100">
               <tbody>
                 {% tablerow person in pcfn_current_by_name_and_group cols:3 %}
-                  <div class="pv3 pv4-l ph3-l">
-                    {% include components/person_community.html %}
+                  <div class="pv3 pv4-l{% if tablerowloop.col_first %} pr3-l{% elsif tablerowloop.col_last %} pl3-l{% else %} ph2-l{% endif %}">
+                    {% include components/person_community.html param=person %}
                   </div>
                 {% endtablerow %}
               </tbody>
@@ -89,7 +89,7 @@ sections:
             <tbody>
               {% tablerow person in penn_faculty cols:3 %}
                 <div class="pv3 pv4-l ph3-l">
-                  {% include components/person_community.html %}
+                  {% include components/person_community.html param=person %}
                 </div>
               {% endtablerow %}
             </tbody>
@@ -118,7 +118,7 @@ sections:
             <tbody>
               {% tablerow person in other_collaborators cols:3 %}
                 <div class="pv3 pv4-l ph3-l">
-                  {% include components/person_community.html %}
+                  {% include components/person_community.html param=person %}
                 </div>
               {% endtablerow %}
             </tbody>
@@ -142,37 +142,91 @@ sections:
           <hr class="w-100 ba b--bluegreen mb3 mb4-l">
 
           <!-- Affiliated groups -->
+          {% comment %}
+            256px instead of 250px for small logos, or else don't fill to edge of container
+            500px instead of 512px for large logos, or else single large logo too large
+          {% endcomment %}
           <div class="pt3 pt4-l">
             <div class="flex flex-column flex-row-ns items-center justify-center mb5">
-              <a class="flex items-center link dim mr5-ns mb5 mb0-ns" href="http://ccn.upenn.edu/" target="_blank">
-                <img src="/assets/img/logo/center-for-cognitive-neuroscience-logo.png" alt="Logo of the Center for Cognitive Neuroscience" width="350">
+              <a class="link dim-l mr5-ns mb5 mb0-ns" href="http://ccn.upenn.edu/" target="_blank">
+                <img class="db"
+                     src="/assets/img/responsive/png/mw640/logos/community/logo--center-for-cognitive-neuroscience--320w.png"
+                     srcset="/assets/img/responsive/png/mw640/logos/community/logo--center-for-cognitive-neuroscience--320w.png 320w,
+                             /assets/img/responsive/png/mw640/logos/community/logo--center-for-cognitive-neuroscience--640w.png 640w,
+                             /assets/img/responsive/png/mw640/logos/community/logo--center-for-cognitive-neuroscience--1280w.png 1280w"
+                     sizes="(min-width: 30em) 500px,
+                            100vw"
+                     alt="Logo for the Center for Cognitive Neuroscience" />
               </a>
-              <a class="flex items-center link dim" href="https://neuroethics.upenn.edu/" target="_blank">
-                <img src="/assets/img/logo/center-for-neuroscience-and-society-logo.png" alt="Logo of the Center for Neuroscience and Society" width="350">
-              </a>
-            </div>
-            <div class="flex flex-column flex-row-ns items-center justify-center mb5">
-              <a class="flex items-center link dim mr5-ns mb5 mb0-ns" href="https://www.sachsarts.org/" target="_blank">
-                <img src="/assets/img/logo/sachs-program-for-arts-innovation-logo.png" alt="Logo of the Sachs Program for Arts Innovation" width="225">
-              </a>
-              <a class="flex items-center link dim mr5-ns mb5 mb0-ns" href="https://neuro.wharton.upenn.edu/" target="_blank">
-                <img src="/assets/img/logo/wharton-neuroscience-initiative-2-logo.jpg" alt="Logo of the Wharton Neuroscience Initiative" width="225">
-              </a>
-              <a class="flex items-center link dim" href="http://www.med.upenn.edu/center-for-human-appearance/" target="_blank">
-                <img src="/assets/img/logo/center-for-human-appearance-logo.jpg" alt="Logo of the Edwin & Fanny Gray Hall Center for Human Appearance" width="225">
-              </a>
-            </div>
-            <div class="flex flex-column flex-row-ns items-center justify-center mb5">
-              <a class="flex items-center link dim mr5-ns mb5 mb0-ns" href="https://web.sas.upenn.edu/mindcore/" target="_blank">
-                <img src="/assets/img/logo/mindcore-logo.png" alt="Logo of mindCORE" width="350">
-              </a>
-              <a class="flex items-center link dim" href="https://globalwellnessinstitute.org/" target="_blank">
-                <img src="/assets/img/logo/global-wellness-institute-logo.png" alt="Logo of the Global Wellness Institute" width="350">
+              <a class="link dim-l" href="https://neuroethics.upenn.edu/" target="_blank">
+                <img class="db"
+                     src="/assets/img/responsive/png/mw640/logos/community/logo--center-for-neuroscience-and-society--320w.png"
+                     srcset="/assets/img/responsive/png/mw640/logos/community/logo--center-for-neuroscience-and-society--320w.png 320w,
+                             /assets/img/responsive/png/mw640/logos/community/logo--center-for-neuroscience-and-society--640w.png 640w,
+                             /assets/img/responsive/png/mw640/logos/community/logo--center-for-neuroscience-and-society--1280w.png 1280w"
+                     sizes="(min-width: 30em) 500px,
+                            100vw"
+                     alt="Logo for the Center for Neuroscience and Society" />
               </a>
             </div>
             <div class="flex flex-column flex-row-ns items-center justify-center mb5">
-              <a class="flex items-center link dim" href="https://www.barnesfoundation.org/" target="_blank">
-                <img src="/assets/img/logo/barnes-foundation-2-logo.jpg" alt="Logo of the Barnes Foundation" width="350">
+              <a class="link dim-l mr5-ns mb5 mb0-ns" href="https://www.sachsarts.org/" target="_blank">
+                <img class="db"
+                     src="/assets/img/responsive/png/mw320/logos/community/logo--sachs-program-for-arts-innovation--320w.png"
+                     srcset="/assets/img/responsive/png/mw320/logos/community/logo--sachs-program-for-arts-innovation--320w.png 320w,
+                             /assets/img/responsive/png/mw320/logos/community/logo--sachs-program-for-arts-innovation--640w.png 640w"
+                     sizes="256px"
+                     alt="Logo for the Sachs Program for Arts Innovation" />
+              </a>
+              <a class="link dim-l mr5-ns mb5 mb0-ns" href="https://neuro.wharton.upenn.edu/" target="_blank">
+                <img class="db"
+                     src="/assets/img/responsive/png/mw320/logos/community/logo--wharton-neuroscience-initiative--320w.png"
+                     srcset="/assets/img/responsive/png/mw320/logos/community/logo--wharton-neuroscience-initiative--320w.png 320w,
+                             /assets/img/responsive/png/mw320/logos/community/logo--wharton-neuroscience-initiative--640w.png 640w"
+                     sizes="256px"
+                     alt="Logo for the Warton Neuroscience Initiative" />
+              </a>
+              <a class="link dim-l" href="http://www.med.upenn.edu/center-for-human-appearance/" target="_blank">
+                <img class="db"
+                     src="/assets/img/responsive/png/mw320/logos/community/logo--center-for-human-appearance--320w.png"
+                     srcset="/assets/img/responsive/png/mw320/logos/community/logo--center-for-human-appearance--320w.png 320w,
+                             /assets/img/responsive/png/mw320/logos/community/logo--center-for-human-appearance--640w.png 640w"
+                     sizes="256px"
+                     alt="Logo for the Edwin & Fanny Gray Hall Center for Human Appearance" />
+              </a>
+            </div>
+            <div class="flex flex-column flex-row-ns items-center justify-center mb5">
+              <a class="link dim-l mr5-ns mb5 mb0-ns" href="https://web.sas.upenn.edu/mindcore/" target="_blank">
+                <img class="db"
+                     src="/assets/img/responsive/png/mw640/logos/community/logo--mindcore--320w.png"
+                     srcset="/assets/img/responsive/png/mw640/logos/community/logo--mindcore--320w.png 320w,
+                             /assets/img/responsive/png/mw640/logos/community/logo--mindcore--640w.png 640w,
+                             /assets/img/responsive/png/mw640/logos/community/logo--mindcore--1280w.png 1280w"
+                     sizes="(min-width: 30em) 500px,
+                            100vw"
+                     alt="Logo for nindCORE" />
+              </a>
+              <a class="link dim-l" href="https://globalwellnessinstitute.org/" target="_blank">
+                <img class="db"
+                     src="/assets/img/responsive/png/mw640/logos/community/logo--global-wellness-institute--320w.png"
+                     srcset="/assets/img/responsive/png/mw640/logos/community/logo--global-wellness-institute--320w.png 320w,
+                             /assets/img/responsive/png/mw640/logos/community/logo--global-wellness-institute--640w.png 640w,
+                             /assets/img/responsive/png/mw640/logos/community/logo--global-wellness-institute--1280w.png 1280w"
+                     sizes="(min-width: 30em) 500px,
+                            100vw"
+                     alt="Logo for the Global Wellness Institute" />
+              </a>
+            </div>
+            <div class="flex flex-column flex-row-ns items-center justify-center">
+              <a class="link dim-l" href="https://www.barnesfoundation.org/" target="_blank">
+                <img class="db"
+                     src="/assets/img/responsive/png/mw640/logos/community/logo--barnes-foundation--320w.png"
+                     srcset="/assets/img/responsive/png/mw640/logos/community/logo--barnes-foundation--320w.png 320w,
+                             /assets/img/responsive/png/mw640/logos/community/logo--barnes-foundation--640w.png 640w,
+                             /assets/img/responsive/png/mw640/logos/community/logo--barnes-foundation--1280w.png 1280w"
+                     sizes="(min-width: 30em) 500px,
+                            100vw"
+                     alt="Logo for the Barnes Foundation" />
               </a>
             </div>
           </div>

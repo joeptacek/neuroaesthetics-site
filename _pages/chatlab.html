@@ -52,7 +52,15 @@ sections:
 
           <div class="mb4 mb5-l">
             <div class="pa1 ba br2 b--moon-gray mb2 mb3-ns">
-              <img class="db w-100 br2" src="/assets/img/group/chatlab-2019-02-01.jpg" alt="ChatLab group photo (February, 2019)" />
+              <img class="db br1"
+                   src="/assets/img/responsive/jpg/mw1280/group/chatlab-2019-02-01--320w.jpg"
+                   srcset="/assets/img/responsive/jpg/mw1280/group/chatlab-2019-02-01--320w.jpg 320w,
+                           /assets/img/responsive/jpg/mw1280/group/chatlab-2019-02-01--640w.jpg 640w,
+                           /assets/img/responsive/jpg/mw1280/group/chatlab-2019-02-01--1280w.jpg 1280w,
+                           /assets/img/responsive/jpg/mw1280/group/chatlab-2019-02-01--2560w.jpg 2560w"
+                   sizes="(min-width: 60em) 1280px,
+                          100vw"
+                   alt="ChatLab group photo (February, 2019)" />
             </div>
             <p class="f6 f5-l light-silver">
               Photo of ChatLab (February, 2019)
@@ -69,7 +77,7 @@ sections:
             {% assign director = chatlab_current | where: "chatlab_role", "director" %}
             {% for person in director %}
               <div class="pv3 pv4-l">
-                {% include components/person_chatlab.html %}
+                {% include components/person_chatlab.html param=person %}
               </div>
             </div>
             {% endfor %}
@@ -83,7 +91,7 @@ sections:
             {% assign staff = chatlab_current | where: "chatlab_role", "staff" %}
             {% for person in staff %}
               <div class="pv3 pv4-l">
-                {% include components/person_chatlab.html %}
+                {% include components/person_chatlab.html param=person %}
               </div>
             {% endfor %}
           </div>
@@ -97,7 +105,7 @@ sections:
             {% assign postdocs = chatlab_current | where: "chatlab_role", "postdoctoral_researcher" %}
             {% for person in postdocs %}
               <div class="pv3 pv4-l">
-                {% include components/person_chatlab.html %}
+                {% include components/person_chatlab.html param=person %}
               </div>
             {% endfor %}
           </div>
@@ -111,7 +119,7 @@ sections:
             {% assign students = chatlab_current | where: "chatlab_role", "student_researcher" %}
             {% for person in students %}
               <div class="pv3 pv4-l">
-                {% include components/person_chatlab.html %}
+                {% include components/person_chatlab.html param=person %}
               </div>
             {% endfor %}
           </div>
@@ -226,7 +234,7 @@ sections:
             {% assign pubs_sorted = site.data.publications | where: "category", "neuroaesthetics" | sort: "work_post_date_fake" | reverse %}
             {% for publication in pubs_sorted %}
               <div class="pv3 pv4-ns ph3 ph4-m ph5-l bt b--black-10">
-                {% include components/publication.html %}
+                {% include components/publication.html param=publication %}
               </div>
             {% endfor %}
           </div>
@@ -252,7 +260,7 @@ sections:
             {% assign pubs_sorted = site.data.publications | where: "category", "language_and_space" | sort: "work_post_date_fake" | reverse %}
             {% for publication in pubs_sorted %}
               <div class="pv3 pv4-ns ph3 ph4-m ph5-l bt b--black-10">
-                {% include components/publication.html %}
+                {% include components/publication.html param=publication %}
               </div>
             {% endfor %}
           </div>
@@ -278,7 +286,7 @@ sections:
             {% assign pubs_sorted = site.data.publications | where: "category", "event_representation" | sort: "work_post_date_fake" | reverse %}
             {% for publication in pubs_sorted %}
               <div class="pv3 pv4-ns ph3 ph4-m ph5-l bt b--black-10">
-                {% include components/publication.html %}
+                {% include components/publication.html param=publication %}
               </div>
             {% endfor %}
           </div>
@@ -304,7 +312,7 @@ sections:
             {% assign pubs_sorted = site.data.publications | where: "category", "neuroethics" | sort: "work_post_date_fake" | reverse %}
             {% for publication in pubs_sorted %}
               <div class="pv3 pv4-ns ph3 ph4-m ph5-l bt b--black-10">
-                {% include components/publication.html %}
+                {% include components/publication.html param=publication %}
               </div>
             {% endfor %}
           </div>
@@ -330,7 +338,7 @@ sections:
             {% assign pubs_sorted = site.data.publications | where: "category", "miscellaneous" | sort: "work_post_date_fake" | reverse %}
             {% for publication in pubs_sorted %}
               <div class="pv3 pv4-ns ph3 ph4-m ph5-l bt b--black-10">
-                {% include components/publication.html %}
+                {% include components/publication.html param=publication %}
               </div>
             {% endfor %}
           </div>
@@ -364,7 +372,7 @@ sections:
             {% for news_item in news_sorted %}
               {% if news_item.archived == false %}
                 <div class="pv4 ph3 ph4-m ph5-l{% unless forloop.index == 1 %} bt b--black-10{% endunless %}">
-                  {% include components/news.html %}
+                  {% include components/news.html param=news_item %}
                 </div>
               {% endif %}
             {% endfor %}

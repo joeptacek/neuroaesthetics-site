@@ -1,13 +1,18 @@
 <div class="flex flex-column items-center flex-row-l items-start-l {% unless forloop.last %}mb4 mb5-l{% endunless %}">
-  <div class="flex-none mw-20rem-ns pa1 ba br2 b--moon-gray mr5-l mb2 mb3-m mb0-l">
+  <div class="flex-none pa1 ba br2 b--moon-gray mb2 mb3-m mb0-l mr5-l">
     <div class="js-carousel-container">
       {% for img in include.param.img_carousel %}
-        <img class="br1" src="{{ img.img_src }}" alt="{{ img.img_alt }}" />
+        <img class="db br1"
+             src="{{ img.img_src_320w }}"
+             srcset="{{ img.img_src_320w }} 320w,
+                     {{ img.img_src_320w | replace: '--320w', '--640w' }} 640w"
+             sizes="320px"
+             alt="{{ img.img_alt }}" />
       {% endfor %}
     </div>
   </div>
   <div class="flex flex-column">
-    <p class="self-center-m self-start-l order-last-l f6 f5-l light-silver mw-20rem-m mb3 mb0-l">
+    <p class="self-center-m self-start-l order-last-l f6 f5-l light-silver mw-320px-m mb3 mb0-l">
       {{ include.param.img_attribution }}
     </p>
     <p class="f5 f4-l mb3-l">

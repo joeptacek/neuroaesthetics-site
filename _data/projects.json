@@ -3,11 +3,11 @@
     "category": "beauty_and_morality",
     "img_carousel": [
       {
-        "img_src": "/assets/img/projects/faces/modified.jpg?ver=2",
+        "img_src_320w": "/assets/img/responsive/jpg/mw320/projects/faces/modified--320w.jpg",
         "img_alt": "Modified image from the Chicago Face Database"
       },
       {
-        "img_src": "/assets/img/projects/faces/original.jpg?ver=2",
+        "img_src_320w": "/assets/img/responsive/jpg/mw320/projects/faces/original--320w.jpg",
         "img_alt": "Original image from the Chicago Face Database"
       }
     ],
@@ -18,11 +18,11 @@
     "category": "beauty_and_morality",
     "img_carousel": [
       {
-        "img_src": "/assets/img/projects/bodies/original.jpg?ver=2",
+        "img_src_320w": "/assets/img/responsive/jpg/mw320/projects/bodies/original--320w.jpg",
         "img_alt": "Original image from the UConn Rudd Center for Food Policy & Obesity"
       },
       {
-        "img_src": "/assets/img/projects/bodies/painted.jpg?ver=2",
+        "img_src_320w": "/assets/img/responsive/jpg/mw320/projects/bodies/painted--320w.jpg",
         "img_alt": "Modified image from the UConn Rudd Center for Food Policy & Obesity"
       }
     ],
@@ -33,19 +33,19 @@
     "category": "the_built_environment_and_wellness",
     "img_carousel": [
       {
-        "img_src": "/assets/img/projects/architecture/steven-spassov-54423-unsplash.jpg?ver=2",
+        "img_src_320w": "/assets/img/responsive/jpg/mw320/projects/architecture/steven-spassov-54423-unsplash--320w.jpg",
         "img_alt": "Architectural photo by Steven Spassov"
       },
       {
-        "img_src": "/assets/img/projects/architecture/jean-philippe-delberghe-756057-unsplash.jpg?ver=2",
+        "img_src_320w": "/assets/img/responsive/jpg/mw320/projects/architecture/jean-philippe-delberghe-756057-unsplash--320w.jpg",
         "img_alt": "Architectural photo by Jean-Phillipe Delberghe"
       },
       {
-        "img_src": "/assets/img/projects/architecture/john-towner-133303-unsplash.jpg?ver=2",
+        "img_src_320w": "/assets/img/responsive/jpg/mw320/projects/architecture/john-towner-133303-unsplash--320w.jpg",
         "img_alt": "Architectural photo by John Towner"
       },
       {
-        "img_src": "/assets/img/projects/architecture/manu-schwendener-7567-unsplash.jpg?ver=2",
+        "img_src_320w": "/assets/img/responsive/jpg/mw320/projects/architecture/manu-schwendener-7567-unsplash--320w.jpg",
         "img_alt": "Architectural photo by Manu Schwendener"
       }
     ],
@@ -56,15 +56,15 @@
     "category": "the_built_environment_and_wellness",
     "img_carousel": [
       {
-        "img_src": "/assets/img/projects/ewingcole/view1.jpg?ver=2",
+        "img_src_320w": "/assets/img/responsive/jpg/mw320/projects/ewingcole/view1--320w.jpg",
         "img_alt": "Architectural rendering of memory care facility by EwingCole"
       },
       {
-        "img_src": "/assets/img/projects/ewingcole/view2.jpg?ver=2",
+        "img_src_320w": "/assets/img/responsive/jpg/mw320/projects/ewingcole/view2--320w.jpg",
         "img_alt": "Architectural rendering of memory care facility by EwingCole"
       },
       {
-        "img_src": "/assets/img/projects/ewingcole/floorplan.jpg?ver=2",
+        "img_src_320w": "/assets/img/responsive/jpg/mw320/projects/ewingcole/floorplan--320w.jpg",
         "img_alt": "Floor plan of memory care facility by EwingCole"
       }
     ],
@@ -75,15 +75,15 @@
     "category": "engagement_with_art",
     "img_carousel": [
       {
-        "img_src": "/assets/img/projects/gradients/original.jpg?ver=2",
+        "img_src_320w": "/assets/img/responsive/jpg/mw320/projects/gradients/original--320w.jpg",
         "img_alt": "Portrait of Louise-Antoinette Feuardent by Jean-François Millet"
       },
       {
-        "img_src": "/assets/img/projects/gradients/gradients-strength.jpg?ver=2",
+        "img_src_320w": "/assets/img/responsive/jpg/mw320/projects/gradients/gradients-strength--320w.jpg",
         "img_alt": "Image showing strength of gradients in portrait"
       },
       {
-        "img_src": "/assets/img/projects/gradients/gradients-orientation.jpg?ver=2",
+        "img_src_320w": "/assets/img/responsive/jpg/mw320/projects/gradients/gradients-orientation--320w.jpg",
         "img_alt": "Image showing orientation of gradients in portrait"
       }
     ],
@@ -94,11 +94,11 @@
     "category": "engagement_with_art",
     "img_carousel": [
       {
-        "img_src": "/assets/img/projects/motion/pma-mondrian.jpg?ver=2",
+        "img_src_320w": "/assets/img/responsive/jpg/mw320/projects/motion/pma-mondrian--320w.jpg",
         "img_alt": "No. 22 by Jackson Pollock"
       },
       {
-        "img_src": "/assets/img/projects/motion/pma-pollock.jpg?ver=2",
+        "img_src_320w": "/assets/img/responsive/jpg/mw320/projects/motion/pma-pollock--320w.jpg",
         "img_alt": "Composition with Blue and Yellow by Piet Mondrian"
       }
     ],
@@ -109,23 +109,23 @@
     "category": "engagement_with_art",
     "img_carousel": [
       {
-        "img_src": "/assets/img/projects/networks/network-1.jpg?ver=2",
+        "img_src_320w": "/assets/img/responsive/jpg/mw320/projects/networks/network-1--320w.jpg",
         "img_alt": "Image showing network analysis conducted on visual art"
       },
       {
-        "img_src": "/assets/img/projects/networks/network-2.jpg?ver=2",
+        "img_src_320w": "/assets/img/responsive/jpg/mw320/projects/networks/network-2--320w.jpg",
         "img_alt": "Image showing network analysis conducted on visual art"
       },
       {
-        "img_src": "/assets/img/projects/networks/network-3.jpg?ver=2",
+        "img_src_320w": "/assets/img/responsive/jpg/mw320/projects/networks/network-3--320w.jpg",
         "img_alt": "Image showing network analysis conducted on visual art"
       },
       {
-        "img_src": "/assets/img/projects/networks/network-4.jpg?ver=2",
+        "img_src_320w": "/assets/img/responsive/jpg/mw320/projects/networks/network-4--320w.jpg",
         "img_alt": "Image showing network analysis conducted on visual art"
       },
       {
-        "img_src": "/assets/img/projects/networks/network-5.jpg?ver=2",
+        "img_src_320w": "/assets/img/responsive/jpg/mw320/projects/networks/network-5--320w.jpg",
         "img_alt": "Image showing network analysis conducted on visual art"
       }
     ],

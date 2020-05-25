@@ -8,7 +8,7 @@
     "archived": false,
     "filter_pcfn": true,
     "blog_data": {
-      "img": "/assets/img/blog/anjan-chatterjee--mural-by-desiree-guinn.jpg",
+      "img_src_320w": "/assets/img/responsive/jpg/mw320/blog/anjan-chatterjee--mural-by-desiree-guinn--320w.jpg",
       "img_attribution": "Mural by Desireé Guinn, photo by Anjan Chatterjee",
       "teaser": "Many shelter in place during the pandemic only going out for walks. Can street art be a salve for wounded times?"
     }
@@ -22,7 +22,7 @@
     "archived": false,
     "filter_pcfn": true,
     "blog_data": {
-      "img": "/assets/img/blog/anjan-chatterjee--stairway.jpg",
+      "img_src_320w": "/assets/img/responsive/jpg/mw320/blog/anjan-chatterjee--stairway--320w.jpg",
       "img_attribution": "Image by Anjan Chatterjee",
       "teaser": "Most of us spend the bulk of our time in built environments. What are the core psychological and neurological responses to architectural interiors?"
     }
@@ -45,7 +45,7 @@
     "archived": false,
     "filter_pcfn": true,
     "blog_data": {
-      "img": "/assets/img/blog/rhododendrites--pollock-stuido-floor.jpg",
+      "img_src_320w": "/assets/img/responsive/jpg/mw320/blog/rhododendrites--pollock-stuido-floor--320w.jpg",
       "img_attribution": "Image by Rhododendrites, from Wikimedia",
       "teaser": "Abstract art does not make reference to anything meaningful in the world. Does that mean that people’s preferences are driven by the visual forms of these images? Maybe not."
     }
@@ -68,7 +68,7 @@
     "archived": false,
     "filter_pcfn": true,
     "highlights_data": {
-      "highlights_photo": "/assets/img/highlights/ac-vox.jpg"
+      "img_src_320w": "/assets/img/responsive/jpg/mw320/highlights/ac-vox--320w.jpg"
     }
   },
   {
@@ -89,7 +89,7 @@
     "archived": false,
     "filter_pcfn": false,
     "blog_data": {
-      "img": "/assets/img/blog/george-washington-bacon--london-map.jpg",
+      "img_src_320w": "/assets/img/responsive/jpg/mw320/blog/george-washington-bacon--london-map--320w.jpg",
       "img_attribution": "Image by George Washington Bacon, from Wikimedia",
       "teaser": "London taxi drivers with extensive knowledge of the city's streets have larger than average hippocampi. Is the same true for better than average navigators?"
     }
@@ -121,7 +121,7 @@
     "archived": false,
     "filter_pcfn": true,
     "highlights_data": {
-      "highlights_photo": "/assets/img/highlights/ac-truth.jpg"
+      "img_src_320w": "/assets/img/responsive/jpg/mw320/highlights/ac-truth--320w.jpg"
     },
     "links": {
       "list_title": "Additional coverage",
@@ -142,7 +142,7 @@
     "archived": false,
     "filter_pcfn": true,
     "blog_data": {
-      "img": "/assets/img/blog/william-gowers-after-st-leger--paralysis-agitans.jpg",
+      "img_src_320w": "/assets/img/responsive/jpg/mw320/blog/william-gowers-after-st-leger--paralysis-agitans--320w.jpg",
       "img_attribution": "Image by William Gowers after St. Leger, from the Internet Archive",
       "teaser": "Thought and language in early Parkinson’s disease teaches us about the relationship between body and mind."
     }
@@ -156,7 +156,7 @@
     "archived": false,
     "filter_pcfn": true,
     "blog_data": {
-      "img": "/assets/img/blog/ambroise-pare--hand.jpg",
+      "img_src_320w": "/assets/img/responsive/jpg/mw320/blog/ambroise-pare--hand--320w.jpg",
       "img_attribution": "Image by Ambroise Paré, from the Wellcome Library",
       "teaser": "Beauty is in the hand more than in the eye of the beholder."
     }
@@ -179,7 +179,7 @@
     "archived": false,
     "filter_pcfn": true,
     "highlights_data": {
-      "highlights_photo": "/assets/img/highlights/ac-neurofields.jpg"
+      "img_src_320w": "/assets/img/responsive/jpg/mw320/highlights/ac-neurofields--320w.jpg"
     }
   },
   {
@@ -200,7 +200,7 @@
     "archived": false,
     "filter_pcfn": true,
     "blog_data": {
-      "img": "/assets/img/blog/joseph-e-baker--rail-splitter.jpg",
+      "img_src_320w": "/assets/img/responsive/jpg/mw320/blog/joseph-e-baker--rail-splitter--320w.jpg",
       "img_attribution": "Image by Joseph E. Baker, from the Library of Congress",
       "teaser": "Metaphors are fundamental to human thought. How do they work, and why don’t we notice them?"
     }
@@ -223,7 +223,7 @@
     "archived": false,
     "filter_pcfn": true,
     "blog_data": {
-      "img": "/assets/img/blog/anjan-chatterjee--lion.jpg",
+      "img_src_320w": "/assets/img/responsive/jpg/mw320/blog/anjan-chatterjee--lion--320w.jpg",
       "img_attribution": "Image by Anjan Chatterjee",
       "teaser": "The Lion King is an opportunity to talk to your children about fairness."
     }
@@ -246,7 +246,7 @@
     "archived": false,
     "filter_pcfn": true,
     "blog_data": {
-      "img": "/assets/img/blog/erin-c-conrad--ideas.png",
+      "img_src_320w": "/assets/img/responsive/jpg/mw320/blog/erin-c-conrad--ideas--320w.jpg",
       "img_attribution": "Image by Erin C. Conrad",
       "teaser": "People are more accepting of the use of “smart pills” at work than in school or sports, and when the pills are framed with positive rather than negative metaphors."
     }
@@ -260,7 +260,7 @@
     "archived": false,
     "filter_pcfn": true,
     "highlights_data": {
-      "highlights_photo": "/assets/img/highlights/cw-brainspace.jpg?ver=2"
+      "img_src_320w": "/assets/img/responsive/jpg/mw320/highlights/cw-brainspace--320w.jpg"
     }
   },
   {
@@ -428,7 +428,7 @@
     "archived": false,
     "filter_pcfn": true,
     "highlights_data": {
-      "highlights_photo": "/assets/img/highlights/ac-gws.jpg"
+      "img_src_320w": "/assets/img/responsive/jpg/mw320/highlights/ac-gws--320w.jpg"
     }
   },
   {
@@ -566,7 +566,7 @@
     "archived": false,
     "filter_pcfn": true,
     "highlights_data": {
-      "highlights_photo": "/assets/img/highlights/ac-mp.jpg"
+      "img_src_320w": "/assets/img/responsive/jpg/mw320/highlights/ac-mp--320w.jpg"
     }
   },
   {
@@ -687,7 +687,7 @@
     "archived": false,
     "filter_pcfn": true,
     "highlights_data": {
-      "highlights_photo": "/assets/img/highlights/ac-ted.jpg"
+      "img_src_320w": "/assets/img/responsive/jpg/mw320/highlights/ac-ted--320w.jpg"
     }
   },
   {
@@ -789,7 +789,7 @@
     "archived": false,
     "filter_pcfn": true,
     "highlights_data": {
-      "highlights_photo": "/assets/img/highlights/ac-interact.jpg"
+      "img_src_320w": "/assets/img/responsive/jpg/mw320/highlights/ac-interact--320w.jpg"
     }
   },
   {
@@ -864,7 +864,7 @@
     "archived": false,
     "filter_pcfn": true,
     "highlights_data": {
-      "highlights_photo": "/assets/img/highlights/ac-cns.jpg"
+      "img_src_320w": "/assets/img/responsive/jpg/mw320/highlights/ac-cns--320w.jpg"
     }
   },
   {

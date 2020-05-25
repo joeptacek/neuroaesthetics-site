@@ -106,7 +106,7 @@ sections:
             {% assign pubs_sorted = site.data.publications | where: "category", "neuroaesthetics" | sort: "work_post_date_fake" | reverse %}
             {% for publication in pubs_sorted %}
               <div class="pv3 pv4-ns ph3 ph4-m ph5-l{% unless forloop.first %} bt b--black-10{% endunless %}">
-                {% include components/publication.html %}
+                {% include components/publication.html param=publication %}
               </div>
             {% endfor %}
           </div>
@@ -137,7 +137,7 @@ sections:
           {% comment %} inserted extra pt3-l after hr bc more slightly more distance is necessary between the preceeding hr and following bt {% endcomment %}
           {% for resource in site.data.resources %}
             <div class="pv4 ph3 ph4-m ph5-l{% unless forloop.index == 1 %} bt b--black-10{% endunless %}">
-              {% include components/resource.html %}
+              {% include components/resource.html param=resource %}
             </div>
           {% endfor %}
         </div>
