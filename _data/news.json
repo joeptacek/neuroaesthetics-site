@@ -1,5 +1,19 @@
 [
   {
+    "title": "Art: Anxiety, Anticipation, and Appreciation",
+    "source": "Brain, Behavior, and Beauty",
+    "date": "2020-05-18",
+    "url": "https://www.psychologytoday.com/us/blog/brain-behavior-and-beauty/202005/art-anxiety-anticipation-and-appreciation",
+    "category": "print",
+    "archived": false,
+    "filter_pcfn": true,
+    "blog_data": {
+      "img_src_320w": "/assets/img/responsive/jpg/mw320/blog/alexej-von-jawlensky--kopf-in-blau--320w.jpg",
+      "img_attribution": "Image by Alexej von Jawlensky, from Wikimedia",
+      "teaser": "When we anticipate looking at work by an artist of whom we know nothing, even a little bit of relevant prior information is rewarding."
+    }
+  },
+  {
     "title": "What Is Art Good For?",
     "source": "Brain, Behavior, and Beauty",
     "date": "2020-04-01",
