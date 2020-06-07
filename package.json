@@ -26,6 +26,7 @@
     "gray-matter": "^4.0.2",
     "gulp": "^4.0.2",
     "gulp-cached": "^1.1.1",
+    "gulp-concat": "^2.6.1",
     "gulp-postcss": "^8.0.0",
     "gulp-responsive": "^3.0.1",
     "gulp-uglify": "^3.0.2",

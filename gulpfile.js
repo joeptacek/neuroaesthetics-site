@@ -26,6 +26,7 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 
 // scripts
+const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 
 // images
@@ -156,9 +157,9 @@ function css() {
 }
 
 function js() {
-  // uglify main.js
-  return gulp.src('_assets/js/main.js')
+  return gulp.src('_assets/js/**')
     .pipe(uglify())
+    .pipe(concat('all.js'))
     .pipe(gulp.dest('_site/assets/js'));
 }
 
@@ -282,6 +283,27 @@ function img() {
               suffix: '--2560w',
               extname: '.jpg'
             }
+          },
+          {
+            width: 1280,
+            rename: {
+              suffix: '--1280w',
+              extname: '.webp'
+            }
+          },
+          {
+            width: 1280 * 1.5,
+            rename: {
+              suffix: '--1920w',
+              extname: '.webp'
+            }
+          },
+          {
+            width: 1280 * 2,
+            rename: {
+              suffix: '--2560w',
+              extname: '.webp'
+            }
           }
         ]
       },
@@ -313,7 +335,7 @@ function serve(cb) {
 function watch() {
   gulp.watch('_assets/img/src/**', img);
   gulp.watch('_assets/css/**', css);
-  gulp.watch('_assets/js/main.js', js);
+  gulp.watch('_assets/js/**', js);
   gulp.watch(
     [
       '_data/**', '!_data/news.json',
