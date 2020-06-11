@@ -1,5 +1,19 @@
 [
   {
+    "title": "What Is Art Good For? [Pt. 2]",
+    "source": "Brain, Behavior, and Beauty",
+    "date": "2020-06-09",
+    "url": "https://www.psychologytoday.com/us/blog/brain-behavior-and-beauty/202006/what-is-art-good",
+    "category": "print",
+    "archived": false,
+    "filter_pcfn": true,
+    "blog_data": {
+      "img_src_320w": "/assets/img/responsive/jpg/mw320/blog/anjan-chatterjee--can-you-hear-us-now--320w.jpg",
+      "img_attribution": "Image by Anjan Chatterjee",
+      "teaser": "America convulses in protests against police brutality towards Black people. In the protests lies the demand: Can you hear us now?"
+    }
+  },
+  {
     "title": "Art: Anxiety, Anticipation, and Appreciation",
     "source": "Brain, Behavior, and Beauty",
     "date": "2020-05-18",
@@ -14,7 +28,7 @@
     }
   },
   {
-    "title": "What Is Art Good For?",
+    "title": "What Is Art Good For? [Pt. 1]",
     "source": "Brain, Behavior, and Beauty",
     "date": "2020-04-01",
     "url": "https://www.psychologytoday.com/us/blog/brain-behavior-and-beauty/202004/what-is-art-good",
