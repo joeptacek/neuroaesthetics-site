@@ -3,11 +3,11 @@
     "theme_title": "Beauty and morality",
     "img_carousel": [
       {
-        "img_src_320w": "/assets/img/responsive/jpg/mw320/themes/beauty-morality/modified--320w.jpg",
+        "img_src_320w": "/assets/img/jpg/mw320/themes/beauty-morality/modified--320w.jpg",
         "img_alt": "Modified version of image from the Chicago Face Database"
       },
       {
-        "img_src_320w": "/assets/img/responsive/jpg/mw320/themes/beauty-morality/original--320w.jpg",
+        "img_src_320w": "/assets/img/jpg/mw320/themes/beauty-morality/original--320w.jpg",
         "img_alt": "Image from the Chicago Face Database"
       }
     ],
@@ -19,19 +19,19 @@
     "theme_title": "The built environment and wellness",
     "img_carousel": [
       {
-        "img_src_320w": "/assets/img/responsive/jpg/mw320/themes/built-environment/vince-fleming-Ie5wWGbtA4g-unsplash--320w.jpg",
+        "img_src_320w": "/assets/img/jpg/mw320/themes/built-environment/vince-fleming-Ie5wWGbtA4g-unsplash--320w.jpg",
         "img_alt": "Image by Vince Fleming"
       },
       {
-        "img_src_320w": "/assets/img/responsive/jpg/mw320/themes/built-environment/ryoji-iwata-G_cvhHbo7OY-unsplash--320w.jpg",
+        "img_src_320w": "/assets/img/jpg/mw320/themes/built-environment/ryoji-iwata-G_cvhHbo7OY-unsplash--320w.jpg",
         "img_alt": "Image by Ryoji Iwata"
       },
       {
-        "img_src_320w": "/assets/img/responsive/jpg/mw320/themes/built-environment/christian-fregnan-1WBtk8m-Xxs-unsplash--320w.jpg",
+        "img_src_320w": "/assets/img/jpg/mw320/themes/built-environment/christian-fregnan-1WBtk8m-Xxs-unsplash--320w.jpg",
         "img_alt": "Image by Christian Fregnan"
       },
       {
-        "img_src_320w": "/assets/img/responsive/jpg/mw320/themes/built-environment/jp-valery-b8CdVExTuUw-unsplash--320w.jpg",
+        "img_src_320w": "/assets/img/jpg/mw320/themes/built-environment/jp-valery-b8CdVExTuUw-unsplash--320w.jpg",
         "img_alt": "Image by Jp Valery"
       }
     ],
@@ -43,19 +43,19 @@
     "theme_title": "Engagement with art",
     "img_carousel": [
       {
-        "img_src_320w": "/assets/img/responsive/jpg/mw320/themes/engagement-with-art/christian-fregnan-ewiYQxLTGEU-unsplash--320w.jpg",
+        "img_src_320w": "/assets/img/jpg/mw320/themes/engagement-with-art/christian-fregnan-ewiYQxLTGEU-unsplash--320w.jpg",
         "img_alt": "Image by Christian Fregnan"
       },
       {
-        "img_src_320w": "/assets/img/responsive/jpg/mw320/themes/engagement-with-art/ian-dooley-ZLBzMGle-nE-unsplash--320w.jpg",
+        "img_src_320w": "/assets/img/jpg/mw320/themes/engagement-with-art/ian-dooley-ZLBzMGle-nE-unsplash--320w.jpg",
         "img_alt": "Image by ian dooley"
       },
       {
-        "img_src_320w": "/assets/img/responsive/jpg/mw320/themes/engagement-with-art/stijn-te-strake-VwhZm4LRQYs-unsplash--320w.jpg",
+        "img_src_320w": "/assets/img/jpg/mw320/themes/engagement-with-art/stijn-te-strake-VwhZm4LRQYs-unsplash--320w.jpg",
         "img_alt": "Image by Stijn te Strake"
       },
       {
-        "img_src_320w": "/assets/img/responsive/jpg/mw320/themes/engagement-with-art/vaclav-pluhar-uqMBLm8bAdA-unsplash--320w.jpg",
+        "img_src_320w": "/assets/img/jpg/mw320/themes/engagement-with-art/vaclav-pluhar-uqMBLm8bAdA-unsplash--320w.jpg",
         "img_alt": "Image by Václav Pluhař"
       }
     ],

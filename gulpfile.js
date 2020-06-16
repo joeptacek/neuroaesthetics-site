@@ -13,6 +13,8 @@ const bs = require('browser-sync').create();
 const del = require('del');
 const log = require('fancy-log');
 const cache = require('gulp-cached');
+const gulpif = require('gulp-if');
+const lazypipe = require('lazypipe');
 
 // freejazz
 const puppeteer = require('puppeteer');
@@ -30,7 +32,8 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 
 // images
-const responsive = require('gulp-responsive');
+const responsive = require('gulp-responsive'); // uses sharp
+const svgmin = require('gulp-svgmin'); // uses svgo
 
 // args
 const args = process.argv;
@@ -141,7 +144,7 @@ function clean() {
   return del([
     '_site/assets/css/**',
     '_site/assets/js/**',
-    '_site/assets/img/responsive/**'
+    '_site/assets/img/**'
   ]);
 }
 
@@ -159,15 +162,19 @@ function css() {
 function js() {
   return gulp.src('_assets/js/**')
     .pipe(uglify())
-    .pipe(concat('all.js'))
+    .pipe(gulpif('bundle/**', concat('bundle.js')))
     .pipe(gulp.dest('_site/assets/js'));
 }
+
+const svgChannel = lazypipe()
+  .pipe(svgmin)
+  .pipe(gulp.dest, '_site/assets/img')
 
 function img() {
   // TODO: add WEBP
   return gulp.src('_assets/img/src/**')
     .pipe(cache('images')) // filters out images already processed
-    .pipe(responsive(
+    .pipe(gulpif('svg/**', svgChannel(), responsive(
       {
         'png/mw320/**': [
           {
@@ -314,8 +321,8 @@ function img() {
         quality: 80, // default
         withMetadata: false // default
       }
-    ))
-    .pipe(gulp.dest('_site/assets/img/responsive'));
+    )))
+    .pipe(gulp.dest('_site/assets/img'));
 }
 
 function jekyll() {

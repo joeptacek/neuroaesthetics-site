@@ -7,7 +7,6 @@ exclude:
   - package-lock.json
   - gulpfile.js
   - README.md
-  - assets/img/originals
 
 # to publish announcement / event documents with filename date in future
 future: true
@@ -16,7 +15,7 @@ future: true
 keep_files:
   - "assets/css"
   - "assets/js"
-  - "assets/img/responsive"
+  - "assets/img"
 
 collections:
   pages:

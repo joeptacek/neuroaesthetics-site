@@ -84,7 +84,7 @@ h1, h2, h3, h4, h5, .font-headers {
 }
 
 .mw-320px {
-  max-width: 20rem;
+  max-width: 320px;
 }
 
 .mw-40rem {
@@ -392,6 +392,16 @@ h1, h2, h3, h4, h5, .font-headers {
   display: block !important;
 }
 
+/* LOGOS */
+
+.logo--pcfn {
+  width: 110px;
+}
+
+.logo--psom {
+  width: 200px;
+}
+
 /* STYLES FOR JAVASCRIPT */
 
 .js-carousel-container {
@@ -464,7 +474,7 @@ h1, h2, h3, h4, h5, .font-headers {
   .dim-ns:active { opacity: .8; transition: none; }
 
   .mw-320px-ns {
-    max-width: 20rem;
+    max-width: 320px;
   }
 
   .mw-40rem-ns {
@@ -506,6 +516,16 @@ h1, h2, h3, h4, h5, .font-headers {
   .break-inside-avoid-ns {
     break-inside: avoid;
   }
+
+  /* LOGOS */
+
+  .logo--pcfn {
+    width: 130px;
+  }
+
+  .logo--psom {
+    width: 220px;
+  }
 }
 
 /* BREAKPOINT: MEDIUM (M) =================================================== */
@@ -516,7 +536,7 @@ h1, h2, h3, h4, h5, .font-headers {
   .dim-m:active { opacity: .8; transition: none; }
 
   .mw-320px-m {
-    max-width: 20rem;
+    max-width: 320px;
   }
 
   .mw-40rem-m {
@@ -568,7 +588,7 @@ h1, h2, h3, h4, h5, .font-headers {
   }
 
   .mw-320px-l {
-    max-width: 20rem;
+    max-width: 320px;
   }
 
   .mw-40rem-l {

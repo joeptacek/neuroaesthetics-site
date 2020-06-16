@@ -1,27 +1,51 @@
 <!doctype html>
-<html class="no-js bg-near-white">
-  <!-- HEAD -->
+<html class="no-js bg-near-white" lang="en">
   {% include partials/head.html %}
-  <!-- BODY -->
   <body class="mid-gray">
+
     <!-- BACKGROUND -->
+    <!-- force-repaint to fix bug on mobile safari -->
     {% if page.big_header and page.big_header != "" %}
       <div class="fixed force-repaint {{ page.big_header.bh_background }} bg-cover w-100 vh-100"></div>
     {% endif %}
-    <!-- HEADER -->
+
+    <!-- force-repaint to fix bug on mobile safari -->
     <div class="force-repaint relative">
+
+      <!-- HEADER -->
       {% include partials/header.html %}
+
       <!-- PAGE NAV -->
       {% if page.sections and page.sections != "" %}
         {% include partials/page-nav.html %}
       {% endif %}
+
       <!-- MAIN -->
       {{ content }}
+
       <!-- FOOTER -->
       {% include partials/footer.html %}
     </div>
-    <!-- SCRIPTS -->
+
+    <!-- BUNDLED SCRIPTS (main.js, modernizr.js, picturefill.js) -->
+    <script src="/assets/js/bundle.js?{{ site.time | date: "%s" }}"></script>
+
+    <!-- TWITTER WIDGET -->
+    <!-- skip async on scripts at end of body? -->
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    <script src="/assets/js/all.js?{{ site.time | date: "%s" }}"></script>
+
+    <!-- GOOGLE ANALYTICS -->
+    <!-- skip async on scripts at end of body? -->
+    {% if jekyll.environment == "production" %}
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109208305-2"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-109208305-2');
+      </script>
+    {% endif %}
+
   </body>
 </html>

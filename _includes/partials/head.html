@@ -21,14 +21,8 @@
     {% comment %} Specify canonical URL for /index.html {% endcomment %}
     <link rel="canonical" href="https://neuroaesthetics.med.upenn.edu/">
   {% endif %}
-  {% if jekyll.environment == "production" %}
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109208305-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-109208305-2');
-    </script>
-  {% endif %}
+  <script>
+    // Picture element HTML5 shiv used with picturefill.js (should stay in head)
+    document.createElement( "picture" );
+  </script>
 </head>
