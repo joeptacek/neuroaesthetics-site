@@ -190,6 +190,20 @@ function img() {
               suffix: '--640w',
               extname: '.png'
             }
+          },
+          {
+            width: 320,
+            rename: {
+              suffix: '--320w',
+              extname: '.webp'
+            }
+          },
+          {
+            width: 320 * 2,
+            rename: {
+              suffix: '--640w',
+              extname: '.webp'
+            }
           }
         ],
         'png/mw640/**': [
@@ -213,6 +227,27 @@ function img() {
               suffix: '--1280w',
               extname: '.png'
             }
+          },
+          {
+            width: 320,
+            rename: {
+              suffix: '--320w',
+              extname: '.webp'
+            }
+          },
+          {
+            width: 320 * 2,
+            rename: {
+              suffix: '--640w',
+              extname: '.webp'
+            }
+          },
+          {
+            width: 320 * 4,
+            rename: {
+              suffix: '--1280w',
+              extname: '.webp'
+            }
           }
         ],
         'jpg/mw320/**': [
@@ -228,6 +263,20 @@ function img() {
             rename: {
               suffix: '--640w',
               extname: '.jpg'
+            }
+          },
+          {
+            width: 320,
+            rename: {
+              suffix: '--320w',
+              extname: '.webp'
+            }
+          },
+          {
+            width: 320 * 2,
+            rename: {
+              suffix: '--640w',
+              extname: '.webp'
             }
           }
         ],
@@ -258,6 +307,34 @@ function img() {
             rename: {
               suffix: '--2560w',
               extname: '.jpg'
+            }
+          },
+          {
+            width: 320,
+            rename: {
+              suffix: '--320w',
+              extname: '.webp'
+            }
+          },
+          {
+            width: 320 * 2,
+            rename: {
+              suffix: '--640w',
+              extname: '.webp'
+            }
+          },
+          {
+            width: 320 * 4,
+            rename: {
+              suffix: '--1280w',
+              extname: '.webp'
+            }
+          },
+          {
+            width: 320 * 8,
+            rename: {
+              suffix: '--2560w',
+              extname: '.webp'
             }
           }
         ],

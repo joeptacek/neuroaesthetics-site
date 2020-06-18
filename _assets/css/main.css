@@ -408,18 +408,13 @@ h1, h2, h3, h4, h5, .font-headers {
   position: relative;
 }
 
-.js-carousel-container img {
-  display: block;    /* squash inline-block gaps */
-
+.js-carousel-container picture {
   position: absolute;
   top: 0;
   left: 0;
-
-  max-width: 100%; /* tachyons already resets img to mw-100 */
-  height: auto; /* not necessary (?) */
 }
 
-.js-carousel-container img:first-child {
+.js-carousel-container picture:first-child {
   /*
   so that first-child is in front of following children, masking these while
   javascript transitions the following children to opaque

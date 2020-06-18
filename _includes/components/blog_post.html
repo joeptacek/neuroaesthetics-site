@@ -2,12 +2,21 @@
   <a class="db link dim-l" href="{{ include.param.url }}" target="_blank">
     <div class="flex flex-column items-center flex-row-l">
       <div class="flex-none pa1 ba br2 b--moon-gray mb4 mb0-l mr5-l">
-        <img class="db br1"
-             src="{{ include.param.blog_data.img_src_320w }}"
-             srcset="{{ include.param.blog_data.img_src_320w }} 320w,
-                     {{ include.param.blog_data.img_src_320w | replace: '--320w', '--640w' }} 640w"
-             sizes="320px"
-             alt="Thumbnail for {{ include.param.title }}" />
+        {% assign jpg_src_320w = include.param.blog_data.img_src_320w | replace: '.webp', '.jpg' %}
+        <picture class="db">
+          <source
+            type="image/webp"
+            srcset="{{ include.param.blog_data.img_src_320w }} 320w,
+                    {{ include.param.blog_data.img_src_320w | replace: '--320w', '--640w' }} 640w"
+            sizes="320px">
+          <img
+            class="db br1"
+            src="{{ jpg_src_320w }}"
+            srcset="{{ jpg_src_320w }} 320w,
+                    {{ jpg_src_320w | replace: '--320w', '--640w' }} 640w"
+            sizes="320px"
+            alt="Thumbnail for {{ include.param.title }}">
+        </picture>
       </div>
       <div class="tc tl-l bluegreen">
         <p class="silver mb2">

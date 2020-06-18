@@ -1,12 +1,21 @@
 <div class="f5 f4-ns lh-title">
   <div class="flex flex-column flex-row-l items-center items-start-l">
     <div class="flex-none pa1 ba br-100 b--moon-gray mb3 mr5-l mb0-l">
-      <img class="db br-100"
-           src="{{ include.param.img_src_320w }}"
-           srcset="{{ include.param.img_src_320w }} 320w,
-                   {{ include.param.img_src_320w | replace: '--320w', '--640w' }} 640w"
-           sizes="250px"
-           alt="{{ include.param.first_name }} {% if include.param.middle_initials %}{{ include.param.middle_initials}} {% endif %}{{ include.param.last_name }}" />
+      {% assign jpg_src_320w = include.param.img_src_320w | replace: '.webp', '.jpg' %}
+      <picture class="db">
+        <source
+          type="image/webp"
+          srcset="{{ include.param.img_src_320w }} 320w,
+                  {{ include.param.img_src_320w | replace: '--320w', '--640w' }} 640w"
+          sizes="250px">
+        <img
+          class="db br-100"
+          src="{{ jpg_src_320w }}"
+          srcset="{{ jpg_src_320w }} 320w,
+                  {{ jpg_src_320w | replace: '--320w', '--640w' }} 640w"
+          sizes="250px"
+          alt="{{ include.param.first_name }} {% if include.param.middle_initials %}{{ include.param.middle_initials}} {% endif %}{{ include.param.last_name }}">
+     </picture>
     </div>
     <div>
       <h4 class="tc tl-l mb2">

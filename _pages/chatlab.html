@@ -52,15 +52,26 @@ sections:
 
           <div class="mb4 mb5-l">
             <div class="pa1 ba br2 b--moon-gray mb2 mb3-ns">
-              <img class="db br1"
-                   src="/assets/img/jpg/mw1280/group/chatlab-2019-02-01--320w.jpg"
-                   srcset="/assets/img/jpg/mw1280/group/chatlab-2019-02-01--320w.jpg 320w,
-                           /assets/img/jpg/mw1280/group/chatlab-2019-02-01--640w.jpg 640w,
-                           /assets/img/jpg/mw1280/group/chatlab-2019-02-01--1280w.jpg 1280w,
-                           /assets/img/jpg/mw1280/group/chatlab-2019-02-01--2560w.jpg 2560w"
-                   sizes="(min-width: 60em) 1280px,
-                          100vw"
-                   alt="ChatLab group photo (February, 2019)" />
+              <picture class="db">
+                <source
+                  type="image/webp"
+                  srcset="/assets/img/jpg/mw1280/group/chatlab-2019-02-01--320w.webp 320w,
+                          /assets/img/jpg/mw1280/group/chatlab-2019-02-01--640w.webp 640w,
+                          /assets/img/jpg/mw1280/group/chatlab-2019-02-01--1280w.webp 1280w,
+                          /assets/img/jpg/mw1280/group/chatlab-2019-02-01--2560w.webp 2560w"
+                  sizes="(min-width: 60em) 1280px,
+                         100vw">
+                <img
+                  class="db br1"
+                  src="/assets/img/jpg/mw1280/group/chatlab-2019-02-01--320w.jpg"
+                  srcset="/assets/img/jpg/mw1280/group/chatlab-2019-02-01--320w.jpg 320w,
+                          /assets/img/jpg/mw1280/group/chatlab-2019-02-01--640w.jpg 640w,
+                          /assets/img/jpg/mw1280/group/chatlab-2019-02-01--1280w.jpg 1280w,
+                          /assets/img/jpg/mw1280/group/chatlab-2019-02-01--2560w.jpg 2560w"
+                  sizes="(min-width: 60em) 1280px,
+                         100vw"
+                  alt="ChatLab group photo (February, 2019)">
+              </picture>
             </div>
             <p class="f6 f5-l light-silver">
               Photo of ChatLab (February, 2019)

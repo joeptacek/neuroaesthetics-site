@@ -2,12 +2,21 @@
   <a class="db link dim-l" href="/people/{{ include.param.name_slug }}.html">
     <div class="flex flex-column items-center flex-row-m">
       <div class="flex-none pa1 ba br-100 b--moon-gray mb3 mr4-m mb0-m">
-        <img class="db br-100"
-             src="{{ include.param.img_src_320w }}"
-             srcset="{{ include.param.img_src_320w }} 320w,
-                     {{ include.param.img_src_320w | replace: '--320w', '--640w' }} 640w"
-             sizes="250px"
-             alt="{{ include.param.first_name }} {% if include.param.middle_initials %}{{ include.param.middle_initials}} {% endif %}{{ include.param.last_name }}" />
+        {% assign jpg_src_320w = include.param.img_src_320w | replace: '.webp', '.jpg' %}
+        <picture class="db">
+          <source
+            type="image/webp"
+            srcset="{{ include.param.img_src_320w }} 320w,
+                    {{ include.param.img_src_320w | replace: '--320w', '--640w' }} 640w"
+            sizes="250px">
+          <img
+            class="db br-100"
+            src="{{ jpg_src_320w }}"
+            srcset="{{ jpg_src_320w }} 320w,
+                    {{ jpg_src_320w | replace: '--320w', '--640w' }} 640w"
+            sizes="250px"
+            alt="{{ include.param.first_name }} {% if include.param.middle_initials %}{{ include.param.middle_initials}} {% endif %}{{ include.param.last_name }}">
+        </picture>
       </div>
       <div class="tc tl-m">
         <h3 class="tc mid-gray tracked-tight tl-m mb2">
