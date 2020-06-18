@@ -167,6 +167,7 @@ function js() {
 }
 
 const svgChannel = lazypipe()
+// TODO: generate fallback pngs
   .pipe(svgmin)
   .pipe(gulp.dest, '_site/assets/img')
 
