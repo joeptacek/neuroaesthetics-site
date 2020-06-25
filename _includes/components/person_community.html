@@ -1,5 +1,5 @@
 <div class="f5 f4-ns lh-title">
-  <a class="db link dim-l" href="/people/{{ include.param.name_slug }}.html">
+  <a class="db mid-gray link dim-l" href="/people/{{ include.param.name_slug }}.html">
     <div class="flex flex-column items-center flex-row-m">
       <div class="flex-none pa1 ba br-100 b--moon-gray mb3 mr4-m mb0-m">
         {% assign jpg_src_320w = include.param.img_src_320w | replace: '.webp', '.jpg' %}
@@ -19,7 +19,7 @@
         </picture>
       </div>
       <div class="tc tl-m">
-        <h3 class="tc mid-gray tracked-tight tl-m mb2">
+        <h3 class="font-serif tc tl-m tracked-tight mb2">
           {{ include.param.first_name }} {% if include.param.middle_initials %}{{ include.param.middle_initials}} {% endif %}{{ include.param.last_name }}
         </h3>
         <div class="f5">

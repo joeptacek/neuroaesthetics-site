@@ -21,7 +21,7 @@ sections:
 
         <div class="pa3 pa4-m pa5-l">
 
-          <h2 class="bluegreen font-default lh-title b mb1 mb2-ns">
+          <h2 class="bluegreen lh-title mb1 mb2-ns">
             {{ page.sections[0] }}
           </h2>
           <hr class="w-100 ba b--bluegreen mb3 mb4-ns">
@@ -45,7 +45,7 @@ sections:
 
         <div class="pa3 pa4-m pa5-l">
 
-          <h2 class="bluegreen font-default lh-title b mb1 mb2-ns">
+          <h2 class="bluegreen lh-title mb1 mb2-ns">
             {{ page.sections[1] }}
           </h2>
           <hr class="w-100 ba b--bluegreen mb3 mb4-ns">
@@ -79,7 +79,7 @@ sections:
           </div>
 
           <!-- DIRECTORS -->
-          <h3 class="bluegreen font-default lh-title b mb1 mb2-ns">
+          <h3 class="bluegreen lh-title mb1 mb2-ns">
             Director
           </h3>
           <hr class="w-100 ba b--bluegreen mb3-ns">
@@ -94,7 +94,7 @@ sections:
             {% endfor %}
 
           <!-- STAFF -->
-          <h3 class="bluegreen font-default lh-title b mb1 mb2-ns">
+          <h3 class="bluegreen lh-title mb1 mb2-ns">
             Staff
           </h3>
           <hr class="w-100 ba b--bluegreen mb3-ns">
@@ -108,7 +108,7 @@ sections:
           </div>
 
           <!-- POSTDOCS -->
-          <h3 class="bluegreen font-default lh-title b mb1 mb2-ns">
+          <h3 class="bluegreen lh-title mb1 mb2-ns">
             Postdoctoral researchers
           </h3>
           <hr class="w-100 ba b--bluegreen mb3-ns">
@@ -122,7 +122,7 @@ sections:
           </div>
 
           <!-- STUDENT RESEARCHERS -->
-          <h3 class="bluegreen font-default lh-title b mb1 mb2-ns">
+          <h3 class="bluegreen lh-title mb1 mb2-ns">
             Student researchers
           </h3>
           <hr class="w-100 ba b--bluegreen mb3-ns">
@@ -136,80 +136,80 @@ sections:
           </div>
 
           <!-- ALUMNI -->
-          <h3 class="bluegreen font-default lh-title b mb1 mb2-ns">
+          <h3 class="bluegreen lh-title mb1 mb2-ns">
             Alumni
           </h3>
           <hr class="w-100 ba b--bluegreen mb3 mb4-ns">
           <div class="columns-1 columns-2-m columns-3-l column-gap-4">
             <div class="break-inside-avoid mb4">
-              <h4 class="f5 f4-ns bluegreen font-default b mb3">Postdoctoral researchers</h4>
+              <h4 class="f5 f4-ns bluegreen lh-title mb3">Postdoctoral researchers</h4>
               {% assign chatlab_alums = site.data.people | where: "chatlab_group", "true" | where: "chatlab_alum", "true" | sort: "last_name" %}
               {% assign postdocs_alums = chatlab_alums | where: "chatlab_role", "postdoctoral_researcher" %}
               {% for person in postdocs_alums %}
-                <h5 class="f6 f5-ns font-default lh-title mb1">
+                <h5 class="f6 f5-ns lh-title mb1">
                   {{ person.first_name }} {% if person.middle_initials %}{{ person.middle_initials}} {% endif %}{{ person.last_name }}
                 </h5>
               {% endfor %}
             </div>
             <div class="break-inside-avoid mb4">
-              <h4 class="f5 f4-ns bluegreen font-default b mb3">Visiting researchers</h4>
+              <h4 class="f5 f4-ns bluegreen lh-title mb3">Visiting researchers</h4>
               {% assign visiting_alums = chatlab_alums | where: "chatlab_role", "visiting_researcher" %}
               {% for person in visiting_alums %}
-                <h5 class="f6 f5-ns font-default lh-title mb1">
+                <h5 class="f6 f5-ns lh-title mb1">
                   {{ person.first_name }} {% if person.middle_initials %}{{ person.middle_initials}} {% endif %}{{ person.last_name }}
                 </h5>
               {% endfor %}
             </div>
             <div class="break-inside-avoid mb4">
-              <h4 class="f5 f4-ns bluegreen font-default b mb3">Medical students</h4>
+              <h4 class="f5 f4-ns bluegreen lh-title mb3">Medical students</h4>
               {% assign medical_alums = chatlab_alums | where: "chatlab_student_role", "medical_student" %}
               {% for person in medical_alums %}
-                <h5 class="f6 f5-ns font-default lh-title mb1">
+                <h5 class="f6 f5-ns lh-title mb1">
                   {{ person.first_name }} {% if person.middle_initials %}{{ person.middle_initials}} {% endif %}{{ person.last_name }}
                 </h5>
               {% endfor %}
             </div>
             <div class="break-inside-avoid mb4">
-              <h4 class="f5 f4-ns bluegreen font-default b mb3">Graduate students</h4>
+              <h4 class="f5 f4-ns bluegreen lh-title mb3">Graduate students</h4>
               {% assign graduate_alums = chatlab_alums | where: "chatlab_student_role", "graduate_student" %}
               {% for person in graduate_alums %}
-                <h5 class="f6 f5-ns font-default lh-title mb1">
+                <h5 class="f6 f5-ns lh-title mb1">
                   {{ person.first_name }} {% if person.middle_initials %}{{ person.middle_initials}} {% endif %}{{ person.last_name }}
                 </h5>
               {% endfor %}
             </div>
             <div class="break-inside-avoid mb4">
-              <h4 class="f5 f4-ns bluegreen font-default b mb3">Postbaccalaureate students</h4>
+              <h4 class="f5 f4-ns bluegreen lh-title mb3">Postbaccalaureate students</h4>
               {% assign postbacc_alums = chatlab_alums | where: "chatlab_student_role", "postbaccalaureate_student" %}
               {% for person in postbacc_alums %}
-                <h5 class="f6 f5-ns font-default lh-title mb1">
+                <h5 class="f6 f5-ns lh-title mb1">
                   {{ person.first_name }} {% if person.middle_initials %}{{ person.middle_initials}} {% endif %}{{ person.last_name }}
                 </h5>
               {% endfor %}
             </div>
             <div class="break-inside-avoid mb4">
-              <h4 class="f5 f4-ns bluegreen font-default b mb3">Undergraduate & high school students</h4>
+              <h4 class="f5 f4-ns bluegreen lh-title mb3">Undergraduate & high school students</h4>
               {% assign undergrad_hs_alums = chatlab_alums | where: "chatlab_student_role", "undergraduate_or_hs_student" %}
               {% for person in undergrad_hs_alums %}
-                <h5 class="f6 f5-ns font-default lh-title mb1">
+                <h5 class="f6 f5-ns lh-title mb1">
                   {{ person.first_name }} {% if person.middle_initials %}{{ person.middle_initials}} {% endif %}{{ person.last_name }}
                 </h5>
               {% endfor %}
             </div>
             <div class="break-inside-avoid mb4">
-              <h4 class="f5 f4-ns bluegreen font-default b mb3">Lab managers</h4>
+              <h4 class="f5 f4-ns bluegreen lh-title mb3">Lab managers</h4>
               {% assign lab_manager_alums = chatlab_alums | where: "chatlab_staff_role", "lab_manager" %}
               {% for person in lab_manager_alums %}
-                <h5 class="f6 f5-ns font-default lh-title mb1">
+                <h5 class="f6 f5-ns lh-title mb1">
                   {{ person.first_name }} {% if person.middle_initials %}{{ person.middle_initials}} {% endif %}{{ person.last_name }}
                 </h5>
               {% endfor %}
             </div>
             <div class="break-inside-avoid mb4">
-              <h4 class="f5 f4-ns bluegreen font-default b mb3">Patient coordinators</h4>
+              <h4 class="f5 f4-ns bluegreen lh-title mb3">Patient coordinators</h4>
               {% assign patient_coord_alums = chatlab_alums | where: "chatlab_staff_role", "patient_coordinator" %}
               {% for person in patient_coord_alums %}
-                <h5 class="f6 f5-ns font-default lh-title mb1">
+                <h5 class="f6 f5-ns lh-title mb1">
                   {{ person.first_name }} {% if person.middle_initials %}{{ person.middle_initials}} {% endif %}{{ person.last_name }}
                 </h5>
               {% endfor %}
@@ -226,14 +226,14 @@ sections:
       <div class="bg-white shadow-6 br2 bt bw3 b--bluegreen">
 
         <div class="pt3 pt4-m pt5-l ph3 ph4-m ph5-l">
-          <h2 class="bluegreen font-default lh-title b mb1 mb2-ns">
+          <h2 class="bluegreen lh-title mb1 mb2-ns">
             {{ page.sections[2] }}
           </h2>
           <hr class="w-100 ba b--bluegreen">
         </div>
 
         <div class="pv3 pv4-ns ph3 ph4-m ph5-l">
-          <h3 class="bluegreen font-default lh-title b mb3">
+          <h3 class="bluegreen lh-title mb3">
             Neuroaesthetics
           </h3>
           <p>
@@ -259,7 +259,7 @@ sections:
         </div>
 
         <div class="pv3 pv4-ns ph3 ph4-m ph5-l bt b--black-10">
-          <h3 class="bluegreen font-default lh-title b mb3">
+          <h3 class="bluegreen lh-title mb3">
             Language & space
           </h3>
           <p>
@@ -285,7 +285,7 @@ sections:
         </div>
 
         <div class="pv3 pv4-ns ph3 ph4-m ph5-l bt b--black-10">
-          <h3 class="bluegreen font-default lh-title b mb3">
+          <h3 class="bluegreen lh-title mb3">
             Event representation
           </h3>
           <p>
@@ -311,7 +311,7 @@ sections:
         </div>
 
         <div class="pv3 pv4-ns ph3 ph4-m ph5-l bt b--black-10">
-          <h3 class="bluegreen font-default lh-title b mb3">
+          <h3 class="bluegreen lh-title mb3">
             Neuroethics
           </h3>
           <p>
@@ -337,7 +337,7 @@ sections:
         </div>
 
         <div class="pv3 pv4-ns ph3 ph4-m ph5-l bt b--black-10">
-          <h3 class="bluegreen font-default lh-title b mb3">
+          <h3 class="bluegreen lh-title mb3">
             Miscellaneous
           </h3>
           <p>
@@ -370,7 +370,7 @@ sections:
       <div class="bg-white shadow-6 br2 bt bw3 b--bluegreen">
 
         <div class="pt3 pt4-m pt5-l ph3 ph4-m ph5-l">
-          <h2 class="bluegreen font-default lh-title b mb1 mb2-ns">
+          <h2 class="bluegreen lh-title mb1 mb2-ns">
             {{ page.sections[3] }}
           </h2>
           <hr class="w-100 ba b--bluegreen">

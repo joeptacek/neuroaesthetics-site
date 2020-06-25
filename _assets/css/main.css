@@ -12,13 +12,11 @@
 
 /* FONTS */
 
-body, button, input, textarea, .font-default {
-  /* check how often .font-default and .font-headers are used, possibly reconsider font families */
+body, button, input, textarea {
   font-family: 'Questrial', sans-serif;
 }
 
-h1, h2, h3, h4, h5, .font-headers {
-  /* check how often .font-default and .font-headers are used, possibly reconsider font families */
+.font-serif {
   font-family: 'Arvo', serif;
   font-weight: normal;
 }
