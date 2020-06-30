@@ -1,22 +1,47 @@
-/* TODO: optimize for non-retina devices, enhance for retina iMacs ========== */
+/* TODO:
+ * - improve sizes for medium breakpoint, should probably be suitable for
+ *   tablets and small laptops, including low and high resolution, maybe try
+ *   1280x1280 and 20480x2048 @2x
+ * - improve sizes for large breakpoint(s) (including retina 27 inch?)
+ */
 
-.bg-angles { background-image: url(/assets/img/jpg/backgrounds/bg--angles--1280w.webp); }
-.bg-flickr-goddard { background-image: url(/assets/img/jpg/backgrounds/bg--flickr-goddard--1280w.webp); }
-.bg-lips { background-image: url(/assets/img/jpg/backgrounds/bg--lips--1280w.webp); }
-.bg-museum { background-image: url(/assets/img/jpg/backgrounds/bg--sergei-akulich-564980-unsplash--1280w.webp); }
-.bg-shapecolor { background-image: url(/assets/img/jpg/backgrounds/bg--shapecolor--1280w.webp); }
-.bg-tag { background-image: url(/assets/img/jpg/backgrounds/bg--tag--1280w.webp); }
-.bg-wall { background-image: url(/assets/img/jpg/backgrounds/bg--wall--1280w.webp); }
+/* MOBILE DEFAULT =========================================================== */
+.bg-angles { background-image: url(/assets/img/jpg/backgrounds/bg--angles--360x640.webp); }
+.bg-flickr-goddard { background-image: url(/assets/img/jpg/backgrounds/bg--flickr-goddard--360x640.webp); }
+.bg-lips { background-image: url(/assets/img/jpg/backgrounds/bg--lips--360x640.webp); }
+.bg-museum { background-image: url(/assets/img/jpg/backgrounds/bg--sergei-akulich-564980-unsplash--360x640.webp); }
+.bg-shapecolor { background-image: url(/assets/img/jpg/backgrounds/bg--shapecolor--360x640.webp); }
+.bg-tag { background-image: url(/assets/img/jpg/backgrounds/bg--tag--360x640.webp); }
+.bg-wall { background-image: url(/assets/img/jpg/backgrounds/bg--wall--360x640.webp); }
 
-.no-webp .bg-angles { background-image: url(/assets/img/jpg/backgrounds/bg--angles--1280w.jpg); }
-.no-webp .bg-flickr-goddard { background-image: url(/assets/img/jpg/backgrounds/bg--flickr-goddard--1280w.jpg); }
-.no-webp .bg-lips { background-image: url(/assets/img/jpg/backgrounds/bg--lips--1280w.jpg); }
-.no-webp .bg-museum { background-image: url(/assets/img/jpg/backgrounds/bg--sergei-akulich-564980-unsplash--1280w.jpg); }
-.no-webp .bg-shapecolor { background-image: url(/assets/img/jpg/backgrounds/bg--shapecolor--1280w.jpg); }
-.no-webp .bg-tag { background-image: url(/assets/img/jpg/backgrounds/bg--tag--1280w.jpg); }
-.no-webp .bg-wall { background-image: url(/assets/img/jpg/backgrounds/bg--wall--1280w.jpg); }
+.no-webp .bg-angles { background-image: url(/assets/img/jpg/backgrounds/bg--angles--360x640.jpg); }
+.no-webp .bg-flickr-goddard { background-image: url(/assets/img/jpg/backgrounds/bg--flickr-goddard--360x640.jpg); }
+.no-webp .bg-lips { background-image: url(/assets/img/jpg/backgrounds/bg--lips--360x640.jpg); }
+.no-webp .bg-museum { background-image: url(/assets/img/jpg/backgrounds/bg--sergei-akulich-564980-unsplash--360x640.jpg); }
+.no-webp .bg-shapecolor { background-image: url(/assets/img/jpg/backgrounds/bg--shapecolor--360x640.jpg); }
+.no-webp .bg-tag { background-image: url(/assets/img/jpg/backgrounds/bg--tag--360x640.jpg); }
+.no-webp .bg-wall { background-image: url(/assets/img/jpg/backgrounds/bg--wall--360x640.jpg); }
 
-/* MEDIUM (TACHYONS) ======================================================== */
+/* MOBILE HIGH RESOLUTION =================================================== */
+@media (min-resolution: 2dppx) {
+  .bg-angles { background-image: url(/assets/img/jpg/backgrounds/bg--angles--720x1280.webp); }
+  .bg-flickr-goddard { background-image: url(/assets/img/jpg/backgrounds/bg--flickr-goddard--720x1280.webp); }
+  .bg-lips { background-image: url(/assets/img/jpg/backgrounds/bg--lips--720x1280.webp); }
+  .bg-museum { background-image: url(/assets/img/jpg/backgrounds/bg--sergei-akulich-564980-unsplash--720x1280.webp); }
+  .bg-shapecolor { background-image: url(/assets/img/jpg/backgrounds/bg--shapecolor--720x1280.webp); }
+  .bg-tag { background-image: url(/assets/img/jpg/backgrounds/bg--tag--720x1280.webp); }
+  .bg-wall { background-image: url(/assets/img/jpg/backgrounds/bg--wall--720x1280.webp); }
+
+  .no-webp .bg-angles { background-image: url(/assets/img/jpg/backgrounds/bg--angles--720x1280.jpg); }
+  .no-webp .bg-flickr-goddard { background-image: url(/assets/img/jpg/backgrounds/bg--flickr-goddard--720x1280.jpg); }
+  .no-webp .bg-lips { background-image: url(/assets/img/jpg/backgrounds/bg--lips--720x1280.jpg); }
+  .no-webp .bg-museum { background-image: url(/assets/img/jpg/backgrounds/bg--sergei-akulich-564980-unsplash--720x1280.jpg); }
+  .no-webp .bg-shapecolor { background-image: url(/assets/img/jpg/backgrounds/bg--shapecolor--720x1280.jpg); }
+  .no-webp .bg-tag { background-image: url(/assets/img/jpg/backgrounds/bg--tag--720x1280.jpg); }
+  .no-webp .bg-wall { background-image: url(/assets/img/jpg/backgrounds/bg--wall--720x1280.jpg); }
+}
+
+/* MEDIUM =================================================================== */
 @media screen and (min-width: 30em) and (max-width: 60em) {
   .bg-angles { background-image: url(/assets/img/jpg/backgrounds/bg--angles--1920w.webp); }
   .bg-flickr-goddard { background-image: url(/assets/img/jpg/backgrounds/bg--flickr-goddard--1920w.webp); }
@@ -35,7 +60,7 @@
   .no-webp .bg-wall { background-image: url(/assets/img/jpg/backgrounds/bg--wall--1920w.jpg); }
 }
 
-/* LARGE (TACHYONS) ========================================================= */
+/* LARGE ==================================================================== */
 @media screen and (min-width: 60em) {
   .bg-angles { background-image: url(/assets/img/jpg/backgrounds/bg--angles--2560w.webp); }
   .bg-flickr-goddard { background-image: url(/assets/img/jpg/backgrounds/bg--flickr-goddard--2560w.webp); }

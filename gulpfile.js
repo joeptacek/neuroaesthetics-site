@@ -345,13 +345,20 @@ function img() {
           // however, can't automatically switch using w-descriptors + sizes (as w/ img element)
           // thus, switching sizes with media queries: default, medium (30em), large (60em)
           //
-          // TODO: widths and media queries currently sort of arbitrary; best to optimize
-          // ...maybe include 960w (640h for 1.5 aspect) for the shortest non-retina phones
-          // ...maybe target `resolution` media feature
+          // for mobile, center crop 9:16 to reduce image size
           {
-            width: 1280,
+            width: 360,
+            height: 640,
             rename: {
-              suffix: '--1280w',
+              suffix: '--360x640',
+              extname: '.jpg'
+            }
+          },
+          {
+            width: 720,
+            height: 1280,
+            rename: {
+              suffix: '--720x1280',
               extname: '.jpg'
             }
           },
@@ -370,9 +377,18 @@ function img() {
             }
           },
           {
-            width: 1280,
+            width: 360,
+            height: 640,
             rename: {
-              suffix: '--1280w',
+              suffix: '--360x640',
+              extname: '.webp'
+            }
+          },
+          {
+            width: 720,
+            height: 1280,
+            rename: {
+              suffix: '--720x1280',
               extname: '.webp'
             }
           },
