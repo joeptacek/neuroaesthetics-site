@@ -13,6 +13,9 @@
           {% if include.param.category == "video" %}
             <div class="dn flex-ns items-center-ns">{% octicon device-camera-video height: 18 class:"fill-light-silver" %}</div>
             <div class="flex items-center dn-ns">{% octicon device-camera-video height: 14 class:"fill-light-silver" %}</div>
+          {% elsif include.param.category == "audio" %}
+            <div class="dn flex-ns items-center-ns">{% octicon unmute height: 18 class:"fill-light-silver" %}</div>
+            <div class="flex items-center dn-ns">{% octicon unmute height: 14 class:"fill-light-silver" %}</div>
           {% endif %}
         </div>
         <h4 class="f4 f3-l bluegreen mb3">
