@@ -349,60 +349,68 @@ function img() {
           {
             width: 360,
             height: 640,
+            quality: 70,
             rename: {
-              suffix: '--360x640',
+              suffix: '--360x640', // mobile
               extname: '.jpg'
             }
           },
           {
-            width: 720,
-            height: 1280,
+            width: 360 * 2,
+            height: 640 * 2,
+            quality: 70,
             rename: {
-              suffix: '--720x1280',
+              suffix: '--720x1280', // mobile @2x
               extname: '.jpg'
             }
           },
           {
             width: 1280 * 1.5,
+            quality: 70,
             rename: {
-              suffix: '--1920w',
+              suffix: '--1920w', // medium
               extname: '.jpg'
             }
           },
           {
             width: 1280 * 2,
+            quality: 50, // lower quality for largest img (try to keep <500KB)
             rename: {
-              suffix: '--2560w',
+              suffix: '--2560w', // large
               extname: '.jpg'
             }
           },
           {
             width: 360,
             height: 640,
+            quality: 70,
             rename: {
-              suffix: '--360x640',
+              suffix: '--360x640', // mobile (webp)
               extname: '.webp'
             }
           },
           {
-            width: 720,
-            height: 1280,
+            width: 360 * 2,
+            height: 640 * 2,
+            quality: 70,
             rename: {
-              suffix: '--720x1280',
+              suffix: '--720x1280', // mobile @2x (webp)
               extname: '.webp'
             }
           },
           {
             width: 1280 * 1.5,
+            quality: 70,
             rename: {
-              suffix: '--1920w',
+              suffix: '--1920w', // medium (webp)
               extname: '.webp'
             }
           },
           {
             width: 1280 * 2,
+            quality: 50, // lower quality for largest img (try to keep <500KB)
             rename: {
-              suffix: '--2560w',
+              suffix: '--2560w', // large (webp)
               extname: '.webp'
             }
           }
