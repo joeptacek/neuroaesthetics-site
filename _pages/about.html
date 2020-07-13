@@ -61,38 +61,8 @@ sections:
 
           {% assign advisory_board = site.data.people | where: "advisory_board_group", "true" | sort: "last_name" %}
           {% for person in advisory_board %}
-            <div class="flex flex-column flex-row-l items-center items-start-l pv3 pv4-l">
-              <div class="flex-none pa1 ba br-100 b--moon-gray mb3 mb0-l mr5-l">
-                {% assign jpg_src_320w = person.img_src_320w | replace: '.webp', '.jpg' %}
-                <picture class="db">
-                  <source
-                    type="image/webp"
-                    srcset="{{ person.img_src_320w }} 320w,
-                            {{ person.img_src_320w | replace: '--320w', '--640w' }} 640w"
-                    sizes="250px">
-                  <img
-                    class="db br-100"
-                    src="{{ jpg_src_320w }}"
-                    srcset="{{ jpg_src_320w }} 320w,
-                            {{ jpg_src_320w | replace: '--320w', '--640w' }} 640w"
-                    sizes="250px"
-                    alt="{{ person.first_name }} {% if person.middle_initials %}{{ person.middle_initials}} {% endif %}{{ person.last_name }}">
-                </picture>
-              </div>
-              <div class="lh-title f5 f4-ns">
-                <h3 class="font-serif tc tl-l mb2">
-                  {{ person.first_name }} {{ person.last_name }}
-                </h3>
-                <p class="f5 tc tl-l silver mb3">
-                  {{ person.advisory_board_title }}
-                </p>
-                <p class="{% if person.links %}mb2 mb3-l{% endif %}">
-                  {{ person.bio }}
-                </p>
-                <p>
-                  <a class="f5 blue underline link dim-l" href="{{ person.links[0].link_url }}">{{ person.links[0].link_name }}</a>
-                </p>
-              </div>
+            <div class="pv3 pv4-l">
+              {% include components/person_advisor.html param=person %}
             </div>
           {% endfor %}
 
@@ -101,7 +71,7 @@ sections:
 
       <div class="bg-white shadow-6 mw-55rem center br2 pa3 pa4-m pa5-l">
         <h2 class="lh-title tc mb3 mb4-ns">
-          Learn more about PCfN!
+          Learn more about the PCfN!
         </h2>
         <div>
           <div class="flex flex-column flex-row-ns">

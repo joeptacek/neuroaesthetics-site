@@ -45,16 +45,6 @@ page_gen:
   template: person
   name: name_slug
   dir: people
-  filter_condition: record["pcfn_group"] && record["pcfn_alum"] == false
-- data: people
-  template: person
-  name: name_slug
-  dir: people
-  filter_condition: record["chatlab_group"] && record["chatlab_alum"] == false
-- data: people
-  template: person
-  name: name_slug
-  dir: people
   filter: penn_faculty_group
 - data: people
   template: person

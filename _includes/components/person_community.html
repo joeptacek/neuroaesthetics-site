@@ -1,7 +1,7 @@
 <div class="f5 f4-ns lh-title">
   <a class="db mid-gray link dim-l" href="/people/{{ include.param.name_slug }}.html">
     <div class="flex flex-column items-center flex-row-m">
-      <div class="flex-none pa1 ba br-100 b--moon-gray mb3 mr4-m mb0-m">
+      <div class="flex-none pa1 ba br-100 b--moon-gray mb3 mb0-m mr4-m">
         {% assign jpg_src_320w = include.param.img_src_320w | replace: '.webp', '.jpg' %}
         <picture class="db">
           <source
@@ -19,20 +19,14 @@
         </picture>
       </div>
       <div class="tc tl-m">
-        <h3 class="font-serif tc tl-m tracked-tight mb2">
+        <h3 class="font-serif mb2">
           {{ include.param.first_name }} {% if include.param.middle_initials %}{{ include.param.middle_initials}} {% endif %}{{ include.param.last_name }}
         </h3>
-        <div class="f5">
-          {% if include.param.pcfn_group %}
-            {% if include.param.pcfn_title_short and include.param.pcfn_title_short != "" %}
-              <p class="silver">{{ include.param.pcfn_title_short }}</p>
-            {% else %}
-              <p class="silver">{{ include.param.pcfn_title }}</p>
-            {% endif %}
-          {% elsif include.param.penn_faculty_group %}
-            <p class="silver mb1">{{ include.param.penn_school }}</p>
+        <div class="f5 silver">
+          {% if include.param.penn_faculty_group %}
+            <p class="mb1">{{ include.param.penn_school }}</p>
           {% elsif include.param.other_collaborators_group %}
-            <p class="silver">{{ include.param.affiliation }}</p>
+            <p>{{ include.param.affiliation }}</p>
           {% endif %}
         </div>
       </div>

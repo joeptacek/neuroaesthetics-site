@@ -26,7 +26,7 @@ sections:
 
           <section class="pb3 pb4-l">
             <p>
-              Our research involves a wide range of topics and approaches. Current projects focus on the built environment and wellness, beauty and morality, and engagement with art.
+              Our research involves a wide range of topics and approaches. Current projects focus on <a class="blue link underline dim-l" href="#beauty-and-morality">beauty and morality</a>, <a class="blue link underline dim-l" href="#the-built-environment-and-wellness">the built environment and wellness</a>, and <a class="blue link underline dim-l" href="#engagement-with-art">engagement with art</a>.
             </p>
           </section>
 
@@ -58,7 +58,7 @@ sections:
           </section>
 
 
-          <section id="engagement-with-art" class="pv3 pv4-l">
+          <section id="engagement-with-art" class="pt3 pt4-l mb3 mb4-m mb5-l">
             <h3 class="bluegreen lh-title mb1 mb2-ns">
               Engagement with art
             </h3>
@@ -71,8 +71,9 @@ sections:
 
           </section>
 
+          <hr class="w-100 ba b--light-gray mb3 mb4-m mb5-l"/>
 
-          <section class="pt3 pt4-l">
+          <section class="">
             <div class="flex flex-column items-start flex-row-ns items-center-ns">
               <span class="w-100 mb3 mb0-ns mr4-ns">
                 Neuroaesthetics projects are conducted through our associated research group, ChatLab.
@@ -102,7 +103,7 @@ sections:
 
         <div class="js-vt-container">
           {% comment %} inserted extra pt3-l after hr bc more slightly more distance is necessary between the preceeding hr and following bt {% endcomment %}
-          <div class="js-vt-viewer" data-vt-viewer-type="show-more" data-vt-show-more-init-visible="5" data-vt-show-more-max="10" data-vt-show-more-responsive="false">
+          <div class="js-vt-viewer" data-vt-viewer-type="show-more" data-vt-show-more-init-visible="10" data-vt-show-more-max="10" data-vt-show-more-responsive="false">
             {% assign pubs_sorted = site.data.publications | where: "category", "neuroaesthetics" | sort: "work_post_date_fake" | reverse %}
             {% for publication in pubs_sorted %}
               <div class="pv3 pv4-ns ph3 ph4-m ph5-l{% unless forloop.first %} bt b--black-10{% endunless %}">
@@ -145,7 +146,7 @@ sections:
 
       <div class="bg-white shadow-6 mw-40rem center br2 pa3 pa4-m pa5-l">
         <h2 class="lh-title tc mb3 mb4-ns">
-          Learn more about PCfN!
+          Learn more about the PCfN!
         </h2>
         <div class="flex flex-column flex-row-ns">
           <a class="db bg-liberty shadow-6 white f5 f4-ns white tc b link dim-l w-100 pa2 pa3-ns br2 mb2 mb0-ns mr2-ns" href="/community.html">Community</a>

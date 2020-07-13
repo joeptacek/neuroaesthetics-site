@@ -8,11 +8,7 @@ layout: default
         <div class="pa3 pa4-ns">
 
           <h1 class="f4 f3-ns bluegreen mb2 mb3-ns">
-            {% if page.pcfn_group %}
-              <a class="bluegreen b link dim-l mr2" href="/community.html">Community</a>
-              <span class="b mr2">→</span>
-              <a class="bluegreen b link dim-l mr2" href="/community.html#at-the-center">At the center</a>
-            {% elsif page.penn_faculty_group %}
+            {% if page.penn_faculty_group %}
               <a class="bluegreen b link dim-l mr2" href="/community.html">Community</a>
               <span class="b mr2">→</span>
               <a class="bluegreen b link dim-l mr2" href="/community.html#penn-faculty">Penn faculty</a>
@@ -42,7 +38,7 @@ layout: default
                           {{ jpg_src_320w | replace: '--320w', '--640w' }} 640w"
                   sizes="250px"
                   alt="{{ page.first_name }} {% if page.middle_initials %}{{ page.middle_initials}} {% endif %}{{ page.last_name }}">
-             </picture>
+                </picture>
             </div>
 
             <div class="tc tl-l lh-title">
@@ -52,15 +48,7 @@ layout: default
               </h2>
 
               <div class="silver">
-                {% if page.pcfn_group %}
-                  <p class="f4 mid-gray mb2">{{ page.pcfn_title }}</p>
-                  {% if page.affiliation == "University of Pennsylvania" %}
-                    <p class="mb1">{{ page.affiliation }}</p>
-                    <p>{{ page.penn_school }}</p>
-                  {% else %}
-                    <p>{{ page.affiliation }}</p>
-                  {% endif %}
-                {% elsif page.penn_faculty_group %}
+                {% if page.penn_faculty_group %}
                   <p class="mb1">{{ page.affiliation }}</p>
                   <p>{{ page.penn_school }}</p>
                 {% elsif page.other_collaborators_group %}
@@ -84,7 +72,7 @@ layout: default
 
           {% if page.links %}
             <div class="mb4">
-              <h3 class="font-serif mb3">
+              <h3 class="mb3">
                 Links
               </h3>
               <ul class="flex flex-column flex-row-ns flex-wrap-ns list pl0">
@@ -99,9 +87,7 @@ layout: default
             </div>
           {% endif %}
 
-          {% if page.pcfn_group %}
-            <a class="dib bluegreen link dim-l f5 f4-ns tc b w-100 pv3 ph4 ba bw1 b--blueegreen br2" href="/community.html#at-the-center">← Back to Community</a>
-          {% elsif page.penn_faculty_group %}
+          {% if page.penn_faculty_group %}
             <a class="dib bluegreen link dim-l f5 f4-ns tc b w-100 pv3 ph4 ba bw1 b--blueegreen br2" href="/community.html#penn-faculty">← Back to Community</a>
           {% elsif page.other_collaborators_group %}
             <a class="dib bluegreen link dim-l f5 f4-ns tc b w-100 pv3 ph4 ba bw1 b--blueegreen br2" href="/community.html#other-collaborators">← Back to Community</a>

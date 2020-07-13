@@ -18,11 +18,11 @@
       </picture>
     </div>
     <div class="tc tl-l">
-      <h4 class="f3 font-serif mb2">
+      <h3 class="font-serif mb2">
         {{ include.param.first_name }} {% if include.param.middle_initials %}{{ include.param.middle_initials}} {% endif %}{{ include.param.last_name }}
-      </h4>
+      </h3>
       <p class="silver{% if include.param.links %} mb2{% else %} mb3{% endif %}">
-        {{ include.param.chatlab_title }}
+        {{ include.param.pcfn_title }}
       </p>
       {% if include.param.links %}
         <ul class="flex flex-column flex-row-ns items-center justify-center-m f5 list pl0 mb3">
@@ -36,12 +36,7 @@
         </ul>
       {% endif %}
       <p class="tl">
-        {% if include.param.chatlab_bio %}
-          {% comment %} i.e., for Anjan or anyone else at ChatLab with multiple bios {% endcomment%}
-          {{ include.param.chatlab_bio }}
-        {% else %}
-          {{ include.param.bio }}
-        {% endif %}
+        {{ include.param.bio }}
       </p>
     </div>
   </div>

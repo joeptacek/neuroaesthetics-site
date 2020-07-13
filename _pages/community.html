@@ -26,7 +26,7 @@ sections:
           <hr class="w-100 ba b--bluegreen mb3 mb4-l">
 
           <!-- PCfN -->
-          <div class="mb3 mb4-l">
+          <div class="mb3-m mb4-l">
             {% comment %}
               For PCfN people, use the `pcfn_rank` property to establish category display order: 900-999 = directors, 800-899 = staff, 700-799 = artist-in-residence, 600-699 = postdoc, 500-599 = student researcher
               Count down from top of a series to establish individual display order: 999 for AC, 998 for EC; for postdocs, use 600 to leave relative individual rank ambiguous, sorting by last name
@@ -44,16 +44,15 @@ sections:
                 {% assign pcfn_current_by_name_and_group = pcfn_current_by_name_and_group | concat: pcfn_current_by_name %}
               {% endif %}
             {% endfor %}
-            <table class="tablegen w-100">
-              <tbody>
-                {% tablerow person in pcfn_current_by_name_and_group cols:3 %}
-                  <div class="pv3 pv4-l{% if tablerowloop.col_first %} pr3-l{% elsif tablerowloop.col_last %} pl3-l{% else %} ph2-l{% endif %}">
-                    {% include components/person_community.html param=person %}
-                  </div>
-                {% endtablerow %}
-              </tbody>
-            </table>
+
+            {% for person in pcfn_current_by_name_and_group %}
+              <div class="pv3 pv4-l">
+                {% include components/person_at_pcfn.html param=person %}
+              </div>
+            {% endfor %}
           </div>
+
+          <hr class="w-100 ba b--light-gray mb3 mb4-m mb5-l"/>
 
           <div class="flex flex-column items-start flex-row-ns items-center-ns">
             <span class="w-100 mb3 mb0-ns mr4-ns">
@@ -313,7 +312,7 @@ sections:
 
       <div class="bg-white shadow-6 mw-40rem center br2 pa3 pa4-m pa5-l">
         <h2 class="lh-title tc mb3 mb4-ns">
-          Learn more about PCfN!
+          Learn more about the PCfN!
         </h2>
         <div class="flex flex-column flex-row-ns">
           <a class="db bg-liberty shadow-6 white f5 f4-ns white tc b link dim-l w-100 pa2 pa3-ns br2 mb2 mb0-ns mr3-ns" href="/research.html">Research</a>
