@@ -1,4 +1,16 @@
 <head>
+  {% comment %} google analytics at top of head, or else search console cannot verify ownership (?) {% endcomment %}
+  {% if jekyll.environment == "production" %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109208305-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-109208305-2');
+    </script>
+  {% endif %}
   <meta charset="utf-8">
   {% if page.collection == "events" %}
     <title>PCfN → News → {{ page.title }}</title>
