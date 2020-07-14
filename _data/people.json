@@ -1,7 +1,6 @@
 [
   {
     "first_name": "Anjan",
-    "middle_initials": "",
     "last_name": "Chatterjee",
     "name_slug": "anjan-chatterjee",
     "suffix": "M.D., F.A.A.N.",
@@ -37,7 +36,6 @@
   },
   {
     "first_name": "Eileen",
-    "middle_initials": "",
     "last_name": "Cardillo",
     "name_slug": "eileen-cardillo",
     "suffix": "D.Phil.",
@@ -65,7 +63,6 @@
   },
   {
     "first_name": "Joe",
-    "middle_initials": "",
     "last_name": "Ptacek",
     "name_slug": "joe-ptacek",
     "img_src_320w": "/assets/img/jpg/mw320/people/joe-ptacek--320w.webp",
@@ -96,7 +93,6 @@
   },
   {
     "first_name": "Emily",
-    "middle_initials": "",
     "last_name": "Urban",
     "name_slug": "emily-urban",
     "img_src_320w": "/assets/img/jpg/mw320/people/emily-urban--320w.webp",
@@ -123,7 +119,6 @@
   },
   {
     "first_name": "Lucas",
-    "middle_initials": "",
     "last_name": "Kelly",
     "name_slug": "lucas-kelly",
     "img_src_320w": "/assets/img/jpg/mw320/people/lucas-kelly--320w.webp",
@@ -155,7 +150,6 @@
   },
   {
     "first_name": "Stacey",
-    "middle_initials": "",
     "last_name": "Humphries",
     "name_slug": "stacey-humphries",
     "suffix": "Ph.D.",
@@ -186,7 +180,6 @@
   },
   {
     "first_name": "Franziska",
-    "middle_initials": "",
     "last_name": "Hartung",
     "name_slug": "franziska-hartung",
     "suffix": "Ph.D.",
@@ -217,7 +210,6 @@
   },
   {
     "first_name": "Yoed",
-    "middle_initials": "",
     "last_name": "Kenett",
     "name_slug": "yoed-kenett",
     "suffix": "Ph.D.",
@@ -248,7 +240,6 @@
   },
   {
     "first_name": "Cliff",
-    "middle_initials": "",
     "last_name": "Workman",
     "name_slug": "cliff-workman",
     "suffix": "Ph.D.",
@@ -279,7 +270,6 @@
   },
   {
     "first_name": "Zack",
-    "middle_initials": "",
     "last_name": "Zapatero",
     "name_slug": "zack-zapatero",
     "img_src_320w": "/assets/img/jpg/mw320/people/zack-zapatero--320w.webp",
@@ -302,7 +292,6 @@
   },
   {
     "first_name": "Nadir",
-    "middle_initials": "",
     "last_name": "Bilici",
     "name_slug": "nadir-bilici",
     "img_src_320w": "/assets/img/jpg/mw320/people/nadir-bilici--320w.webp",
@@ -325,7 +314,6 @@
   },
   {
     "first_name": "Dexian",
-    "middle_initials": "",
     "last_name": "He",
     "name_slug": "dexian-he",
     "suffix": "M.A.",
@@ -349,7 +337,6 @@
   },
   {
     "first_name": "Yuchao",
-    "middle_initials": "",
     "last_name": "Wang",
     "name_slug": "yuchao-wang",
     "img_src_320w": "/assets/img/jpg/mw320/people/yuchao-wang--320w.webp",
@@ -372,7 +359,6 @@
   },
   {
     "first_name": "Charlie",
-    "middle_initials": "",
     "last_name": "Siegel",
     "name_slug": "charlie-siegel",
     "img_src_320w": "/assets/img/jpg/mw320/people/charlie-siegel--320w.webp",
@@ -395,7 +381,6 @@
   },
   {
     "first_name": "Gregor",
-    "middle_initials": "",
     "last_name": "Hayn-Leichsenring",
     "name_slug": "gregor-hayn-leichsenring",
     "suffix": "D.D.S.",
@@ -426,7 +411,6 @@
   },
   {
     "first_name": "Kelly",
-    "middle_initials": "",
     "last_name": "Porter",
     "name_slug": "kelly-porter",
     "img_src_320w": "/assets/img/jpg/mw320/people/kelly-porter--320w.webp",
@@ -443,7 +427,6 @@
   },
   {
     "first_name": "Nate",
-    "middle_initials": "",
     "last_name": "Klooster",
     "name_slug": "nate-klooster",
     "suffix": "Ph.D.",
@@ -468,7 +451,6 @@
   },
   {
     "first_name": "Erin",
-    "middle_initials": "",
     "last_name": "Conrad",
     "name_slug": "erin-conrad",
     "suffix": "M.D.",
@@ -489,7 +471,6 @@
   },
   {
     "first_name": "Steve",
-    "middle_initials": "",
     "last_name": "Weisberg",
     "name_slug": "steve-weisberg",
     "suffix": "Ph.D.",
@@ -521,7 +502,6 @@
   },
   {
     "first_name": "Madhushree",
-    "middle_initials": "",
     "last_name": "Chakrabarty",
     "name_slug": "madhushree-chakrabarty",
     "suffix": "Ph.D.",
@@ -535,7 +515,6 @@
   },
   {
     "first_name": "Claire",
-    "middle_initials": "",
     "last_name": "Dinh",
     "name_slug": "claire-dinh",
     "bio": "I am a Penn Master of Bioethics student exploring the neural bases of language. Currently, I am assisting in a patient study on metaphor comprehension. As a Haverford College German major, I conducted research in the ChatLab for my honors thesis on the evolution of the German language and German prepositions. This project required using an interdisciplinary approach, as I employed research methods from linguistics, statistics, and the humanities.",
@@ -549,7 +528,6 @@
   },
   {
     "first_name": "Daniel",
-    "middle_initials": "",
     "last_name": "Badgio",
     "name_slug": "daniel-badgio",
     "bio": "I graduated from St. John's College (Annapolis) where I studied the Liberal Arts by reading and discussing classic and canonical works. Currently at Penn I am taking courses and hoping to gain research experience in preparation for graduate school in neuroscience. Some of my interests that I'd like to pursue are in the domains of quantitative thinking, intuition, mathematical modelling of the brain, philosophy of neuroscience, and phenomenology.",
@@ -563,7 +541,6 @@
   },
   {
     "first_name": "Alex",
-    "middle_initials": "",
     "last_name": "Coburn",
     "name_slug": "alex-coburn",
     "bio": "I'm a second year doctoral student in the Department of Architecture at Cambridge University. My research explores how architectural design impacts psychological health, with a particular focus on evaluating the potential cognitive and emotional benefits of biophilic, or nature-like, built environments. As a visiting researcher at Penn, I plan to undertake a series of experiments measuring acute neuropsychological responses to architecture and to investigate the pathways by which external environmental features might influence internal psychological experiences. In my free time, I enjoy hiking, playing soccer, and exploring new places.",
@@ -576,7 +553,6 @@
   },
   {
     "first_name": "Miriam",
-    "middle_initials": "",
     "last_name": "Rosen",
     "name_slug": "miriam-rosen",
     "bio": "My research interests lie primarily in the intersection between medicine and art. I completed my B.A. in Art History and Visual Arts at Columbia University. I then spent a year in Berlin as a DAAD scholar at the Bild Wissen Gestaltung Interdisciplinary Laboratory at Humboldt University. While there, I worked on a project aimed to create a virtual database of facial expressions. I matriculated at the University of Pittsburgh Medical School in August 2016, and I have since taken time off to do research that examines implicit bias with respect to facial disfigurement. I am constantly exploring the intersection between medicine, neuroscience, psychology, art, and literature.",
@@ -589,7 +565,6 @@
   },
   {
     "first_name": "Vicente",
-    "middle_initials": "",
     "last_name": "Estrada-Gonzalez",
     "name_slug": "vicente-estrada-gonzalez",
     "bio": "I am interested in how preference for artworks is mediated by their level of complexity, which can be characterized by statistical measures. I am a second year master student in Cognitive Science at Universidad Autónoma del Estado de México. I graduated from Universidad Nacional Autónoma de México, where I received a B.Sc. in Psychology with a focus in Neuroscience. At Penn, I plan to do some experiments evaluating how statistical features of artworks can be used to predict aesthetic judgments.",
@@ -602,7 +577,6 @@
   },
   {
     "first_name": "Ting Fung",
-    "middle_initials": "",
     "last_name": "Ho",
     "name_slug": "ting-fung-ho",
     "bio": "I am a Ph.D. candidate from University of Pennsylvania Department of Philosophy. My research focuses on the nature of human experience, and how cognitive neuroscience sheds light on this issue. Topics that I am working on include how we should understand the transition from perceptual experience to perceptual judgment and whether we can perceptually experience aesthetic properties.",
@@ -615,7 +589,6 @@
   },
   {
     "first_name": "Marguerite",
-    "middle_initials": "",
     "last_name": "McQuire",
     "name_slug": "marguerite-mcquire",
     "chatlab_role": "postdoctoral_researcher",
@@ -626,7 +599,6 @@
   },
   {
     "first_name": "Anja",
-    "middle_initials": "",
     "last_name": "Jamrozik",
     "name_slug": "anja-jamrozik",
     "chatlab_role": "postdoctoral_researcher",
@@ -637,7 +609,6 @@
   },
   {
     "first_name": "Lorna",
-    "middle_initials": "",
     "last_name": "Quandt",
     "name_slug": "lorna-quandt",
     "chatlab_role": "postdoctoral_researcher",
@@ -648,7 +619,6 @@
   },
   {
     "first_name": "Tilbe",
-    "middle_initials": "",
     "last_name": "Göksun",
     "name_slug": "tilbe-goksun",
     "chatlab_role": "postdoctoral_researcher",
@@ -659,7 +629,6 @@
   },
   {
     "first_name": "Adam",
-    "middle_initials": "",
     "last_name": "Woods",
     "name_slug": "adam-woods",
     "chatlab_role": "postdoctoral_researcher",
@@ -670,7 +639,6 @@
   },
   {
     "first_name": "Christine",
-    "middle_initials": "",
     "last_name": "Watson",
     "name_slug": "christine-watson",
     "chatlab_role": "postdoctoral_researcher",
@@ -681,7 +649,6 @@
   },
   {
     "first_name": "Iftah",
-    "middle_initials": "",
     "last_name": "Biran",
     "name_slug": "iftah-biran",
     "chatlab_role": "postdoctoral_researcher",
@@ -692,7 +659,6 @@
   },
   {
     "first_name": "Evan",
-    "middle_initials": "",
     "last_name": "Chen",
     "name_slug": "evan-chen",
     "chatlab_role": "postdoctoral_researcher",
@@ -703,7 +669,6 @@
   },
   {
     "first_name": "Raffaella",
-    "middle_initials": "",
     "last_name": "Ricci",
     "name_slug": "raffaella-ricci",
     "chatlab_role": "postdoctoral_researcher",
@@ -714,7 +679,6 @@
   },
   {
     "first_name": "Gwenda",
-    "middle_initials": "",
     "last_name": "Schmidt",
     "name_slug": "gwenda-schmidt",
     "chatlab_role": "postdoctoral_researcher",
@@ -725,7 +689,6 @@
   },
   {
     "first_name": "Janice",
-    "middle_initials": "",
     "last_name": "Snyder",
     "name_slug": "janice-snyder",
     "chatlab_role": "postdoctoral_researcher",
@@ -736,7 +699,6 @@
   },
   {
     "first_name": "Denise",
-    "middle_initials": "",
     "last_name": "Wu",
     "name_slug": "denise-wu",
     "chatlab_role": "postdoctoral_researcher",
@@ -747,7 +709,6 @@
   },
   {
     "first_name": "Sara",
-    "middle_initials": "",
     "last_name": "Waller",
     "name_slug": "sara-waller",
     "chatlab_role": "postdoctoral_researcher",
@@ -758,7 +719,6 @@
   },
   {
     "first_name": "Guo",
-    "middle_initials": "",
     "last_name": "Yuyue",
     "name_slug": "guo-yuyue",
     "chatlab_role": "visiting_researcher",
@@ -769,7 +729,6 @@
   },
   {
     "first_name": "Diana",
-    "middle_initials": "",
     "last_name": "Rosa-Leyra",
     "name_slug": "diana-rosa-leyra",
     "chatlab_role": "visiting_researcher",
@@ -780,7 +739,6 @@
   },
   {
     "first_name": "Eliza",
-    "middle_initials": "",
     "last_name": "Alawi",
     "name_slug": "eliza-alawi",
     "chatlab_role": "visiting_researcher",
@@ -791,7 +749,6 @@
   },
   {
     "first_name": "Juliane",
-    "middle_initials": "",
     "last_name": "Mühlhaus",
     "name_slug": "juliane-muhlhaus",
     "chatlab_role": "visiting_researcher",
@@ -802,7 +759,6 @@
   },
   {
     "first_name": "Alessandro",
-    "middle_initials": "",
     "last_name": "Piedimonte",
     "name_slug": "alessandro-piedimonte",
     "chatlab_role": "visiting_researcher",
@@ -813,7 +769,6 @@
   },
   {
     "first_name": "Sailee",
-    "middle_initials": "",
     "last_name": "Shikhare",
     "name_slug": "sailee-shikhare",
     "chatlab_role": "visiting_researcher",
@@ -824,7 +779,6 @@
   },
   {
     "first_name": "Annika",
-    "middle_initials": "",
     "last_name": "Hillebrandt",
     "name_slug": "annika-hillebrandt",
     "chatlab_role": "visiting_researcher",
@@ -835,7 +789,6 @@
   },
   {
     "first_name": "Roberta",
-    "middle_initials": "",
     "last_name": "Daini",
     "name_slug": "roberta-daini",
     "chatlab_role": "visiting_researcher",
@@ -846,7 +799,6 @@
   },
   {
     "first_name": "Bree",
-    "middle_initials": "",
     "last_name": "Chancellor",
     "name_slug": "bree-chancellor",
     "chatlab_role": "visiting_researcher",
@@ -857,7 +809,6 @@
   },
   {
     "first_name": "Lauren",
-    "middle_initials": "",
     "last_name": "McCollum",
     "name_slug": "lauren-mccollum",
     "chatlab_role": "student_researcher",
@@ -869,7 +820,6 @@
   },
   {
     "first_name": "Sashank",
-    "middle_initials": "",
     "last_name": "Prasad",
     "name_slug": "sashank-prasad",
     "chatlab_role": "student_researcher",
@@ -881,7 +831,6 @@
   },
   {
     "first_name": "Prin",
-    "middle_initials": "",
     "last_name": "Amorapanth",
     "name_slug": "prin-amorapanth",
     "chatlab_role": "student_researcher",
@@ -893,7 +842,6 @@
   },
   {
     "first_name": "Joe",
-    "middle_initials": "",
     "last_name": "Kable",
     "name_slug": "joe-kable",
     "chatlab_role": "student_researcher",
@@ -905,7 +853,6 @@
   },
   {
     "first_name": "Elaine",
-    "middle_initials": "",
     "last_name": "Wencil",
     "name_slug": "elaine-wencil",
     "chatlab_role": "student_researcher",
@@ -917,7 +864,6 @@
   },
   {
     "first_name": "Sandeep",
-    "middle_initials": "",
     "last_name": "Vaishnavi",
     "name_slug": "sandeep-vaishnavi",
     "chatlab_role": "student_researcher",
@@ -929,7 +875,6 @@
   },
   {
     "first_name": "Lindsey",
-    "middle_initials": "",
     "last_name": "Bupp",
     "name_slug": "lindsey-bupp",
     "chatlab_role": "student_researcher",
@@ -941,7 +886,6 @@
   },
   {
     "first_name": "Antonio",
-    "middle_initials": "",
     "last_name": "Nicosia",
     "name_slug": "antonio-nicosia",
     "chatlab_role": "student_researcher",
@@ -953,7 +897,6 @@
   },
   {
     "first_name": "Michelle",
-    "middle_initials": "",
     "last_name": "Oraa Ali",
     "name_slug": "michelle-oraa-ali",
     "chatlab_role": "student_researcher",
@@ -965,7 +908,6 @@
   },
   {
     "first_name": "Melissa",
-    "middle_initials": "",
     "last_name": "Beswick",
     "name_slug": "melissa-beswick",
     "chatlab_role": "student_researcher",
@@ -977,7 +919,6 @@
   },
   {
     "first_name": "Alex",
-    "middle_initials": "",
     "last_name": "Yu",
     "name_slug": "alex-yu",
     "chatlab_role": "student_researcher",
@@ -989,7 +930,6 @@
   },
   {
     "first_name": "Mary",
-    "middle_initials": "",
     "last_name": "Dumler",
     "name_slug": "mary-dumler",
     "chatlab_role": "student_researcher",
@@ -1001,7 +941,6 @@
   },
   {
     "first_name": "Gürer",
-    "middle_initials": "",
     "last_name": "Gündöndü",
     "name_slug": "gurer-gundondu",
     "chatlab_role": "student_researcher",
@@ -1013,7 +952,6 @@
   },
   {
     "first_name": "Devi",
-    "middle_initials": "",
     "last_name": "Majeske",
     "name_slug": "devi-majeske",
     "chatlab_role": "student_researcher",
@@ -1025,7 +963,6 @@
   },
   {
     "first_name": "Katsiaryna",
-    "middle_initials": "",
     "last_name": "Malykhina",
     "name_slug": "katsiaryna-malykhina",
     "chatlab_role": "student_researcher",
@@ -1037,7 +974,6 @@
   },
   {
     "first_name": "Sonali",
-    "middle_initials": "",
     "last_name": "Mehta",
     "name_slug": "sonali-mehta",
     "chatlab_role": "student_researcher",
@@ -1049,7 +985,6 @@
   },
   {
     "first_name": "Geena",
-    "middle_initials": "",
     "last_name": "Ianni",
     "name_slug": "geena-ianni",
     "chatlab_role": "student_researcher",
@@ -1061,7 +996,6 @@
   },
   {
     "first_name": "Georgia",
-    "middle_initials": "",
     "last_name": "Gerike",
     "name_slug": "georgia-gerike",
     "chatlab_role": "student_researcher",
@@ -1073,7 +1007,6 @@
   },
   {
     "first_name": "Ben",
-    "middle_initials": "",
     "last_name": "van Buren",
     "name_slug": "ben-van-buren",
     "chatlab_role": "student_researcher",
@@ -1085,7 +1018,6 @@
   },
   {
     "first_name": "Fiona",
-    "middle_initials": "",
     "last_name": "Shaw",
     "name_slug": "fiona-shaw",
     "chatlab_role": "student_researcher",
@@ -1097,7 +1029,6 @@
   },
   {
     "first_name": "Carla",
-    "middle_initials": "",
     "last_name": "Goncalves",
     "name_slug": "carla-goncalves",
     "chatlab_role": "student_researcher",
@@ -1109,7 +1040,6 @@
   },
   {
     "first_name": "Adrianna",
-    "middle_initials": "",
     "last_name": "Kashuba",
     "name_slug": "adrianna-kashuba",
     "chatlab_role": "student_researcher",
@@ -1121,7 +1051,6 @@
   },
   {
     "first_name": "Jonathan",
-    "middle_initials": "",
     "last_name": "Kopelovich",
     "name_slug": "jonathan-kopelovich",
     "chatlab_role": "student_researcher",
@@ -1133,7 +1062,6 @@
   },
   {
     "first_name": "Elizabeth",
-    "middle_initials": "",
     "last_name": "Olson",
     "name_slug": "elizabeth-olson",
     "chatlab_role": "student_researcher",
@@ -1145,7 +1073,6 @@
   },
   {
     "first_name": "Billy",
-    "middle_initials": "",
     "last_name": "Smith",
     "name_slug": "billy-smith",
     "chatlab_role": "student_researcher",
@@ -1157,7 +1084,6 @@
   },
   {
     "first_name": "Adam",
-    "middle_initials": "",
     "last_name": "Greenberg",
     "name_slug": "adam-greenberg",
     "chatlab_role": "student_researcher",
@@ -1169,7 +1095,6 @@
   },
   {
     "first_name": "Kate",
-    "middle_initials": "",
     "last_name": "Lauber",
     "name_slug": "kate-lauber",
     "chatlab_role": "student_researcher",
@@ -1181,7 +1106,6 @@
   },
   {
     "first_name": "Emily",
-    "middle_initials": "",
     "last_name": "Rogers",
     "name_slug": "emily-rogers",
     "chatlab_role": "staff",
@@ -1193,7 +1117,6 @@
   },
   {
     "first_name": "Jonathan",
-    "middle_initials": "",
     "last_name": "Yu",
     "name_slug": "jonathan-yu",
     "chatlab_role": "staff",
@@ -1205,7 +1128,6 @@
   },
   {
     "first_name": "Matt",
-    "middle_initials": "",
     "last_name": "Lehet",
     "name_slug": "matt-lehet",
     "chatlab_role": "staff",
@@ -1217,7 +1139,6 @@
   },
   {
     "first_name": "Bianca",
-    "middle_initials": "",
     "last_name": "Bromberger",
     "name_slug": "biana-bromberger",
     "chatlab_role": "staff",
@@ -1229,7 +1150,6 @@
   },
   {
     "first_name": "Jesse",
-    "middle_initials": "",
     "last_name": "Calhoun",
     "name_slug": "jesse-calhoun",
     "chatlab_role": "staff",
@@ -1241,7 +1161,6 @@
   },
   {
     "first_name": "Page",
-    "middle_initials": "",
     "last_name": "Widick",
     "name_slug": "page-widick",
     "chatlab_role": "staff",
@@ -1253,7 +1172,6 @@
   },
   {
     "first_name": "Ashley",
-    "middle_initials": "",
     "last_name": "Wilson",
     "name_slug": "ashley-wilson",
     "chatlab_role": "staff",
@@ -1265,7 +1183,6 @@
   },
   {
     "first_name": "Angela",
-    "middle_initials": "",
     "last_name": "Armstrong",
     "name_slug": "angela-armstrong",
     "chatlab_role": "staff",
@@ -1277,7 +1194,6 @@
   },
   {
     "first_name": "Kenneth",
-    "middle_initials": "",
     "last_name": "Thompson",
     "name_slug": "kenneth-thompson",
     "chatlab_role": "staff",
@@ -1289,7 +1205,6 @@
   },
   {
     "first_name": "Feyza",
-    "middle_initials": "",
     "last_name": "Sancar",
     "name_slug": "feyza-sancar",
     "chatlab_role": "staff",
@@ -1301,7 +1216,6 @@
   },
   {
     "first_name": "Marianna",
-    "middle_initials": "",
     "last_name": "Stark",
     "name_slug": "marianna-stark",
     "chatlab_role": "staff",
@@ -1313,7 +1227,6 @@
   },
   {
     "first_name": "Pauline",
-    "middle_initials": "",
     "last_name": "Brown",
     "name_slug": "pauline-brown",
     "img_src_320w": "/assets/img/jpg/mw320/people/pauline-brown--320w.webp",
@@ -1327,7 +1240,6 @@
   },
   {
     "first_name": "Susie",
-    "middle_initials": "",
     "last_name": "Ellis",
     "name_slug": "susie-ellis",
     "img_src_320w": "/assets/img/jpg/mw320/people/susie-ellis--320w.webp",
@@ -1341,7 +1253,6 @@
   },
   {
     "first_name": "Katherine",
-    "middle_initials": "",
     "last_name": "Sachs",
     "name_slug": "katherine-sachs",
     "img_src_320w": "/assets/img/jpg/mw320/people/katherine-sachs--320w.webp",
@@ -1355,7 +1266,6 @@
   },
   {
     "first_name": "Rafael",
-    "middle_initials": "",
     "last_name": "Viñoly",
     "name_slug": "rafael-vinoly",
     "img_src_320w": "/assets/img/jpg/mw320/people/rafael-vinoly--320w.webp",
@@ -1369,7 +1279,6 @@
   },
   {
     "first_name": "Dan",
-    "middle_initials": "",
     "last_name": "Weiss",
     "name_slug": "dan-weiss",
     "img_src_320w": "/assets/img/jpg/mw320/people/dan-weiss--320w.webp",
@@ -1383,7 +1292,6 @@
   },
   {
     "first_name": "Coren",
-    "middle_initials": "",
     "last_name": "Apicella",
     "name_slug": "coren-apicella",
     "img_src_320w": "/assets/img/jpg/mw320/people/coren-apicella--320w.webp",
@@ -1397,7 +1305,6 @@
   },
   {
     "first_name": "Danielle",
-    "middle_initials": "",
     "last_name": "Bassett",
     "name_slug": "danielle-bassett",
     "img_src_320w": "/assets/img/jpg/mw320/people/danielle-bassett--320w.webp",
@@ -1417,7 +1324,6 @@
   },
   {
     "first_name": "Liz",
-    "middle_initials": "",
     "last_name": "Brannon",
     "name_slug": "liz-brannon",
     "img_src_320w": "/assets/img/jpg/mw320/people/liz-brannon--320w.webp",
@@ -1477,7 +1383,6 @@
   },
   {
     "first_name": "Gary",
-    "middle_initials": "",
     "last_name": "Hatfield",
     "name_slug": "gary-hatfield",
     "img_src_320w": "/assets/img/jpg/mw320/people/gary-hatfield--320w.webp",
@@ -1497,7 +1402,6 @@
   },
   {
     "first_name": "Elizabeth",
-    "middle_initials": "",
     "last_name": "Johnson",
     "name_slug": "elizabeth-johnson",
     "img_src_320w": "/assets/img/jpg/mw320/people/elizabeth-johnson--320w.webp",
@@ -1511,7 +1415,6 @@
   },
   {
     "first_name": "Joe",
-    "middle_initials": "",
     "last_name": "Kable",
     "name_slug": "joe-kable",
     "img_src_320w": "/assets/img/jpg/mw320/people/joe-kable--320w.webp",
@@ -1531,7 +1434,6 @@
   },
   {
     "first_name": "Michael",
-    "middle_initials": "",
     "last_name": "Leja",
     "name_slug": "michael-leja",
     "img_src_320w": "/assets/img/jpg/mw320/people/michael-leja--320w.webp",
@@ -1551,7 +1453,6 @@
   },
   {
     "first_name": "Ken",
-    "middle_initials": "",
     "last_name": "Lum",
     "name_slug": "ken-lum",
     "img_src_320w": "/assets/img/jpg/mw320/people/ken-lum--320w.webp",
@@ -1571,7 +1472,6 @@
   },
   {
     "first_name": "Allyson",
-    "middle_initials": "",
     "last_name": "Mackey",
     "name_slug": "allyson-mackey",
     "img_src_320w": "/assets/img/jpg/mw320/people/allyson-mackey--320w.webp",
@@ -1591,7 +1491,6 @@
   },
   {
     "first_name": "Matt",
-    "middle_initials": "",
     "last_name": "Neff",
     "name_slug": "matt-neff",
     "img_src_320w": "/assets/img/jpg/mw320/people/matt-neff--320w.webp",
@@ -1655,7 +1554,6 @@
   },
   {
     "first_name": "Michael",
-    "middle_initials": "",
     "last_name": "Platt",
     "name_slug": "michael-platt",
     "img_src_320w": "/assets/img/jpg/mw320/people/michael-platt--320w.webp",
@@ -1699,7 +1597,6 @@
   },
   {
     "first_name": "Frederick",
-    "middle_initials": "",
     "last_name": "Steiner",
     "name_slug": "frederick-steiner",
     "img_src_320w": "/assets/img/jpg/mw320/people/frederick-steiner--320w.webp",
@@ -1719,7 +1616,6 @@
   },
   {
     "first_name": "Nina",
-    "middle_initials": "",
     "last_name": "Strohminger",
     "name_slug": "nina-strohminger",
     "img_src_320w": "/assets/img/jpg/mw320/people/nina-strohminger--320w.webp",
@@ -1743,7 +1639,6 @@
   },
   {
     "first_name": "Orkan",
-    "middle_initials": "",
     "last_name": "Telhan",
     "name_slug": "orkan-telhan",
     "img_src_320w": "/assets/img/jpg/mw320/people/orkan-telhan--320w.webp",
@@ -1767,7 +1662,6 @@
   },
   {
     "first_name": "Ian",
-    "middle_initials": "",
     "last_name": "Verstegen",
     "name_slug": "ian-verstegen",
     "img_src_320w": "/assets/img/jpg/mw320/people/ian-verstegen--320w.webp",
@@ -1811,7 +1705,6 @@
   },
   {
     "first_name": "Amy",
-    "middle_initials": "",
     "last_name": "Belfi",
     "name_slug": "amy-belfi",
     "img_src_320w": "/assets/img/jpg/mw320/people/amy-belfi--320w.webp",
@@ -1835,7 +1728,6 @@
   },
   {
     "first_name": "Beatriz",
-    "middle_initials": "",
     "last_name": "Calvo-Merino",
     "name_slug": "beatriz-calvo-merino",
     "img_src_320w": "/assets/img/jpg/mw320/people/beatriz-calvo-merino--320w.webp",
@@ -1855,7 +1747,6 @@
   },
   {
     "first_name": "George",
-    "middle_initials": "",
     "last_name": "Christopoulos",
     "name_slug": "george-christopoulos",
     "img_src_320w": "/assets/img/jpg/mw320/people/george-christopoulos--320w.webp",
@@ -1875,7 +1766,6 @@
   },
   {
     "first_name": "Alexander",
-    "middle_initials": "",
     "last_name": "Kranjec",
     "name_slug": "alexander-kranjec",
     "img_src_320w": "/assets/img/jpg/mw320/people/alexander-kranjec--320w.webp",
@@ -1896,7 +1786,6 @@
   },
   {
     "first_name": "Jonathan",
-    "middle_initials": "",
     "last_name": "Fineberg",
     "name_slug": "jonathan-fineberg",
     "img_src_320w": "/assets/img/jpg/mw320/people/jonathan-fineberg--320w.webp",
@@ -1920,7 +1809,6 @@
   },
   {
     "first_name": "Helmut",
-    "middle_initials": "",
     "last_name": "Leder",
     "name_slug": "helmut-leder",
     "img_src_320w": "/assets/img/jpg/mw320/people/helmut-leder--320w.webp",
@@ -1948,7 +1836,6 @@
   },
   {
     "first_name": "Marcos",
-    "middle_initials": "",
     "last_name": "Nadal",
     "name_slug": "marcos-nadal",
     "img_src_320w": "/assets/img/jpg/mw320/people/marcos-nadal--320w.webp",
@@ -1992,7 +1879,6 @@
   },
   {
     "first_name": "Martin",
-    "middle_initials": "",
     "last_name": "Skov",
     "name_slug": "martin-skov",
     "img_src_320w": "/assets/img/jpg/mw320/people/martin-skov--320w.webp",
@@ -2012,7 +1898,6 @@
   },
   {
     "first_name": "Oshin",
-    "middle_initials": "",
     "last_name": "Vartanian",
     "name_slug": "oshin-vartanian",
     "img_src_320w": "/assets/img/jpg/mw320/people/oshin-vartanian--320w.webp",
