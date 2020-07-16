@@ -38,9 +38,9 @@
       <p class="tl">
         {% if include.param.chatlab_bio %}
           {% comment %} i.e., for Anjan or anyone else at ChatLab with multiple bios {% endcomment%}
-          {{ include.param.chatlab_bio }}
+          {{ include.param.chatlab_bio | smartify }}
         {% else %}
-          {{ include.param.bio }}
+          {{ include.param.bio | smartify }}
         {% endif %}
       </p>
     </div>

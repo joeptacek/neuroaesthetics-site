@@ -3,7 +3,6 @@
     "first_name": "Anjan",
     "last_name": "Chatterjee",
     "name_slug": "anjan-chatterjee",
-    "suffix": "M.D., F.A.A.N.",
     "img_src_320w": "/assets/img/jpg/mw320/people/anjan-chatterjee--320w.webp",
     "bio": "Anjan Chatterjee is a Professor of Neurology, Psychology, and Architecture and the founding Director of the Penn Center for Neuroaesthetics. He wrote <i>The Aesthetic Brain: How We Evolved to Desire Beauty and Enjoy Art</i> and co-edited <i>Neuroethics in Practice: Mind, Medicine, and Society</i> and <i>The Roots of Cognitive Neuroscience: Behavioral Neurology and Neuropsychology</i>. He has received the Norman Geschwind Prize in Behavioral and Cognitive Neurology and the Rudolph Arnheim Prize for contribution to Psychology and the Arts. He is a founding member of the Board of Governors of the Neuroethics Society, the past President of the International Association of Empirical Aesthetics, and the past President of the Behavioral and Cognitive Neurology Society. He currently serves on the Boards of The College of Physicians of Philadelphia and has served on the boards of Haverford College, the Norris Square Neighborhood Project and the Associated Services for the Blind and Visually Impaired.",
     "links": [
@@ -38,7 +37,6 @@
     "first_name": "Eileen",
     "last_name": "Cardillo",
     "name_slug": "eileen-cardillo",
-    "suffix": "D.Phil.",
     "img_src_320w": "/assets/img/jpg/mw320/people/eileen-cardillo--320w.webp",
     "bio": "Eileen Cardillo, DPhil is a cognitive neuroscientist and Associate Director of the Penn Center for Neuroaesthetics. She received her B.S. in Biological Psychology at the College of William and Mary and her doctorate in Experimental Psychology while a Rhodes Scholar at the University of Oxford. After completing her postdoctoral training at UC-San Diego and the University of Pennsylvania, Eileen served as the Patient Coordinator of the Focal Lesion Database at Penn’s Center for Cognitive Neuroscience. Her research investigates the cognitive and neural mechanisms supporting language comprehension, with a particular focus on metaphor and neuropsychological studies of patient populations. Other areas of interest include verbal creativity, aesthetic preference, and the cognitive and neural changes associated with contemplative practice.",
     "links": [
@@ -152,7 +150,6 @@
     "first_name": "Stacey",
     "last_name": "Humphries",
     "name_slug": "stacey-humphries",
-    "suffix": "Ph.D.",
     "img_src_320w": "/assets/img/jpg/mw320/people/stacey-humphries--320w.webp",
     "bio": "I am interested in when and how sensorimotor representations shape language, conceptual processing, reasoning, and aesthetic judgment. To do this work, I use a variety of methods, including functional neuroimaging, studies of neurological patients (Parkinson’s disease patients, and stroke patients with focal lesions), and cognitive and behavioural testing. During my Ph.D. at the University of Manchester, UK, I explored how impaired action representations affect the way patients with Parkinson’s disease gesture about action concepts in conversation. At Penn, I am examining how neurodegenerative patients comprehend literal and metaphorical language, how stroke patients understand analogies, and how patients and young adults view different types of abstract artwork.",
     "links": [
@@ -182,7 +179,6 @@
     "first_name": "Franziska",
     "last_name": "Hartung",
     "name_slug": "franziska-hartung",
-    "suffix": "Ph.D.",
     "img_src_320w": "/assets/img/jpg/mw320/people/franziska-hartung--320w.webp",
     "bio": "Franziska received her PhD degree in cognitive neuroscience from the Max-Planck Institute for Psycholinguistics and the Radboud University (Donders Institute for Brain, Cognition, and Behaviour) in the Netherlands. Her research projects centered around the question of how context shapes meaning and experience and its underlying neural mechanisms. She is working on various aspects of story comprehension, event processing, aesthetic and affective responses to literary texts and as of recent human faces which includes exploratory work on person perception and stigma.",
     "links": [
@@ -212,7 +208,6 @@
     "first_name": "Yoed",
     "last_name": "Kenett",
     "name_slug": "yoed-kenett",
-    "suffix": "Ph.D.",
     "img_src_320w": "/assets/img/jpg/mw320/people/yoed-kenett--320w.webp",
     "bio": "I have a Ph.D. (2015) in neuroscience from Bar-Ilan University, Israel. Currently I am a postdoctoral fellow at the Department of Psychology at the University of Pennsylvania, working at the labs of Dr. Sharon Thompson-Schill and Dr. Anjan Chatterjee. My research computationally and empirically investigates the structure of semantic memory (our memory of knowledge and facts) and how it constrains cognitive processes operating over it, in typical and clinical populations. I then apply neurocognitive empirical methods to study these quantitative findings. Here at Penn, I am gaining experience in neuroimaging research, applying network neuroscience methods to study creativity. In parallel, I am exploring further cognitive domains, such as conceptual combinations and aesthetic perception. A few of my current projects address topics on the conceptual representation of beauty and well-being, aesthetic emotions, dynamics of semantic memory, and the neural dynamics of generating and evaluating creative ideas.",
     "links": [
@@ -242,7 +237,6 @@
     "first_name": "Cliff",
     "last_name": "Workman",
     "name_slug": "cliff-workman",
-    "suffix": "Ph.D.",
     "img_src_320w": "/assets/img/jpg/mw320/people/cliff-workman--320w.webp",
     "bio": "When we judge people for their moral or prosocial behaviors, do our perceptions of their beauty influence our evaluations? I am interested in understanding how morality and beauty interact to modulate decision-making. Prior to joining the ChatLab, I was a postdoctoral scholar in the Social Cognitive Neuroscience Lab at the University of Chicago under the supervision of Jean Decety. Our work investigates the psycholigical and neural mechansisms underpinning political polarization and support for ideologically-motivated violence. I received my Ph.D. from the University of Manchester in England in 2016 where I investigated relations between moral cognition and emotions and the physiopathology of major depression. Before starting my PhD, I worked at Johns Hopkins University on neuroimaging studies of psychiatric disorders, and also completed a B.S. in Psychology at the University of Maryland, Baltimore County, where I worked on studies of clinical, cognitive, and social functioning.",
     "links": [
@@ -259,6 +253,50 @@
         "link_url": "https://twitter.com/cliffordianw"
       }
     ],
+    "pcfn_title": "Postdoctoral Researcher",
+    "pcfn_rank": 600,
+    "chatlab_title": "Postdoctoral Researcher",
+    "chatlab_role": "postdoctoral_researcher",
+    "pcfn_group": true,
+    "pcfn_alum": false,
+    "chatlab_group": true,
+    "chatlab_alum": false
+  },
+  {
+    "first_name": "Alex",
+    "last_name": "Christensen",
+    "name_slug": "alex-christensen",
+    "img_src_320w": "/assets/img/jpg/mw320/people/alex-christensen--320w.webp",
+    "bio": "My research roots can be traced back to personality: How are people different? And what sorts of outcomes extend from these differences? Specifically, I am interested in what makes people more (or less) open to various experiences. My Ph.D. work at the University of North Carolina at Greensboro sought to clarify the types of experiences people are open to, the cognitive and neurological differences of \"open\" people, and the behavioral consequences of being \"open\" (e.g., creative, curious, humorous). At Penn, I look forward to exploring how people differ in their cognitive and affective responses to aesthetics, and how these differences affect their subsequent aesthetic experiences.",
+    "links": [
+      {
+        "link_name": "Email",
+        "link_url": "mailto:alexpaulchristensen@gmail.com"
+      },
+      {
+        "link_name": "Personal Website",
+        "link_url": "https://sites.google.com/view/apchristensen/home"
+      },
+      {
+        "link_name": "Profile on GitHub",
+        "link_url": "https://github.com/AlexChristensen"
+      }
+    ],
+    "pcfn_title": "Postdoctoral Researcher",
+    "pcfn_rank": 600,
+    "chatlab_title": "Postdoctoral Researcher",
+    "chatlab_role": "postdoctoral_researcher",
+    "pcfn_group": true,
+    "pcfn_alum": false,
+    "chatlab_group": true,
+    "chatlab_alum": false
+  },
+  {
+    "first_name": "Adam",
+    "last_name": "Weinberger",
+    "name_slug": "adam-weinberger",
+    "img_src_320w": "/assets/img/jpg/mw320/people/adam-weinberger--320w.webp",
+    "bio": "I received my PhD in psychology from Georgetown University in 2020. I am broadly interested in human learning, and how implicit processes shape our more explicit knowledge and beliefs, including belief in God. I also have ongoing research examining creativity. My work involves a variety of behavioral and neural methods, with a particular focus on neural representations and brain network organization. Outside of the lab, I enjoy listening to music, making cocktails, and playing online chess.",
     "pcfn_title": "Postdoctoral Researcher",
     "pcfn_rank": 600,
     "chatlab_title": "Postdoctoral Researcher",
@@ -316,7 +354,6 @@
     "first_name": "Dexian",
     "last_name": "He",
     "name_slug": "dexian-he",
-    "suffix": "M.A.",
     "img_src_320w": "/assets/img/jpg/mw320/people/dexian-he--320w.webp",
     "bio": "I am interested in the role of experience in forming individual face preferences. In ChatLab, my project focuses on how viewer age and subject age interact to affect the perception of facial attractiveness. I am a second-year doctoral student at the School of Psychology, South China Normal University. I received my master's degree from SCNU in 2018 where I investigated the relation between obesity and cognitive control, and how it can be modulated by aesthetics of food. Beyond research, I enjoy reading, jogging, and traveling.",
     "links": [
@@ -383,7 +420,6 @@
     "first_name": "Gregor",
     "last_name": "Hayn-Leichsenring",
     "name_slug": "gregor-hayn-leichsenring",
-    "suffix": "D.D.S.",
     "img_src_320w": "/assets/img/jpg/mw320/people/gregor-hayn-leichsenring--320w.webp",
     "bio": "I received a D.D.S. degree as well as a B.A. degree in philosophy from the University of Jena. Previously, I performed research in neuroembryology as well as empirical aesthetics, focusing on face attractiveness, beauty in visual abstract artworks, and philosophical aesthetics at the Institute of Anatomy I in Jena. At present, I am a postdoctoral scientist at the University of Pennsylvania working on global image properties and their correlation with neurophysiological activities. I am trying to relate the neuronal responses to landscape paintings, art portraits, and abstract art paintings with their statistical image properties. Special focus is on specific areas of the sensorimotor system and the emotion-valuation system.",
     "links": [
@@ -429,7 +465,6 @@
     "first_name": "Nate",
     "last_name": "Klooster",
     "name_slug": "nate-klooster",
-    "suffix": "Ph.D.",
     "img_src_320w": "/assets/img/jpg/mw320/people/nate-klooster--320w.webp",
     "bio": "I am interested in the neuroscience of memory and language broadly. At Penn, I study semantic memory and figurative language. Examining neurological patients allows me to establish the necessity of brain regions in their support of cognition. My work identifying experimental measures sensitive to the earliest cognitive changes in neurodegenerative disease aims to impact early diagnoses and the evaluation of potential treatments. I earned my Ph.D. at the University of Iowa where I studied semantic richness in patients with bilateral hippocampal damage and profound amnesia. Outside of lab, I like spending time with my wife Dana, our daughter Izzy, and our dog Boogie.",
     "links": [
@@ -453,7 +488,6 @@
     "first_name": "Erin",
     "last_name": "Conrad",
     "name_slug": "erin-conrad",
-    "suffix": "M.D.",
     "img_src_320w": "/assets/img/jpg/mw320/people/erin-conrad--320w.webp",
     "bio": "I am interested in ethical decision making and finding out what factors influence our understanding of ethical questions. I completed an M.A. in Philosophy, Politics, and Economics of Health at University College London, where I studied the ethics of research on large groups as well as the ethics of conscientious objection in medicine. I then completed my M.D. at University of Michigan. I am now a neurology resident at Penn.",
     "links": [
@@ -473,7 +507,6 @@
     "first_name": "Steve",
     "last_name": "Weisberg",
     "name_slug": "steve-weisberg",
-    "suffix": "Ph.D.",
     "bio": "My research explores how people navigate. As a graduate student at Temple University, I conducted behavioral experiments in virtual environments to determine what makes some people navigational experts and others constantly lost. At Penn, I will incorporate patient and neuroimaging techniques to pursue questions at the intersection of language and navigation. Understanding how spatial and linguistic representations differ will hopefully provide windows to treatment for those with navigational deficits.",
     "links": [
       {
@@ -504,7 +537,6 @@
     "first_name": "Madhushree",
     "last_name": "Chakrabarty",
     "name_slug": "madhushree-chakrabarty",
-    "suffix": "Ph.D.",
     "bio": "I am interested in exploring language processing in the human brain, especially the subtle intricacies involved in the pragmatic use of language. I did my Ph.D. at the School of Cognitive Science, Jadavpur University, India. I have used behavioral methods to study the metaphor comprehension ability of patients with focal brain lesions and schizophrenia. I received a Fulbright award to work at Penn to investigate the comprehension of metaphorical and ironic meanings of sentences in patients with focal brain lesions.",
     "chatlab_title": "Postdoctoral Researcher",
     "chatlab_role": "postdoctoral_researcher",
