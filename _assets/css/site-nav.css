@@ -1,0 +1,31 @@
+#site-nav {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#site-nav__list {
+  display: none;
+}
+
+#site-nav.site-nav--menu-open {
+  box-shadow: none;
+}
+
+#site-nav.site-nav--menu-open #site-nav__list {
+  display: block;
+}
+
+
+/* BREAKPOINT: NOT SMALL (NS) =============================================== */
+@media screen and (min-width: 30em) {
+  #site-nav__button {
+    display: none;
+  }
+
+  #site-nav__list {
+    display: block;
+  }
+
+  #site-nav.site-nav--menu-open {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+}

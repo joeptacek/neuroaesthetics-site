@@ -1,6 +1,7 @@
 /* IMPORTS VIA POSTCSS-IMPORT */
 @import "tachyons-modified.css";
 @import "responsive-backgrounds.css";
+@import "site-nav.css";
 
 /* OVERRIDE TACHYONS */
 
@@ -170,6 +171,10 @@ body, button, input, textarea {
   background-color: #e9ebec;
 }
 
+.bg-white-95 {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
 /* BACKGROUND GRADIENTS */
 
 .bg-gradient-theme {
@@ -196,116 +201,6 @@ body, button, input, textarea {
 
 .bg-gradient-rainbow-1e {
   background: linear-gradient(147deg, #CCABD8, #FA897B);
-}
-
-/* RAINBOW 2 (https://www.schemecolor.com/happy-rainbow.php) */
-
-.bg-gradient-rainbow-2a {
-  background: linear-gradient(#DF4757, #E88C54);
-}
-
-.bg-gradient-rainbow-2b {
-  background: linear-gradient(#E88C54, #F8E846);
-}
-
-.bg-gradient-rainbow-2c {
-  background: linear-gradient(#F8E846, #64D87F);
-}
-
-.bg-gradient-rainbow-2d {
-  background: linear-gradient(#64D87F, #5392D2);
-}
-
-.bg-gradient-rainbow-2e {
-  background: linear-gradient(#5392D2, #6144D0);
-}
-
-/* RAINBOW 3 (https://www.schemecolor.com/double-rainbow.php) */
-
-.bg-gradient-rainbow-3a {
-  background: linear-gradient(#D71729, #FC9127);
-}
-
-.bg-gradient-rainbow-3b {
-  background: linear-gradient(#FC9127, #FFFB62);
-}
-
-.bg-gradient-rainbow-3c {
-  background: linear-gradient(#FFFB62, #8BE071);
-}
-
-.bg-gradient-rainbow-3d {
-  background: linear-gradient(#8BE071, #1076E2);
-}
-
-.bg-gradient-rainbow-3e {
-  background: linear-gradient(#1076E2, #673295);
-}
-
-/* RAINBOW 4 (https://www.schemecolor.com/rainbow-on.php) */
-
-.bg-gradient-rainbow-4a {
-  background: linear-gradient(#F9874E, #FAC758);
-}
-
-.bg-gradient-rainbow-4b {
-  background: linear-gradient(#FAC758, #8CC788);
-}
-
-.bg-gradient-rainbow-4c {
-  background: linear-gradient(#8CC788, #53B3A6);
-}
-
-.bg-gradient-rainbow-4d {
-  background: linear-gradient(#53B3A6, #6691CC);
-}
-
-.bg-gradient-rainbow-4e {
-  background: linear-gradient(#6691CC, #C587C4);
-}
-
-/* RAINBOW 5 (https://www.schemecolor.com/chinese-rainbow-color-palette.php) */
-
-.bg-gradient-rainbow-5a {
-  background: linear-gradient(#AA361A, #F27242);
-}
-
-.bg-gradient-rainbow-5b {
-  background: linear-gradient(#F27242, #FFB200);
-}
-
-.bg-gradient-rainbow-5c {
-  background: linear-gradient(#FFB200, #78C848);
-}
-
-.bg-gradient-rainbow-5d {
-  background: linear-gradient(#78C848, #325292);
-}
-
-.bg-gradient-rainbow-5e {
-  background: linear-gradient(#325292, #3D2564);
-}
-
-/* RAINBOW 6 (https://www.schemecolor.com/american-rainbow-color-palette.php) */
-
-.bg-gradient-rainbow-6a {
-  background: linear-gradient(#B22032, #FE8B01);
-}
-
-.bg-gradient-rainbow-6b {
-  background: linear-gradient(#FE8B01, #F4B404);
-}
-
-.bg-gradient-rainbow-6c {
-  background: linear-gradient(#F4B404, #33B333);
-}
-
-.bg-gradient-rainbow-6d {
-  background: linear-gradient(#33B333, #3B3B6B);
-}
-
-.bg-gradient-rainbow-6e {
-  background: linear-gradient(#3B3B6B, #421A55);
 }
 
 /* FILLS */
@@ -361,13 +256,18 @@ body, button, input, textarea {
 }
 
 .shadow-7 {
-  /* inset shadow (top + bottom) */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) inset, 0 -4px 8px 0 rgba(0, 0, 0, 0.2) inset;
+  /* subtle inset shadow for resources */
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1) inset;
 }
 
 .shadow-8 {
-  /* subtle inset shadow */
-  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1) inset;
+  /* shadow for bottom of site-nav to mirror shadow-9, shifted down slightly */
+  box-shadow: 0 5px 8px -1px rgba( 0, 0, 0, .2 );
+}
+
+.shadow-9 {
+  /* upward inset shadow */
+  box-shadow: 0 -8px 8px -4px rgba(0, 0, 0, 0.2) inset;
 }
 
 /* OPACITY */
@@ -494,6 +394,10 @@ body, button, input, textarea {
     background-color: transparent;
   }
 
+  .shadow-none-ns {
+    box-shadow: none;
+  }
+
   .columns-1-ns {
     columns: 1;
   }
@@ -508,16 +412,6 @@ body, button, input, textarea {
 
   .break-inside-avoid-ns {
     break-inside: avoid;
-  }
-
-  /* LOGOS */
-
-  .logo--pcfn {
-    width: 130px;
-  }
-
-  .logo--psom {
-    width: 220px;
   }
 }
 
@@ -603,12 +497,25 @@ body, button, input, textarea {
     background-position: 50% 50%;
   }
 
+  .bg-near-white-l {
+    background-color: #f4f4f4;
+  }
+
+  .bg-transparent-l {
+    background-color: transparent;
+  }
+
+  .bg-liberty-l {
+    /* from coolors.com */
+    background-color: #4357AD;
+  }
+
   .o-80-l {
     opacity: .8;
   }
 
-  .bg-white-90-l {
-    background-color: rgba( 255, 255, 255, .9 ); /* tachyons white-90 */
+  .white-l {
+    color: #fff;
   }
 
   .dni-l {

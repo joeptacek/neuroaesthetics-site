@@ -442,7 +442,7 @@ function serve(cb) {
 }
 
 function watch() {
-  gulp.watch('_assets/img/src/**', img);
+  gulp.watch('_assets/img/src/**', img); // browsersync catches file change at _site but doesn't inject changes for some reason (must manually reload, could consider setting injectChanges to false)
   gulp.watch('_assets/css/**', css);
   gulp.watch('_assets/js/**', js);
   gulp.watch(

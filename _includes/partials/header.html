@@ -1,15 +1,15 @@
-<header class="flex flex-column{% if page.big_header and page.big_header != "" %} bb b--moon-gray{% endif %}">
+<header class="flex flex-column">
   <!-- SITE NAV -->
   {% include partials/site-nav.html %}
   {% if page.big_header and page.big_header != "" %}
     <!-- GAP + TITLE CARD -->
-    <div class="relative shadow-7 vh-100 vh-75-tall ph3 ph4-m ph6-l">
+    <div class="relative shadow-9 vh-100 vh-75-tall ph3 ph4-m ph6-l">
       <!-- PINNED ANNOUNCEMENT -->
       <div class="absolute z-999 top-0 left-0 right-0">
         {% include partials/pinned-announcement.html %}
       </div>
       <div class="relative flex justify-center items-center h-100">
-        <div class="flex-auto flex flex-column justify-center f5 f4-ns bg-near-white shadow-5 min-h5 mw-55rem lh-copy br3 pa4 pa5-ns o-95">
+        <div class="flex-auto flex flex-column justify-center f5 f4-l bg-near-white shadow-5 min-h5 mw-55rem lh-copy br3 pa4 pa5-ns o-95">
           <h1 class="font-serif lh-solid tc">
             {{ page.big_header.bh_title }}
           </h1>

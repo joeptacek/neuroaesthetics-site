@@ -1,5 +1,14 @@
 // TODO: get rid of a lot of these init functions? just add these styles to CSS classes?
 
+// Site Nav
+
+var siteNav = document.getElementById('site-nav');
+var siteNavButton = document.getElementById('site-nav__button');
+siteNavButton.addEventListener('click', function() {
+  siteNav.classList.toggle('site-nav--menu-open');
+});
+
+
 // View Toggle
 
 var VTContainers = document.getElementsByClassName('js-vt-container');

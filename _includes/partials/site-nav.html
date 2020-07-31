@@ -1,28 +1,70 @@
-<nav class="bg-near-white bb b--moon-gray pv4-l ph6-l">
-  <div class="js-vt-container flex flex-column flex-row-l items-center-l justify-between-l">
-    <div class="pv4 ph3 ph4-m pa0-l bb bn-l b--black-10">
-      <div class="flex justify-between justify-center-ns ph2 ph3-m ph0-l">
-        <a class="link dim flex items-center justify-center" href="/">
-          {% comment %} maybe use png fallback for svg? {% endcomment %}
-          <img class="logo--pcfn db" src="/assets/img/svg/logos/logo--penn-center-for-neuroaesthetics.svg" alt="Logo for the Penn Center for Neuroaesthetics" />
-        </a>
-        <div class="js-vt-button flex items-center justify-end dn-ns w-50 pointer">
-          {% octicon grabber height:30 class:"fill-black" %}
-        </div>
+<nav id="site-nav" class="flex flex-column flex-row-l items-center-l justify-between-l bg-white-95 pa4-l">
+
+  <div class="flex-m items-center-m justify-between-m pa3 pa4-m pa0-l">
+    <a class="flex items-center dark-gray link dim" href="/">
+      <div class="flex-none mr3 mr4-ns">
+        {% comment %} maybe use png fallback for svg? {% endcomment %}
+        <img class="logo--pcfn db" src="/assets/img/svg/logos/logo--penn-center-for-neuroaesthetics.svg" alt="Logo for the Penn Center for Neuroaesthetics" />
       </div>
-    </div>
-    <ul class="js-vt-viewer bg-light-gray bg-transparent-ns f4 pv3-m ph3 ph4-m ph0-l list" data-vt-viewer-type="show-hide">
-      <li class="dbi-ns ph2 ph3-m ph0-l">
-        <ul class="flex flex-column flex-row-ns items-center-ns justify-center-ns list pl0">
-          <li class="pt4 pb2 pa0-ns mr4-ns"><a class="link dim black-60" href="/">Home</a></li>
-          <li class="pv2 pa0-ns mr4-ns"><a class="link dim black-60" href="/community.html">Community</a></li>
-          <li class="pv2 pa0-ns mr4-ns"><a class="link dim black-60" href="/research.html">Research</a></li>
-          <li class="pv2 pa0-ns mr4-ns"><a class="link dim black-60" href="/news.html">News</a></li>
-          <li class="pv2 pa0-ns mr4-ns"><a class="link dim black-60" href="/about.html">About</a></li>
-          <li class="dn-ns pt2 pb4 pa0-ns"><a class="link dim liberty" href="https://giving.apps.upenn.edu/fund?program=MED&fund=604330" target="_blank">Giving</a></li>
-          <li class="dn db-ns pt2 pb4 pa0-ns"><a class="link dim bg-liberty dib white pv2 ph3 br-pill" href="https://giving.apps.upenn.edu/fund?program=MED&fund=604330" target="_blank">Giving</a></li>
-        </ul>
-      </li>
-    </ul>
+      <h1 class="f4 mb0">
+        Penn Center for
+        <br />Neuroaesthetics
+      </h1>
+    </a>
+    <a class="dn db-m bg-liberty white f4 link dim pv2 ph3 br-pill" href="https://giving.apps.upenn.edu/fund?program=MED&fund=604330" target="_blank">
+      Giving
+    </a>
   </div>
+
+  <div id="site-nav__button" class="flex items-center justify-between dark-gray b pv1 ph3 bt b--black-10 pointer">
+    <p class="mb0">
+      Menu
+    </p>
+    <div class="flex items-center justify-center">
+      {% octicon grabber height:30 class:"fill-black" %}
+    </div>
+  </div>
+
+  <div id="site-nav__list" class="relative">
+    <div class="absolute relative-ns z-999 flex justify-center-m bg-white-95 bg-transparent-ns shadow-8 shadow-none-ns f4-ns w-100 pv3-m ph4-m ph0-l bt b--black-10 bn-l">
+
+      <ul class="flex flex-column flex-row-ns items-center-ns list w-50 w-auto-ns pl0">
+        <li class="mr3-ns">
+          <a class="db link dim black-80 pv2 ph3 pa0-ns" href="/">
+            Home
+          </a>
+        </li>
+        <li class="mr3-ns bt b--black-10 bn-ns">
+          <a class="db link dim black-80 pv2 ph3 pa0-ns" href="/community.html">
+            Community
+          </a>
+        </li>
+        <li class="mr3-ns bt b--black-10 bn-ns">
+          <a class="db link dim black-80 pv2 ph3 pa0-ns" href="/research.html">
+            Research
+          </a>
+        </li>
+      </ul>
+
+      <ul class="flex flex-column flex-row-ns items-center-ns list w-50 w-auto-ns pl0 bl b--black-10 bn-ns">
+        <li class="mr3-ns">
+          <a class="db link dim black-80 pv2 ph3 pa0-ns" href="/news.html">
+            News
+          </a>
+        </li>
+        <li class="mr3-ns bt b--black-10 bn-ns">
+          <a class="db link dim black-80 pv2 ph3 pa0-ns" href="/about.html">
+            About
+          </a>
+        </li>
+        <li class="bt b--black-10 bn-ns">
+          <a class="db dn-m link dim bg-liberty-l liberty white-l pv2 ph3 br-pill-l" href="https://giving.apps.upenn.edu/fund?program=MED&fund=604330" target="_blank">
+            Giving
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
 </nav>
