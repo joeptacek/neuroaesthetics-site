@@ -1,5 +1,23 @@
 [
   {
+    "title": "Beauty and Health",
+    "source": "WHYY: The Pulse",
+    "date": "2020-07-31",
+    "url": "https://whyy.org/episodes/beauty-and-health/",
+    "category": "audio",
+    "archived": false,
+    "filter_pcfn": true
+  },
+  {
+    "title": "Aesthetics in the Brain",
+    "source": "Behind Your Behavior",
+    "date": "2020-07-30",
+    "url": "https://anchor.fm/byb-lullas/episodes/Aesthetics-in-the-Brain-ehf2gl",
+    "category": "audio",
+    "archived": false,
+    "filter_pcfn": true
+  },
+  {
     "title": "Post-lockdown Working Poses Challenges for People With Disfigurements",
     "source": "Financial Times",
     "date": "2020-07-12",
