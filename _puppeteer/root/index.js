@@ -7,8 +7,6 @@
 
 const jazzicon = require('jazzicon');
 const crypto = require('crypto');
-
-// url-slug seems more compatible with jekyll's slugify out of the box; however, url-slug fragments camelcased words, e.g., PCfN becomes pcf-n, so need to say PCFN in titles
 const urlslug = require('url-slug');
 
 // request data.json (contains an array of objects with titles for news, announcements, events)
@@ -34,7 +32,10 @@ function addJazzicons(inputJSON, targetId) {
     const int = parseInt(hex.substring(0, 10), 16); // truncate hex to reduce magnitude for jazzicon, convert to int
     const diameter = 150; // jazzicon versions earlier than 2.0.0 don't allow diameter > 100
     const div = jazzicon(diameter, int);
-    div.id = urlslug(title); // use url-slug of title to set id so that Jekyll can find this later by using the slugify filter on the same title
+
+    // use url-slug of title to set id so that Jekyll can find this later by using slugify filter on same title
+    // currently, url-slug seems compatible with Jekyll slugify; earlier version would insert an extra separator at camelCase boundaries (e.g., PCfN -> pcf-n), resulting in build erros
+    div.id = urlslug.convert(title, { camelCase: false });
     div.style.borderRadius = '9999px'; // jazzicon uses constant 50px for border-radius property; doesn't result in circles if diameter > 100px
     document.getElementById(targetId).appendChild(div);
   }
