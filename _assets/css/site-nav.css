@@ -2,7 +2,7 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-#site-nav__list {
+#site-nav__dropdown {
   display: none;
 }
 
@@ -10,10 +10,20 @@
   box-shadow: none;
 }
 
-#site-nav.site-nav--menu-open #site-nav__list {
+#site-nav.site-nav--menu-open #site-nav__dropdown {
   display: block;
 }
 
+#site-nav__table {
+  width: 100%;
+  border-collapse: collapse;
+  border: hidden;
+}
+
+#site-nav__table td {
+  border: 1px solid rgb(229, 229, 229);
+  width: 50%;
+}
 
 /* BREAKPOINT: NOT SMALL (NS) =============================================== */
 @media screen and (min-width: 30em) {
@@ -21,11 +31,23 @@
     display: none;
   }
 
-  #site-nav__list {
+  #site-nav__dropdown {
     display: block;
   }
 
   #site-nav.site-nav--menu-open {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  #site-nav__table tbody {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #site-nav__table td {
+    border: none;
+    width: auto;
   }
 }

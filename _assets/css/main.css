@@ -131,7 +131,6 @@ body, button, input, textarea {
   transform: translateZ(0);
 }
 
-
 /* BACKGROUND TEXTURES */
 
 .bg-pattern-circuit {
@@ -293,14 +292,27 @@ body, button, input, textarea {
 /* LOGOS */
 
 .logo--pcfn {
-  width: 110px;
+  width: 100px;
 }
 
 .logo--psom {
   width: 200px;
 }
 
-/* STYLES FOR JAVASCRIPT */
+/* ETC. */
+
+.twitter-timeline {
+  /*
+  fix for Twitter widget
+  by default iframe width is set to content width on ios
+  content is larger than viewport, so overflows
+  explicitly setting the width fixes this
+  can stay responsive by setting very small width and then min-width
+  need to include !important to override width set by Twitter widget
+  */
+  width: 0 !important;
+  min-width: 100% !important;
+}
 
 .js-carousel-container {
   position: relative;
@@ -321,9 +333,6 @@ body, button, input, textarea {
   z-index: 99;
 }
 
-
-/* STYLES FOR LIQUID */
-
 .tablegen {
   display: block; /* squash inline space */
 }
@@ -338,17 +347,15 @@ body, button, input, textarea {
   flex-flow: column;
 }
 
-.twitter-timeline {
-  /*
-  fix for Twitter widget
-  by default iframe width is set to content width on ios
-  content is larger than viewport, so overflows
-  explicitly setting the width fixes this
-  can stay responsive by setting very small width and then min-width
-  need to include !important to override width set by Twitter widget
-  */
-  width: 0 !important;
-  min-width: 100% !important;
+#page-nav__table {
+  width: 100%;
+  border-collapse: collapse;
+  border: hidden;
+}
+
+#page-nav__table td {
+  border: 1px solid rgb(229, 229, 229);
+  width: 50%;
 }
 
 /* BREAKPOINT: TALL ========================================================= */
@@ -396,6 +403,10 @@ body, button, input, textarea {
 
   .shadow-none-ns {
     box-shadow: none;
+  }
+
+  .logo--pcfn {
+    width: 110px;
   }
 
   .columns-1-ns {
@@ -549,5 +560,16 @@ body, button, input, textarea {
 
   .break-inside-avoid-l {
     break-inside: avoid;
+  }
+
+  #page-nav__table tbody {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+  }
+
+  #page-nav__table td {
+    border: none;
+    width: auto;
   }
 }
