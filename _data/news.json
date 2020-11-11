@@ -1,5 +1,19 @@
 [
   {
+    "title": "Talk the Walk",
+    "source": "Brain, Behavior, and Beauty",
+    "date": "2020-11-10",
+    "url": "https://www.psychologytoday.com/us/blog/brain-behavior-and-beauty/202011/talk-the-walk",
+    "category": "print",
+    "archived": false,
+    "filter_pcfn": false,
+    "blog_data": {
+      "img_src_320w": "/assets/img/jpg/mw320/blog/unsplash--stefano-zocca--frisbee--320w.webp",
+      "img_attribution": "Image by Stefano Zocca, from Unsplash",
+      "teaser": "Ultimate frisbee players offer insight into communicating directions. They anchor words to body or environment centered reference frames, suggesting a speed-stability tradeoff."
+    }
+  },
+  {
     "title": "\"Wasn't She Crazy?\"",
     "source": "President Lincoln's Cottage: Q & Abe",
     "date": "2020-10-01",

@@ -715,6 +715,25 @@
     "link": false
   },
   {
+    "work_authors": "Weisberg, S. M., & Chatterjee, A.",
+    "work_year": 2020,
+    "work_title": "Reference frames in spatial communication for navigation and sports: An empirical study in ultimate frisbee players",
+    "work_publication_format": "article_in_journal",
+    "work_doi": "10.1186/s41235-020-00254-1",
+    "work_post_date_fake": 39,
+    "work_post_date": "2020-11-05",
+    "pdf": "/assets/pdf/publications/Weisberg_Chatterjee_2020_01.pdf",
+    "category": "language_and_space",
+    "journal_title": "Cognitive Research: Principles and Implications",
+    "journal_advance": false,
+    "journal_preprint": false,
+    "journal_vol": 5,
+    "journal_pages_start": 53,
+    "journal_pages_stop": 53,
+    "review": false,
+    "link": false
+  },
+  {
     "work_authors": "Hartung, F. Kenett, Y. N., Cardillo, E. R., Humphries, S., Klooster, N., & Chatterjee, A.",
     "work_year": 2020,
     "work_title": "Context matters: Novel metaphors in supportive and non-supportive contexts",
@@ -766,7 +785,7 @@
     "link": false
   },
   {
-    "work_authors": "Weisberg, S., Newcomb, N., & Chatterjee, A.",
+    "work_authors": "Weisberg, S. M., Newcomb, N., & Chatterjee, A.",
     "work_year": 2019,
     "work_title": "Everyday taxi drivers: Do better navigators have larger hippocampi?",
     "work_publication_format": "article_in_journal",
@@ -1688,7 +1707,7 @@
     "link": false
   },
   {
-    "work_authors": "Weisberg, S., Badgio, D., & Chatterjee, A.",
+    "work_authors": "Weisberg, S. M., Badgio, D., & Chatterjee, A.",
     "work_year": 2017,
     "work_title": "A CRISPR new world: Attitudes in the public toward innovations in human genetic modification",
     "work_publication_format": "article_in_journal",
