@@ -191,11 +191,13 @@ sections:
           <div class="js-vt-viewer" data-vt-viewer-type="show-more" data-vt-show-more-init-visible="10" data-vt-show-more-max="10" data-vt-show-more-responsive="false">
             {% comment %}not sorting by date for now because json has been manually ordered when there are two items with same date{% endcomment %}
             {% assign news_sorted = site.data.news %}
+            {% assign first_news = true %}
             {% for news_item in news_sorted %}
               {% if news_item.filter_pcfn and news_item.archived == false %}
-                <div class="pv4 ph3 ph4-m ph5-l{% unless forloop.index == 1 %} bt b--black-10{% endunless %}">
+                <div class="pv4 ph3 ph4-m ph5-l{% unless first_news %} bt b--black-10{% endunless %}">
                   {% include components/news.html param=news_item %}
                 </div>
+                {% assign first_news = false %}
               {% endif %}
             {% endfor %}
           </div>
