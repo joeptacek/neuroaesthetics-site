@@ -39,7 +39,7 @@ sections:
             <p class="mb3 mb4-ns">
               You can also use this contact form to send us a message and/or sign up for PCfN email announcements.
             </p>
-            <form class="mb3 mb4-ns mb5-l" method="POST" action="https://formspree.io/jptacek@pennmedicine.upenn.edu">
+            <form class="mb3 mb4-ns mb5-l" method="POST" action="https://formspree.io/f/meqpzdjw">
               <p class="mb3"><input class="pa3 w-100 ba br2 b--moon-gray" type="text" name="_replyto" placeholder="Your email address" required></p>
               <p class="mb3"><input class="pa3 w-100 ba br2 b--moon-gray" type="text" name="name" placeholder="Your name" required></p>
               <textarea class="pa3 w-100 ba br2 b--moon-gray mb3 mb4-ns" name="message" placeholder="Your message (optional)"></textarea>
@@ -50,6 +50,7 @@ sections:
               </div>
               <p><button class="bg-liberty white ba pv3 ph5 bn br2 shadow-6" type="submit">Send</button></p>
               <input type="hidden" name="_subject" value="PCfN correspondence">
+              {% comment %} Skip cc: Eileen? {% endcomment %}
               <input type="hidden" name="_cc" value="eica@pennmedicine.upenn.edu">
               <input type="hidden" name="_next" value="/contact.html">
             </form>
