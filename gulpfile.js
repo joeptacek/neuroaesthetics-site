@@ -463,6 +463,7 @@ function watch() {
       '_data/news.json',
       '_announcements/**',
       '_events/**',
+      '_puppeteer/root/index.js', '_puppeteer/root/index.html'
     ],
     gulp.series(freejazz, jekyll)
   );
