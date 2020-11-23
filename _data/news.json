@@ -1,5 +1,19 @@
 [
   {
+    "title": "Brains on Metaphor",
+    "source": "Brain, Behavior, and Beauty",
+    "date": "2020-11-23",
+    "url": "https://www.psychologytoday.com/intl/blog/brain-behavior-and-beauty/202011/brains-metaphor",
+    "category": "print",
+    "archived": false,
+    "filter_pcfn": true,
+    "blog_data": {
+      "img_src_320w": "/assets/img/jpg/mw320/blog/unsplash--nikita-kachanovsky--outside-the-box--320w.webp",
+      "img_attribution": "Image by Nikita Kachanovsky, from Unsplash",
+      "teaser": "Traditional theories of metaphor comprehension implicate the right hemisphere as playing a privileged role. Our findings suggest that these theories are likely to be wrong."
+    }
+  },
+  {
     "title": "Talk the Walk",
     "source": "Brain, Behavior, and Beauty",
     "date": "2020-11-10",
@@ -516,7 +530,7 @@
     "url": "http://metaphorlab.org/about/current-reseach/anjan-chatterjee-eileen-cardillo-why-the-right-hemispheres-role-in-metaphor-processing-might-not-be-right/",
     "category": "print",
     "archived": false,
-    "filter_pcfn": false
+    "filter_pcfn": true
   },
   {
     "title": "Buildings, Beauty, and the Brain: A Neuroscience of Architectural Experience",
