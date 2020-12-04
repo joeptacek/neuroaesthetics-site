@@ -189,8 +189,10 @@ sections:
             </div>
             <div class="break-inside-avoid mb4">
               <h4 class="f5 f4-ns bluegreen lh-title mb3">Undergraduate & high school students</h4>
-              {% assign undergrad_hs_alums = chatlab_alums | where: "chatlab_student_role", "undergraduate_or_hs_student" %}
-              {% for person in undergrad_hs_alums %}
+              {% assign undergrad_alums = chatlab_alums | where: "chatlab_student_role", "undergraduate_student" %}
+              {% assign undergrad_or_hs_alums = chatlab_alums | where: "chatlab_student_role", "undergraduate_or_hs_student" %}
+              {% assign all_undergrad_hs_alumns = undergrad_alums | concat: undergrad_or_hs_alums | sort: "last_name" %}
+              {% for person in all_undergrad_hs_alumns %}
                 <h5 class="f6 f5-ns lh-title mb1">
                   {{ person.first_name }} {% if person.middle_initials %}{{ person.middle_initials}} {% endif %}{{ person.last_name }}
                 </h5>

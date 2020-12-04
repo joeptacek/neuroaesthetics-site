@@ -417,51 +417,6 @@
     "chatlab_alum": false
   },
   {
-    "first_name": "Gregor",
-    "last_name": "Hayn-Leichsenring",
-    "name_slug": "gregor-hayn-leichsenring",
-    "img_src_320w": "/assets/img/jpg/mw320/people/gregor-hayn-leichsenring--320w.webp",
-    "bio": "I received a D.D.S. degree as well as a B.A. degree in philosophy from the University of Jena. Previously, I performed research in neuroembryology as well as empirical aesthetics, focusing on face attractiveness, beauty in visual abstract artworks, and philosophical aesthetics at the Institute of Anatomy I in Jena. At present, I am a postdoctoral scientist at the University of Pennsylvania working on global image properties and their correlation with neurophysiological activities. I am trying to relate the neuronal responses to landscape paintings, art portraits, and abstract art paintings with their statistical image properties. Special focus is on specific areas of the sensorimotor system and the emotion-valuation system.",
-    "links": [
-      {
-        "link_name": "Personal Website",
-        "link_url": "https://www.gregor-hayn.com/"
-      },
-      {
-        "link_name": "Profile on Twitter",
-        "link_url": "https://twitter.com/unter_geher"
-      },
-      {
-        "link_name": "Profile on Instagram",
-        "link_url": "https://www.instagram.com/unter_geher/"
-      }
-    ],
-    "pcfn_title": "Postdoctoral Researcher",
-    "pcfn_rank": 600,
-    "chatlab_title": "Postdoctoral Researcher",
-    "chatlab_role": "postdoctoral_researcher",
-    "pcfn_group": true,
-    "pcfn_alum": true,
-    "chatlab_group": true,
-    "chatlab_alum": true
-  },
-  {
-    "first_name": "Kelly",
-    "last_name": "Porter",
-    "name_slug": "kelly-porter",
-    "img_src_320w": "/assets/img/jpg/mw320/people/kelly-porter--320w.webp",
-    "bio": "Kelly Porter is a junior at the University of Pennsylvania studying criminology, neuroscience, and Africana studies. She hopes to attend law school and to provide resources for mental health to individuals within the criminal justice system. Outside of class, she is involved in the Kappa Iota chapter of Sigma Kappa, peer academic advising, and Project HEAL. She enjoys traveling, reading, and hanging with her friends.",
-    "pcfn_title": "Student Researcher",
-    "pcfn_rank": 500,
-    "chatlab_title": "Undergraduate Student",
-    "chatlab_role": "student_researcher",
-    "chatlab_student_role": "undergraduate_student",
-    "pcfn_group": true,
-    "pcfn_alum": true,
-    "chatlab_group": true,
-    "chatlab_alum": true
-  },
-  {
     "first_name": "Nate",
     "last_name": "Klooster",
     "name_slug": "nate-klooster",
@@ -534,14 +489,47 @@
     "chatlab_alum": true
   },
   {
-    "first_name": "Madhushree",
-    "last_name": "Chakrabarty",
-    "name_slug": "madhushree-chakrabarty",
-    "bio": "I am interested in exploring language processing in the human brain, especially the subtle intricacies involved in the pragmatic use of language. I did my Ph.D. at the School of Cognitive Science, Jadavpur University, India. I have used behavioral methods to study the metaphor comprehension ability of patients with focal brain lesions and schizophrenia. I received a Fulbright award to work at Penn to investigate the comprehension of metaphorical and ironic meanings of sentences in patients with focal brain lesions.",
+    "first_name": "Gregor",
+    "last_name": "Hayn-Leichsenring",
+    "name_slug": "gregor-hayn-leichsenring",
+    "img_src_320w": "/assets/img/jpg/mw320/people/gregor-hayn-leichsenring--320w.webp",
+    "bio": "I received a D.D.S. degree as well as a B.A. degree in philosophy from the University of Jena. Previously, I performed research in neuroembryology as well as empirical aesthetics, focusing on face attractiveness, beauty in visual abstract artworks, and philosophical aesthetics at the Institute of Anatomy I in Jena. At present, I am a postdoctoral scientist at the University of Pennsylvania working on global image properties and their correlation with neurophysiological activities. I am trying to relate the neuronal responses to landscape paintings, art portraits, and abstract art paintings with their statistical image properties. Special focus is on specific areas of the sensorimotor system and the emotion-valuation system.",
+    "links": [
+      {
+        "link_name": "Personal Website",
+        "link_url": "https://www.gregor-hayn.com/"
+      },
+      {
+        "link_name": "Profile on Twitter",
+        "link_url": "https://twitter.com/unter_geher"
+      },
+      {
+        "link_name": "Profile on Instagram",
+        "link_url": "https://www.instagram.com/unter_geher/"
+      }
+    ],
+    "pcfn_title": "Postdoctoral Researcher",
+    "pcfn_rank": 600,
     "chatlab_title": "Postdoctoral Researcher",
     "chatlab_role": "postdoctoral_researcher",
-    "pcfn_group": false,
-    "pcfn_alum": false,
+    "pcfn_group": true,
+    "pcfn_alum": true,
+    "chatlab_group": true,
+    "chatlab_alum": true
+  },
+  {
+    "first_name": "Kelly",
+    "last_name": "Porter",
+    "name_slug": "kelly-porter",
+    "img_src_320w": "/assets/img/jpg/mw320/people/kelly-porter--320w.webp",
+    "bio": "Kelly Porter is a junior at the University of Pennsylvania studying criminology, neuroscience, and Africana studies. She hopes to attend law school and to provide resources for mental health to individuals within the criminal justice system. Outside of class, she is involved in the Kappa Iota chapter of Sigma Kappa, peer academic advising, and Project HEAL. She enjoys traveling, reading, and hanging with her friends.",
+    "pcfn_title": "Student Researcher",
+    "pcfn_rank": 500,
+    "chatlab_title": "Undergraduate Student",
+    "chatlab_role": "student_researcher",
+    "chatlab_student_role": "undergraduate_student",
+    "pcfn_group": true,
+    "pcfn_alum": true,
     "chatlab_group": true,
     "chatlab_alum": true
   },
@@ -553,6 +541,18 @@
     "chatlab_title": "Graduate Student",
     "chatlab_role": "student_researcher",
     "chatlab_student_role": "graduate_student",
+    "pcfn_group": false,
+    "pcfn_alum": false,
+    "chatlab_group": true,
+    "chatlab_alum": true
+  },
+  {
+    "first_name": "Madhushree",
+    "last_name": "Chakrabarty",
+    "name_slug": "madhushree-chakrabarty",
+    "bio": "I am interested in exploring language processing in the human brain, especially the subtle intricacies involved in the pragmatic use of language. I did my Ph.D. at the School of Cognitive Science, Jadavpur University, India. I have used behavioral methods to study the metaphor comprehension ability of patients with focal brain lesions and schizophrenia. I received a Fulbright award to work at Penn to investigate the comprehension of metaphorical and ironic meanings of sentences in patients with focal brain lesions.",
+    "chatlab_title": "Postdoctoral Researcher",
+    "chatlab_role": "postdoctoral_researcher",
     "pcfn_group": false,
     "pcfn_alum": false,
     "chatlab_group": true,
