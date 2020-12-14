@@ -208,6 +208,18 @@
     "filter_pcfn": true
   },
   {
+    "title": "Hidden Brain Responses to the Aesthetics of People and Places (and Things)",
+    "source": "Penn Center for Neuroscience & Society",
+    "date": "2019-11-07",
+    "url": "https://www.youtube.com/watch?v=ZPzSq3bCgEY",
+    "category": "video",
+    "archived": false,
+    "filter_pcfn": true,
+    "highlights_data": {
+      "img_src_320w": "/assets/img/jpg/mw320/highlights/hidden-brain-responses--320w.webp"
+    }
+  },
+  {
     "title": "GPS in the Brain",
     "source": "Brain, Behavior, and Beauty",
     "date": "2019-11-06",
