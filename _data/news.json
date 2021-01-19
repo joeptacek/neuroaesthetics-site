@@ -6,7 +6,7 @@
     "url": "https://www.psychologytoday.com/us/blog/brain-behavior-and-beauty/202101/epiphany-and-empiricism",
     "category": "print",
     "archived": false,
-    "filter_pcfn": false,
+    "filter_pcfn": true,
     "blog_data": {
       "img_src_320w": "/assets/img/jpg/mw320/blog/wikimedia-commons--san-damiano-crucifix--320w.webp",
       "img_attribution": "Photo by Chris Light, from Wimimedia Commons",
@@ -20,7 +20,7 @@
     "url": "https://www.psychologytoday.com/us/blog/brain-behavior-and-beauty/202101/the-relation-art-and-cognition",
     "category": "print",
     "archived": false,
-    "filter_pcfn": false,
+    "filter_pcfn": true,
     "blog_data": {
       "img_src_320w": "/assets/img/jpg/mw320/blog/wikimedia-commons--plato-bust--320w.webp",
       "img_attribution": "Photo by Dudva, from Wikimedia Commons",
@@ -34,7 +34,7 @@
     "url": "https://www.psychologytoday.com/intl/blog/brain-behavior-and-beauty/202101/what-does-aesthetic-cognitivism-really-mean-anyway",
     "category": "print",
     "archived": false,
-    "filter_pcfn": false,
+    "filter_pcfn": true,
     "blog_data": {
       "img_src_320w": "/assets/img/jpg/mw320/blog/william-salter--othellos-lamentation--320w.webp",
       "img_attribution": "\"Othello's Lamentation\" by William Salter, from Wikimedia Commons",
