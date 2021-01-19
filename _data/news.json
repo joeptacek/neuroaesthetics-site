@@ -1,5 +1,33 @@
 [
   {
+    "title": "Epiphany and Empiricism",
+    "source": "Brain, Behavior, and Beauty",
+    "date": "2021-01-18",
+    "url": "https://www.psychologytoday.com/us/blog/brain-behavior-and-beauty/202101/epiphany-and-empiricism",
+    "category": "print",
+    "archived": false,
+    "filter_pcfn": false,
+    "blog_data": {
+      "img_src_320w": "/assets/img/jpg/mw320/blog/wikimedia-commons--san-damiano-crucifix--320w.webp",
+      "img_attribution": "Photo by Chris Light, from Wimimedia Commons",
+      "teaser": "Can an ancient discipline like theology learn from a fast-developing, empirical field?"
+    }
+  },
+  {
+    "title": "The Relation of Art and Cognition",
+    "source": "Brain, Behavior, and Beauty",
+    "date": "2021-01-11",
+    "url": "https://www.psychologytoday.com/us/blog/brain-behavior-and-beauty/202101/the-relation-art-and-cognition",
+    "category": "print",
+    "archived": false,
+    "filter_pcfn": false,
+    "blog_data": {
+      "img_src_320w": "/assets/img/jpg/mw320/blog/wikimedia-commons--plato-bust--320w.webp",
+      "img_attribution": "Photo by Dudva, from Wikimedia Commons",
+      "teaser": "A perspective from the philosophy of art."
+    }
+  },
+  {
     "title": "What Does Aesthetic Cognitivism Really Mean, Anyway?",
     "source": "Brain, Behavior, and Beauty",
     "date": "2021-01-05",
