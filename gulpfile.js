@@ -22,7 +22,7 @@ const browserify = require('browserify');
 const gm = require('gray-matter');
 
 // styles
-const postcss = require('gulp-postcss');
+const postcss = require('gulp-postcss'); // starting with gu\p-postcss 8, must install postcss sepearately under devDependencies
 const atImport = require('postcss-import');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
