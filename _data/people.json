@@ -1840,6 +1840,25 @@
     "other_collaborators_group": true
   },
   {
+    "first_name": "Xianyou",
+    "last_name": "He",
+    "name_slug": "xianyou-he",
+    "img_src_320w": "/assets/img/jpg/mw320/people/xianyou-he--320w.webp",
+    "bio": "Xianyou He is a professor of the Pearl River Scholar Program of Guangdong Province and a recipient of the New Century Excellent Talents Support Project of the Ministry of Education in China. Now, he works as dean of the School of Psychology at South China Normal University (SCNU), Vice Chairman of the Educational Psychology Committee of the Chinese Psychological Society, and director of the learning science center of SCNU. He received his PhD at SCNU, completed postdoctoral training at Beijing Normal University, and was a visiting scholar at the University of Memphis. His research mainly focuses on social cognition, neuroaesthetics, and language processing. He has received several funds on neuroaesthetics supported by the National Natural Science Foundation of China.",
+    "external_affiliation": "South China Normal University",
+    "links": [
+      {
+        "link_name": "Profile on SCNU School of Psychology Website",
+        "link_url": "http://psy.scnu.edu.cn/english/facultymember/teachers/hexianyou/"
+      }
+    ],
+    "pcfn_group": false,
+    "pcfn_alum": false,
+    "chatlab_group": false,
+    "chatlab_alum": false,
+    "other_collaborators_group": true
+  },
+  {
     "first_name": "Helmut",
     "last_name": "Leder",
     "name_slug": "helmut-leder",

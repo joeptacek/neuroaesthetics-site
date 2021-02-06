@@ -98,6 +98,11 @@ body, button, input, textarea {
   max-width: 64rem;
 }
 
+.mw-72rem {
+  /* TODO: new wrapper width? */
+  max-width: 72rem;
+}
+
 /* HEIGHT */
 
 .h-16rem {
