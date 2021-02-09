@@ -1,0 +1,38 @@
+<div class="f5 f4-ns lh-title">
+  <a class="db mid-gray link dim-l" href="/people/{{ include.param.name_slug }}.html">
+    <div class="flex flex-column items-center flex-row-m bg-black-10 pt3 pb2 ph2 pa0-m ba b--moon-gray br2">
+      <div class="flex-none bg-white pa1 ba br-100 b--moon-gray mb3 mb0-m mr4-m">
+        {% assign jpg_src_320w = include.param.img_src_320w | replace: '.webp', '.jpg' %}
+        <picture class="db">
+          <source
+            type="image/webp"
+            srcset="{{ include.param.img_src_320w }} 320w,
+                    {{ include.param.img_src_320w | replace: '--320w', '--640w' }} 640w"
+            sizes="250px">
+          <img
+            class="db br-100"
+            src="{{ jpg_src_320w }}"
+            srcset="{{ jpg_src_320w }} 320w,
+                    {{ jpg_src_320w | replace: '--320w', '--640w' }} 640w"
+            sizes="250px"
+            alt="{{ include.param.first_name }} {% if include.param.middle_initials %}{{ include.param.middle_initials}} {% endif %}{{ include.param.last_name }}">
+        </picture>
+      </div>
+      <div class="self-stretch self-center-m flex items-center justify-between bg-white w-100 pv2 ph3 ba b--moon-gray br2">
+        <div>
+          <h3 class="font-serif mb2">
+            {{ include.param.first_name }} {% if include.param.middle_initials %}{{ include.param.middle_initials}} {% endif %}{{ include.param.last_name }}
+          </h3>
+          <div class="f5 silver">
+            {% if include.param.penn_faculty_group %}
+              <p class="mb1">{{ include.param.penn_school }}</p>
+            {% elsif include.param.other_collaborators_group %}
+              <p>{{ include.param.external_affiliation }}</p>
+            {% endif %}
+          </div>
+        </div>
+        {% octicon arrow-right height:20 %}
+      </div>
+    </div>
+  </a>
+</div>
