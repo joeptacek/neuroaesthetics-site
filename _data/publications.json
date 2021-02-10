@@ -1,5 +1,21 @@
 [
   {
+    "work_authors": "Workman, C. I., Humphries, S., Hartung, F., Aguirre, G. K., Kable, J. W., & Chatterjee, A.",
+    "work_year": 2021,
+    "work_title": "Morality is in the eye of the beholder: The neurocognitive basis of the \"anomalous‐is‐bad\" stereotype",
+    "work_publication_format": "article_in_journal",
+    "work_doi": "10.1111/nyas.14575",
+    "work_post_date_fake": 40,
+    "work_post_date": "2021-02-09",
+    "pdf": "/assets/pdf/publications/Workman_Humphries_Hartung_Aguirre_Kable_Chatterjee_2021_01.pdf",
+    "category": "neuroaesthetics",
+    "journal_title": "Annals of the New York Academy of Sciences",
+    "journal_advance": true,
+    "journal_preprint": false,
+    "review": false,
+    "link": false
+  },
+  {
     "work_authors": "Zhao, X., Wang, J., Li, J., Luo, G., Li, T., Chatterjee, A., Zhang, W., & He, X.",
     "work_year": 2020,
     "work_title": "The neural mechanism of aesthetic judgments of dynamic landscapes: An fMRI study",
