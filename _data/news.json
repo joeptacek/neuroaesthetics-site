@@ -6,7 +6,28 @@
     "url": "https://www.pennmedicine.org/news/news-releases/2021/february/the-scarred-villain-study-explores-neurocognitive-basis-of-bias-against-people-who-look-different",
     "category": "print",
     "archived": false,
-    "filter_pcfn": true
+    "filter_pcfn": true,
+    "links": {
+      "list_title": "Additional coverage",
+      "list": [
+        {
+          "name": "Penn Today",
+          "url": "https://penntoday.upenn.edu/news/study-explores-neurocognitive-basis-bias-against-people-who-look-different"
+        }
+      ]
+    }
+  },
+  {
+    "title": "You, Myself, and Art [Trailer]",
+    "source": "EGX Film Factory",
+    "date": "2021-02-02",
+    "url": "https://vimeo.com/507778822",
+    "category": "video",
+    "archived": false,
+    "filter_pcfn": true,
+    "highlights_data": {
+      "img_src_320w": "/assets/img/jpg/mw320/highlights/me-myself-and-art--320w.webp"
+    }
   },
   {
     "title": "Art and the Apophatic Horizon",
@@ -153,6 +174,18 @@
     "category": "print",
     "archived": false,
     "filter_pcfn": true
+  },
+  {
+    "title": "Built Beautiful: An Architecture & Neuroscience Love Story [Trailer]",
+    "source": "Beauty, Neuroscience & Architecture",
+    "date": "2020-07-01",
+    "url": "https://vimeo.com/434411431",
+    "category": "video",
+    "archived": false,
+    "filter_pcfn": true,
+    "highlights_data": {
+      "img_src_320w": "/assets/img/jpg/mw320/highlights/built-beautiful--320w.webp?v=2"
+    }
   },
   {
     "title": "Beauty and the Brain: Interview with Anjan Chatterjee",
