@@ -417,6 +417,50 @@
     "chatlab_alum": false
   },
   {
+    "first_name": "Will",
+    "last_name": "Sturgeon",
+    "name_slug": "will-sturgeon",
+    "img_src_320w": "/assets/img/jpg/mw320/people/will-sturgeon--320w.webp",
+    "bio": "As an undergrad at Penn, I’m studying architecture and computer science to bridge art and technology toward creating cutting-edge architecture that serves humanity. I’m fascinated by ways that machine learning can potentially capture aesthetic styles and preferences, or even generate new art, and what that means for humanity. Outside ChatLab, I develop computer vision for soccer-playing robots (UPennalizers), design the webpage for a magazine on art and tech (t-art), and various other odd jobs around campus. Just for fun, I love swing dancing, sketching, watching great movies, and reading anything and everything I can find!",
+    "links": [
+      {
+        "link_name": "Email",
+        "link_url": "mailto:sturge@sas.upenn.edu"
+      }
+    ],
+    "pcfn_title": "Student Researcher",
+    "pcfn_rank": 500,
+    "chatlab_title": "Undergraduate Student",
+    "chatlab_role": "student_researcher",
+    "chatlab_student_role": "undergraduate_student",
+    "pcfn_group": true,
+    "pcfn_alum": false,
+    "chatlab_group": true,
+    "chatlab_alum": false
+  },
+  {
+    "first_name": "Mayank",
+    "last_name": "Patel",
+    "name_slug": "mayank-patel",
+    "img_src_320w": "/assets/img/jpg/mw320/people/mayank-patel--320w.webp",
+    "bio": "I am a first year medical student at Drexel University College of Medicine. I received my Bachelor’s in biomedical engineering but have always had an interest in neuroscience leading me to work at Avid Radiopharmaceuticals during my undergrad where I spent time learning about the brain and Alzheimer’s detection through the use of PET scans. My interest in ChatLab arose from wanting the answers to how we judge people and my current research is looking into how people perceive facial expressions, using functional near-infrared spectrometry. Outside of school and research, I love biking, gardening, cooking, and listening to podcasts.",
+    "links": [
+      {
+        "link_name": "Email",
+        "link_url": "mailto:mjp438@drexel.edu"
+      }
+    ],
+    "pcfn_title": "Student Researcher",
+    "pcfn_rank": 500,
+    "chatlab_title": "Medical Student",
+    "chatlab_role": "student_researcher",
+    "chatlab_student_role": "medical_student",
+    "pcfn_group": true,
+    "pcfn_alum": false,
+    "chatlab_group": true,
+    "chatlab_alum": false
+  },
+  {
     "first_name": "Nate",
     "last_name": "Klooster",
     "name_slug": "nate-klooster",
