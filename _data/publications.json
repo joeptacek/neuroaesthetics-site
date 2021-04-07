@@ -1,5 +1,21 @@
 [
   {
+    "work_authors": "Humphries, S., Rick, J., Weintraub, D., & Chatterjee, A.",
+    "work_year": 2021,
+    "work_title": "Movement in aesthetic experiences: What we can learn from Parkinson's disease",
+    "work_publication_format": "article_in_journal",
+    "work_doi": "10.1162/jocn_a_01718",
+    "work_post_date_fake": 41,
+    "work_post_date": "2021-03-31",
+    "pdf": "/assets/pdf/publications/Humphries_Rick_Weintraub_Chatterjee_2021_01.pdf",
+    "category": "neuroaesthetics",
+    "journal_title": "Journal of Cognitive Neuroscience",
+    "journal_advance": true,
+    "journal_preprint": false,
+    "review": false,
+    "link": false
+  },
+  {
     "work_authors": "Workman, C. I., Humphries, S., Hartung, F., Aguirre, G. K., Kable, J. W., & Chatterjee, A.",
     "work_year": 2021,
     "work_title": "Morality is in the eye of the beholder: The neurocognitive basis of the \"anomalous‐is‐bad\" stereotype",
