@@ -6,7 +6,16 @@
     "url": "https://www.pennmedicine.org/news/news-releases/2021/april/what-parkinsons-disease-patients-reveal-about-how-art-is-experienced-and-valued",
     "category": "print",
     "archived": false,
-    "filter_pcfn": true
+    "filter_pcfn": true,
+    "links": {
+      "list_title": "Additional coverage",
+      "list": [
+        {
+          "name": "Neuroscience News",
+          "url": "https://neurosciencenews.com/parkinsons-art0perception-18278/"
+        }
+      ]
+    }
   },
   {
     "title": "Why Are People Biased Against Anomalous Facial Features?",
